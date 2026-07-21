@@ -15,7 +15,7 @@ Never hard-code any of these values in copy or components: always render from
 | Florida license number | `business.json` -> `licenses[0].number` = "PLACEHOLDER" | Florida Certified Electrical Contractor license number | Damean | Footer license line (renders "License number available on request" while PLACEHOLDER), About/trust sections, schema |
 | Broward license number | `business.json` -> `licenses[1].number` = "PLACEHOLDER" | Broward County Master Electrician license number | Damean | Footer license line (renders "License number available on request" while PLACEHOLDER), About/trust sections, schema |
 | Logo artwork | Inline placeholder crown SVG in `components/layout/Header.tsx` and `components/layout/Footer.tsx` | Final Ghost Crown Electric logo (SVG preferred, plus favicon set) | Damean / designer | Header brand mark, Footer brand mark, favicon and app icons |
-| Open Graph / social share image | Not yet present (no `app/opengraph-image` asset) | Branded 1200x630 OG image | Damean / designer | Social link previews across the site (metadata layer) |
+| Open Graph / social share image | Generated placeholder at `public/og-default.png` (1200x630, brand colors and site name), referenced by `lib/seo.ts` as `/og-default.png` | Final branded 1200x630 OG image from the designer | Damean / designer | Social link previews across the site (metadata layer) |
 | Canonical site URL | `NEXT_PUBLIC_SITE_URL` env var; fallback constant `SITE_URL` in `lib/content.ts` | Real production domain (for absolute URLs in sitemap, robots, canonical tags, OG) | Damean | `app/sitemap.ts`, `app/robots.ts`, metadata base |
 
 ## How placeholder flags work

@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { loadAllPosts, loadPost } from "@/lib/blog";
 
 /*
   Content loading layer for Ghost Crown Electric.
@@ -237,17 +238,13 @@ export function getCity(slug: string): City | null {
   return getCities().find((city) => city.slug === slug) ?? null;
 }
 
+// Blog articles are authored as Markdown with front matter, so the parsing and
+// ordering live in lib/blog.ts. These delegate to it, keeping getPosts/getPost
+// as the single content entry point that the sitemap and other loaders call.
 export function getPosts(): Post[] {
-  const posts = readJsonDir<Post>("blog");
-  // Newest first when a date is present, otherwise stable by slug.
-  return posts.sort((a, b) => {
-    if (a.date && b.date) return b.date.localeCompare(a.date);
-    if (a.date) return -1;
-    if (b.date) return 1;
-    return (a.slug ?? "").localeCompare(b.slug ?? "");
-  });
+  return loadAllPosts();
 }
 
 export function getPost(slug: string): Post | null {
-  return getPosts().find((post) => post.slug === slug) ?? null;
+  return loadPost(slug);
 }
