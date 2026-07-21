@@ -1,0 +1,59 @@
+{
+  "slug": "fort-lauderdale",
+  "name": "Fort Lauderdale",
+  "county": "Broward",
+  "lat": 26.14111,
+  "lng": -80.14444,
+  "metaTitle": "Electrician in Fort Lauderdale, FL | Ghost Crown Electric",
+  "metaDescription": "Licensed electrician in Fort Lauderdale, FL. Panel upgrades, older-home wiring, and emergency work across Broward, day or night. Book an on-site visit.",
+  "h1": "Electrician in Fort Lauderdale, FL",
+  "intro": "Fort Lauderdale wears its history in its wiring. The city goes back to 1911, saw its first boom in the 1920s, and then exploded after the Second World War, so you can drive a single street and pass panels of nearly every era. Add the salt air off the water, and equipment down here ages faster than it would inland. When breakers trip for no clear reason, when you smell something warm near the panel, or when a 4-point inspection flags the electrical, you want a licensed hand that knows these older homes. We come out, we look in person, and we give you one honest price. The owner runs your job from the first call to the final inspection.",
+  "neighborhoods": [
+    "Victoria Park",
+    "Rio Vista",
+    "Coral Ridge",
+    "Croissant Park",
+    "Sailboat Bend",
+    "Colee Hammock",
+    "Las Olas Isles",
+    "Flagler Village",
+    "Tarpon River",
+    "Poinsettia Heights",
+    "Harbor Beach",
+    "Middle River Terrace"
+  ],
+  "housingNotes": "Fort Lauderdale is one of the oldest cities in Broward, incorporated in 1911, and its neighborhoods span more than a century of construction. Historic sections like Sailboat Bend, Rio Vista, and Victoria Park carry early homes, while the post-war boom of the 1950s and 1960s filled in much of the rest. That range means original fuse boxes and early breaker panels still turn up, along with brands the industry no longer considers safe. Homes near the Intracoastal and the ocean face an added factor: salt air quietly corrodes lugs, bus bars, and terminations, so a panel here can wear faster than the same panel would in a drier place. Older waterfront homes with pools often have bonding and grounding that deserve a fresh look. Newer construction is generally well protected, which is exactly why the older stock stands out.",
+  "permitNote": "In Fort Lauderdale, service changes and pool electrical corrections are permitted work, handled through the city's building and development services under the Florida Building Code. Permits and inspections exist to put a licensed contractor and an inspector between you and a costly mistake. Ghost Crown Electric pulls the permit in our own name, schedules the inspection, and the owner personally attends it, so the work is documented and signed off the way it should be.",
+  "challenges": [
+    {
+      "heading": "Salt air working on coastal equipment",
+      "body": "From Harbor Beach to the Intracoastal neighborhoods, salt air is a quiet worker. It corrodes the lugs, bus bars, and terminations inside a panel and meter, and a corroded connection runs hotter than it should. On a coastal service call we pay close attention to the condition of every connection, because heat is what wears a panel out early."
+    },
+    {
+      "heading": "A century of housing under one city",
+      "body": "Fort Lauderdale has homes from the 1920s through today, so fuse boxes, early breaker panels, and obsolete brands all still turn up. Each era has its own quirks, and ten years of situations already seen means we usually know what is behind the cover before we open it."
+    },
+    {
+      "heading": "Older waterfront pools and their bonding",
+      "body": "Many established Fort Lauderdale homes sit on the water with pools that are decades old. The bonding and grounding that keep a pool safe can loosen or corrode over the years, especially near salt air. A once-a-year pool electrical inspection, ideally before heater season, catches those issues early."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Do you work in Fort Lauderdale day or night?",
+      "answer": "Yes. Fort Lauderdale is right in the heart of our service area, and we show up whenever you call, day or night. After-hours and emergency visits carry a premium, and the owner will tell you plainly what to expect before we roll. What you get is a licensed electrician who actually answers, not a call center."
+    },
+    {
+      "question": "My carrier flagged the panel on my older home. What now?",
+      "answer": "That is common with Fort Lauderdale's older housing. Send us the notice or the 4-point report and we will read it with you. Usually the fix is a modern, code-compliant panel that passes inspection. We assess the service in person, pull the permit, and the owner meets the inspector so the electrical objection standing between you and coverage is cleared."
+    },
+    {
+      "question": "My home is near the water. Does salt air really matter?",
+      "answer": "It does. Salt air corrodes the connections inside panels and meter equipment, and corroded connections run hot. On coastal homes we look closely at every termination during an assessment and factor that reality into an honest forecast, so the work we quote actually holds up in the environment it has to live in."
+    },
+    {
+      "question": "What does a service call cost in Fort Lauderdale?",
+      "answer": "Our service call is $240, which covers roughly two hours including travel, arrival, and diagnosis. If we can handle the problem on the spot, there is no separate return charge. Larger work like a panel replacement or a service rebuild is forecast and priced once before we begin, and that price does not change mid-job."
+    }
+  ]
+}

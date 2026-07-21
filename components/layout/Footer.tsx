@@ -150,6 +150,11 @@ export function Footer() {
           </p>
           <ul className="flex items-center gap-5">
             <li>
+              <Link href={routes.blog} className="hover:text-accent">
+                Blog
+              </Link>
+            </li>
+            <li>
               <Link href={routes.privacy} className="hover:text-accent">
                 Privacy
               </Link>

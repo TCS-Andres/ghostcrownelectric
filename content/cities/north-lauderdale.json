@@ -1,0 +1,60 @@
+{
+  "slug": "north-lauderdale",
+  "name": "North Lauderdale",
+  "county": "Broward",
+  "lat": 26.21139,
+  "lng": -80.22111,
+  "metaTitle": "Electrician in North Lauderdale, FL | Ghost Crown Electric",
+  "metaDescription": "Licensed electrician in North Lauderdale, FL, our Broward home base. Panel upgrades, rebuilds, and emergency work, day or night. Book an on-site visit.",
+  "h1": "Electrician in North Lauderdale, FL",
+  "intro": "North Lauderdale is our home. Ghost Crown Electric is based right here, and this is where a lot of our neighbors first got to know us. Most of these homes went up during the development boom of the 1970s, which means a good number of them are running on original panels that were sized for a much lighter electrical life than the one a house lives today. When a breaker keeps tripping, when the lights dim as the air conditioner kicks on, or when your insurance company sends a letter about the panel, you want someone local who answers the phone. The owner takes your call, prices the job, and meets the inspector himself. Day or night.",
+  "neighborhoods": [
+    "Broadview Estates",
+    "Burnham Woods",
+    "Cross Creek",
+    "Hamptons Townhomes",
+    "Hamptons West",
+    "Highlands of Tam O Shanter",
+    "Hunters Run",
+    "Kimberly Village",
+    "North Lauderdale Estates",
+    "North Lauderdale Village",
+    "Sugar Springs",
+    "The Village at Coral Lake",
+    "Willow Woods"
+  ],
+  "housingNotes": "North Lauderdale grew up fast during a development boom that ran through the 1970s, after the city was incorporated in 1963. That timing matters for your electrical system. A large share of the single-family homes and townhomes here were wired in the 1970s and early 1980s, when the panel that came with the house was built for a lighter electrical load than a modern family puts on it. Many of those original panels are now at or past the end of their service life, and some carry breaker brands that inspectors and insurance carriers no longer accept. Condos and townhome communities from the same era often share aging service equipment. None of this is cause for alarm. It simply means the wiring here has reached the age where an honest look pays off.",
+  "permitNote": "In North Lauderdale, electrical service changes and pool electrical corrections require a permit and an inspection, handled through the city's building department under the Florida Building Code and Broward County's electrical requirements. That process exists to protect you, and it works best when a licensed contractor runs it. Ghost Crown Electric pulls the permit in our own name, and the owner personally meets the inspector on site, so the sign-off is clean and nothing about the work is left undocumented.",
+  "challenges": [
+    {
+      "heading": "Original panels reaching the end of the line",
+      "body": "So much of North Lauderdale was wired during the 1970s boom that original panels are a common sight on a service call. Decades of South Florida heat and humidity age the connections inside them, and some are brands carriers will no longer insure. When your panel is worn or obsolete, everything downstream of it is affected."
+    },
+    {
+      "heading": "Insurance letters landing in mailboxes",
+      "body": "Carriers across Broward have tightened up, and a 4-point inspection that flags an older panel can hold up your policy. We read the notice with you, assess the service in person, and bring the equipment up to a modern, insurable standard so the electrical objection goes away."
+    },
+    {
+      "heading": "Community homes on shared aging equipment",
+      "body": "Many of the townhome and condo homes here came up in the same few years, so the service equipment across a street often ages together. When one unit shows warning signs, neighbors frequently find the same. We assess each property on its own and tell you plainly what yours needs."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Do you cover North Lauderdale day or night?",
+      "answer": "Yes. North Lauderdale is our home base and these are our neighbors. We show up whenever you call, day or night. For after-hours and true emergencies there is a premium, and the owner will tell you plainly what to expect before we head out. A licensed, local electrician answering the phone is the whole point."
+    },
+    {
+      "question": "My insurance company flagged my panel. Can you help?",
+      "answer": "That is one of the most common reasons North Lauderdale neighbors call us. Send us the notice or the 4-point report and we will read it with you. In most cases the fix is a modern, code-compliant panel that passes inspection. We assess the service in person, pull the permit, and the owner meets the inspector so your carrier's objection is cleared."
+    },
+    {
+      "question": "How often should I have my pool's electrical checked?",
+      "answer": "About once a year, ideally before heater season, is a sensible rhythm for a pool. Bonding and grounding protect your family, your home, and your investment as a whole, and they can loosen or corrode over time in our climate. If you would like yours looked at, you can book a pool electrical inspection and we will tell you honestly what we find."
+    },
+    {
+      "question": "What does the $240 service call cover?",
+      "answer": "Our service call is $240, which covers roughly two hours including travel, arrival, and diagnosis. If the problem can be handled on the spot, there is no separate return charge. Anything larger, like a panel replacement or a service rebuild, we forecast and price once before we begin, and that number does not change mid-job."
+    }
+  ]
+}

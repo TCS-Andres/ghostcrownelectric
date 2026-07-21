@@ -24,8 +24,8 @@ export const routes = {
   faq: "/faq",
   reviews: "/reviews",
 
-  // Booking CTAs point at the contact page until a dedicated booking flow exists.
-  book: "/contact",
+  // Booking CTAs point at the dedicated booking flow.
+  book: "/book",
 
   privacy: "/privacy",
   terms: "/terms",
@@ -37,8 +37,10 @@ export const STATIC_ROUTES = [
   routes.home,
   routes.services,
   routes.serviceAreas,
+  routes.blog,
   routes.about,
   routes.contact,
+  routes.book,
   routes.faq,
   routes.reviews,
   routes.privacy,

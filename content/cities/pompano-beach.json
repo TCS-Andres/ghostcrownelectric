@@ -1,0 +1,59 @@
+{
+  "slug": "pompano-beach",
+  "name": "Pompano Beach",
+  "county": "Broward",
+  "lat": 26.23472,
+  "lng": -80.12556,
+  "metaTitle": "Electrician in Pompano Beach, FL | Ghost Crown Electric",
+  "metaDescription": "Licensed electrician in Pompano Beach, FL. Panel upgrades, coastal and pool electrical, and emergency work in Broward, day or night. Book an on-site assessment.",
+  "h1": "Electrician in Pompano Beach, FL",
+  "intro": "Pompano Beach goes back to 1908, boomed after the Second World War, and kept growing through the late twentieth century, so its housing runs the full range of eras. Along the coast, from Hillsboro Shores to the Intracoastal, salt air is hard on electrical equipment. Inland, condo communities like Cypress Bend and Palm-Aire and post-war neighborhoods carry service equipment that has aged for decades. When breakers trip, when you smell something warm near the panel, or when a 4-point inspection flags the electrical, you want a licensed hand who knows coastal homes. We look in person and price the job once. Day or night, the owner runs it from first call to final inspection.",
+  "neighborhoods": [
+    "Cypress Bend",
+    "Palm-Aire",
+    "Old Pompano",
+    "Cresthaven",
+    "Kendall Green",
+    "Harbor Village",
+    "Pompano Beach Highlands",
+    "Leisureville",
+    "Garden Isles",
+    "Hillsboro Shores",
+    "Terra Mar",
+    "Sanders Park"
+  ],
+  "housingNotes": "Pompano Beach was founded in 1908 and became a city in 1947, then grew heavily after the Second World War and through the late twentieth century. That long history shows in its wiring, from post-war single-family homes to large condo communities like Cypress Bend and Palm-Aire built in the 1970s. Homes and buildings from those decades often still run on their original panels and meter equipment, and some carry breaker brands carriers no longer accept. Along the coast, from Hillsboro Shores to Terra Mar, salt air corrodes lugs, bus bars, and terminations, so equipment near the water can wear faster than the same panel would inland. Many older homes have pools that need their bonding and grounding looked at. Newer construction is generally well protected.",
+  "permitNote": "In Pompano Beach, service changes and pool electrical corrections are permitted work through the city's building department, under the Florida Building Code and Broward County's electrical requirements. Permits and inspections put a licensed contractor and an inspector between you and a costly mistake. Ghost Crown Electric pulls the permit in our own name, schedules the inspection, and the owner personally attends it, so the work is documented and signed off cleanly.",
+  "challenges": [
+    {
+      "heading": "Salt air along the coast and Intracoastal",
+      "body": "From Hillsboro Shores to Terra Mar and the Intracoastal neighborhoods, salt air quietly corrodes the connections inside panels and meter equipment. A corroded connection runs hotter than it should, and heat is what wears a panel out early. On coastal service calls we look closely at every termination and factor that into an honest forecast."
+    },
+    {
+      "heading": "1970s condo communities on original equipment",
+      "body": "Large communities like Cypress Bend and Palm-Aire were built in the 1970s and often still run on original meter banks and shared service equipment. When that equipment ages, it affects more than one home. We assess the building's actual setup and explain what the whole system needs, in plain language."
+    },
+    {
+      "heading": "Post-war homes and insurance pressure",
+      "body": "Pompano Beach has a lot of post-war housing, and carriers are stricter than ever about aging panels. A flagged panel can hold up a policy or a renewal. We read the notice with you, assess the service in person, and bring it up to a modern, insurable standard so the electrical objection is cleared."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Do you cover Pompano Beach day or night?",
+      "answer": "Yes. Pompano Beach is part of our regular Broward service area, and we show up whenever you call, day or night. After-hours and emergency visits carry a premium, and the owner will tell you plainly what to expect before we roll. You reach a licensed electrician who answers, not a call center."
+    },
+    {
+      "question": "My carrier flagged the panel on my older home. Can you help?",
+      "answer": "Yes, and it is common with Pompano Beach's post-war and 1970s housing. Send us the notice or the 4-point report and we will read it with you. Usually the fix is a modern, code-compliant panel that passes inspection. We assess the service in person, pull the permit, and the owner meets the inspector so the objection is cleared."
+    },
+    {
+      "question": "How often should a coastal pool's electrical be checked?",
+      "answer": "About once a year, ideally before heater season. Near the coast, salt air is hard on bonding and grounding, which can loosen or corrode over time. Proper bonding protects your family, your home, and your investment as a whole. You can book a pool electrical inspection and we will tell you honestly what we find."
+    },
+    {
+      "question": "What does the $240 service call cover?",
+      "answer": "Our service call is $240, which covers roughly two hours including travel, arrival, and diagnosis. If the problem can be handled on the spot, there is no separate return charge. Larger work like a panel replacement or a service rebuild is forecast and priced once before we begin, and that price does not change mid-job."
+    }
+  ]
+}
