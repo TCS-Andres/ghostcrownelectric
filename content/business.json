@@ -1,0 +1,21 @@
+{
+  "name": "Ghost Crown Electric",
+  "legalName": "Ghost Crown Electric LLC",
+  "tagline": "Show Up. Do It Right. Sleep Easy.",
+  "founder": {"name": "Damean Callum", "title": "Master Electrician", "note": "PLACEHOLDER: exact spelling pending license verification"},
+  "phoneDisplay": "(954) 555-0100",
+  "phoneTel": "+19545550100",
+  "phoneIsPlaceholder": true,
+  "email": "office@ghostcrownelectric-placeholder.com",
+  "emailIsPlaceholder": true,
+  "address": {"locality": "North Lauderdale", "region": "FL", "country": "US", "streetIsPlaceholder": true},
+  "hours": "Monday to Friday, with emergency response day or night",
+  "licenses": [
+    {"label": "Florida Certified Electrical Contractor", "number": "PLACEHOLDER"},
+    {"label": "Broward County Master Electrician", "number": "PLACEHOLDER"}
+  ],
+  "serviceArea": "West Palm Beach to North Miami, Broward County core",
+  "geo": {"lat": 26.2174, "lng": -80.2256},
+  "stats": {"permittedProjects": 286, "yearsActive": 10, "trucks": 3},
+  "social": []
+}
