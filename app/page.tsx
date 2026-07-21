@@ -7,7 +7,7 @@ import {
 } from "@/lib/content";
 import { routes } from "@/lib/routes";
 import { buildMetadata, absoluteUrl } from "@/lib/seo";
-import { cityLinks, firstSentence, groupServices } from "@/lib/links";
+import { cityLinks, groupServices } from "@/lib/links";
 import { formatPostDate } from "@/lib/blog";
 import { getPosts } from "@/lib/content";
 import {
@@ -20,6 +20,8 @@ import {
 import type { Faq } from "@/lib/content";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Card } from "@/components/ui/Card";
+import { Media } from "@/components/ui/Media";
+import { ServiceCard } from "@/components/ui/ServiceCard";
 import { CTABand } from "@/components/ui/CTABand";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { CallToActions } from "@/components/sections/CallToActions";
@@ -117,7 +119,8 @@ export default function HomePage() {
       {/* 1. Hero */}
       <section className="bg-surface-dark text-ink-on-dark">
         <div className="container-page py-16 sm:py-20 lg:py-24">
-          <div className="max-w-3xl">
+          <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
+            <div className="max-w-2xl">
             <ul className="flex flex-wrap gap-2 text-sm text-ink-muted-on-dark">
               {business.licenses.map((license) => (
                 <li
@@ -159,6 +162,17 @@ export default function HomePage() {
                 </li>
               ))}
             </ul>
+            </div>
+
+            <div className="hidden lg:block">
+              <Media
+                src="/images/hero-electrician.jpg"
+                alt="An electrician installing breakers inside a modern electrical panel"
+                priority
+                sizes="(min-width: 1024px) 42vw, 0px"
+                className="aspect-[4/5] rounded-2xl border border-charcoal-600"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -257,22 +271,7 @@ export default function HomePage() {
                 <ul className="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
                   {group.services.map((service: Service) => (
                     <li key={service.slug}>
-                      <Link
-                        href={routes.service(service.slug)}
-                        className="group block h-full focus-visible:outline-none"
-                      >
-                        <Card interactive className="flex h-full flex-col bg-surface">
-                          <h4 className="font-heading text-lg font-semibold text-ink group-hover:text-accent-hover">
-                            {service.shortName || service.name}
-                          </h4>
-                          <p className="mt-2 flex-1 text-sm text-ink-muted">
-                            {firstSentence(service.intro)}
-                          </p>
-                          <span className="mt-4 text-sm font-semibold text-accent">
-                            View service
-                          </span>
-                        </Card>
-                      </Link>
+                      <ServiceCard service={service} titleAs="h4" />
                     </li>
                   ))}
                 </ul>

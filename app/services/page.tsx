@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { getServices } from "@/lib/content";
 import { routes } from "@/lib/routes";
 import { buildMetadata, absoluteUrl } from "@/lib/seo";
-import { firstSentence, groupServices } from "@/lib/links";
+import { groupServices } from "@/lib/links";
 import {
   breadcrumbListNode,
   electricianNode,
@@ -13,7 +12,7 @@ import {
 import type { Crumb } from "@/components/layout/Breadcrumbs";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { Card } from "@/components/ui/Card";
+import { ServiceCard } from "@/components/ui/ServiceCard";
 import { CTABand } from "@/components/ui/CTABand";
 import { JsonLd } from "@/components/seo/JsonLd";
 
@@ -77,22 +76,7 @@ export default function ServicesIndexPage() {
                 <ul className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
                   {group.services.map((service) => (
                     <li key={service.slug}>
-                      <Link
-                        href={routes.service(service.slug)}
-                        className="group block h-full focus-visible:outline-none"
-                      >
-                        <Card interactive className="flex h-full flex-col">
-                          <h3 className="font-heading text-lg font-semibold text-ink group-hover:text-accent-hover">
-                            {service.shortName || service.name}
-                          </h3>
-                          <p className="mt-2 flex-1 text-sm text-ink-muted">
-                            {firstSentence(service.intro)}
-                          </p>
-                          <span className="mt-4 text-sm font-semibold text-accent">
-                            View service
-                          </span>
-                        </Card>
-                      </Link>
+                      <ServiceCard service={service} titleAs="h3" />
                     </li>
                   ))}
                 </ul>

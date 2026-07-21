@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { getBusiness } from "@/lib/content";
 import { routes } from "@/lib/routes";
 import { cn } from "@/lib/cn";
@@ -21,10 +22,20 @@ export function CTABand({
   return (
     <section
       className={cn(
-        "bg-surface-dark text-ink-on-dark",
+        "relative isolate overflow-hidden bg-surface-dark text-ink-on-dark",
         className,
       )}
     >
+      <div aria-hidden="true" className="absolute inset-0 -z-10">
+        <Image
+          src="/images/cta-texture.jpg"
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover object-right opacity-60"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-surface-dark via-surface-dark/85 to-surface-dark/45" />
+      </div>
       <div className="container-page flex flex-col items-start gap-6 py-14 sm:py-16 md:flex-row md:items-center md:justify-between">
         <div className="max-w-xl">
           <h2 className="text-2xl text-ink-on-dark sm:text-3xl">{headline}</h2>

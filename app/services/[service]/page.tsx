@@ -5,6 +5,7 @@ import { getService, getServices, type Service } from "@/lib/content";
 import { routes } from "@/lib/routes";
 import { buildMetadata, absoluteUrl } from "@/lib/seo";
 import { cityLinks, firstSentence } from "@/lib/links";
+import { serviceImage } from "@/lib/imagery";
 import {
   breadcrumbListNode,
   electricianNode,
@@ -18,6 +19,7 @@ import type { Crumb } from "@/components/layout/Breadcrumbs";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Card } from "@/components/ui/Card";
+import { Media } from "@/components/ui/Media";
 import { CTABand } from "@/components/ui/CTABand";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { HeroTrust } from "@/components/sections/HeroTrust";
@@ -66,6 +68,7 @@ export default async function ServicePage({
     .map((relatedSlug) => getService(relatedSlug))
     .filter((item): item is Service => item !== null);
 
+  const heroImage = serviceImage(service.slug);
   const cities = cityLinks();
 
   const trail: Crumb[] = [
@@ -96,16 +99,29 @@ export default async function ServicePage({
       {/* Hero */}
       <section className="mt-6 bg-surface-dark text-ink-on-dark">
         <div className="container-page py-14 sm:py-20">
-          <div className="max-w-3xl">
-            <h1 className="text-3xl text-ink-on-dark sm:text-4xl md:text-5xl">
-              {service.h1}
-            </h1>
-            <p className="mt-5 text-lg text-ink-muted-on-dark">
-              {service.intro}
-            </p>
+          <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
+            <div>
+              <div className="max-w-2xl">
+                <h1 className="text-3xl text-ink-on-dark sm:text-4xl md:text-5xl">
+                  {service.h1}
+                </h1>
+                <p className="mt-5 text-lg text-ink-muted-on-dark">
+                  {service.intro}
+                </p>
+              </div>
+              <HeroTrust className="mt-8" />
+              <CallToActions className="mt-8" />
+            </div>
+            <div className="hidden lg:block">
+              <Media
+                src={heroImage.src}
+                alt={heroImage.alt}
+                priority
+                sizes="(min-width: 1024px) 45vw, 0px"
+                className="aspect-[4/3] rounded-2xl border border-charcoal-600"
+              />
+            </div>
           </div>
-          <HeroTrust className="mt-8" />
-          <CallToActions className="mt-8" />
         </div>
       </section>
 

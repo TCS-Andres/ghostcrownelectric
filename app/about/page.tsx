@@ -12,6 +12,7 @@ import type { Crumb } from "@/components/layout/Breadcrumbs";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Card } from "@/components/ui/Card";
+import { Media } from "@/components/ui/Media";
 import { CTABand } from "@/components/ui/CTABand";
 import { HeroTrust } from "@/components/sections/HeroTrust";
 import { CallToActions } from "@/components/sections/CallToActions";
@@ -90,24 +91,37 @@ export default function AboutPage() {
       {/* Hero: the company in one honest paragraph */}
       <section className="mt-6 bg-surface-dark text-ink-on-dark">
         <div className="container-page py-14 sm:py-20">
-          <div className="max-w-3xl">
-            <span className="text-sm font-semibold uppercase tracking-[0.14em] text-accent">
-              About the company
-            </span>
-            <h1 className="mt-3 text-3xl text-ink-on-dark sm:text-4xl md:text-5xl">
-              The licensed hand behind the work
-            </h1>
-            <p className="mt-5 text-lg text-ink-muted-on-dark">
-              Ghost Crown Electric is a licensed electrical service, repair, and
-              restoration company based in North Lauderdale, serving Broward
-              County and South Florida. The owner takes your first call, prices
-              the job, and meets the inspector himself. We stay in our lane, we
-              show up when we say we will, and we would rather do the work right
-              once than come back twice.
-            </p>
+          <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
+            <div>
+              <div className="max-w-2xl">
+                <span className="text-sm font-semibold uppercase tracking-[0.14em] text-accent">
+                  About the company
+                </span>
+                <h1 className="mt-3 text-3xl text-ink-on-dark sm:text-4xl md:text-5xl">
+                  The licensed hand behind the work
+                </h1>
+                <p className="mt-5 text-lg text-ink-muted-on-dark">
+                  Ghost Crown Electric is a licensed electrical service, repair, and
+                  restoration company based in North Lauderdale, serving Broward
+                  County and South Florida. The owner takes your first call, prices
+                  the job, and meets the inspector himself. We stay in our lane, we
+                  show up when we say we will, and we would rather do the work right
+                  once than come back twice.
+                </p>
+              </div>
+              <HeroTrust className="mt-8" />
+              <CallToActions className="mt-8" />
+            </div>
+            <div className="hidden lg:block">
+              <Media
+                src="/images/about-craft.jpg"
+                alt="An electrician testing a circuit with a multimeter"
+                priority
+                sizes="(min-width: 1024px) 45vw, 0px"
+                className="aspect-[4/3] rounded-2xl border border-charcoal-600"
+              />
+            </div>
           </div>
-          <HeroTrust className="mt-8" />
-          <CallToActions className="mt-8" />
         </div>
       </section>
 
