@@ -250,33 +250,42 @@ export default function HomePage() {
           title="A track record you can look up, not just take our word for."
           description="Most of our work comes from referrals, but the proof is public. Here is what the record shows."
         />
-        <dl className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {[
-            {
-              value: String(business.stats.permittedProjects),
-              label: "Permitted projects on public record",
-            },
-            {
-              value: "Top tier",
-              label: "Of Florida contractors by permit quality",
-            },
-            {
-              value: `${business.stats.yearsActive} years`,
-              label: "Actively in business",
-            },
-            {
-              value: "Owner led",
-              label: "From the first call to the final inspection",
-            },
-          ].map((stat) => (
-            <Card key={stat.label} className="flex flex-col gap-2">
-              <dt className="font-heading text-3xl font-bold text-ink">
-                {stat.value}
-              </dt>
-              <dd className="text-sm text-ink-muted">{stat.label}</dd>
-            </Card>
-          ))}
-        </dl>
+        <div className="relative isolate mt-10 overflow-hidden rounded-3xl bg-surface-dark px-5 py-8 sm:px-8 sm:py-10">
+          <div
+            aria-hidden="true"
+            className="glow-gold pointer-events-none absolute -top-24 left-1/2 -z-10 h-[26rem] w-[44rem] -translate-x-1/2 opacity-40"
+          />
+          <dl className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              {
+                value: String(business.stats.permittedProjects),
+                label: "Permitted projects on public record",
+              },
+              {
+                value: "Top tier",
+                label: "Of Florida contractors by permit quality",
+              },
+              {
+                value: `${business.stats.yearsActive} years`,
+                label: "Actively in business",
+              },
+              {
+                value: "Owner led",
+                label: "From the first call to the final inspection",
+              },
+            ].map((stat) => (
+              <div
+                key={stat.label}
+                className="glass-dark flex flex-col gap-2 rounded-2xl p-6"
+              >
+                <dt className="font-heading text-3xl font-bold text-gold-300">
+                  {stat.value}
+                </dt>
+                <dd className="text-sm text-ink-muted-on-dark">{stat.label}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
       </section>
 
       {/* 4. Services grid: money and pool */}
@@ -346,49 +355,59 @@ export default function HomePage() {
             title="We price it once, and we price it right."
             description="No games and no moving numbers. Here is how it works before you ever call."
           />
-          <ul className="mt-10 grid grid-cols-1 gap-5 lg:grid-cols-3">
-            <li>
-              <Card className="flex h-full flex-col">
-                <h3 className="font-heading text-lg font-semibold text-ink">
-                  The service call
-                </h3>
-                <p className="mt-2 text-2xl font-bold text-ink">$240</p>
-                <p className="mt-2 text-ink-muted">
-                  That covers roughly two hours, including travel, arrival, and
-                  diagnosis. If we can handle it on the spot in that window,
-                  there is no separate return charge.
-                </p>
-              </Card>
-            </li>
-            <li>
-              <Card className="flex h-full flex-col">
-                <h3 className="font-heading text-lg font-semibold text-ink">
-                  After hours and emergencies
-                </h3>
-                <p className="mt-2 text-2xl font-bold text-ink">A premium</p>
-                <p className="mt-2 text-ink-muted">
-                  When you need us in the middle of the night, that visit carries
-                  a premium. You are paying for real availability, day or night,
-                  and we tell you plainly before we roll.
-                </p>
-              </Card>
-            </li>
-            <li>
-              <Card className="flex h-full flex-col">
-                <h3 className="font-heading text-lg font-semibold text-ink">
-                  A residential service rebuild
-                </h3>
-                <p className="mt-2 text-2xl font-bold text-ink">
-                  $5,000 to $8,000
-                </p>
-                <p className="mt-2 text-ink-muted">
-                  A full residential electrical service rebuild typically lands
-                  in this range. The exact number comes after we see the property,
-                  and it is quoted per property.
-                </p>
-              </Card>
-            </li>
-          </ul>
+          <div className="relative isolate mt-10 overflow-hidden rounded-3xl bg-surface-dark px-5 py-8 sm:px-8 sm:py-10">
+            <div
+              aria-hidden="true"
+              className="glow-gold pointer-events-none absolute -bottom-24 left-1/2 -z-10 h-[26rem] w-[44rem] -translate-x-1/2 opacity-40"
+            />
+            <ul className="grid grid-cols-1 gap-4 lg:grid-cols-3">
+              <li>
+                <div className="glass-dark flex h-full flex-col rounded-2xl p-6">
+                  <h3 className="font-heading text-lg font-semibold text-ink-on-dark">
+                    The service call
+                  </h3>
+                  <p className="mt-2 font-heading text-3xl font-bold text-gold-300">
+                    $240
+                  </p>
+                  <p className="mt-2 text-ink-muted-on-dark">
+                    That covers roughly two hours, including travel, arrival, and
+                    diagnosis. If we can handle it on the spot in that window,
+                    there is no separate return charge.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div className="glass-dark flex h-full flex-col rounded-2xl p-6">
+                  <h3 className="font-heading text-lg font-semibold text-ink-on-dark">
+                    After hours and emergencies
+                  </h3>
+                  <p className="mt-2 font-heading text-3xl font-bold text-gold-300">
+                    A premium
+                  </p>
+                  <p className="mt-2 text-ink-muted-on-dark">
+                    When you need us in the middle of the night, that visit carries
+                    a premium. You are paying for real availability, day or night,
+                    and we tell you plainly before we roll.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div className="glass-dark flex h-full flex-col rounded-2xl p-6">
+                  <h3 className="font-heading text-lg font-semibold text-ink-on-dark">
+                    A residential service rebuild
+                  </h3>
+                  <p className="mt-2 font-heading text-3xl font-bold text-gold-300">
+                    $5,000 to $8,000
+                  </p>
+                  <p className="mt-2 text-ink-muted-on-dark">
+                    A full residential electrical service rebuild typically lands
+                    in this range. The exact number comes after we see the property,
+                    and it is quoted per property.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
           <p className="mt-8 max-w-2xl text-ink-muted">
             The number we quote is the number you pay. We forecast the job
             honestly, put one price on it, and we do not change it mid job. You
