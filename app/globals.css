@@ -130,3 +130,51 @@ h6 {
   margin-inline: auto;
   padding-inline: 1.25rem;
 }
+
+/*
+  Glassmorphism surfaces. Frosted, translucent panels with a soft inner
+  highlight, used on the dynamic elements (cards over imagery, floating chips,
+  the header, the sticky bar, the lead form, the popup). `glass` is for light
+  areas, `glass-dark` for dark areas or over imagery. They need something behind
+  them to refract, so they pair with imagery or the ambient gold glow below.
+*/
+@utility glass {
+  background-color: color-mix(in oklab, white 68%, transparent);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  backdrop-filter: blur(16px) saturate(150%);
+  border: 1px solid color-mix(in oklab, white 65%, transparent);
+  box-shadow:
+    inset 0 1px 0 0 color-mix(in oklab, white 75%, transparent),
+    var(--shadow-card);
+}
+
+@utility glass-dark {
+  background-color: color-mix(in oklab, white 9%, transparent);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  backdrop-filter: blur(16px) saturate(150%);
+  border: 1px solid color-mix(in oklab, white 16%, transparent);
+  box-shadow:
+    inset 0 1px 0 0 color-mix(in oklab, white 20%, transparent),
+    0 12px 40px rgba(0, 0, 0, 0.28);
+}
+
+/* Soft ambient gold glow. A decorative, blurred radial used behind glass on
+   dark sections to give the frost something warm to refract. */
+@utility glow-gold {
+  background: radial-gradient(
+    closest-side,
+    color-mix(in oklab, var(--color-gold) 42%, transparent),
+    transparent
+  );
+}
+
+/* Graceful fallback where backdrop-filter is unsupported: lean opaque so text
+   stays readable rather than washing out. */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .glass {
+    background-color: color-mix(in oklab, white 92%, transparent);
+  }
+  .glass-dark {
+    background-color: color-mix(in oklab, var(--color-charcoal) 82%, transparent);
+  }
+}

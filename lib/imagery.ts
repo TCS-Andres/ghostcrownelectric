@@ -1,48 +1,89 @@
 /*
-  Central map of brand imagery. Editorial, atmospheric trade photography that
-  illustrates a service category. These are not photos of specific Ghost Crown
-  jobs or people, so alt text stays descriptive of the image, never a proof
-  claim. Real job and crew photography replaces or supplements these later
-  (see PLACEHOLDERS.md).
+  Central map of brand imagery. Editorial, atmospheric trade photography for the
+  detail work, and golden-hour location imagery for the cities. Every service,
+  city, and article maps to its own image, so nothing repeats across the site.
+
+  These are category and location illustration, not photos of specific Ghost
+  Crown jobs, people, or trucks. Alt text describes the image, never a proof
+  claim. Real job and crew photography still supplements these (see
+  PLACEHOLDERS.md).
 */
 
-// Service slug to image file (in /public/images). Services in the same family
-// share an image on purpose, so the set reads as one cohesive system.
+// One image per service. No two services share an image.
 const SERVICE_IMAGE: Record<string, string> = {
   "electrical-panel-upgrade": "panel-upgrade",
-  "zinsco-panel-replacement": "old-panel",
+  "zinsco-panel-replacement": "zinsco-panel",
   "federal-pacific-panel-replacement": "old-panel",
   "electrical-service-rebuild": "service-entrance",
   "emergency-electrician": "emergency-night",
-  "emergency-power-restoration": "emergency-night",
-  "meter-socket-replacement": "meter-bank",
+  "emergency-power-restoration": "power-restoration",
+  "meter-socket-replacement": "meter-socket",
   "meter-bank-replacement": "meter-bank",
   "ev-charger-installation": "ev-charger",
-  "electrical-safety-check": "about-craft",
+  "electrical-safety-check": "safety-check",
   "generator-installation": "generator-surge",
-  "whole-home-surge-protection": "generator-surge",
-  "pool-grounding-bonding-inspection": "pool-safety",
-  "pool-electrical-repair": "pool-safety",
-  "pool-gfci-breaker-replacement": "pool-safety",
+  "whole-home-surge-protection": "surge-protection",
+  "pool-grounding-bonding-inspection": "pool-bonding",
+  "pool-electrical-repair": "pool-repair",
+  "pool-gfci-breaker-replacement": "pool-gfci",
   "pool-electrical-service-rebuild": "pool-safety",
 };
 
-// Descriptive alt text per image, written to describe what the photo shows.
+// One golden-hour location image per city.
+const CITY_IMAGE: Record<string, string> = {
+  "north-lauderdale": "city-north-lauderdale",
+  "fort-lauderdale": "city-fort-lauderdale",
+  "lauderhill": "city-lauderhill",
+  "tamarac": "city-tamarac",
+  "sunrise": "city-sunrise",
+  "plantation": "city-plantation",
+  "pompano-beach": "city-pompano-beach",
+  "hollywood": "city-hollywood",
+};
+
+// One hero image per article.
+const POST_IMAGE: Record<string, string> = {
+  "zinsco-federal-pacific-panels-insurance": "blog-panels-insurance",
+  "pool-grounding-and-bonding-explained": "blog-pool-grounding",
+  "what-a-residential-service-rebuild-involves": "blog-service-rebuild",
+};
+
+// Descriptive alt text per image.
 const IMAGE_ALT: Record<string, string> = {
   "hero-electrician": "An electrician installing breakers inside a modern electrical panel",
   "panel-upgrade": "A clean, modern electrical panel with neatly organized breakers",
+  "zinsco-panel": "An aged Zinsco-style electrical panel of the kind insurers flag for replacement",
   "old-panel": "An older electrical panel of the kind insurers often flag for replacement",
   "service-entrance": "The exterior electrical service entrance of a home at dusk",
   "emergency-night": "An electrician working at night by warm task light",
+  "power-restoration": "A hand resetting a main breaker as power is restored",
+  "meter-socket": "A single electrical meter socket on a home exterior wall",
   "meter-bank": "A bank of electrical meter sockets on the exterior of a building",
   "ev-charger": "A modern EV charger mounted on the exterior wall of a home",
-  "pool-safety": "A backyard swimming pool lit softly at dusk",
+  "safety-check": "An open electrical panel being inspected during a safety check",
   "generator-surge": "A whole-home standby generator beside a house",
+  "surge-protection": "A panel-mounted whole-home surge protection device",
+  "pool-bonding": "Pool equipotential bonding, a grounding lug and copper wire on pool equipment",
+  "pool-repair": "A poolside equipment pad with pump, heater, and electrical at dusk",
+  "pool-gfci": "A GFCI breaker and a poolside electrical sub-panel",
+  "pool-safety": "A backyard swimming pool lit softly at dusk",
   "about-craft": "An electrician testing a circuit with a multimeter",
   "cta-texture": "",
+  "city-north-lauderdale": "A North Lauderdale residential neighborhood at golden hour",
+  "city-fort-lauderdale": "A Fort Lauderdale waterfront neighborhood at golden hour",
+  "city-lauderhill": "An established Lauderhill residential community at golden hour",
+  "city-tamarac": "A Tamarac community of homes and palms at golden hour",
+  "city-sunrise": "A Sunrise suburban community at golden hour",
+  "city-plantation": "A leafy Plantation neighborhood at golden hour",
+  "city-pompano-beach": "A Pompano Beach coastal neighborhood at golden hour",
+  "city-hollywood": "A historic Hollywood, Florida neighborhood at golden hour",
+  "blog-panels-insurance": "A close inspection of an aged residential electrical panel",
+  "blog-pool-grounding": "An underwater view of a pool light and a bonded metal handrail",
+  "blog-service-rebuild": "A residential electrical service rebuild in progress",
 };
 
-const FALLBACK = "panel-upgrade";
+const SERVICE_FALLBACK = "panel-upgrade";
+const CITY_FALLBACK = "city-north-lauderdale";
 
 export function imagePath(name: string): string {
   return `/images/${name}.jpg`;
@@ -52,8 +93,20 @@ export function imageAlt(name: string): string {
   return IMAGE_ALT[name] ?? "";
 }
 
-// Resolve the image for a service slug into a ready {src, alt} pair.
-export function serviceImage(slug: string): { src: string; alt: string } {
-  const name = SERVICE_IMAGE[slug] ?? FALLBACK;
+function resolve(name: string): { src: string; alt: string } {
   return { src: imagePath(name), alt: imageAlt(name) };
+}
+
+export function serviceImage(slug: string): { src: string; alt: string } {
+  return resolve(SERVICE_IMAGE[slug] ?? SERVICE_FALLBACK);
+}
+
+export function cityImage(slug: string): { src: string; alt: string } {
+  return resolve(CITY_IMAGE[slug] ?? CITY_FALLBACK);
+}
+
+// Articles without a mapped image return null so the template can skip cleanly.
+export function postImage(slug: string): { src: string; alt: string } | null {
+  const name = POST_IMAGE[slug];
+  return name ? resolve(name) : null;
 }

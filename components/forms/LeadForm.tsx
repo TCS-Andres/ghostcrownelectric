@@ -122,7 +122,7 @@ export function LeadForm({
     return (
       <div
         className={cn(
-          "rounded-xl border border-border bg-surface p-6 shadow-[var(--shadow-card)]",
+          "glass rounded-2xl p-6",
           className,
         )}
         role="status"
@@ -153,7 +153,7 @@ export function LeadForm({
     <form
       onSubmit={handleSubmit}
       className={cn(
-        "rounded-xl border border-border bg-surface p-6 shadow-[var(--shadow-card)] sm:p-7",
+        "glass rounded-2xl p-6 sm:p-7",
         className,
       )}
       noValidate

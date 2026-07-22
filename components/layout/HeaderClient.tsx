@@ -71,7 +71,7 @@ export function HeaderClient({
   return (
     <header
       ref={navRef}
-      className="sticky top-0 z-50 border-b border-border bg-surface/95 backdrop-blur"
+      className="sticky top-0 z-50 border-b border-border/70 bg-surface/70 backdrop-blur-xl"
     >
       <div className="container-page flex h-16 items-center justify-between gap-4">
         {/* Brand */}
@@ -153,7 +153,7 @@ export function HeaderClient({
       {mobileOpen ? (
         <div
           id="mobile-menu"
-          className="border-t border-border bg-surface lg:hidden"
+          className="border-t border-border bg-surface/95 backdrop-blur-xl lg:hidden"
         >
           <nav
             aria-label="Mobile"
@@ -220,7 +220,7 @@ function Dropdown({
         <Chevron open={isOpen} />
       </button>
       {isOpen ? (
-        <div className="absolute left-0 top-full z-50 mt-1 min-w-60 rounded-lg border border-border bg-surface p-2 shadow-[var(--shadow-lift)]">
+        <div className="absolute left-0 top-full z-50 mt-1 min-w-60 rounded-xl border border-border bg-surface/85 p-2 shadow-[var(--shadow-lift)] backdrop-blur-xl">
           <ul className="flex flex-col">
             {items.map((item) => (
               <li key={item.href}>

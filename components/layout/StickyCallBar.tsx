@@ -7,7 +7,7 @@ import { routes } from "@/lib/routes";
 export function StickyCallBar() {
   const business = getBusiness();
   return (
-    <div className="fixed inset-x-0 bottom-0 z-40 border-t border-border-dark bg-surface-dark lg:hidden">
+    <div className="fixed inset-x-0 bottom-0 z-40 border-t border-white/10 bg-surface-dark/80 backdrop-blur-xl lg:hidden">
       <div className="grid grid-cols-2">
         <Link
           href={routes.services}

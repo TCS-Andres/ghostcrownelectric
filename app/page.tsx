@@ -117,7 +117,11 @@ export default function HomePage() {
       <JsonLd data={graph(nodes)} />
 
       {/* 1. Hero */}
-      <section className="bg-surface-dark text-ink-on-dark">
+      <section className="relative isolate overflow-hidden bg-surface-dark text-ink-on-dark">
+        <div
+          aria-hidden="true"
+          className="glow-gold pointer-events-none absolute -right-32 -top-24 -z-10 h-[38rem] w-[38rem] opacity-60"
+        />
         <div className="container-page py-16 sm:py-20 lg:py-24">
           <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
             <div className="max-w-2xl">
@@ -152,7 +156,7 @@ export default function HomePage() {
             <ul className="mt-8 flex flex-wrap gap-2.5">
               {heroChips.map((chip) => (
                 <li key={chip}>
-                  <span className="inline-flex items-center gap-2 rounded-full border border-charcoal-600 px-3 py-1.5 text-sm text-ink-on-dark">
+                  <span className="glass-dark inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 text-sm text-ink-on-dark">
                     <span
                       aria-hidden="true"
                       className="h-1.5 w-1.5 shrink-0 rounded-full bg-accent"
@@ -171,7 +175,38 @@ export default function HomePage() {
                 priority
                 sizes="(min-width: 1024px) 42vw, 0px"
                 className="aspect-[4/5] rounded-2xl border border-charcoal-600"
-              />
+              >
+                <div className="absolute inset-x-4 bottom-4">
+                  <div className="glass-dark flex items-center gap-3 rounded-xl px-4 py-3">
+                    <span
+                      aria-hidden="true"
+                      className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-accent/90 text-accent-ink"
+                    >
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z" />
+                        <path d="M9 12l2 2 4-4" />
+                      </svg>
+                    </span>
+                    <div>
+                      <p className="text-sm font-semibold text-ink-on-dark">
+                        Licensed and insured
+                      </p>
+                      <p className="text-xs text-ink-muted-on-dark">
+                        Broward County Master Electrician
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </Media>
             </div>
           </div>
         </div>

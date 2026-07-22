@@ -101,7 +101,7 @@ export function ExitIntentPopup() {
 
   return (
     <div
-      className="fixed inset-0 z-[60] flex items-center justify-center bg-charcoal/60 p-4"
+      className="fixed inset-0 z-[60] flex items-center justify-center bg-charcoal/60 p-4 backdrop-blur-sm"
       onClick={close}
     >
       <div
@@ -111,7 +111,7 @@ export function ExitIntentPopup() {
         aria-labelledby="exit-intent-title"
         tabIndex={-1}
         onClick={(event) => event.stopPropagation()}
-        className="relative w-full max-w-md rounded-2xl border border-border bg-surface p-8 shadow-[var(--shadow-lift)] focus:outline-none"
+        className="relative w-full max-w-md rounded-2xl border border-white/50 bg-surface/85 p-8 shadow-[var(--shadow-lift)] backdrop-blur-2xl focus:outline-none"
       >
         <button
           type="button"

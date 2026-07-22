@@ -6,6 +6,7 @@ import { loadAllPosts, loadPost, formatPostDate } from "@/lib/blog";
 import { routes } from "@/lib/routes";
 import { buildMetadata, absoluteUrl } from "@/lib/seo";
 import { firstSentence } from "@/lib/links";
+import { postImage } from "@/lib/imagery";
 import {
   articleNode,
   breadcrumbListNode,
@@ -18,6 +19,7 @@ import type { Crumb } from "@/components/layout/Breadcrumbs";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Card } from "@/components/ui/Card";
+import { Media } from "@/components/ui/Media";
 import { CTABand } from "@/components/ui/CTABand";
 import { JsonLd } from "@/components/seo/JsonLd";
 
@@ -56,6 +58,7 @@ export default async function BlogArticlePage({
   if (!post) notFound();
 
   const business = getBusiness();
+  const heroImage = postImage(slug);
 
   const related: Service[] = post.relatedServices
     .map((serviceSlug) => getService(serviceSlug))
@@ -85,6 +88,15 @@ export default async function BlogArticlePage({
 
       <article className="container-page py-10 sm:py-14">
         <div className="mx-auto max-w-3xl">
+          {heroImage ? (
+            <Media
+              src={heroImage.src}
+              alt={heroImage.alt}
+              priority
+              sizes="(min-width: 768px) 48rem, 100vw"
+              className="mb-8 aspect-[16/9] rounded-2xl border border-border"
+            />
+          ) : null}
           {/* Article header */}
           <header>
             <div className="flex flex-wrap items-center gap-2 text-sm text-ink-muted">

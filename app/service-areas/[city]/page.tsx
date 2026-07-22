@@ -5,6 +5,7 @@ import { getCities, getCity, getServices } from "@/lib/content";
 import { routes } from "@/lib/routes";
 import { buildMetadata, absoluteUrl } from "@/lib/seo";
 import { groupServices } from "@/lib/links";
+import { cityImage } from "@/lib/imagery";
 import {
   breadcrumbListNode,
   cityElectricianNode,
@@ -17,6 +18,7 @@ import type { Crumb } from "@/components/layout/Breadcrumbs";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Card } from "@/components/ui/Card";
+import { Media } from "@/components/ui/Media";
 import { CTABand } from "@/components/ui/CTABand";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { HeroTrust } from "@/components/sections/HeroTrust";
@@ -59,6 +61,8 @@ export default async function CityPage({
   const city = getCity(slug);
   if (!city) notFound();
 
+  const heroImage = cityImage(slug);
+
   // All services, ordered money and pool first, then safety and core.
   const orderedServices = groupServices(getServices()).flatMap(
     (group) => group.services,
@@ -88,16 +92,45 @@ export default async function CityPage({
       </div>
 
       {/* Hero */}
-      <section className="mt-6 bg-surface-dark text-ink-on-dark">
+      <section className="relative isolate mt-6 overflow-hidden bg-surface-dark text-ink-on-dark">
+        <div
+          aria-hidden="true"
+          className="glow-gold pointer-events-none absolute -right-40 top-0 -z-10 h-[34rem] w-[34rem] opacity-50"
+        />
         <div className="container-page py-14 sm:py-20">
-          <div className="max-w-3xl">
-            <h1 className="text-3xl text-ink-on-dark sm:text-4xl md:text-5xl">
-              {city.h1}
-            </h1>
-            <p className="mt-5 text-lg text-ink-muted-on-dark">{city.intro}</p>
+          <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
+            <div>
+              <div className="max-w-2xl">
+                <h1 className="text-3xl text-ink-on-dark sm:text-4xl md:text-5xl">
+                  {city.h1}
+                </h1>
+                <p className="mt-5 text-lg text-ink-muted-on-dark">{city.intro}</p>
+              </div>
+              <HeroTrust className="mt-8" />
+              <CallToActions className="mt-8" />
+            </div>
+            <div className="hidden lg:block">
+              <Media
+                src={heroImage.src}
+                alt={heroImage.alt}
+                priority
+                sizes="(min-width: 1024px) 45vw, 0px"
+                className="aspect-[4/3] rounded-2xl border border-charcoal-600"
+              >
+                <div className="absolute inset-x-4 bottom-4">
+                  <span className="glass-dark inline-flex items-center gap-2 rounded-full px-4 py-2">
+                    <span
+                      aria-hidden="true"
+                      className="h-2 w-2 rounded-full bg-accent"
+                    />
+                    <span className="text-sm font-medium text-ink-on-dark">
+                      Serving {city.name}, day or night
+                    </span>
+                  </span>
+                </div>
+              </Media>
+            </div>
           </div>
-          <HeroTrust className="mt-8" />
-          <CallToActions className="mt-8" />
         </div>
       </section>
 

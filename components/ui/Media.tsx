@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import Image from "next/image";
 import { cn } from "@/lib/cn";
 
@@ -10,6 +11,8 @@ interface MediaProps {
   imageClassName?: string;
   sizes?: string;
   priority?: boolean;
+  /** Optional overlay content (e.g. a floating glass chip) rendered above the image. */
+  children?: ReactNode;
 }
 
 // A framed, cover-fit image. The box controls shape (aspect, rounding); the
@@ -21,6 +24,7 @@ export function Media({
   imageClassName,
   sizes = "100vw",
   priority = false,
+  children,
 }: MediaProps) {
   return (
     <div className={cn("relative overflow-hidden bg-surface-dark-2", className)}>
@@ -32,6 +36,7 @@ export function Media({
         priority={priority}
         className={cn("object-cover", imageClassName)}
       />
+      {children}
     </div>
   );
 }
