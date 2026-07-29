@@ -41,7 +41,7 @@ export function Breadcrumbs({ trail, className }: BreadcrumbsProps) {
                 </span>
               )}
               {!isLast ? (
-                <span aria-hidden="true" className="text-cream-300">
+                <span aria-hidden="true" className="text-mist-300">
                   /
                 </span>
               ) : null}

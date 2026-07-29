@@ -100,7 +100,7 @@ export default async function ServicePage({
       <section className="relative isolate mt-6 overflow-hidden bg-surface-dark text-ink-on-dark">
         <div
           aria-hidden="true"
-          className="glow-gold pointer-events-none absolute -right-40 top-0 -z-10 h-[34rem] w-[34rem] opacity-50"
+          className="glow-ambient pointer-events-none absolute -right-40 top-0 -z-10 h-[34rem] w-[34rem] opacity-50"
         />
         <div className="container-page py-14 sm:py-20">
           <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
@@ -122,7 +122,7 @@ export default async function ServicePage({
                 alt={heroImage.alt}
                 priority
                 sizes="(min-width: 1024px) 45vw, 0px"
-                className="aspect-[4/3] rounded-2xl border border-charcoal-600"
+                className="aspect-[4/3] rounded-2xl border border-navy-600"
               >
                 <div className="absolute inset-x-4 bottom-4">
                   <span className="glass-dark inline-flex items-center gap-2 rounded-full px-4 py-2">

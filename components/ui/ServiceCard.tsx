@@ -29,7 +29,7 @@ export function ServiceCard({ service, titleAs: Title = "h3" }: ServiceCardProps
           className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
         {/* Scrim keeps the caption legible over any image */}
-        <div className="absolute inset-0 bg-gradient-to-t from-charcoal/85 via-charcoal/25 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-navy/85 via-navy/25 to-transparent" />
         {/* Frosted glass caption */}
         <div className="absolute inset-x-3 bottom-3">
           <div className="glass-dark flex items-center justify-between gap-3 rounded-xl px-4 py-3">

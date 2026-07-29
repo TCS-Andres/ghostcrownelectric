@@ -68,7 +68,7 @@ const IMAGE_ALT: Record<string, string> = {
   "pool-gfci": "A GFCI breaker and a poolside electrical sub-panel",
   "pool-safety": "A backyard swimming pool lit softly at dusk",
   "about-craft": "An electrician testing a circuit with a multimeter",
-  "cta-texture": "",
+  "cta-texture-blue": "",
   "city-north-lauderdale": "A North Lauderdale residential neighborhood at golden hour",
   "city-fort-lauderdale": "A Fort Lauderdale waterfront neighborhood at golden hour",
   "city-lauderhill": "An established Lauderhill residential community at golden hour",

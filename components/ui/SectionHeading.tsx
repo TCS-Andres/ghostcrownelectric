@@ -9,7 +9,7 @@ interface SectionHeadingProps {
   /** Heading level for correct document outline. Defaults to h2. */
   as?: "h1" | "h2" | "h3";
   align?: "left" | "center";
-  /** Set true when placed on a charcoal surface so colors invert. */
+  /** Set true when placed on a navy surface so colors invert. */
   onDark?: boolean;
   className?: string;
 }

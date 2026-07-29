@@ -120,7 +120,7 @@ export default function HomePage() {
       <section className="relative isolate overflow-hidden bg-surface-dark text-ink-on-dark">
         <div
           aria-hidden="true"
-          className="glow-gold pointer-events-none absolute -right-32 -top-24 -z-10 h-[38rem] w-[38rem] opacity-60"
+          className="glow-ambient pointer-events-none absolute -right-32 -top-24 -z-10 h-[38rem] w-[38rem] opacity-60"
         />
         <div className="container-page py-16 sm:py-20 lg:py-24">
           <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
@@ -174,7 +174,7 @@ export default function HomePage() {
                 alt="An electrician installing breakers inside a modern electrical panel"
                 priority
                 sizes="(min-width: 1024px) 42vw, 0px"
-                className="aspect-[4/5] rounded-2xl border border-charcoal-600"
+                className="aspect-[4/5] rounded-2xl border border-navy-600"
               >
                 <div className="absolute inset-x-4 bottom-4">
                   <div className="glass-dark flex items-center gap-3 rounded-xl px-4 py-3">
@@ -253,7 +253,7 @@ export default function HomePage() {
         <div className="relative isolate mt-10 overflow-hidden rounded-3xl bg-surface-dark px-5 py-8 sm:px-8 sm:py-10">
           <div
             aria-hidden="true"
-            className="glow-gold pointer-events-none absolute -top-24 left-1/2 -z-10 h-[26rem] w-[44rem] -translate-x-1/2 opacity-40"
+            className="glow-ambient pointer-events-none absolute -top-24 left-1/2 -z-10 h-[26rem] w-[44rem] -translate-x-1/2 opacity-40"
           />
           <dl className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {[
@@ -358,7 +358,7 @@ export default function HomePage() {
           <div className="relative isolate mt-10 overflow-hidden rounded-3xl bg-surface-dark px-5 py-8 sm:px-8 sm:py-10">
             <div
               aria-hidden="true"
-              className="glow-gold pointer-events-none absolute -bottom-24 left-1/2 -z-10 h-[26rem] w-[44rem] -translate-x-1/2 opacity-40"
+              className="glow-ambient pointer-events-none absolute -bottom-24 left-1/2 -z-10 h-[26rem] w-[44rem] -translate-x-1/2 opacity-40"
             />
             <ul className="grid grid-cols-1 gap-4 lg:grid-cols-3">
               <li>
@@ -428,7 +428,7 @@ export default function HomePage() {
           />
           <ul className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-2">
             <li>
-              <div className="h-full rounded-xl border border-charcoal-600 bg-surface-dark-2 p-6 sm:p-7">
+              <div className="h-full rounded-xl border border-navy-600 bg-surface-dark-2 p-6 sm:p-7">
                 <h3 className="font-heading text-lg font-semibold text-ink-on-dark">
                   A ten-meter bank, back to life after a vehicle fire
                 </h3>
@@ -442,7 +442,7 @@ export default function HomePage() {
               </div>
             </li>
             <li>
-              <div className="h-full rounded-xl border border-charcoal-600 bg-surface-dark-2 p-6 sm:p-7">
+              <div className="h-full rounded-xl border border-navy-600 bg-surface-dark-2 p-6 sm:p-7">
                 <h3 className="font-heading text-lg font-semibold text-ink-on-dark">
                   A 150-foot pool feeder, and a handshake from the inspector
                 </h3>

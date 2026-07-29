@@ -2,16 +2,17 @@
 
 /*
   Ghost Crown Electric design system.
-  Direction: charcoal plus crown gold. Near black charcoal surfaces, warm crown
-  gold accent, white and warm neutral content surfaces. Premium, trustworthy,
+  Direction: deep navy blue plus crown gold. Navy surfaces, warm crown gold
+  accent, white and cool neutral content surfaces. Premium, trustworthy,
   trade service.
 
   Contrast notes (WCAG AA verified):
-  - Ink #1B1B1F on white:            about 17.2 to 1  (AAA)
-  - Ink muted #52525B on white:      about 7.7 to 1   (AA, AAA for large)
-  - Gold #C9A227 with charcoal ink:  about 7.1 to 1   (AA for all text)
-  - Ink on dark #F5F4F1 on charcoal: about 16 to 1    (AAA)
-  - Muted on dark #A1A1AA on charcoal: about 6.7 to 1 (AA)
+  - Ink #0D1B2E on white:              about 17.3 to 1  (AAA)
+  - Ink muted #4B5F78 on white:        about 6.6 to 1   (AA, AAA for large)
+  - Gold #C9A227 with navy ink:        about 7.1 to 1   (AA for all text)
+  - Ink on dark #EFF4FA on navy:       about 15.6 to 1  (AAA)
+  - Muted on dark #A7B8CE on navy:     about 8.5 to 1   (AAA)
+  - Gold 300 #E0C463 on navy:          about 10.1 to 1  (AAA)
   Gold is used as a surface or accent, never as small text on white
   (gold on white is only about 2.4 to 1 and would fail AA).
 */
@@ -22,37 +23,37 @@
   --font-heading: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
 
   /* Brand palette */
-  --color-charcoal: #1b1b1f;
-  --color-charcoal-800: #242429;
-  --color-charcoal-700: #34343b;
-  --color-charcoal-600: #4a4a52;
+  --color-navy: #0d1b2e;
+  --color-navy-800: #152840;
+  --color-navy-700: #21395a;
+  --color-navy-600: #35527d;
 
   --color-gold: #c9a227;
   --color-gold-600: #b8901e;
   --color-gold-300: #e0c463;
   --color-gold-100: #f3e9c7;
 
-  --color-cream: #f7f6f3;
-  --color-cream-200: #e7e4dd;
-  --color-cream-300: #d8d4cb;
+  --color-mist: #f3f6fa;
+  --color-mist-200: #dfe7f1;
+  --color-mist-300: #c9d5e4;
 
   /* Semantic tokens (generate utilities such as bg-surface, text-ink, bg-accent) */
   --color-surface: #ffffff;
-  --color-surface-2: #f7f6f3;
-  --color-surface-dark: #1b1b1f;
-  --color-surface-dark-2: #242429;
+  --color-surface-2: #f3f6fa;
+  --color-surface-dark: #0d1b2e;
+  --color-surface-dark-2: #152840;
 
-  --color-ink: #1b1b1f;
-  --color-ink-muted: #52525b;
-  --color-ink-on-dark: #f5f4f1;
-  --color-ink-muted-on-dark: #a1a1aa;
+  --color-ink: #0d1b2e;
+  --color-ink-muted: #4b5f78;
+  --color-ink-on-dark: #eff4fa;
+  --color-ink-muted-on-dark: #a7b8ce;
 
   --color-accent: #c9a227;
   --color-accent-hover: #b8901e;
-  --color-accent-ink: #1b1b1f;
+  --color-accent-ink: #0d1b2e;
 
-  --color-border: #e7e4dd;
-  --color-border-dark: #34343b;
+  --color-border: #dfe7f1;
+  --color-border-dark: #21395a;
 
   /* Radius scale */
   --radius-sm: 0.25rem;
@@ -65,9 +66,9 @@
   --spacing-section: 5rem;
   --spacing-section-lg: 7rem;
 
-  /* Shadows tuned for warm neutrals rather than cool grey */
-  --shadow-card: 0 1px 2px rgba(27, 27, 31, 0.04), 0 8px 24px rgba(27, 27, 31, 0.06);
-  --shadow-lift: 0 4px 12px rgba(27, 27, 31, 0.08), 0 16px 40px rgba(27, 27, 31, 0.1);
+  /* Shadows tinted with the navy base rather than neutral grey */
+  --shadow-card: 0 1px 2px rgba(13, 27, 46, 0.05), 0 8px 24px rgba(13, 27, 46, 0.08);
+  --shadow-lift: 0 4px 12px rgba(13, 27, 46, 0.1), 0 16px 40px rgba(13, 27, 46, 0.14);
 }
 
 /* Base element defaults */
@@ -158,12 +159,14 @@ h6 {
     0 12px 40px rgba(0, 0, 0, 0.28);
 }
 
-/* Soft ambient gold glow. A decorative, blurred radial used behind glass on
-   dark sections to give the frost something warm to refract. */
-@utility glow-gold {
+/* Soft ambient glow. A decorative, blurred radial used behind glass on dark
+   sections so the frost has something to refract. Azure rather than gold: the
+   large soft areas set the overall temperature of the page, and gold at this
+   size reads brown against navy. Gold stays for crisp accents. */
+@utility glow-ambient {
   background: radial-gradient(
     closest-side,
-    color-mix(in oklab, var(--color-gold) 42%, transparent),
+    color-mix(in oklab, #3f83e8 48%, transparent),
     transparent
   );
 }
@@ -175,6 +178,6 @@ h6 {
     background-color: color-mix(in oklab, white 92%, transparent);
   }
   .glass-dark {
-    background-color: color-mix(in oklab, var(--color-charcoal) 82%, transparent);
+    background-color: color-mix(in oklab, var(--color-navy) 82%, transparent);
   }
 }

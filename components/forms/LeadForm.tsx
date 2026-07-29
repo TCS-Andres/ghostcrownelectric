@@ -169,7 +169,7 @@ export function LeadForm({
                 className={cn(
                   "flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-sm font-semibold",
                   state === "current" && "bg-accent text-accent-ink",
-                  state === "done" && "bg-charcoal text-ink-on-dark",
+                  state === "done" && "bg-navy text-ink-on-dark",
                   state === "upcoming" && "bg-surface-2 text-ink-muted",
                 )}
                 aria-current={state === "current" ? "step" : undefined}
@@ -219,7 +219,7 @@ export function LeadForm({
               id={`${baseId}-service`}
               value={service}
               onChange={(e) => setService(e.target.value)}
-              className="h-11 rounded-md border border-cream-300 bg-surface px-3 text-ink"
+              className="h-11 rounded-md border border-mist-300 bg-surface px-3 text-ink"
             >
               <option value="">Choose the closest match</option>
               {serviceOptions.map((option) => (
@@ -249,7 +249,7 @@ export function LeadForm({
               id={`${baseId}-city`}
               value={city}
               onChange={(e) => setCity(e.target.value)}
-              className="h-11 rounded-md border border-cream-300 bg-surface px-3 text-ink"
+              className="h-11 rounded-md border border-mist-300 bg-surface px-3 text-ink"
             >
               <option value="">Choose your area</option>
               {cityOptions.map((option) => (
@@ -272,7 +272,7 @@ export function LeadForm({
               value={locationDetail}
               onChange={(e) => setLocationDetail(e.target.value)}
               autoComplete="address-level2"
-              className="h-11 rounded-md border border-cream-300 bg-surface px-3 text-ink"
+              className="h-11 rounded-md border border-mist-300 bg-surface px-3 text-ink"
               placeholder="Helps us plan the trip"
             />
           </div>
@@ -299,7 +299,7 @@ export function LeadForm({
               value={name}
               onChange={(e) => setName(e.target.value)}
               autoComplete="name"
-              className="h-11 rounded-md border border-cream-300 bg-surface px-3 text-ink"
+              className="h-11 rounded-md border border-mist-300 bg-surface px-3 text-ink"
             />
           </div>
           <div className="flex flex-col gap-1.5">
@@ -316,7 +316,7 @@ export function LeadForm({
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
               autoComplete="tel"
-              className="h-11 rounded-md border border-cream-300 bg-surface px-3 text-ink"
+              className="h-11 rounded-md border border-mist-300 bg-surface px-3 text-ink"
             />
           </div>
           <div className="flex flex-col gap-1.5">
@@ -332,7 +332,7 @@ export function LeadForm({
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               autoComplete="email"
-              className="h-11 rounded-md border border-cream-300 bg-surface px-3 text-ink"
+              className="h-11 rounded-md border border-mist-300 bg-surface px-3 text-ink"
             />
           </div>
           <div className="flex flex-col gap-1.5">
@@ -347,7 +347,7 @@ export function LeadForm({
               rows={4}
               value={description}
               onChange={(e) => setDescription(e.target.value)}
-              className="rounded-md border border-cream-300 bg-surface px-3 py-2 text-ink"
+              className="rounded-md border border-mist-300 bg-surface px-3 py-2 text-ink"
               placeholder="What is happening, when it started, anything you have noticed"
             />
           </div>
@@ -357,7 +357,7 @@ export function LeadForm({
               type="checkbox"
               checked={consent}
               onChange={(e) => setConsent(e.target.checked)}
-              className="mt-1 h-5 w-5 shrink-0 rounded border-cream-300 accent-accent"
+              className="mt-1 h-5 w-5 shrink-0 rounded border-mist-300 accent-accent"
             />
             <label htmlFor={`${baseId}-consent`} className="text-sm text-ink-muted">
               I agree to be contacted by call or text about this request. Message

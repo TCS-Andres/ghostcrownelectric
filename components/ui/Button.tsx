@@ -11,15 +11,15 @@ const base =
   "disabled:cursor-not-allowed disabled:opacity-60";
 
 const variants: Record<Variant, string> = {
-  // Crown gold with charcoal ink: about 7.1 to 1 contrast, passes AA.
+  // Crown gold with navy ink: about 7.1 to 1 contrast, passes AA.
   primary: "bg-accent text-accent-ink hover:bg-accent-hover",
   // Charcoal surface with warm off-white text.
-  secondary: "bg-charcoal text-ink-on-dark hover:bg-charcoal-800",
+  secondary: "bg-navy text-ink-on-dark hover:bg-navy-800",
   // Calm outline for secondary actions on light surfaces.
-  outline: "border border-cream-300 text-ink hover:bg-surface-2",
-  // Outline for use on charcoal surfaces.
+  outline: "border border-mist-300 text-ink hover:bg-surface-2",
+  // Outline for use on navy surfaces.
   outlineOnDark:
-    "border border-charcoal-600 text-ink-on-dark hover:bg-charcoal-800",
+    "border border-navy-600 text-ink-on-dark hover:bg-navy-800",
   ghost: "text-ink hover:bg-surface-2",
 };
 

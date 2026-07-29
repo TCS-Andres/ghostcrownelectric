@@ -13,7 +13,7 @@ function Chip({ children, onDark }: { children: React.ReactNode; onDark: boolean
       className={cn(
         "inline-flex items-center gap-2 rounded-full border px-3 py-1.5 text-sm",
         onDark
-          ? "border-charcoal-600 text-ink-on-dark"
+          ? "border-navy-600 text-ink-on-dark"
           : "border-border text-ink",
       )}
     >

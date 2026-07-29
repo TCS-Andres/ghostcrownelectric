@@ -28,7 +28,7 @@ export function CTABand({
     >
       <div aria-hidden="true" className="absolute inset-0 -z-10">
         <Image
-          src="/images/cta-texture.jpg"
+          src="/images/cta-texture-blue.jpg"
           alt=""
           fill
           sizes="100vw"
