@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { getServices } from "@/lib/content";
 import { routes } from "@/lib/routes";
 import { buildMetadata, absoluteUrl } from "@/lib/seo";
-import { groupServices } from "@/lib/links";
+import { categorizeServices } from "@/lib/categories";
 import {
   breadcrumbListNode,
   electricianNode,
@@ -30,7 +30,7 @@ export function generateMetadata(): Metadata {
 
 export default function ServicesIndexPage() {
   const services = getServices();
-  const groups = groupServices(services);
+  const { categories, uncategorized } = categorizeServices(services);
 
   const trail: Crumb[] = [
     { label: "Home", href: routes.home },
@@ -65,16 +65,20 @@ export default function ServicesIndexPage() {
           </p>
         ) : (
           <div className="mt-12 flex flex-col gap-14">
-            {groups.map((group) => (
-              <section key={group.tier}>
+            {categories.map((category) => (
+              <section
+                key={category.id}
+                id={category.id}
+                className="scroll-mt-28"
+              >
                 <SectionHeading
                   as="h2"
-                  title={group.label}
-                  description={group.blurb}
+                  title={category.label}
+                  description={category.blurb}
                   className="mb-6"
                 />
                 <ul className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-                  {group.services.map((service) => (
+                  {category.services.map((service) => (
                     <li key={service.slug}>
                       <ServiceCard service={service} titleAs="h3" />
                     </li>
@@ -82,6 +86,23 @@ export default function ServicesIndexPage() {
                 </ul>
               </section>
             ))}
+            {uncategorized.length > 0 ? (
+              <section id="more-services" className="scroll-mt-28">
+                <SectionHeading
+                  as="h2"
+                  title="More electrical work"
+                  description="Other services handled by our in-house crew."
+                  className="mb-6"
+                />
+                <ul className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                  {uncategorized.map((service) => (
+                    <li key={service.slug}>
+                      <ServiceCard service={service} titleAs="h3" />
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            ) : null}
           </div>
         )}
       </div>

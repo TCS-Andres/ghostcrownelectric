@@ -80,6 +80,14 @@ const IMAGE_ALT: Record<string, string> = {
   "blog-panels-insurance": "A close inspection of an aged residential electrical panel",
   "blog-pool-grounding": "An underwater view of a pool light and a bonded metal handrail",
   "blog-service-rebuild": "A residential electrical service rebuild in progress",
+  "damean-panel": "A Ghost Crown Electric electrician testing a residential electrical panel",
+  "damean-meter": "A Ghost Crown Electric electrician inspecting a building's meter bank",
+  "damean-rooftop": "A Ghost Crown Electric electrician servicing a rooftop electrical disconnect",
+  "damean-pool": "A Ghost Crown Electric electrician correcting pool bonding and grounding",
+  "damean-ev": "A Ghost Crown Electric electrician installing a home EV charger",
+  "damean-consult": "A Ghost Crown Electric electrician meeting a homeowner at the door",
+  "damean-switchgear": "A Ghost Crown Electric electrician testing commercial switchgear",
+  "damean-cabletray": "A Ghost Crown Electric electrician running cable in a commercial ceiling",
 };
 
 const SERVICE_FALLBACK = "panel-upgrade";

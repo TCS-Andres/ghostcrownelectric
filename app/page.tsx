@@ -1,15 +1,13 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
-import {
-  getBusiness,
-  getServices,
-  type Service,
-} from "@/lib/content";
+import { getBusiness, getServices, getPosts } from "@/lib/content";
 import { routes } from "@/lib/routes";
 import { buildMetadata, absoluteUrl } from "@/lib/seo";
-import { cityLinks, groupServices } from "@/lib/links";
+import { cityLinks } from "@/lib/links";
+import { categorizeServices } from "@/lib/categories";
+import { postImage } from "@/lib/imagery";
 import { formatPostDate } from "@/lib/blog";
-import { getPosts } from "@/lib/content";
 import {
   electricianNode,
   faqPageNode,
@@ -19,8 +17,8 @@ import {
 } from "@/lib/schema";
 import type { Faq } from "@/lib/content";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { Card } from "@/components/ui/Card";
-import { ServiceCard } from "@/components/ui/ServiceCard";
+import { Media } from "@/components/ui/Media";
+import { CategoryCard } from "@/components/ui/CategoryCard";
 import { CTABand } from "@/components/ui/CTABand";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { CallToActions } from "@/components/sections/CallToActions";
@@ -66,18 +64,23 @@ const HOME_FAQS: Faq[] = [
   },
 ];
 
-const SERVED_LANES: { title: string; body: string }[] = [
+// The reasons to choose Ghost Crown, shown beside a photo of the work.
+const WHY_FEATURES: { title: string; body: string }[] = [
   {
-    title: "Property managers",
-    body: "You need someone who picks up, prices it so an owner will sign off, and gets it inspected without drama. We give you licensed accountability, honest numbers, and one point of contact who has already met your inspector.",
+    title: "Licensed and certified",
+    body: "Florida Certified Electrical Contractor and Broward County Master Electrician, in a market full of unlicensed labor.",
   },
   {
-    title: "Homeowners",
-    body: "We treat your home the way we would treat family. We explain what is wrong in plain language, what it takes to fix, and what it costs, then we do it cleanly. No fear, no upsell, just peace of mind and a home that is safe.",
+    title: "One honest price",
+    body: "We forecast the job, quote it once, and never change the number mid job. No surprises when the work is done.",
   },
   {
-    title: "General contractors",
-    body: "Sub the electrical to a crew that will not cost you a callback. Licensed execution, permits pulled correctly, and inspections that pass the first time. We stay in our lane so you can stay on schedule.",
+    title: "Day or night",
+    body: "Power does not wait for business hours. We answer the phone and show up when we say we will.",
+  },
+  {
+    title: "A documented record",
+    body: "286 permitted projects on public record, ranked in the top tier of Florida contractors by permit quality.",
   },
 ];
 
@@ -92,9 +95,7 @@ export function generateMetadata(): Metadata {
 export default function HomePage() {
   const business = getBusiness();
   const services = getServices();
-  const featuredGroups = groupServices(services).filter(
-    (group) => group.tier === "money" || group.tier === "pool",
-  );
+  const { categories } = categorizeServices(services);
   const cities = cityLinks();
   const posts = getPosts().slice(0, 3);
   const pageUrl = absoluteUrl(routes.home);
@@ -105,73 +106,80 @@ export default function HomePage() {
     faqPageNode(HOME_FAQS, pageUrl),
   ];
 
-  const heroChips = [
+  const trustItems = [
     ...business.licenses.map((license) => license.label),
     `${business.stats.permittedProjects} permitted projects`,
-    "Day or night",
+    "Available day or night",
   ];
 
   return (
     <>
       <JsonLd data={graph(nodes)} />
 
-      {/* 1. Hero */}
+      {/* 1. Hero with ambient video background */}
       <section className="relative isolate overflow-hidden bg-surface-dark text-ink-on-dark">
+        <div aria-hidden="true" className="absolute inset-0 -z-20">
+          <Image
+            src="/images/hero-video-poster.jpg"
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+          />
+          <video
+            className="hero-video absolute inset-0 h-full w-full object-cover"
+            autoPlay
+            muted
+            loop
+            playsInline
+            poster="/images/hero-video-poster.jpg"
+          >
+            <source src="/videos/gce-ambient-web.mp4" type="video/mp4" />
+          </video>
+        </div>
+        {/* Dark on the left for legibility, lighter on the right so the video shows */}
         <div
           aria-hidden="true"
-          className="glow-ambient pointer-events-none absolute -right-32 -top-24 -z-10 h-[38rem] w-[38rem] opacity-60"
+          className="absolute inset-0 -z-10 bg-gradient-to-r from-navy via-navy/85 to-navy/40"
         />
+
         <div className="container-page py-16 sm:py-20 lg:py-24">
           <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
             <div className="max-w-2xl">
-            <ul className="flex flex-wrap gap-2 text-sm text-ink-muted-on-dark">
-              {business.licenses.map((license) => (
-                <li
-                  key={license.label}
-                  className="inline-flex items-center gap-2"
-                >
-                  <span
-                    aria-hidden="true"
-                    className="h-1.5 w-1.5 rounded-full bg-accent-bright"
-                  />
-                  {license.label}
-                </li>
-              ))}
-            </ul>
-
-            <h1 className="mt-5 text-4xl text-ink-on-dark sm:text-5xl lg:text-6xl">
-              Electrician in Broward County,{" "}
-              <span className="text-accent-bright">on call day or night.</span>
-            </h1>
-
-            <p className="mt-5 max-w-2xl text-lg text-ink-muted-on-dark">
-              Licensed, owner led, and calm under pressure. Damean takes your
-              call, prices the job himself, and meets the inspector on site.
-              From a panel that keeps tripping to a house with no power, we show
-              up when we say we will.
-            </p>
-
-            <CallToActions className="mt-8" />
-
-            <ul className="mt-8 flex flex-wrap gap-2.5">
-              {heroChips.map((chip) => (
-                <li key={chip}>
-                  <span className="glass-dark inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 text-sm text-ink-on-dark">
+              <ul className="flex flex-wrap gap-2 text-sm text-ink-muted-on-dark">
+                {business.licenses.map((license) => (
+                  <li key={license.label} className="inline-flex items-center gap-2">
                     <span
                       aria-hidden="true"
-                      className="h-1.5 w-1.5 shrink-0 rounded-full bg-accent-bright"
+                      className="h-1.5 w-1.5 rounded-full bg-accent-bright"
                     />
-                    {chip}
-                  </span>
-                </li>
-              ))}
-            </ul>
+                    {license.label}
+                  </li>
+                ))}
+              </ul>
+
+              <h1 className="mt-5 text-4xl text-ink-on-dark sm:text-5xl lg:text-6xl">
+                Electrician in Broward County,{" "}
+                <span className="text-accent-bright">on call day or night.</span>
+              </h1>
+
+              <p className="mt-5 max-w-2xl text-lg text-ink-muted-on-dark">
+                Licensed, owner led, and calm under pressure. Damean takes your
+                call, prices the job himself, and meets the inspector on site.
+                From a panel that keeps tripping to a house with no power, we show
+                up when we say we will.
+              </p>
+
+              <CallToActions className="mt-8" />
             </div>
 
             {/* Request-service form, front and center in the hero */}
             <div id="request-service" className="scroll-mt-24">
               <LeadForm
-                services={services.map((service) => service.shortName || service.name)}
+                services={services.map(
+                  (service) => service.shortName || service.name,
+                )}
                 cities={cities}
                 phoneDisplay={business.phoneDisplay}
                 phoneTel={business.phoneTel}
@@ -193,61 +201,34 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 3. Documented record trust block */}
-      <section className="container-page py-16 sm:py-20">
-        <SectionHeading
-          as="h2"
-          eyebrow="On the record"
-          title="A track record you can look up, not just take our word for."
-          description="Most of our work comes from referrals, but the proof is public. Here is what the record shows."
-        />
-        <div className="relative isolate mt-10 overflow-hidden rounded-3xl bg-surface-dark px-5 py-8 sm:px-8 sm:py-10">
-          <div
-            aria-hidden="true"
-            className="glow-ambient pointer-events-none absolute -top-24 left-1/2 -z-10 h-[26rem] w-[44rem] -translate-x-1/2 opacity-40"
-          />
-          <dl className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {[
-              {
-                value: String(business.stats.permittedProjects),
-                label: "Permitted projects on public record",
-              },
-              {
-                value: "Top tier",
-                label: "Of Florida contractors by permit quality",
-              },
-              {
-                value: `${business.stats.yearsActive} years`,
-                label: "Actively in business",
-              },
-              {
-                value: "Owner led",
-                label: "From the first call to the final inspection",
-              },
-            ].map((stat) => (
-              <div
-                key={stat.label}
-                className="glass-dark flex flex-col gap-2 rounded-2xl p-6"
-              >
-                <dt className="font-heading text-3xl font-bold text-cyan-300">
-                  {stat.value}
-                </dt>
-                <dd className="text-sm text-ink-muted-on-dark">{stat.label}</dd>
-              </div>
+      {/* 2. Trust bar */}
+      <section className="border-b border-border bg-surface">
+        <div className="container-page">
+          <ul className="grid grid-cols-2 gap-x-6 gap-y-4 py-6 sm:grid-cols-4">
+            {trustItems.map((item) => (
+              <li key={item} className="flex items-center gap-2.5">
+                <span
+                  aria-hidden="true"
+                  className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-accent/10 text-accent"
+                >
+                  <CheckIcon />
+                </span>
+                <span className="text-sm font-semibold text-ink">{item}</span>
+              </li>
             ))}
-          </dl>
+          </ul>
         </div>
       </section>
 
-      {/* 4. Services grid: money and pool */}
+      {/* 3. Services by category */}
       <section className="bg-surface-2">
         <div className="container-page py-16 sm:py-20">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <SectionHeading
               as="h2"
               eyebrow="What we do"
-              title="The work carriers, inspectors, and owners ask about most"
-              description="Panels, meters, and service rebuilds, plus the pool electrical that keeps the water and everyone in it safe."
+              title="Electrical work, sorted so you can find it fast"
+              description="From panels and meters to pool electrical and backup power, this is the work we are called for most. Pick a category, or see the full list."
             />
             <Link
               href={routes.services}
@@ -257,47 +238,55 @@ export default function HomePage() {
             </Link>
           </div>
 
-          <div className="mt-12 flex flex-col gap-12">
-            {featuredGroups.map((group) => (
-              <div key={group.tier}>
-                <h3 className="font-heading text-xl font-semibold text-ink">
-                  {group.label}
-                </h3>
-                <ul className="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-                  {group.services.map((service: Service) => (
-                    <li key={service.slug}>
-                      <ServiceCard service={service} titleAs="h4" />
-                    </li>
-                  ))}
-                </ul>
-              </div>
+          <ul className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {categories.map((category) => (
+              <li key={category.id}>
+                <CategoryCard category={category} titleAs="h3" />
+              </li>
             ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* 4. Why Ghost Crown */}
+      <section className="container-page py-16 sm:py-20">
+        <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
+          <Media
+            src="/images/damean-switchgear.jpg"
+            alt="A Ghost Crown Electric electrician testing commercial switchgear"
+            sizes="(min-width: 1024px) 45vw, 100vw"
+            className="aspect-square rounded-2xl border border-border shadow-[var(--shadow-card)]"
+          />
+          <div>
+            <SectionHeading
+              as="h2"
+              eyebrow="Why Ghost Crown"
+              title="The licensed hand you want in your panel"
+              description="You cannot see your electrical system, so you are trusting the person who works on it. Here is why property managers and homeowners keep calling us back."
+            />
+            <ul className="mt-8 flex flex-col gap-5">
+              {WHY_FEATURES.map((feature) => (
+                <li key={feature.title} className="flex gap-3.5">
+                  <span
+                    aria-hidden="true"
+                    className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-accent/10 text-accent"
+                  >
+                    <CheckIcon />
+                  </span>
+                  <div>
+                    <h3 className="font-heading text-base font-semibold text-ink">
+                      {feature.title}
+                    </h3>
+                    <p className="mt-1 text-ink-muted">{feature.body}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
 
-      {/* 5. Who we serve */}
-      <section className="container-page py-16 sm:py-20">
-        <SectionHeading
-          as="h2"
-          eyebrow="Who we serve"
-          title="Three kinds of people call us, and we speak to each plainly."
-        />
-        <ul className="mt-10 grid grid-cols-1 gap-5 lg:grid-cols-3">
-          {SERVED_LANES.map((lane) => (
-            <li key={lane.title}>
-              <Card className="flex h-full flex-col">
-                <h3 className="font-heading text-lg font-semibold text-ink">
-                  {lane.title}
-                </h3>
-                <p className="mt-2 text-ink-muted">{lane.body}</p>
-              </Card>
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      {/* 6. Straight pricing */}
+      {/* 5. Straight pricing */}
       <section className="bg-surface-2">
         <div className="container-page py-16 sm:py-20">
           <SectionHeading
@@ -368,7 +357,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 7. Case proof */}
+      {/* 6. Proof from the field */}
       <section className="bg-surface-dark text-ink-on-dark">
         <div className="container-page py-16 sm:py-20">
           <SectionHeading
@@ -377,36 +366,66 @@ export default function HomePage() {
             eyebrow="From the field"
             title="Two jobs that tell you how we work"
           />
-          <ul className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-2">
-            <li>
-              <div className="h-full rounded-xl border border-navy-600 bg-surface-dark-2 p-6 sm:p-7">
-                <h3 className="font-heading text-lg font-semibold text-ink-on-dark">
-                  A ten-meter bank, back to life after a vehicle fire
-                </h3>
-                <p className="mt-3 text-ink-muted-on-dark">
-                  A vehicle fire took out a ten-meter meter bank and left the
-                  whole building dark. Tenants had been without power for a week.
-                  We got in, rebuilt the electrical in a week, and the building
-                  was back online within two weeks of the fire. That is the kind
-                  of situation you want handled by someone who has done it before.
-                </p>
-              </div>
-            </li>
-            <li>
-              <div className="h-full rounded-xl border border-navy-600 bg-surface-dark-2 p-6 sm:p-7">
-                <h3 className="font-heading text-lg font-semibold text-ink-on-dark">
-                  A 150-foot pool feeder, and a handshake from the inspector
-                </h3>
-                <p className="mt-3 text-ink-muted-on-dark">
-                  We ran a 150-foot pool feeder rewire and did it to the letter.
-                  When the inspector came out, he looked it over and shook
-                  Damean's hand. Pool electrical is unforgiving work, and getting
-                  the grounding and bonding right is how you protect the water
-                  and everyone in it.
-                </p>
-              </div>
-            </li>
-          </ul>
+          <div className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-[0.85fr_1.15fr] lg:gap-10">
+            <Media
+              src="/images/damean-cabletray.jpg"
+              alt="A Ghost Crown Electric electrician running cable in a commercial ceiling"
+              sizes="(min-width: 1024px) 35vw, 100vw"
+              className="aspect-[4/3] rounded-2xl border border-navy-600 lg:aspect-auto lg:h-full"
+            />
+            <ul className="grid grid-cols-1 gap-6">
+              <li>
+                <div className="h-full rounded-2xl border border-navy-600 bg-surface-dark-2 p-6 sm:p-7">
+                  <h3 className="font-heading text-lg font-semibold text-ink-on-dark">
+                    A ten-meter bank, back to life after a vehicle fire
+                  </h3>
+                  <p className="mt-3 text-ink-muted-on-dark">
+                    A vehicle fire took out a ten-meter meter bank and left the
+                    whole building dark. Tenants had been without power for a week.
+                    We got in, rebuilt the electrical in a week, and the building
+                    was back online within two weeks of the fire. That is the kind
+                    of situation you want handled by someone who has done it before.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div className="h-full rounded-2xl border border-navy-600 bg-surface-dark-2 p-6 sm:p-7">
+                  <h3 className="font-heading text-lg font-semibold text-ink-on-dark">
+                    A 150-foot pool feeder, and a handshake from the inspector
+                  </h3>
+                  <p className="mt-3 text-ink-muted-on-dark">
+                    We ran a 150-foot pool feeder rewire and did it to the letter.
+                    When the inspector came out, he looked it over and shook
+                    Damean's hand. Pool electrical is unforgiving work, and getting
+                    the grounding and bonding right is how you protect the water
+                    and everyone in it.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* 7. Emergency strip */}
+      <section className="bg-gradient-to-r from-cyan-600 to-cyan text-accent-bright-ink">
+        <div className="container-page flex flex-col items-start gap-5 py-10 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <h2 className="font-heading text-2xl font-bold sm:text-3xl">
+              Power out, or something that does not feel safe?
+            </h2>
+            <p className="mt-1.5 font-medium text-accent-bright-ink/80">
+              Call day or night. We will talk it through right away and head your
+              way.
+            </p>
+          </div>
+          <a
+            href={`tel:${business.phoneTel}`}
+            className="inline-flex shrink-0 items-center gap-2 rounded-md bg-navy px-6 py-3.5 font-heading font-semibold text-ink-on-dark transition hover:bg-navy-800"
+          >
+            <PhoneIcon />
+            Call {business.phoneDisplay}
+          </a>
         </div>
       </section>
 
@@ -457,23 +476,49 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 10. Reviews, honest launch state */}
+      {/* 10. The record */}
       <section className="container-page py-16 sm:py-20">
-        <div className="max-w-2xl">
-          <SectionHeading
-            as="h2"
-            eyebrow="Reviews"
-            title="Ten years of referral work, now being written down"
-            description="We built this business almost entirely on referrals, one honest job leading to the next. We are gathering those stories into written reviews now. We would rather show you real ones than inflate a number, so this page will keep growing as they come in."
+        <SectionHeading
+          as="h2"
+          eyebrow="On the record"
+          title="A track record you can look up, not just take our word for."
+          description="Most of our work comes from referrals, but the proof is public. Here is what the record shows."
+        />
+        <div className="relative isolate mt-10 overflow-hidden rounded-3xl bg-surface-dark px-5 py-8 sm:px-8 sm:py-10">
+          <div
+            aria-hidden="true"
+            className="glow-ambient pointer-events-none absolute -top-24 left-1/2 -z-10 h-[26rem] w-[44rem] -translate-x-1/2 opacity-40"
           />
-          <p className="mt-8">
-            <Link
-              href={routes.reviews}
-              className="text-sm font-semibold text-accent hover:text-accent-hover"
-            >
-              See our reviews
-            </Link>
-          </p>
+          <dl className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              {
+                value: String(business.stats.permittedProjects),
+                label: "Permitted projects on public record",
+              },
+              {
+                value: "Top tier",
+                label: "Of Florida contractors by permit quality",
+              },
+              {
+                value: `${business.stats.yearsActive} years`,
+                label: "Actively in business",
+              },
+              {
+                value: "Owner led",
+                label: "From the first call to the final inspection",
+              },
+            ].map((stat) => (
+              <div
+                key={stat.label}
+                className="glass-dark flex flex-col gap-2 rounded-2xl p-6"
+              >
+                <dt className="font-heading text-3xl font-bold text-cyan-300">
+                  {stat.value}
+                </dt>
+                <dd className="text-sm text-ink-muted-on-dark">{stat.label}</dd>
+              </div>
+            ))}
+          </dl>
         </div>
       </section>
 
@@ -496,39 +541,54 @@ export default function HomePage() {
               </Link>
             </div>
             <ul className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-3">
-              {posts.map((post) => (
-                <li key={post.slug}>
-                  <Link href={routes.post(post.slug)} className="group block h-full">
-                    <Card interactive as="article" className="flex h-full flex-col bg-surface">
-                      <div className="flex items-center gap-2 text-xs text-ink-muted">
-                        <span className="font-semibold uppercase tracking-[0.1em] text-accent">
-                          {business.name}
-                        </span>
-                        {post.date ? (
-                          <>
-                            <span aria-hidden="true">/</span>
-                            <time dateTime={post.date}>
-                              {formatPostDate(post.date)}
-                            </time>
-                          </>
-                        ) : null}
-                      </div>
-                      <h3 className="mt-3 font-heading text-lg font-semibold text-ink group-hover:text-accent-hover">
-                        {post.title ?? post.slug}
-                      </h3>
-                      {typeof post.description === "string" &&
-                      post.description ? (
-                        <p className="mt-2 flex-1 text-sm text-ink-muted">
-                          {post.description}
-                        </p>
+              {posts.map((post) => {
+                const image = postImage(post.slug);
+                return (
+                  <li key={post.slug}>
+                    <Link
+                      href={routes.post(post.slug)}
+                      className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-surface shadow-[var(--shadow-card)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[var(--shadow-lift)]"
+                    >
+                      {image ? (
+                        <Media
+                          src={image.src}
+                          alt={image.alt}
+                          className="aspect-[16/9]"
+                          sizes="(min-width: 768px) 33vw, 100vw"
+                          imageClassName="transition-transform duration-500 group-hover:scale-105"
+                        />
                       ) : null}
-                      <span className="mt-4 text-sm font-semibold text-accent">
-                        Read article
-                      </span>
-                    </Card>
-                  </Link>
-                </li>
-              ))}
+                      <div className="flex flex-1 flex-col p-6">
+                        <div className="flex items-center gap-2 text-xs text-ink-muted">
+                          <span className="font-semibold uppercase tracking-[0.1em] text-accent">
+                            {business.name}
+                          </span>
+                          {post.date ? (
+                            <>
+                              <span aria-hidden="true">/</span>
+                              <time dateTime={post.date}>
+                                {formatPostDate(post.date)}
+                              </time>
+                            </>
+                          ) : null}
+                        </div>
+                        <h3 className="mt-3 font-heading text-lg font-semibold text-ink group-hover:text-accent-hover">
+                          {post.title ?? post.slug}
+                        </h3>
+                        {typeof post.description === "string" &&
+                        post.description ? (
+                          <p className="mt-2 flex-1 text-sm text-ink-muted">
+                            {post.description}
+                          </p>
+                        ) : null}
+                        <span className="mt-4 text-sm font-semibold text-accent">
+                          Read article
+                        </span>
+                      </div>
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </section>
@@ -540,5 +600,31 @@ export default function HomePage() {
         body="That is the whole promise. Damean answers, prices the job, does the work, and meets the inspector himself. Reach out and we will tell you plainly what it takes and what it costs."
       />
     </>
+  );
+}
+
+function CheckIcon() {
+  return (
+    <svg
+      width="14"
+      height="14"
+      viewBox="0 0 16 16"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M3 8.5l3.5 3.5L13 4.5" />
+    </svg>
+  );
+}
+
+function PhoneIcon() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor" aria-hidden="true">
+      <path d="M5.6 2.2 3.3 2.6C2.7 2.7 2.3 3.3 2.4 3.9c.6 5 4.7 9.1 9.7 9.7.6.1 1.2-.3 1.3-.9l.4-2.3c.1-.5-.2-1-.7-1.2l-2.3-.9c-.4-.2-.9 0-1.2.3l-.8.9C7.3 8.7 6.3 7.7 5.5 6.2l.9-.8c.3-.3.5-.8.3-1.2l-.9-2.3c-.1-.5-.6-.8-1.1-.7Z" />
+    </svg>
   );
 }
