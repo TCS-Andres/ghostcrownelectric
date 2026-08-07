@@ -9,24 +9,18 @@
   PLACEHOLDERS.md).
 */
 
-// One image per service. No two services share an image.
+// One image per service. No two services share an image. Uses the on-brand
+// Damean action photography for the human-facing services, with illustration
+// for generators/surge. Maps to the 8 consolidated services (see SERVICE_SLUGS).
 const SERVICE_IMAGE: Record<string, string> = {
-  "electrical-panel-upgrade": "panel-upgrade",
-  "zinsco-panel-replacement": "zinsco-panel",
-  "federal-pacific-panel-replacement": "old-panel",
+  "electrical-panel-upgrade": "damean-panel",
   "electrical-service-rebuild": "service-entrance",
-  "emergency-electrician": "emergency-night",
-  "emergency-power-restoration": "power-restoration",
-  "meter-socket-replacement": "meter-socket",
-  "meter-bank-replacement": "meter-bank",
-  "ev-charger-installation": "ev-charger",
-  "electrical-safety-check": "safety-check",
-  "generator-installation": "generator-surge",
-  "whole-home-surge-protection": "surge-protection",
-  "pool-grounding-bonding-inspection": "pool-bonding",
-  "pool-electrical-repair": "pool-repair",
-  "pool-gfci-breaker-replacement": "pool-gfci",
-  "pool-electrical-service-rebuild": "pool-safety",
+  "emergency-electrician": "damean-rooftop",
+  "pool-electrical": "damean-pool",
+  "ev-charger-installation": "damean-ev",
+  "meter-bank-replacement": "damean-meter",
+  "generators-and-surge-protection": "generator-surge",
+  "electrical-safety-check": "damean-consult",
 };
 
 // One golden-hour location image per city.

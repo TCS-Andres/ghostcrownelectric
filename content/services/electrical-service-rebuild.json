@@ -1,168 +1,152 @@
 {
   "slug": "electrical-service-rebuild",
-  "name": "Electrical Service Rebuild",
-  "shortName": "Service Rebuild",
+  "name": "Electrical Service & Meter Upgrades",
+  "shortName": "Service & Meter Upgrades",
   "tier": "money",
-  "metaTitle": "Electrical Service Rebuild Broward | Ghost Crown Electric",
-  "metaDescription": "Full electrical service rebuild in Broward County by a licensed contractor. Panels, meter, disconnects, one honest price. Book an on-site assessment today.",
-  "h1": "Electrical Service Rebuild in Broward County",
-  "intro": "Sometimes the problem is not one panel or one breaker. It is the whole electrical service showing its age at once. The panel is obsolete, the meter equipment is worn, the disconnect is tired, and patching any single piece just moves the trouble along. That is when a full service rebuild is the honest answer. We remove and replace the service as a whole, the disconnects, the panels, the distribution, and the meter equipment, for homes and commercial properties. This is the core of what we do, and we do it in and out. We forecast the entire job, we price it once before we begin, and the price does not change halfway through. For most homes a rebuild runs $5,000 to $8,000 depending on condition and scope, and we tell you where yours lands before work starts.",
+  "metaTitle": "Service & Meter Upgrades in Broward | Ghost Crown Electric",
+  "metaDescription": "Full service and meter upgrades in Broward County. Mast, meter socket, disconnect, grounding, and panel, rebuilt by a licensed crew for one honest price.",
+  "h1": "Electrical Service and Meter Upgrades in Broward County",
+  "intro": "Sometimes the problem is not one panel or one breaker, it is the whole electrical service showing its age at once. The mast is corroded, the meter socket is failing, the disconnect is tired, and patching any single piece just moves the trouble along. That is when a service upgrade is the honest answer. We rebuild the service entrance as a whole, the mast and riser, the meter socket, the main disconnect, the grounding, and the panel when it is part of the job, for homes and commercial properties. When it is only the meter socket, we handle that too. We forecast the entire job and price it once before we begin. For most homes a rebuild runs $5,000 to $8,000 depending on condition and scope, and we tell you where yours lands before work starts.",
   "definition": {
-    "heading": "What an electrical service rebuild is",
-    "body": "An electrical service rebuild is the removal and replacement of your property's electrical service as a complete system, not just one part of it. The service is everything that brings power in from the utility and distributes it through the building: the meter equipment, the main disconnect, the panel or panels, and the distribution that feeds your circuits. Over time these pieces age together, and when enough of them are worn or obsolete, replacing them one at a time is slower and costlier than doing the job right in one pass. A rebuild brings the entire service up to current code as a unit, so every part is new, sized correctly, and working together. This is the core of what Ghost Crown Electric does, for both residential and commercial properties. It is an in and out type of situation, forecast and priced once, then performed cleanly by our own crew."
+    "heading": "What a service and meter upgrade is",
+    "body": "An electrical service and meter upgrade is the removal and replacement of the parts that bring power into your property and distribute it, from the utility connection to the panel. The service is everything on that path: the mast and riser where the line meets the building, the meter socket that holds the utility's meter, the main disconnect that shuts the building down, the grounding, and the panel or panels that divide power into circuits. Over time these pieces age together, and when enough of them are worn or obsolete, replacing them one at a time is slower and costlier than doing the job right in one pass. An upgrade can be the whole service rebuilt as a unit, or a single piece like the meter socket when that is all that has failed. Either way, it is brought up to current code, sized correctly, and left working together. This is the core of what Ghost Crown Electric does, for both residential and commercial properties."
   },
   "symptoms": [
     {
       "title": "Multiple parts of the service are failing",
-      "body": "It is not just the panel. The meter equipment is worn, the disconnect is tired, and the panel is obsolete all at once. When several pieces are near the end together, rebuilding the service as a whole is more honest than chasing one failure at a time."
+      "body": "It is not just the panel. The meter socket is worn, the disconnect is tired, and the panel is obsolete all at once. When several pieces are near the end together, upgrading the service as a whole is more honest than chasing one failure at a time."
     },
     {
       "title": "Your insurer wants the service updated",
-      "body": "A 4-point inspection or a carrier flagged the electrical service, not just the panel. In South Florida this pushes many owners toward a full rebuild, because bringing the whole service to current code is what satisfies the inspection cleanly."
+      "body": "A 4-point inspection or a carrier flagged the electrical service, not just the panel. In South Florida this pushes many owners toward a full upgrade, because bringing the whole service to current code is what satisfies the inspection cleanly."
     },
     {
-      "title": "The meter or mast is damaged",
-      "body": "The meter housing, the mast, or the point where power enters the building is corroded, loose, or pulling away. That is the front door of your electrical system, and damage there often signals the service behind it needs a full rebuild."
+      "title": "The meter socket or mast is damaged",
+      "body": "The meter housing, the mast, or the point where power enters the building is corroded, loose, scorched, or pulling away, or the utility red-tagged the meter. That is the front door of your electrical system, and damage there often means the service behind it needs work too."
     },
     {
       "title": "Repeated repairs that never quite hold",
-      "body": "You have paid for one electrical fix after another and the trouble keeps returning somewhere new. When patching stops solving the problem, it is usually a sign the service itself has aged out and wants replacing as a whole."
+      "body": "You have paid for one electrical fix after another and the trouble keeps returning somewhere new. When patching stops solving the problem, it usually means the service itself has aged out and wants replacing as a whole."
     },
     {
       "title": "The service is undersized for the property",
-      "body": "The building asks more of the electrical service than it was ever built to give, and the panel is full with nowhere to grow. An undersized, maxed out service is a candidate for a rebuild that is sized for how the property actually lives now."
+      "body": "The building asks more of the electrical service than it was ever built to give, and the panel is full with nowhere to grow. An undersized, maxed out service is a candidate for an upgrade sized for how the property actually lives now."
     },
     {
       "title": "Heat, scorching, or a burning smell at the service",
-      "body": "You feel warmth, see scorching, or catch a burning smell around the meter, disconnect, or panel. Electricity is something we do not see, we only feel the effect. Those effects across the service point to wear that a rebuild resolves for good."
+      "body": "You feel warmth, see scorching, or catch a burning smell around the meter, the disconnect, or the panel. Electricity is something we do not see, we only feel the effect. Those effects across the service point to wear that an upgrade resolves for good."
     }
   ],
   "process": [
     {
       "title": "You call, we listen",
-      "body": "You reach us and describe what is happening across the property. We take the call, ask the right questions, and get a first read on whether this is a single repair or a full service rebuild. Day or night, a real person picks up."
+      "body": "You reach us and describe what is happening across the property. We take the call, ask the right questions, and get a first read on whether this is a single repair, a meter socket replacement, or a full service upgrade. Day or night, a real person picks up."
     },
     {
       "title": "We assess the whole service in person",
-      "body": "We come out and look at the entire service, the meter, the disconnect, the panels, and the distribution, not just the part that failed. A rebuild cannot be honestly quoted from a photo, so we see how the whole system is holding up first."
+      "body": "We come out and look at the entire service, the mast, the meter socket, the disconnect, the panels, and the grounding, not just the part that failed. A service job cannot be honestly quoted from a photo, so we see how the whole system is holding up first."
     },
     {
       "title": "One forecast-based price, up front",
-      "body": "We forecast the entire job and price it once before any work begins. For most homes a rebuild runs $5,000 to $8,000 depending on condition and scope. That number holds. We do not come back mid-job with new fees. Price it once, price it right."
+      "body": "We forecast the entire job and price it once before any work begins. For most homes an upgrade runs $5,000 to $8,000 depending on condition and scope. That number holds. We do not come back mid-job with new fees. Price it once, price it right."
     },
     {
-      "title": "Our own crew rebuilds the service",
-      "body": "Our three-person in-house crew removes and replaces the service as a unit, running three simultaneous jobs across three trucks when the schedule calls for it. This is the core of what we do. You are paying for the experience, and it shows in the finished work."
+      "title": "Our own crew does the work",
+      "body": "Our three-person in-house crew removes and replaces the service as a unit, and coordinates the utility disconnect and reconnect so your power is off for as little time as possible. We run three trucks, so the job is staffed properly rather than stretched thin."
     },
     {
       "title": "Permit, inspection, and a follow-up",
-      "body": "We pull the permit and we meet the inspector in person, so the rebuilt service is documented and signed off. After the job we call to confirm everything is right. That is peace of mind you get to keep long after we leave."
+      "body": "We pull the permit, coordinate the utility, and we meet the inspector in person, so the rebuilt service is documented and signed off. After the job we call to confirm everything is right. That is peace of mind you get to keep long after we leave."
     }
   ],
   "benefits": [
     {
       "title": "The whole service, solved at once",
-      "body": "Instead of chasing failures one at a time, you get an entire electrical service that is new, current, and working together. The trouble does not migrate to the next tired piece, because there is no tired piece left."
+      "body": "Instead of chasing failures one at a time, you get an electrical service that is new, current, and working together. The trouble does not migrate to the next tired piece, because there is no tired piece left."
     },
     {
       "title": "A known price before we start",
-      "body": "For most homes a rebuild runs $5,000 to $8,000 depending on condition and scope, and we tell you where yours lands up front. The number is forecast once and it holds, so there are no surprises mid-job."
+      "body": "For most homes an upgrade runs $5,000 to $8,000 depending on condition and scope, and we tell you where yours lands up front. The number is forecast once and it holds, so there are no surprises mid-job."
     },
     {
       "title": "Insurable and inspection ready",
-      "body": "A rebuilt service brought fully to current code is what carriers and 4-point inspections want to see. Once it passes, the electrical objections to your policy are cleared in one pass rather than piece by piece."
+      "body": "A service brought fully to current code is what carriers and 4-point inspections want to see. Once it passes, the electrical objections to your policy are cleared in one pass rather than piece by piece."
     },
     {
-      "title": "One accountable company from first call to sign-off",
-      "body": "The team that prices your rebuild is the team that meets the inspector and makes the follow-up call. That continuity is why nothing important falls through the cracks on a job this size."
+      "title": "One accountable company, utility included",
+      "body": "The team that prices your job coordinates the power company, meets the inspector, and makes the follow-up call. That continuity, including the utility handoff, is why nothing important falls through the cracks on a job this size."
     }
   ],
   "localSections": [
     {
       "heading": "Aging services in South Florida housing",
-      "body": "Broward County grew in waves across many decades, and each wave installed electrical services built for the electrical life of its time. A service that was generous in its era can be undersized and worn now, after decades of added air conditioning, appliances, and the general growth in how a home uses power. When we open up an older service from West Palm Beach down to North Miami Beach, it is common to find the panel, the meter equipment, and the disconnect all aging together, because they went in together and have lived the same years. That is exactly the situation where a full rebuild makes more sense than repairing one piece and waiting for the next to go. Replacing the service as a whole brings an older home's power infrastructure up to the standard the rest of the house already runs on. It is honest, lasting work, and it fits the reality of the stock we serve every day."
-    },
-    {
-      "heading": "Heat, humidity, and salt air on the service",
-      "body": "The electrical service lives partly outside, at the meter and the point where power enters the building, so it takes the full force of the South Florida climate. Sun and heat wear on the enclosures. Humidity works into the meter housing and the disconnect. Homes near the coast face salt air that corrodes the meter socket, the lugs, and the terminations across the service. Corrosion and heat feed on each other, and over the years they can quietly compromise the whole assembly, not just one part. This is why a South Florida service can be in worse shape than an inland one of the same age, and why we look at the entire assembly during an assessment rather than just the panel indoors. We build the real climate into the forecast, so the rebuilt service is specified to stand up to the heat, humidity, and salt air it has to face for years to come."
-    },
-    {
-      "heading": "Permitting and code reality in Broward",
-      "body": "An electrical service rebuild in Broward County is fully permitted work, as it should be, because it touches the utility connection and the core of the building's power. The permit puts a licensed contractor and a county inspector between you and a serious mistake, and it documents that the rebuilt service meets today's code. Electrical code advances on a multi-year cycle, so a rebuild brings the whole service up to the current standard in one pass, not the standard from decades ago. We coordinate the permit, the utility, and the inspection, and we meet the inspector on site in person. On a job this size that continuity matters. The team that forecast and priced your rebuild, and knows every detail of it, is standing there when Broward County signs off, so the whole system is verified and documented properly, with nothing left open to a question later on."
+      "body": "Broward County grew in waves across many decades, and each wave installed electrical services built for the electrical life of its time. A service that was generous in its era can be undersized and worn now, after decades of added air conditioning, appliances, and the general growth in how a home uses power. When we open an older service from West Palm Beach down to North Miami Beach, it is common to find the mast, the meter socket, the panel, and the disconnect all aging together, because they went in together and have lived the same years. The climate is hard on all of it. The service lives partly outside, so sun and heat wear on the enclosures, humidity works into the meter housing, and homes near the coast face salt air that corrodes the meter socket, the lugs, and the terminations. Corrosion and heat feed on each other and can quietly compromise the whole assembly, not just one part. That is exactly the situation where a full upgrade makes more sense than repairing one piece and waiting for the next to go."
     },
     {
       "heading": "How carriers view the electrical service",
-      "body": "South Florida insurance carriers scrutinize the electrical service closely, and their concern often reaches beyond a single obsolete panel. A 4-point inspection reports on the electrical system as a whole, and an aging or undersized service, worn meter equipment, or an obsolete panel can each contribute to a failed electrical section. Some carriers decline a new policy over it, and others drop a renewal on a home they have covered for years. This is honest, verifiable reality in the current market, and it is why many owners find that repairing one piece is not enough to clear the objection. A full rebuild that brings the entire service to current code addresses the whole electrical section at once. We handle the permit and we meet the inspector, so you get clean documentation for your carrier. Then the electrical reason your policy was in question is resolved thoroughly, not just for now, but in a way that holds up at the next renewal too."
+      "body": "South Florida insurance carriers scrutinize the electrical service closely, and their concern often reaches beyond a single obsolete panel. A 4-point inspection reports on the electrical system as a whole, and an aging or undersized service, worn meter equipment, or an obsolete panel can each contribute to a failed electrical section. Some carriers decline a new policy over it, and others drop a renewal on a home they have covered for years. This is honest, verifiable reality in the current market, and it is why many owners find that repairing one piece is not enough to clear the objection. A full upgrade that brings the entire service to current code addresses the whole electrical section at once. We handle the permit and we meet the inspector, so you get clean documentation for your carrier. Then the electrical reason your policy was in question is resolved thoroughly, in a way that holds up at the next renewal too."
     }
   ],
   "guide": {
-    "title": "The complete guide to an electrical service rebuild in South Florida",
+    "title": "The complete guide to electrical service and meter upgrades in South Florida",
     "sections": [
       {
-        "heading": "What a service rebuild is and when you need one",
-        "body": "Your electrical service is the whole path power takes from the utility into your building and out to your circuits. It includes the meter equipment where power is measured, the main disconnect that shuts the building down, the panel or panels that divide power into circuits, and the distribution that carries it where it needs to go. A service rebuild is the removal and replacement of that entire system as a unit. You need one when enough of the service has aged out that fixing a single piece no longer makes sense. If the panel is obsolete, the meter equipment is corroded, and the disconnect is tired all at the same time, replacing them one at a time is slower, more disruptive, and in the end more expensive than doing the job right in one pass. A rebuild brings everything up to current code together, sized for how the property actually uses power today. This is the core of what Ghost Crown Electric does, for homes and commercial properties, and it is an in and out type of situation. That is what we do."
+        "heading": "What a service and meter upgrade is and when you need one",
+        "body": "Your electrical service is the whole path power takes from the utility into your building and out to your circuits. It includes the mast and riser where the utility line meets the building, the meter socket where power is measured, the main disconnect that shuts the building down, the panel or panels that divide power into circuits, and the grounding that ties the whole thing to earth. A service and meter upgrade is the removal and replacement of that system, in whole or in the parts that have aged out. You need the full job when enough of the service has worn out that fixing a single piece no longer makes sense. If the panel is obsolete, the meter socket is corroded, and the disconnect is tired all at the same time, replacing them one at a time is slower, more disruptive, and in the end more expensive than doing it right in one pass. A rebuild brings everything up to current code together, sized for how the property actually uses power today. This is the core of what Ghost Crown Electric does, for homes and commercial properties, and it is an in and out type of situation. That is what we do."
       },
       {
-        "heading": "How we forecast and price the job",
-        "body": "The single most important promise on a rebuild is the price, and here is exactly how we handle it. We do not quote a service rebuild from a phone call or a photograph, because we would only be guessing, and a guess is not a price you can trust. Instead we come to the property and assess the entire service in person: the meter, the disconnect, the panels, the distribution, and the condition of every connection. Then we forecast what the whole job actually takes, start to finish, and we give you one number before any work begins. That number is the number. It does not change halfway through. We do not discover a surprise and come back asking for more, because forecasting the job properly the first time is our responsibility, not yours. Price it once, price it right. Ten years of situations already seen and solved is what lets us forecast accurately, and that is a real part of what you are paying for. If we lose an honestly priced bid to a lower one, that is fine with us. We would rather keep our word than win by lowballing and padding later."
+        "heading": "How we forecast the job, and what it costs",
+        "body": "The single most important promise on a service upgrade is the price, and here is how we handle it. We do not quote from a phone call or a photograph, because we would only be guessing, and a guess is not a price you can trust. We come to the property and assess the whole service in person: the mast, the meter socket, the disconnect, the panels, the grounding, and the condition of every connection. Then we forecast what the job actually takes and give you one number before any work begins, and that number does not change halfway through. For most residential properties, an electrical service rebuild runs $5,000 to $8,000, depending on the condition of the existing service and the scope of the work. A service that is worn but straightforward sits lower in that range, and one that needs more extensive work across the meter, the disconnect, and the distribution sits higher. Commercial properties vary more and are quoted per situation after we see them. Separate from a rebuild, our standard service call is $240, which covers roughly two hours including travel, arrival, and diagnosis, and if a smaller problem can be handled on the spot, there is no separate return charge. Price it once, price it right."
       },
       {
-        "heading": "What a rebuild actually costs",
-        "body": "Let us talk plainly about money, because you deserve real numbers, not a runaround. For most residential properties, an electrical service rebuild runs $5,000 to $8,000, depending on the condition of the existing service and the scope of what the job requires. A home whose service is worn but straightforward sits lower in that range. A home that needs more extensive work across the meter, the disconnect, and the distribution sits higher. Commercial properties vary more and are quoted per situation after we see them, because the scope can differ widely. We share the residential range openly so you can plan, and then we tell you where your specific property lands once we have assessed it in person, before any work starts. Separate from a rebuild, our standard service call is $240, which covers roughly two hours including travel, arrival, and diagnosis, and if a smaller problem can be handled on the spot, there is no separate return charge. We would rather you understand the money up front than be surprised by it, on a job this size especially."
+        "heading": "When it is just the meter socket",
+        "body": "Sometimes the service as a whole is sound and the trouble is only the meter socket, the box where the utility's meter plugs into your building. It takes the full brunt of South Florida weather, so it shows up with rust streaks, a cracked or loose enclosure, scorch marks, or a meter that sits crooked. Left alone, a failing socket can arc, overheat, or drop power to the whole property, because everything downstream runs through it. Replacing it is not a job for a handyman and not a job to do without the power company, because the utility owns the meter and has to disconnect and reconnect it on a scheduled window. We handle that coordination with the utility, pull the permit, do the work with our own crew, meet the inspector, and time everything so your power is off for the shortest safe period. If the utility has red-tagged the meter and will not reconnect until it is fixed, that is exactly the situation we manage from start to finish. And if we open things up and find the failure has spread to the disconnect or the panel behind the socket, we will show you honestly what we see before we go any further."
       },
       {
         "heading": "What the day of the work looks like",
-        "body": "An electrical service rebuild is a coordinated job, and we plan it so your time without power is as short and predictable as it can be. It is an in and out type of situation. That is what we do. We arrange with the utility so power to the property can be interrupted safely for the work window, and we tell you honestly ahead of time what to expect so you can plan around it. Then our three-person in-house crew removes the old service and rebuilds it as a unit: the meter equipment, the disconnect, the panel or panels, and the distribution, reconnecting and labeling every circuit as we go. Because we run three trucks and can work three jobs at once, we staff the rebuild properly rather than stretching one person thin. The same crew does this work constantly, so it moves with a rhythm, and the property is left clean. When the rebuild is complete, we schedule the county inspection so the whole system is verified and documented before we consider the job finished. Before the day arrives, there is little you need to do beyond clearing access to the meter, the disconnect, and the panels, and making a plan for the stretch without power. If your household works from home or depends on medical equipment, or if the property is a business that cannot simply go dark, tell us early so we can schedule the window to fit. We would rather build the day around your life than ask you to build your life around ours."
-      },
-      {
-        "heading": "Rebuild versus repair: making the honest call",
-        "body": "Not every electrical problem is a rebuild, and we will never tell you it is one when it is not. Plenty of issues are a single repair, and if that is what your property needs, that is what we will recommend and quote. The honest case for a rebuild is when several parts of the service are worn or obsolete at the same time, when repeated repairs keep failing to hold because the underlying service has aged out, or when an insurance inspection has flagged the electrical system as a whole rather than one component. In those situations, spending money on piecemeal fixes is spending money that only delays the real solution. A rebuild costs more up front than a single repair, but it resolves the whole service at once and stops the cycle of one failure after another. We will lay out the trade honestly, show you what we see, and let you decide. We stay in our lane and we do not sell a rebuild to a property that only needs a repair. That is not how we keep customers for the long run."
+        "body": "An electrical service upgrade is a coordinated job, and we plan it so your time without power is as short and predictable as it can be. It is an in and out type of situation. That is what we do. We arrange with the utility so power to the property can be interrupted safely for the work window, and we tell you honestly ahead of time what to expect so you can plan around it. Then our three-person in-house crew removes the old service and rebuilds it as a unit: the mast and riser, the meter socket, the disconnect, the panel or panels, and the grounding, reconnecting and labeling every circuit as we go. Because we run three trucks and can work three jobs at once, we staff the job properly rather than stretching one person thin. When the work is complete, we schedule the county inspection so the whole system is verified and documented before we consider the job finished. Before the day arrives, there is little you need to do beyond clearing access to the meter, the disconnect, and the panels, and making a plan for the stretch without power. If your household works from home or depends on medical equipment, or the property is a business that cannot simply go dark, tell us early so we can schedule the window to fit. We would rather build the day around your life than ask you to build your life around ours."
       },
       {
         "heading": "How to choose a contractor for a job this size",
-        "body": "A service rebuild is one of the larger electrical jobs a property owner will ever authorize, so the contractor matters as much as the work. Start with licensing, always. Ghost Crown Electric is a Florida Certified Electrical Contractor with statewide authority and a Broward County Master Electrician, with 286 permitted projects on public record. Ask whether the contractor pulls the permit in their own name and who attends the inspection, because on a rebuild the documentation and the sign-off are as important as the equipment. Ask who does the work: an in-house crew that rebuilds services routinely is not the same as subcontractors assembled for one job. Ask how they price, and favor the contractor who forecasts the whole job and holds the number over one who leaves room to add fees later. And be wary of anyone who wins your trust by running down every other company. We do not do that. We let the license and the record speak, we give a customer more than what they pay for, and we show up when we say we will. On a job this size, that reliability is the thing you are actually buying. On a rebuild you are also buying an accurate forecast, and accuracy comes from experience. You are paying for the experience, ten years of services already seen and solved, which is what lets us price the whole job correctly before the first tool comes out. A contractor who has rebuilt many services can read what is behind the cover before it is open, and that is what keeps the number from moving on you later."
-      },
-      {
-        "heading": "What a rebuilt service gives you",
-        "body": "When the rebuild is finished and the county has signed off, you are left with an electrical service that is new from the utility connection to the last circuit, sized for how your property truly uses power, and built to current code as a single working system. The insurance objections to the electrical section are cleared in one pass, not piece by piece, so your policy can move forward on a service the carrier has no reason to question. Proper grounding and solid connections keep the whole system running cool and quiet. Grounding is not a gimmick, and we never frame it as more than it is. It protects your family, your home, and your investment as a whole, and it is simply part of rebuilding a service correctly. Beyond the technical result, you get to stop worrying about the electrical service entirely, which on a property you care about is worth a great deal. We rebuilt it once, we priced it right, and now it works, steadily and quietly, the way a service should for many years to come."
+        "body": "A service upgrade is one of the larger electrical jobs a property owner will ever authorize, so the contractor matters as much as the work. Start with licensing. Ghost Crown Electric is a Florida Certified Electrical Contractor with statewide authority and a Broward County Master Electrician, with 286 permitted projects on public record. Ask whether the contractor pulls the permit in their own name and who attends the inspection, because on a service job the documentation and the sign-off are as important as the equipment. Ask whether the company coordinates the utility disconnect and reconnect, because that handoff is where an unlicensed hand tends to get stuck. Ask who does the work, since an in-house crew that rebuilds services routinely is not the same as subcontractors assembled for one job. And be wary of anyone who wins your trust by running down every other company. We do not do that. We let the license and the record speak, we give a customer more than what they pay for, and we show up when we say we will. On a job this size, that reliability is the thing you are actually buying, along with a forecast that comes from ten years of services already seen and solved."
       }
     ]
   },
   "faqs": [
     {
-      "question": "What exactly is included in a service rebuild?",
-      "answer": "A rebuild replaces the electrical service as a whole system: the meter equipment, the main disconnect, the panel or panels, and the distribution that feeds your circuits. Rather than fixing one worn part and waiting for the next to fail, we bring the entire service up to current code in one pass, sized for how your property actually uses power today. It is the core of what we do."
+      "question": "What exactly is included in a service and meter upgrade?",
+      "answer": "It covers the electrical service as a system: the mast and riser, the meter socket, the main disconnect, the grounding, and the panel or panels when they are part of the job. Rather than fixing one worn part and waiting for the next to fail, we bring the service up to current code, sized for how your property actually uses power today. It is the core of what we do."
     },
     {
-      "question": "How much does an electrical service rebuild cost?",
-      "answer": "For most residential properties, a rebuild runs $5,000 to $8,000, depending on the condition of the existing service and the scope of the work. A straightforward service sits lower, a more extensive one higher. Commercial properties are quoted per situation. We forecast the whole job and give you one price before we start, and it does not change mid-job."
+      "question": "How much does a service and meter upgrade cost?",
+      "answer": "For most residential properties, a rebuild runs $5,000 to $8,000, depending on the condition of the existing service and the scope of the work. Commercial properties are quoted per situation, and a single meter socket replacement is quoted per property. We forecast the whole job and give you one price before we start, and it does not change mid-job. Our standard service call is $240, which covers roughly two hours including travel, arrival, and diagnosis."
+    },
+    {
+      "question": "Can you just replace the meter socket, or does it have to be the whole service?",
+      "answer": "We do both. If the service is otherwise sound and only the meter socket has failed, we replace the socket by itself and coordinate the utility disconnect and reconnect and the permit as one clean job. If we find the failure has spread to the disconnect, the panel, or the conductors behind it, we will show you honestly what we see and let you decide. We do not sell a full upgrade to a property that only needs the socket."
     },
     {
       "question": "Will the price really not change once you start?",
-      "answer": "Correct. We forecast the entire job in person before we quote it, so the number we give you is the number. Price it once, price it right. We do not come back partway through asking for more, because getting the forecast right the first time is our responsibility. Ten years of situations already seen is what lets us price a rebuild accurately up front."
+      "answer": "Correct. We forecast the entire job in person before we quote it, so the number we give you is the number. Price it once, price it right. We do not come back partway through asking for more, because getting the forecast right the first time is our responsibility. Ten years of situations already seen is what lets us price a service job accurately up front."
     },
     {
-      "question": "Do I need a full rebuild, or just a repair?",
-      "answer": "It depends on what we find, and we will tell you honestly. Many problems are a single repair, and if that is what your property needs, that is what we will recommend. A rebuild makes sense when several parts of the service are worn at once, when repeated repairs keep failing, or when an inspection flagged the whole electrical system. We stay in our lane and do not oversell."
+      "question": "Do I need a full upgrade, or just a repair?",
+      "answer": "It depends on what we find, and we will tell you honestly. Many problems are a single repair or a single part like the meter socket, and if that is what your property needs, that is what we will recommend. A full upgrade makes sense when several parts of the service are worn at once, when repeated repairs keep failing, or when an inspection flagged the whole electrical system. We stay in our lane and do not oversell."
     },
     {
-      "question": "Do you do commercial service rebuilds too?",
-      "answer": "Yes. We rebuild electrical services for both residential and commercial properties across our service area, from West Palm Beach down to North Miami Beach. Commercial scope varies more than residential, so a commercial rebuild is quoted per situation after we assess it in person. The approach is the same: forecast the whole job, price it once, do it with our own crew, and we meet the inspector."
-    },
-    {
-      "question": "How long will my power be off during the rebuild?",
-      "answer": "For part of the work, since rebuilding the service means interrupting the power that feeds it. We coordinate with the utility and tell you honestly ahead of time what to expect so you can plan around it. Because we run three trucks and staff the job properly with our own crew, a rebuild is a focused, in and out type of situation rather than a job that drags on for days."
+      "question": "How long will my power be off during the work?",
+      "answer": "For part of the work, since replacing the service means interrupting the power that feeds it. We coordinate with the utility and tell you honestly ahead of time what to expect so you can plan around it. Because we run three trucks and staff the job properly with our own crew, it is a focused, in and out type of situation rather than a job that drags on for days."
     }
   ],
   "related": [
     "electrical-panel-upgrade",
-    "meter-socket-replacement",
-    "zinsco-panel-replacement",
-    "emergency-power-restoration"
+    "meter-bank-replacement",
+    "emergency-electrician",
+    "electrical-safety-check"
   ],
   "pricing": {
     "display": "Residential rebuilds run $5,000 to $8,000, quoted after an on-site assessment",
-    "notes": "For most homes a rebuild runs $5,000 to $8,000 depending on condition and scope. Commercial properties are quoted per situation. The whole job is forecast and priced once before work begins, and that price does not change mid-job. Our standard service call is $240, covering roughly two hours including travel, arrival, and diagnosis."
+    "notes": "For most homes a rebuild runs $5,000 to $8,000 depending on condition and scope. Commercial properties are quoted per situation, and a single meter socket replacement is quoted per property. The whole job is forecast and priced once before work begins, and that price does not change mid-job. Our standard service call is $240, covering roughly two hours including travel, arrival, and diagnosis."
   },
   "stats": [
     {
@@ -180,6 +164,6 @@
   ],
   "cta": {
     "headline": "Rebuild it once, rebuild it right",
-    "body": "If your electrical service is failing in more than one place, call us. We will assess the whole system, forecast the job, and give you one honest price. Day or night, a real person answers, and we run your rebuild from first call to final inspection."
+    "body": "If your electrical service is failing at the meter, the panel, or more than one place at once, call us. We will assess the whole system, forecast the job, and give you one honest price. Day or night, a real person answers, and we run your job from first call to final inspection."
   }
 }

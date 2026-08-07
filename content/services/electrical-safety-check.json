@@ -1,63 +1,62 @@
 {
   "slug": "electrical-safety-check",
-  "name": "Electrical Safety Check",
-  "shortName": "Safety Check",
+  "name": "Electrical Safety Inspections",
+  "shortName": "Safety Inspections",
   "tier": "safety",
-  "metaTitle": "Electrical Safety Check in Broward | Ghost Crown",
-  "metaDescription": "A defined electrical safety check in Broward County by a licensed master electrician. We inspect your panel, meter, and system for peace of mind. Book yours.",
-  "h1": "Electrical Safety Check in Broward County",
-  "intro": "Electricity is something you do not see. You only feel the effect, and by then a small problem has usually had time to grow. An electrical safety check is how you get ahead of that. It is a defined walkthrough of your home's electrical system, the panel, the meter socket, and the wiring you rely on every day, done by a licensed master electrician who knows what a problem looks like before it becomes one. Most people call because something felt off, a warm outlet, a flickering light, a panel that looks old, or because they just bought a home and have no idea what is behind the walls. Whatever brought you here, the goal is the same: a clear, honest answer about whether your electrical system is in good shape, and peace of mind either way."
-  ,
+  "metaTitle": "Electrical Safety Inspections in Broward | Ghost Crown",
+  "metaDescription": "Electrical safety inspections in Broward County by a licensed crew. We inspect the panel, meter, and wiring and tell you what a carrier will flag. Book yours.",
+  "h1": "Electrical Safety Inspections in Broward County",
+  "intro": "If your insurance carrier wants a 4-point inspection, or something in your home just feels off, an electrical safety inspection is the honest answer. Electricity is something you do not see. You only feel the effect, and by then a small problem has usually had time to grow. Our licensed crew walks your electrical system the way a Florida carrier looks at it: the panel, the meter socket, the wiring, and the overall condition of the system you rely on every day. Then we tell you plainly what is sound, what to watch, and what a carrier is likely to flag. Whatever brought you here, a new home, an aging panel, a warm outlet, or a renewal letter, the goal is the same. You get a clear, honest read on your electrical system, and peace of mind either way.",
   "definition": {
-    "heading": "What is an electrical safety check",
-    "body": "An electrical safety check is a defined inspection of your property's electrical system, done to confirm that nothing is in a bad state. It is not a loose consultation or a sales visit dressed up as an inspection. It is a specific scope of work with a clear beginning and end. A licensed electrician walks the property and looks at the parts that matter most: the panel and its breakers, the meter socket where power enters the home, the grounding, and the visible wiring and connections. The point is to catch trouble early, the warm connection, the tired breaker, the outdated panel, the missing ground, while it is still a small fix instead of a hazard. You come away knowing exactly where your electrical system stands, in plain language, with no guessing."
+    "heading": "What is an electrical safety inspection",
+    "body": "An electrical safety inspection is a defined inspection of your property's electrical system, done to confirm that nothing is in a bad state. It is not a loose consultation or a sales visit dressed up as an inspection. It is a specific scope of work with a clear beginning and end. A licensed electrician walks the property and looks at the parts that matter most: the panel and its breakers, the meter socket where power enters the home, the grounding, and the visible wiring and connections. Those are the same things a Florida carrier cares about in the electrical portion of a 4-point inspection, and the electrical portion is where older homes most often get flagged. The point is to catch trouble early, the warm connection, the tired breaker, the outdated panel, the missing ground, while it is still a small fix instead of a hazard, and to tell you plainly where you stand before an underwriter does."
   },
   "symptoms": [
     {
+      "title": "A carrier asking for a 4-point inspection",
+      "body": "Your insurer will not write or renew the policy on an older home until it sees a 4-point inspection, and the electrical portion is where homes get flagged. A documented inspection from a licensed master electrician gives them the professional record they want and tells you where you stand first."
+    },
+    {
       "title": "An older home you have never had checked",
-      "body": "The house has been standing for decades and no one has ever looked hard at the electrical system. Codes and standards have changed several times since it was wired. A safety check tells you whether it has kept up or quietly fallen behind."
+      "body": "The house has been standing for decades and no one has ever looked hard at the electrical system. Codes and standards have changed several times since it was wired. An inspection tells you whether it has kept up or quietly fallen behind."
     },
     {
       "title": "A home you just bought",
-      "body": "You closed on a house and have no real idea what is behind the walls or inside the panel. A home inspection is broad and quick. A dedicated electrical safety check by a master electrician gives you the honest, specific picture of what you actually own."
+      "body": "You closed on a house and have no real idea what is behind the walls or inside the panel. A home inspection is broad and quick. A dedicated electrical safety inspection by a master electrician gives you the honest, specific picture of what you actually own."
     },
     {
       "title": "Warm outlets, flickering lights, or a buzzing panel",
-      "body": "Small signs like a warm outlet plate, lights that flicker, or a faint buzz from the panel are the system telling you something. None of them should be ignored, and a safety check finds the source before it turns into heat or fire."
+      "body": "Small signs like a warm outlet plate, lights that flicker, or a faint buzz from the panel are the system telling you something. None of them should be ignored, and an inspection finds the source before it turns into heat or fire."
     },
     {
       "title": "A property with a pool",
-      "body": "Homes with pools carry extra electrical risk because water and electricity share the same yard. Pool homes are one of the cases that genuinely warrant closer, more regular attention, and a safety check is a sensible way to confirm nothing has drifted out of spec."
-    },
-    {
-      "title": "An insurance or sale request",
-      "body": "Your carrier or a buyer wants an electrical inspection before they will move forward. A documented safety check from a licensed master electrician gives them the professional record they are asking for and gives you a clear standing on the home."
+      "body": "Homes with pools carry extra electrical risk because water and electricity share the same yard. Pool homes are one of the cases that genuinely warrant closer, more regular attention, and an inspection is a sensible way to confirm nothing has drifted out of spec."
     },
     {
       "title": "A panel you have heard is a problem brand",
-      "body": "You learned your panel is one of the brands with a known history of trouble. That is worth taking seriously. A safety check confirms what you are dealing with and whether it needs to move up your list before something forces the issue."
+      "body": "You learned your panel is one of the brands with a known history of trouble, and it is often exactly what a carrier flags. An inspection confirms what you are dealing with and whether it needs to move up your list before something forces the issue."
     }
   ],
   "process": [
     {
       "title": "The call and a few honest questions",
-      "body": "You call and tell us about the home: how old it is, what you have noticed, whether there is a pool, and why you want the check. That short conversation lets us plan the visit and tells you what to expect before we arrive. No pressure, no script."
+      "body": "You call and tell us about the home: how old it is, what you have noticed, whether there is a pool, and why you want the inspection, including whether a carrier has asked for one. That short conversation lets us plan the visit and tells you what to expect before we arrive."
     },
     {
       "title": "The walkthrough and assessment",
-      "body": "We come out and work through the system methodically: the panel and breakers, the meter socket, the grounding, and the visible wiring and connections. This is the defined scope of the safety check, done in person by a master electrician who knows the difference between old and unsafe."
+      "body": "We come out and work through the system methodically: the panel and breakers, the meter socket, the grounding, and the visible wiring and connections. This is the defined scope of the inspection, done in person by a master electrician who knows the difference between old and unsafe."
     },
     {
       "title": "One clear, honest report of what we found",
-      "body": "We tell you plainly what we saw. What is fine, what to keep an eye on, and what genuinely needs attention. If everything is in good shape, we say so. We do not invent work, and we do not overprescribe. Honesty is the whole point of the visit."
+      "body": "We tell you plainly what we saw. What is fine, what to keep an eye on, what genuinely needs attention, and what a carrier is likely to flag. If everything is in good shape, we say so. We do not invent work, and we do not overprescribe. Honesty is the whole point of the visit."
     },
     {
-      "title": "The in-house crew handles any repairs",
-      "body": "If the check turns up something that should be fixed, our own crew can take care of it, priced separately once you decide to move forward. There is no obligation. You are free to sit with the findings and choose your own timing."
+      "title": "Our in-house crew handles any repairs",
+      "body": "If the inspection turns up something that should be fixed, our own crew can take care of it, priced separately once you decide to move forward. There is no obligation. You are free to sit with the findings and choose your own timing."
     },
     {
       "title": "Permits and inspection where work is done",
-      "body": "If a repair rises to the level of permitted work, we pull the permit and we meet the inspector in person. Then we follow up to make sure you understand what was done and that the system is left in a state you can trust."
+      "body": "If a repair rises to the level of permitted work, we pull the permit in our own name and we meet the inspector in person. Then we follow up to make sure you understand what was done and that the system is left in a state you can trust."
     }
   ],
   "benefits": [
@@ -67,11 +66,11 @@
     },
     {
       "title": "Small problems caught early",
-      "body": "A warm connection or a tired breaker found today is a quick fix. Found the hard way later, it is a hazard and a much bigger bill. The check is how you stay ahead of it."
+      "body": "A warm connection or a tired breaker found today is a quick fix. Found the hard way later, it is a hazard and a much bigger bill. The inspection is how you stay ahead of it."
     },
     {
-      "title": "An honest cadence, never overprescribed",
-      "body": "We will tell you if you do not need us again for years. A newer home protected by modern breakers does not need constant visits, and we will say so rather than sell you a schedule."
+      "title": "Ready for a carrier's questions",
+      "body": "You learn what a 4-point would flag on your own timeline, with the documentation a Florida carrier is looking for, instead of being surprised by a non-renewal notice."
     },
     {
       "title": "Peace of mind you can act on",
@@ -81,84 +80,68 @@
   "localSections": [
     {
       "heading": "The many ages of South Florida housing",
-      "body": "Broward County homes span a wide range of eras, and each era wired its houses to the standards of its time. A home from the 1960s or 70s may still have its original panel and a grounding approach that no longer matches how we do things today. Homes from the 80s and 90s brought their own known problem panels. Newer construction is generally well protected by modern breakers and current installation standards. This spread is exactly why a safety check is so useful here. An older home is not automatically unsafe, and a newer home is not automatically perfect, but the age of the house tells us where to look hardest. When we walk your system, we are reading it against the era it came from and the changes that have happened since, so the answer you get is grounded in the real history of how your home was built."
+      "body": "Broward County homes span a wide range of eras, and each era wired its houses to the standards of its time. A home from the 1960s or 70s may still have its original panel and a grounding approach that no longer matches how we do things today. Homes from the 80s and 90s brought their own known problem panels. Newer construction is generally well protected by modern breakers and current installation standards. This spread is exactly why an inspection is so useful here. An older home is not automatically unsafe, and a newer home is not automatically perfect, but the age of the house tells us where to look hardest. There is also a slow, quiet toll from the climate itself. Heat, humidity, and, near the coast, salt in the air corrode terminals, loosen connections over years of heat cycling, and age a weather-exposed meter socket faster than in a mild, dry place. When we walk your system, we are reading it against the era it came from and the conditions it has lived in, so the answer you get is grounded in the real history of how your home was built and how it has held up."
     },
     {
-      "heading": "Heat, humidity, and salt take a toll over time",
-      "body": "South Florida is warm and damp for most of the year, and near the coast there is salt in the air. Those conditions work on electrical connections slowly and quietly. Terminals corrode, connections loosen with years of heat cycling, and a meter socket exposed to weather ages faster than one in a mild, dry climate. None of this is dramatic on any single day, which is exactly why it is easy to miss until something fails. A safety check is a chance to catch that slow wear before it becomes a fault. When we look at your panel and meter socket, we are watching for the signatures of this climate: discoloration, corrosion, heat marks, and connections that have quietly given up their grip. Finding that wear early is a small repair. Finding it after it fails is a very different situation, and the humidity here makes the early look worth doing."
-    },
-    {
-      "heading": "Codes, permits, and the five-year rhythm",
-      "body": "Electrical codes update on a multi-year cycle, and Broward County building departments enforce the current standards on new and permitted work. That steady drift is the reason a whole-home electrical checkup makes sense roughly once every five years rather than every year. In that window the code has usually moved at least once, and it is a sensible time to confirm your home has kept pace with anything that matters for safety. It is not about chasing every revision. Most changes will not affect a sound existing system. The value of the rhythm is that it catches the meaningful gaps without turning into a constant expense. When a safety check does surface work that should be permitted, we handle it the right way: the permit is pulled and we meet the inspector in person, so the repair is on record and done to the standard in force today."
-    },
-    {
-      "heading": "What insurance carriers are asking for",
-      "body": "Florida insurance carriers have become far more attentive to the condition of a home's electrical system, and many now ask for an inspection before they will write or renew a policy, especially on older homes. A documented safety check from a licensed master electrician is often exactly the kind of professional record they want to see. We are not here to alarm anyone or to manufacture urgency. The reality is simply that carriers care about panels, wiring age, and known problem equipment, and having a clear, honest inspection on hand puts you in a stronger position at renewal or sale. If the check surfaces something a carrier would flag, you learn it on your own timeline and can address it deliberately, rather than being surprised by a non-renewal notice. Knowing where you stand is always better than finding out from an underwriter."
+      "heading": "What Florida insurance carriers are asking for",
+      "body": "Florida insurance carriers have become far more attentive to the condition of a home's electrical system, and many now require a 4-point inspection before they will write or renew a policy, especially on homes past a certain age. A 4-point looks at four major systems, and electrical is the one where older homes most often get flagged: an aging or overloaded panel, a known problem brand, outdated wiring, a compromised ground. A documented electrical safety inspection from a licensed master electrician is often exactly the professional record a carrier wants to see for that portion. We are not here to alarm anyone or to manufacture urgency. The reality is simply that carriers care about panels, wiring age, and known problem equipment, and having a clear, honest read on hand puts you in a stronger position at renewal or sale. If the inspection surfaces something a carrier would flag, you learn it on your own timeline and can address it deliberately, rather than being surprised by a non-renewal notice. Knowing where you stand is always better than finding out from an underwriter."
     }
   ],
   "guide": {
-    "title": "The honest guide to an electrical safety check in South Florida",
+    "title": "The honest guide to an electrical safety inspection in South Florida",
     "sections": [
       {
-        "heading": "What a safety check really is, and is not",
-        "body": "An electrical safety check is a defined inspection with a clear scope, not an open-ended consultation and not a sales call. That distinction matters. When you book one, you are buying a specific piece of work: we walk your property and examine the electrical system in a deliberate way, then tell you plainly what we found. We look at the panel and its breakers, the meter socket where power enters the home, the grounding that keeps the system safe, and the visible wiring and connections. We are checking whether anything is in a bad state, a tired breaker, a warm or corroded connection, a panel with a known problem history, a grounding gap. The value is that you get a professional, honest read on the system you cannot see and rarely think about. Electricity is something you do not see, you only feel the effect, and a safety check is how you learn the truth about it before the effect finds you."
+        "heading": "What an inspection really is, and is not",
+        "body": "An electrical safety inspection is a defined inspection with a clear scope, not an open-ended consultation and not a sales call. That distinction matters. When you book one, you are buying a specific piece of work: we walk your property and examine the electrical system in a deliberate way, then tell you plainly what we found. We look at the panel and its breakers, the meter socket where power enters the home, the grounding that keeps the system safe, and the visible wiring and connections. We are checking whether anything is in a bad state, a tired breaker, a warm or corroded connection, a panel with a known problem history, a grounding gap. The value is that you get a professional, honest read on the system you cannot see and rarely think about. Electricity is something you do not see, you only feel the effect, and an inspection is how you learn the truth about it before the effect finds you."
       },
       {
-        "heading": "The honest cadence: about once every five years",
-        "body": "Here is the part most companies will not tell you, because it does not sell more visits: most homes do not need an electrical safety check very often. A whole-home checkup about once every five years is a sensible rhythm for the average home. The reason is straightforward. Electrical codes update on a multi-year cycle, so in a five-year window the standards have usually shifted at least once, and it is a reasonable time to confirm your home has kept pace with anything that genuinely affects safety. A newer home is a different story. Modern breakers and current installation standards protect newer construction well, and those homes can go longer with no concern at all. We would rather tell you that your system is sound and you do not need us again for years than sell you a schedule you do not need. That honesty is the whole point. If you ever hear that your home needs inspecting every single year, be skeptical, because that is usually about the contractor's calendar, not your safety."
+        "heading": "The 4-point inspection and what a carrier will flag",
+        "body": "If you are here because your insurer asked for a 4-point inspection, it helps to know what that is and where we fit. A 4-point inspection is a snapshot of four major systems in a home, the roof, the electrical, the plumbing, and the HVAC, that Florida carriers use to decide whether they will write or renew a policy, most often on older homes. Of those four, electrical is where homes most often get flagged, and it is the part we know cold. When we inspect, we look at exactly what an underwriter cares about: the panel's brand, age, and condition, whether it is one of the known problem types, whether it is overloaded or improperly wired, the state of the meter socket, and whether the grounding is intact. Then we tell you plainly what is sound and what a carrier is likely to flag, so nothing about your renewal is a surprise. If something would be flagged, you hear it from us first, on your own timeline, with the honest picture of how serious it is and what it would take to address. That is a very different position than opening a non-renewal letter and scrambling."
       },
       {
-        "heading": "Why older homes and pool homes are the exception",
-        "body": "The five-year rhythm is for the typical home in good condition. Two kinds of property genuinely warrant closer attention. The first is the older home. A house wired decades ago may carry an aging panel, an outdated grounding approach, or one of the problem-brand panels that were never reliable to begin with. Age alone does not make a home unsafe, but it does raise the odds that something has drifted out of spec, and it is worth a look sooner rather than later. The second is the home with a pool. Water and electricity sharing the same yard is a real hazard when the bonding and grounding around the pool are not right, and pool electrical systems benefit from their own regular inspection on top of the whole-home check. If your home falls into either group, the honest cadence tightens up, not because we want more visits, but because the risk in those specific cases is real and worth staying ahead of."
+        "heading": "The honest cadence, and the exceptions",
+        "body": "Here is the part most companies will not tell you, because it does not sell more visits: most homes do not need an electrical safety inspection very often. A whole-home checkup about once every five years is a sensible rhythm for the average home, because electrical codes update on a multi-year cycle and in that window the standards have usually shifted at least once. A newer home is a different story, well protected by modern breakers and able to go longer with no concern at all. We would rather tell you your system is sound and you do not need us again for years than sell you a schedule. Two kinds of property are the exception. The first is the older home, where an aging panel, an outdated grounding approach, or a problem-brand panel raises the odds that something has drifted out of spec. The second is the home with a pool, where water and electricity sharing the same yard is a real hazard if the bonding and grounding are not right, and the pool system benefits from its own regular inspection. If you ever hear that your home needs inspecting every single year, be skeptical, because that is usually about the contractor's calendar, not your safety."
       },
       {
         "heading": "What we actually look at",
-        "body": "During the check we move through the system in a consistent order so nothing gets missed. At the panel we look at the brand and age, whether it is one of the known problem types, the condition of the breakers, signs of heat or corrosion, and whether the panel is overloaded or improperly wired. At the meter socket we look for weather damage, corrosion, and loose or burned connections, which matter a great deal in a humid, salt-touched climate. We check the grounding, because proper grounding is what protects your family, your home, and your investment as a whole, and a missing or broken ground quietly removes that protection. We look at the visible wiring and connections for age, damage, and amateur work from past owners or unlicensed hands. Throughout, we are separating what is merely old from what is actually unsafe, because those are not the same thing, and telling you the difference is the job. When we are done, you have a clear mental map of your own electrical system: which parts are solid, which are simply aging, and which need a decision, so the power running through your home stops being a mystery to you."
+        "body": "During the inspection we move through the system in a consistent order so nothing gets missed. At the panel we look at the brand and age, whether it is one of the known problem types, the condition of the breakers, signs of heat or corrosion, and whether the panel is overloaded or improperly wired. At the meter socket we look for weather damage, corrosion, and loose or burned connections, which matter a great deal in a humid, salt-touched climate. We check the grounding, because proper grounding is what protects your family, your home, and your investment as a whole, and a missing or broken ground quietly removes that protection. We look at the visible wiring and connections for age, damage, and amateur work from past owners or unlicensed hands. Throughout, we are separating what is merely old from what is actually unsafe, because those are not the same thing, and telling you the difference is the job. When we are done, you have a clear mental map of your own electrical system: which parts are solid, which are simply aging, and which need a decision, so the power running through your home stops being a mystery to you."
       },
       {
-        "heading": "What happens if we find something",
-        "body": "If the check turns up a problem, we tell you exactly what it is and how serious it is, in plain language, and we sort it into what needs attention now and what can wait. Nothing about that conversation is high pressure. You are free to take the findings, sit with them, and decide your own timing. If you want us to handle the repair, our own in-house crew can take care of it, priced separately once you choose to move forward, and if the work rises to the level of a permit, we pull it and we meet the inspector in person. If the check turns up nothing, we say that just as plainly and you go on with your day, out only the cost of the inspection and richer for the peace of mind. We do not invent work to justify the visit. A safety check that ends with good news is a successful safety check."
-      },
-      {
-        "heading": "An honest word on scope and cost",
-        "body": "An electrical safety check is sold as a defined scope, not a loose hourly wander through your house, and it is priced as that defined scope and quoted when you book. That structure protects you, because you know what you are buying and what it covers before we arrive. If the check leads to repairs, those are quoted separately based on what the work actually requires, and you decide whether and when to proceed. We do not bundle surprise work into the inspection, and we do not use the visit as a lever to sell you a project you did not ask about. The forecast is honest and the price is set once. We would rather price it right the first time and keep your trust than nickel and dime you into never calling again. Give a customer more than what they pay for, and they call you for the next thing and the thing after that."
-      },
-      {
-        "heading": "Choosing who inspects your electrical",
-        "body": "The value of a safety check depends entirely on who is doing it, so choose carefully. Ask whether the person is licensed. Ghost Crown Electric is a Florida Certified Electrical Contractor with statewide authority and a Broward County Master Electrician, with 286 permitted projects on public record and ten years of showing up when we said we would. Ask whether they will give you honest findings even when the honest answer is that nothing is wrong, because a contractor who always finds expensive problems is a contractor to be wary of. Ask who would do any resulting repairs, an in-house crew or a rotating cast of subs. And notice whether they respect your timeline instead of manufacturing urgency. A good safety check leaves you better informed and in control, never cornered. We treat you like family, tell you the truth about your system, and let a decade of doing it that way speak for itself."
+        "heading": "What happens if we find something, and an honest word on cost",
+        "body": "If the inspection turns up a problem, we tell you exactly what it is and how serious it is, in plain language, and we sort it into what needs attention now and what can wait. Nothing about that conversation is high pressure. You are free to take the findings, sit with them, and decide your own timing. If you want us to handle the repair, our own in-house crew can take care of it, priced separately once you choose to move forward, and if the work rises to the level of a permit, we pull it in our own name and meet the inspector in person. If the inspection turns up nothing, we say that just as plainly and you go on with your day, richer for the peace of mind. On cost, the inspection is sold as a defined scope, not a loose hourly wander through your house, and it is priced as that scope and quoted when you book, so you know what you are buying before we arrive. Any repairs are quoted separately based on what the work actually requires, and we do not bundle surprise work into the inspection or use the visit as a lever to sell you a project you did not ask about. Give a customer more than what they pay for, and they call you for the next thing and the thing after that."
       }
     ]
   },
   "faqs": [
     {
-      "question": "How often should I have an electrical safety check?",
+      "question": "My insurance company wants a 4-point inspection. Can you help?",
+      "answer": "Yes. A documented electrical safety inspection from a licensed master electrician is often exactly the professional record a Florida carrier wants for the electrical portion of a 4-point, which is where older homes most often get flagged. We inspect the panel, meter, grounding, and wiring, give you honest findings, and tell you what a carrier is likely to flag, so you learn it on your own timeline instead of from an underwriter."
+    },
+    {
+      "question": "How often should I have an electrical safety inspection?",
       "answer": "For a typical home in good condition, about once every five years is a sensible rhythm, because electrical codes update on a multi-year cycle. Newer homes are well protected by modern breakers and can go longer. Older homes and homes with pools genuinely warrant closer attention. We will tell you honestly if you do not need us again for years."
     },
     {
-      "question": "What does a safety check include?",
+      "question": "What does an inspection include?",
       "answer": "It is a defined walkthrough of your electrical system: the panel and breakers, the meter socket where power enters, the grounding, and the visible wiring and connections. A licensed master electrician looks for anything in a bad state, then tells you plainly what is fine, what to watch, and what needs attention. You come away knowing exactly where your system stands."
-    },
-    {
-      "question": "How much does an electrical safety check cost?",
-      "answer": "It is sold as a defined scope of work and priced as that scope, quoted when you book, so you know what you are buying before we arrive. If the check leads to repairs, those are quoted separately based on what the work actually requires, with no obligation. We do not use the inspection as a lever to sell you a project."
     },
     {
       "question": "Do I need one if my home is fairly new?",
       "answer": "Probably not often. Newer homes are well protected by modern breakers and current installation standards, and they can go a good while with no concern. We would rather tell you that honestly than sell you a schedule you do not need. If nothing has changed and nothing feels off, a newer home is usually in good hands already."
     },
     {
-      "question": "My insurance company wants an electrical inspection. Can you help?",
-      "answer": "Yes. A documented safety check from a licensed master electrician is often exactly the professional record a Florida carrier is asking for before they will write or renew a policy. We inspect the system, give you honest findings, and provide the documentation. If something would be flagged, you learn it on your own timeline instead of from an underwriter."
+      "question": "How much does an electrical safety inspection cost?",
+      "answer": "It is sold as a defined scope of work and priced as that scope, quoted when you book, so you know what you are buying before we arrive. If the inspection leads to repairs, those are quoted separately based on what the work actually requires, with no obligation. We do not use the inspection as a lever to sell you a project."
     },
     {
       "question": "Will you just try to sell me a bunch of work?",
-      "answer": "No. Honest cadence and honest findings are the whole point. If your system is sound, we say so and you are done. If we find something, we tell you how serious it is and let you choose your own timing, with no pressure. We do not invent work. A safety check that ends with good news is a good outcome for both of us."
+      "answer": "No. Honest cadence and honest findings are the whole point. If your system is sound, we say so and you are done. If we find something, we tell you how serious it is and let you choose your own timing, with no pressure. We do not invent work. An inspection that ends with good news is a good outcome for both of us."
     }
   ],
-  "related": ["electrical-panel-upgrade", "whole-home-surge-protection", "pool-grounding-bonding-inspection", "electrical-service-rebuild"],
+  "related": ["electrical-panel-upgrade", "pool-electrical", "generators-and-surge-protection", "electrical-service-rebuild"],
   "pricing": {
     "display": "Priced as a defined scope, quoted when you book",
-    "notes": "The electrical safety check is a specific inspection with a clear scope, not a loose hourly consultation. It is priced as that defined scope and quoted when you book. Any repairs the check turns up are quoted separately, based on what the work actually requires, with no obligation to proceed."
+    "notes": "The electrical safety inspection is a specific inspection with a clear scope, not a loose hourly consultation. It is priced as that defined scope and quoted when you book. Any repairs the inspection turns up are quoted separately, based on what the work actually requires, with no obligation to proceed."
   },
   "stats": [
     {"value": "Master", "label": "Broward County Master Electrician"},
@@ -167,6 +150,6 @@
   ],
   "cta": {
     "headline": "Know where your electrical stands",
-    "body": "Book a safety check and get an honest, plain-language read on your panel, meter, and system. If it is sound, we will say so. If it needs attention, you will know exactly what and how soon."
+    "body": "Book an electrical safety inspection and get an honest, plain-language read on your panel, meter, and wiring, including what a carrier is likely to flag. If it is sound, we will say so. If it needs attention, you will know exactly what and how soon."
   }
 }

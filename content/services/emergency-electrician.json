@@ -1,20 +1,20 @@
 {
   "slug": "emergency-electrician",
-  "name": "24/7 Emergency Electrician",
-  "shortName": "Emergency Electrician",
+  "name": "24/7 Emergency Electrical",
+  "shortName": "Emergency Electrical",
   "tier": "money",
-  "metaTitle": "24/7 Emergency Electrician in Broward | Ghost Crown",
-  "metaDescription": "Need a 24/7 emergency electrician in Broward County? Ghost Crown Electric is a Florida Certified, licensed and local electrical contractor. We show up day or night.",
-  "h1": "24/7 Emergency Electrician in Broward County",
-  "intro": "It is eleven at night and a tenant just called. The air conditioning is dead, half the outlets are out, and the breaker will not stay on. That is the call this company was built around. When power fails after hours you do not need a promise for next week, you need a licensed electrician who picks up and shows up. We show up whenever you call. Day or night. With three trucks on the road we can run three jobs at once, so an emergency at one property does not sit behind another. Electricity is something we do not see, we only feel the effect, and when the effect is a hot night with no cooling we treat it that way. You are paying for the experience, and for someone who actually answers the phone.",
+  "metaTitle": "24/7 Emergency Electrical in Broward County | Ghost Crown",
+  "metaDescription": "Lost power, a tripped breaker, or a burning smell in Broward County? Ghost Crown Electric finds the fault and restores power day or night. Licensed and local.",
+  "h1": "24/7 Emergency Electrical and Power Restoration in Broward County",
+  "intro": "When the power fails after hours, you do not need a promise for next week, you need a licensed electrician who answers and shows up. It is eleven at night, the air conditioning is dead, half the outlets are out, and the breaker will not stay on. That is the call this company was built around. Our licensed crew traces the fault, makes it safe, and restores power where it is safe to do so. The standard $240 service call covers roughly two hours including travel, arrival, and diagnosis, and after-hours and emergency visits carry a premium, which we tell you before we roll. With three trucks on the road we can run three jobs at once, so an emergency at one property does not sit behind another. We show up whenever you call. Day or night.",
   "definition": {
-    "heading": "What a 24/7 emergency electrician does",
-    "body": "An emergency electrician handles the electrical failures that cannot wait for a regular appointment: a dead circuit feeding critical equipment, a panel that trips and will not reset, a burning smell, sparking, or a sudden loss of power to part of a building. The work is to find the fault quickly, make the situation safe, and restore power where it is safe to do so. Some problems are an in and out type of situation and are handled on the spot. Others need parts, a utility call, or a permit, and we tell you that honestly before we start. The point of the after-hours visit is real availability at night, not a rushed guess. We diagnose first, then price the fix so you know the number before the work begins."
+    "heading": "What emergency electrical and power restoration cover",
+    "body": "Emergency electrical work handles the failures that cannot wait for a regular appointment: a dead circuit feeding critical equipment, a panel that trips and will not reset, a burning smell, sparking, or a sudden loss of power to part of a building. Power restoration is the troubleshooting side of the same job, finding out exactly why power stopped and bringing it back safely, whether it is a full outage, half a property gone dark from a lost leg of service, or an intermittent fault that flickers on and off. The work is to locate the fault quickly, make the situation safe, and restore power where it is safe to do so. Some problems are an in and out type of situation handled on the spot. Others need a part, a utility call, or a permit, and we tell you that honestly before we start. We diagnose first, then price the fix, so you know the number before the work begins."
   },
   "symptoms": [
     {
       "title": "Part of the building lost power",
-      "body": "The lights are out in one unit or one wing while the rest of the property still works. When the outage stops at your property line it is not the utility, it is an electrical fault we can locate and repair."
+      "body": "The lights are out in one unit, one wing, or one circuit while the rest of the property still works. When the outage stops at your property line it is not the utility, it is an electrical fault our crew can locate and repair."
     },
     {
       "title": "A breaker will not stay on",
@@ -25,26 +25,26 @@
       "body": "You notice a hot plastic smell, warm cover plates, or brown scorch marks near an outlet, switch, or the panel. Stop using that circuit and call. This is the kind of sign we take seriously and come out for."
     },
     {
-      "title": "Outlets or a circuit went dead",
-      "body": "A row of outlets or a whole circuit quit with no warning, and resetting the GFCI and the breaker did nothing. Something upstream has failed. We trace the circuit back to the fault and restore it safely."
+      "title": "Half the property is dark",
+      "body": "Lights and outlets work in part of the building but not the rest, and large appliances act strange. That pattern often means a lost leg of incoming power, a serious fault we locate at the service and correct safely."
     },
     {
-      "title": "Flickering, dimming, or buzzing",
-      "body": "Lights dim or flicker across the property, or you hear a buzz or crackle at the panel. Those are early warnings of a loose connection or a tired panel. Catching it now beats meeting it at midnight later."
+      "title": "The panel is warm, buzzing, or tripping the main",
+      "body": "A panel that hums, feels warm to the touch, or trips its main breaker is telling you a connection is failing under load. Stop leaning on that panel and call. We restore power by fixing the cause, not by resetting the symptom."
     },
     {
-      "title": "Critical equipment lost power at night",
-      "body": "The air conditioning, a well pump, a lift station, or another system a tenant depends on lost power after hours. That cannot wait until morning in South Florida heat, and it does not have to. We come out."
+      "title": "Power dropped after a storm or a bump",
+      "body": "A storm, a surge, a dug-up line, or a vehicle striking equipment can knock out power at one property. If the utility says the area is fine, the damage is on your equipment, and we locate it and restore service."
     }
   ],
   "process": [
     {
       "title": "You call and we triage",
-      "body": "We take the call and ask the right questions: what failed, what still works, any smell or spark. That phone triage tells us whether it is safe to wait, safe to reset, or a truck out the door right now."
+      "body": "We take the call and ask the right questions: what failed, what still works, whether the neighbors have power, any smell or spark. That phone triage separates a utility outage from a fault on your side, and tells us whether a truck rolls now or it is safe to wait."
     },
     {
-      "title": "On-site assessment",
-      "body": "We arrive and find the actual fault instead of guessing. The $240 service call covers roughly two hours including travel, arrival, and diagnosis, so you are paying for a real diagnosis, not a sales visit."
+      "title": "On-site diagnosis",
+      "body": "We arrive and find the actual fault with meters and method instead of guessing. The $240 service call covers roughly two hours including travel, arrival, and diagnosis, so you are paying for a real answer about where and why the power stopped, not a sales visit."
     },
     {
       "title": "One forecast-based price",
@@ -52,117 +52,101 @@
     },
     {
       "title": "Our in-house crew does the work",
-      "body": "The same three-person crew that shows up does the repair, not a subcontractor you never met. We restore power where it is safe, and if a part or a utility step is needed we lay out the plan clearly."
+      "body": "The same three-person crew that shows up does the repair, not a subcontractor you never met. We restore power where it is safe, from a burned connection to a failed section of service, and lay out the plan clearly when a part or a utility step is needed."
     },
     {
       "title": "Permit, inspection, and follow-up",
-      "body": "When the fix requires a permit we pull it, and we meet the inspector in person. Then we follow up to confirm the property is stable. We show up when we say we will, start to finish."
+      "body": "When the fix requires a permit we pull it under our own license, and we meet the inspector in person. Then we follow up to confirm the property is stable. We show up when we say we will, start to finish."
     }
   ],
   "benefits": [
     {
-      "title": "Power restored safely",
-      "body": "The goal is not just lights back on, it is lights back on safely. We find the real fault and fix that, so the problem does not return the next hot night when the load climbs again."
+      "title": "The fault is actually found",
+      "body": "Restoration that skips the diagnosis just delays the next outage. We locate the exact point of failure and repair that, so the power that comes back stays back instead of dropping again on the next hot night when the load climbs."
     },
     {
       "title": "A licensed electrician who answers",
-      "body": "You reach a Florida Certified Electrical Contractor and Broward County Master Electrician, not an answering service. We show up whenever you call. Day or night. That availability is the whole point of an emergency line."
+      "body": "You reach a Florida Certified Electrical Contractor and Broward County Master Electrician team, not an answering service. We show up whenever you call, day or night. That availability is the whole point of an emergency line."
+    },
+    {
+      "title": "Honest about what is ours to fix",
+      "body": "If the whole neighborhood is dark, that is the utility and we will tell you so rather than bill you for their outage. When the fault is on your property, it is our lane, and we stay in it."
     },
     {
       "title": "One price that holds",
       "body": "You get one honest number before the repair starts, and it does not creep upward mid-job. For a property manager at eleven at night, a price that holds is as valuable as the speed."
-    },
-    {
-      "title": "One accountable company",
-      "body": "We take the call, price the job, and stand behind it. Speed without accountability is worthless, and accountability without speed is useless at night. This company sells both, from first call to final inspection."
     }
   ],
   "localSections": [
     {
       "heading": "Aging housing stock and tired panels",
-      "body": "Much of Broward County was wired across the nineteen sixties, seventies, and eighties, and a good share of those panels are still in service. Some are known problem lines that age poorly and lose their grip on breakers over time. When a panel like that has run window units and pool pumps through twenty South Florida summers, the failure rarely announces itself politely. It shows up as a breaker that will not reset, a warm panel cover, or a circuit that dies at the worst hour. Most of our after-hours calls trace back to a service or panel that was already near the end of its life and finally gave out under load. When we come out we read the whole picture, not just the one dead circuit, so we can tell you whether this was a one-time fault or a sign the panel itself is asking to be replaced soon."
+      "body": "Much of Broward County was wired across the nineteen sixties, seventies, and eighties, and a good share of those panels and service equipment are still in use. Some are known problem lines that lose their grip on breakers and corrode on the bus over time. When a panel like that has run window units and pool pumps through twenty South Florida summers, the failure rarely announces itself politely. It shows up as a breaker that will not reset, a warm panel cover, a lost leg that darkens half the property, or a circuit that dies at the worst hour. Most of our after-hours calls trace back to a service or panel that was already near the end of its life and finally gave out under load. When we come out we read the whole picture, not just the one dead circuit, so we can tell you honestly whether this was a one-time fault or a sign the equipment itself is asking to be replaced soon."
     },
     {
       "heading": "Heat, humidity, and salt air",
-      "body": "South Florida is hard on electrical equipment in ways inland systems never see. Air conditioning runs eight or nine months a year, so circuits that feed cooling carry heavy load for long stretches, and heat is what finds a loose or corroded connection. Humidity works into panels and outdoor equipment, and salt air off the coast corrodes lugs, bus bars, and meter equipment faster than most owners expect. Corrosion adds resistance, resistance makes heat, and heat is what turns a slow problem into a sudden one at night. That is why so many emergencies here land in the evening after a long hot day of demand. We factor the climate into every diagnosis, because a repair that ignores heat and salt in this region is a repair that comes back."
-    },
-    {
-      "heading": "Code and permitting in Broward",
-      "body": "Emergency work is still real electrical work, and in Broward County that means it is governed by the same permitting and inspection rules as any other job. Making a property safe at night and pulling the required permit are not in conflict; we do the safe stabilization first, then handle the paperwork the right way. When a repair or replacement needs a permit we pull it under our own license and we meet the inspector in person rather than sending a stranger. That matters because an emergency fix that skips the permit can haunt a property manager later at sale, at refinance, or at the next inspection. We keep the record clean so the fast fix does not become tomorrow's problem. Permits pulled and inspections attended are part of how we work, not an upsell."
-    },
-    {
-      "heading": "What insurance carriers watch",
-      "body": "Insurance carriers in South Florida have grown strict about electrical systems, and they pay close attention after a claim. If a fire or water event traces back to electrical failure, the carrier will want to know whether the work was done by a licensed contractor and whether it was permitted and inspected. Unpermitted or handyman electrical repairs can slow a claim or put coverage at risk, which is a costly surprise at the worst possible time. When we handle an emergency we document what failed and what we did, pull permits where they are required, and leave you with a clean licensed trail. For a property manager that paper record is part of protecting the owner, not just the tenant, and it is the kind of thing we handle without being asked twice."
+      "body": "South Florida is hard on electrical equipment in ways inland systems never see. Air conditioning runs eight or nine months a year, so circuits that feed cooling carry heavy load for long stretches, and heat is what finds a loose or corroded connection. Humidity works into panels and outdoor equipment, and salt air off the coast corrodes lugs, bus bars, and meter equipment faster than most owners expect. Corrosion adds resistance, resistance makes heat, and heat is what turns a slow problem into a sudden outage at night. That is why so many emergencies here land in the evening after a long hot day of demand, and why intermittent faults get worse through the summer. We factor the climate into every diagnosis, because a repair that ignores heat and salt in this region is a repair that comes back."
     }
   ],
   "guide": {
-    "title": "The complete guide to emergency electrical service in South Florida",
+    "title": "The complete guide to emergency electrical and power restoration in South Florida",
     "sections": [
       {
-        "heading": "What actually counts as an electrical emergency",
-        "body": "Not every electrical problem is an emergency, and part of an honest electrician's job is telling you which is which. A true emergency is anything that is unsafe or that leaves people without power they depend on. Burning smells, smoke, sparking, warm or discolored outlets and cover plates, a panel that buzzes or feels hot, and any electrical problem paired with water all belong in the call now category, because those point to arcing or overheating that can start a fire. The second kind of emergency is a loss of critical power: air conditioning in July, a well pump, a lift station, security and life safety systems, or a medical device. In South Florida heat, cooling is not a luxury for a tenant, and a dead AC circuit at night is a legitimate emergency call. On the other end, a single dead outlet, a light that will not turn on, or one tripped GFCI that resets and holds can usually wait for a scheduled visit and save you the after-hours premium. When you call, we will ask what failed, what still works, and whether there is any smell or spark, and that triage decides how fast a truck rolls. We would rather talk you through a safe overnight wait than charge you for a run you did not need."
+        "heading": "What counts as an emergency, and whose problem it is",
+        "body": "Not every electrical problem is an emergency, and part of an honest electrician's job is telling you which is which. A true emergency is anything unsafe or anything that leaves people without power they depend on. Burning smells, smoke, sparking, warm or discolored outlets and cover plates, a panel that buzzes or feels hot, and any electrical problem paired with water all belong in the call now category, because those point to arcing or overheating that can start a fire. The second kind of emergency is a loss of critical power: air conditioning in July, a well pump, a lift station, security and life safety systems, or a medical device. In South Florida heat, cooling is not a luxury for a tenant, and a dead AC circuit at night is a legitimate emergency. Before you pay anyone to come out, though, it helps to know whether the problem is yours or the power company's, and the test is simple: it is about where the darkness stops. If the whole street is dark, if your neighbors lost power too, or if the utility reports an outage in the area, that is the utility's line to restore and no electrician can bring it back faster. But if the power stops at your property, if it is one unit, one wing, or one circuit while everyone around you still has lights, that is almost always a fault on your side of the meter, and that is our lane. When you call, we will help you sort this out over the phone so you are not paying for a visit that belongs to the power company. We stay in our lane, and part of staying in it is being honest when a problem is not ours to bill for."
       },
       {
-        "heading": "Utility problem or electrical problem, and how to tell",
-        "body": "Before you pay anyone to come out, it helps to know whether the problem is yours or the power company's, because the answer changes who fixes it. The simplest test is to look past your own walls. If the whole street is dark, if your neighbors lost power too, or if the utility is reporting an outage in the area, that is the utility's line to restore and an electrician cannot bring it back any faster. But if the power stops at your property, if it is one unit, one wing, or one circuit while everyone around you still has lights, that is almost always an electrical problem on your side of the meter, and that is our lane. A few other clues point to your system: power that comes and goes, half the house dark while the other half works which can signal a lost leg of service, breakers that trip and will not reset, or dimming that tracks with a big appliance turning on. When you call we will help you sort this out over the phone so you are not paying for a visit that belongs to the power company. We stay in our lane, and part of staying in it is being honest when a problem is not ours to bill for."
+        "heading": "How troubleshooting and fault location work",
+        "body": "Restoring power is not guesswork, and the difference between a real electrician and someone throwing parts at a wall is method. When our crew arrives we start at the source and work outward. We check the incoming service and the meter, then the main panel, then the individual circuit, using meters to measure voltage at each stage so we can see exactly where the power is present and where it stops. That point, where live becomes dead, is the fault, and finding it precisely is what lets us fix the right thing the first time. One of the most common and most misunderstood outages is when half a property loses power while the other half works fine. Most homes and small buildings receive two legs of incoming power, and many large appliances use both, so when one leg is lost, often at a failed connection at the meter, the service, or the utility drop, roughly half your circuits go dead while the rest keep running and the big appliances behave strangely. That is not a fuse you can reset, it is a real fault at the service that has to be located and repaired safely. Other frequent causes are a tripped or failed main or subpanel breaker, a burned bus bar in an aging panel, a loose or corroded neutral, and heat-damaged connections in equipment that has run hard through many South Florida summers. Electricity is something we do not see, we only feel the effect, so a proper diagnosis is the whole game. A restoration that skips it just means you will be calling again soon, and we would rather do it once and do it right."
       },
       {
-        "heading": "What to do before we arrive",
-        "body": "There are a few safe steps that protect people and property while a truck is on the way, and a few things you should never do. If you smell burning plastic, see smoke, or notice sparks, stop using that circuit and keep people away from it; if anything is actively smoking or on fire, get everyone out and call the fire department first. If a specific appliance or outlet is the obvious source and you can reach the breaker safely, you can switch that one breaker off to remove power from the problem. Do not stand in water to touch anything electrical, do not keep resetting a breaker that trips right back, and never replace a tripping breaker with a larger one, because that breaker is protecting the wire and a bigger one just lets the wire overheat. Leave the main panel closed unless you are simply flipping a labeled breaker. Grab a flashlight rather than candles, note exactly what failed and when, and if a tenant reported it, get their unit number and a callback. Small details like which outlets are dead and whether anything was running when the power dropped help us find the fault faster once we are on site, which keeps the whole visit shorter and cheaper for you."
-      },
-      {
-        "heading": "What happens during an after-hours visit",
-        "body": "When we arrive at night the first job is a fast, methodical assessment, not a guess. We confirm what has failed, check the panel and the incoming service, and use meters to trace the dead circuit back toward the fault instead of opening walls at random. The $240 service call covers roughly two hours including travel, arrival, and diagnosis, and after hours that call carries a premium because you are paying for real availability at night rather than a slot next week. Once we know what is wrong, you get one honest number for the repair before we begin. Many problems are an in and out type of situation: a failed breaker, a burned connection, a bad device, a loose lug, and those we can often make safe and restore the same visit. Others need a part we have to source, a utility disconnect and reconnect, or a permit and inspection, and when that is the case we stabilize what we safely can, explain the plan, and schedule the rest quickly. Either way we do not leave you guessing about cost or next steps. If the problem is fully resolved on that first visit there is no separate return charge. Everything beyond the diagnosis is quoted per situation, because no two failures are the same and we would rather see it before we price it."
+        "heading": "What to do, and not do, before we arrive",
+        "body": "There are a few safe steps that protect people and property while a truck is on the way, and a few things you should never do. First, if you can, confirm it is not the utility by checking whether the neighbors have power. If you smell burning plastic, see smoke, or notice sparks, stop using that circuit and keep people away from it, and if anything is actively smoking or on fire, get everyone out and call the fire department first. If a specific appliance or outlet is the obvious source and you can reach the breaker safely, you can switch that one labeled breaker off to remove power from the problem. Do not stand in or near water to touch anything electrical, do not keep resetting a breaker that trips right back, and never replace a tripping breaker with a larger one, because that breaker is protecting the wire and a bigger one just lets the wire overheat toward a fire. Leave the main panel closed otherwise. Grab a flashlight rather than candles, and note exactly what failed and when: which outlets or rooms are dead, whether anything was running when the power dropped, and whether a storm, a loud pop, or a starting appliance came first. If a tenant reported it, get their unit number and a callback. Those small details help us find the fault faster once we are on site, which keeps the whole visit shorter and cheaper for you."
       },
       {
         "heading": "Why after-hours costs more, explained plainly",
-        "body": "It is fair to ask why an emergency visit costs more than a daytime one, and the honest answer is that you are buying availability. During the day the standard service call is $240, and that covers roughly the first two hours including travel, arrival, and diagnosis. After hours and on emergencies that same visit carries a premium, and the reason is simple: instead of paying for two hours, you are paying for three, because getting a licensed crew out of bed and to your property at midnight has a real cost. What you are actually buying is not just speed. Speed without accountability is worthless, and a fast electrician who cannot stand behind the work is useless to a property manager at eleven at night. Accountability without speed is just as useless when a tenant has no power. We sell both at once, and the premium reflects that. We will always tell you a premium applies before we roll, so there is no surprise on the invoice. What we will not do is inflate the diagnosis, invent problems, or move the number once it is set. We price it once, price it right, and give a customer more than what they pay for, because the property managers who call us at night are the same ones who call us for the planned work in daylight, and that relationship is worth far more than any single after-hours ticket."
+        "body": "It is fair to ask why an emergency visit costs more than a daytime one, and the honest answer is that you are buying availability. During the day the standard service call is $240, and that covers roughly the first two hours including travel, arrival, and diagnosis. After hours and on emergencies that same visit carries a premium, and the reason is simple: instead of paying for two hours you are paying for three, because getting a licensed crew out of bed and to your property at midnight has a real cost. We will always tell you a premium applies before we roll, so there is no surprise on the invoice. What you are actually buying is not just speed. Speed without accountability is worthless, and a fast electrician who cannot stand behind the work is useless to a property manager at eleven at night, while accountability without speed is just as useless when a tenant has no power. We sell both at once, and the premium reflects that. Beyond the diagnosis, the repair itself is quoted per situation, because until we locate the fault we honestly do not know whether it is a five minute breaker swap or a failed section of service, and pricing a repair sight unseen would either overcharge you to be safe or trap us into a number that does not fit. Once we have found the fault you get one honest number before we begin, and it holds unless we uncover something new behind it and tell you first. If the problem is fully resolved on that first visit, there is no separate return charge. We price it once, price it right, and give a customer more than what they pay for."
       },
       {
-        "heading": "How to choose an emergency electrician you can trust",
-        "body": "At night, when you are tired and a tenant is upset, it is easy to hand the job to whoever answers first, but a few checks protect you. Start with licensing: you want a Florida Certified Electrical Contractor with statewide authority, and here in Broward a county Master Electrician, because that is the difference between someone who guesses and someone who is accountable to the state for the work. Ask whether the person doing the repair is in-house crew or a subcontractor you will never see again, and whether the company pulls permits and attends inspections or quietly skips them. Skipped permits become your problem later at sale or refinance. Ask how they price after-hours work, and be wary of anyone who will not name a premium up front or who quotes a firm repair price sight unseen; every electrical situation is different and the honest ones see it before they promise it. A good emergency electrician also tells you when a problem is the utility's and not yours, rather than billing you for their outage. Ghost Crown Electric has run for ten years, holds 286 permitted projects on public record, and stays in the top tier of Florida contractors by permit quality, and we take the call, price the job, and meet the inspector in person. When you call, you are not getting a dispatcher and a stranger, you are getting a licensed electrician whose license is on the line."
-      },
-      {
-        "heading": "After the emergency: making the fix permanent",
-        "body": "Getting the power back at midnight is the first job, but a good emergency electrician is already thinking about the next hot night. Once the immediate danger is handled, we tell you plainly whether what failed was a one-time fault or a symptom of something larger, like a panel that is losing its grip on breakers or service equipment that is worn out. That honesty lets a property manager plan the permanent repair on their own schedule and budget, in daylight, instead of meeting the same failure again at the worst hour and at an after-hours premium. We never use the stress of the moment to push a big project; every electrical situation is different, and the real fix gets its own site visit and its own honest price. We also leave you with a record of what we found and what we did, which matters when the same issue later touches a tenant complaint or an insurance question. For a building that keeps having small electrical emergencies, that pattern is itself the message: the service is tired and asking for attention. Catching that early, and acting on it when it is convenient rather than when it is smoking, is how you turn a string of midnight calls into one planned, permitted job. That is the whole difference between chasing symptoms and fixing the cause, and it is the reason property managers keep our number in their phone rather than searching for a stranger the next time the lights go out."
+        "heading": "When a restoration turns into a bigger fix",
+        "body": "Getting the power back at midnight is the first job, but a good emergency electrician is already thinking about the next hot night. Sometimes we locate the fault, restore your power, and the honest news is that the equipment behind the outage is at the end of its life. A panel that has lost its grip on breakers, a bus bar burned across several connections, or service equipment corroded by years of salt air and heat will keep producing outages no matter how carefully we repair a single point. In those cases we do the safe thing first, get power back where we can, and then have a straight conversation about what the property really needs, which may be a panel upgrade or a full electrical service rebuild in the 5,000 to 8,000 range for a typical residential job. We never use the stress of the moment to push a big project. If your existing equipment is safe and current, we will tell you so and leave it alone. Every situation is different, and the real fix gets its own site visit and its own honest price, in daylight and on your schedule. When a repair or replacement does need a permit, we pull it under our own license and we meet the inspector in person, and we leave you with a documented record of what failed and what we did. That record matters if the same issue later touches a tenant complaint or an insurance question, because South Florida carriers look hard at whether electrical work was licensed, permitted, and inspected, and unpermitted repairs can slow a claim at the worst time. Ghost Crown Electric has run for ten years, holds 286 permitted projects on public record, and stays in the top tier of Florida contractors by permit quality, so from the first call to the final inspection, the licensed team accountable for the work is who you are talking to."
       }
     ]
   },
   "faqs": [
     {
       "question": "Do you really answer the phone at night?",
-      "answer": "Yes. Emergency response is the service this company was built around. We show up whenever you call. Day or night. We take the call, ask what failed and what still works, and decide with you whether a truck rolls now or whether it is safe to wait until morning and save you the after-hours premium."
+      "answer": "Yes. Emergency response is the service this company was built around. We show up whenever you call, day or night. We take the call, ask what failed and what still works, and decide with you whether a truck rolls now or whether it is safe to wait until morning and save you the after-hours premium."
     },
     {
       "question": "How much does an emergency visit cost?",
       "answer": "The standard service call is $240 and covers roughly two hours including travel, arrival, and diagnosis. After-hours and emergency visits carry a premium over that because you are paying for real availability at night. The repair itself is quoted per situation once we see the fault, and if the problem is resolved on the spot there is no separate return charge."
     },
     {
-      "question": "How is this different from a normal service call?",
-      "answer": "A normal service call is a scheduled daytime visit. An emergency visit is the same licensed diagnosis, but after hours and with a premium, because we are getting a crew to you at night. With three trucks we can run three jobs at once, so an emergency at one property does not have to wait behind another job on the calendar."
+      "question": "Is my outage the power company's problem or an electrician's?",
+      "answer": "It depends on where the darkness stops. If the whole neighborhood is out, that is the utility and we cannot restore it faster. If the power stops at your property, or it is one unit or one circuit while your neighbors have lights, the fault is on your side of the meter and it is our lane. Call and we will help you tell which it is before anyone comes out."
     },
     {
-      "question": "Is my outage a power company problem or an electrician problem?",
-      "answer": "If the whole neighborhood is dark, that is the utility and we cannot restore it faster. If the power stops at your property, or it is one unit or one circuit while your neighbors have lights, that is almost always on your side of the meter and it is our lane. Call us and we will help you tell the difference before anyone comes out."
+      "question": "Why did half my property lose power?",
+      "answer": "Most buildings receive two legs of incoming power, and many large appliances use both. When one leg is lost, often at the meter or service, about half your circuits go dead while the rest keep working and the big appliances act strange. That is a real fault at the service, not a breaker you can reset, and we locate and repair it safely."
     },
     {
       "question": "Can you get the power back on the same night?",
       "answer": "Often, yes. Many failures are an in and out type of situation, such as a failed breaker or a burned connection, and we can make them safe and restore power on the first visit. Some problems need a part, a utility disconnect, or a permit, and when that happens we stabilize what is safe and lay out a clear plan for the rest."
     },
     {
-      "question": "Should I keep resetting the breaker while I wait?",
-      "answer": "No. A breaker that trips right back is protecting the wire from overheating, and forcing it on repeatedly is not safe. Never swap in a larger breaker either, because that removes the protection. If one labeled breaker is clearly the source, you can leave it off. Otherwise leave the panel alone, keep people clear, and let us find the fault."
+      "question": "My power keeps flickering off and on. Is that urgent?",
+      "answer": "Yes, treat it seriously. Power that comes and goes usually means a loose or corroded connection that is arcing, and arcing is a fire risk. It rarely fixes itself and it tends to get worse. Stop relying on that circuit, note when it happens, and call us to locate the connection before it fails completely or causes damage."
     }
   ],
   "related": [
-    "emergency-power-restoration",
     "electrical-service-rebuild",
-    "meter-bank-replacement",
-    "electrical-safety-check"
+    "electrical-panel-upgrade",
+    "pool-electrical",
+    "meter-bank-replacement"
   ],
   "pricing": {
     "display": "The $240 service call covers roughly two hours. After-hours and emergency visits carry a premium.",
-    "notes": "The $240 service call includes travel, arrival, and diagnosis, and if the problem is handled on the spot there is no separate return charge. After-hours and emergency visits carry a premium over the standard call because you are paying for real availability at night. Everything beyond the diagnosis is quoted per situation after we see the fault."
+    "notes": "The $240 service call includes travel, arrival, and diagnosis, and if the problem is handled on the spot there is no separate return charge. After-hours and emergency visits carry a premium over the standard call because you are paying for real availability at night. Everything beyond the diagnosis is quoted per situation once we locate the fault, and a larger repair such as a panel upgrade or a full service rebuild is priced on its own."
   },
   "stats": [
     {
@@ -180,6 +164,6 @@
   ],
   "cta": {
     "headline": "Power out? Call day or night.",
-    "body": "When the power fails and it cannot wait, you need a licensed electrician who answers and shows up. Ghost Crown Electric runs three trucks across Broward County and a licensed electrician answers. We show up whenever you call."
+    "body": "When the power fails and it cannot wait, you need a licensed electrician who answers, finds the fault, and shows up. Ghost Crown Electric runs three trucks across Broward County, and a licensed electrician answers. We show up whenever you call."
   }
 }

@@ -3,7 +3,7 @@ title: "Why Older Pools Shock Swimmers: Grounding and Bonding, Explained Plainly
 description: "Older South Florida pools can tingle before they shock. A Broward electrician explains pool grounding and bonding plainly, and the yearly inspection to book."
 date: "2026-07-21"
 tags: ["pool safety", "grounding and bonding", "pool electrical", "homeowners"]
-relatedServices: ["pool-grounding-bonding-inspection", "pool-electrical-repair", "pool-gfci-breaker-replacement"]
+relatedServices: ["pool-electrical", "electrical-safety-check", "electrical-panel-upgrade"]
 ---
 
 If you have ever climbed the ladder out of a pool and felt a faint tingle in the hand that gripped the metal rail, you already know the feeling this article is about. Most people brush it off. The water was cold, or a foot fell asleep, or it was just imagination. Sometimes it really is nothing. But a genuine tingle from a pool rail, a ladder, or a metal fitting is the pool trying to tell you something, and it is worth understanding what it is saying.
@@ -32,15 +32,15 @@ That tingle is the early warning. It is the system telling you a leak has starte
 
 Pools built around forty years ago are the ones we watch most closely, and it is not about age for its own sake. It is that the rules and the materials have improved a great deal since then, and four decades of South Florida sun, salt air, pool chemistry, and groundwater are hard on copper and steel. Bonding connections that were fine in the 1980s can corrode loose. Older equipment predates some of the protections we now consider standard. A pool from that era is not automatically unsafe, but it has earned a careful look at the parts you cannot see. Most of what protects a swimmer lives underground or inside the equipment, out of sight, which is exactly why a trained look matters more than a glance from the deck.
 
-Two upgrades come up often on these older pools. The first is the breaker. Pool circuits should be protected by a water-rated, fast-trip breaker, the kind designed to sense a tiny imbalance and cut power in a fraction of a second, long before it becomes a problem for a person. If your pool equipment is still on an ordinary breaker, that is worth addressing. You can read more on the [pool GFCI breaker replacement](/services/pool-gfci-breaker-replacement) page.
+Two upgrades come up often on these older pools. The first is the breaker. Pool circuits should be protected by a water-rated, fast-trip breaker, the kind designed to sense a tiny imbalance and cut power in a fraction of a second, long before it becomes a problem for a person. If your pool equipment is still on an ordinary breaker, that is worth addressing. You can read more on the [pool GFCI breaker replacement](/services/pool-electrical) page.
 
-The second is location. Code has moved the electrical panel that serves the pool out of the old pump enclosure and to a proper, accessible spot away from the wet equipment. On many older installations the panel is still tucked inside or right on top of the pump, which is exactly where you do not want it. Correcting that is part of a thorough [pool electrical repair](/services/pool-electrical-repair).
+The second is location. Code has moved the electrical panel that serves the pool out of the old pump enclosure and to a proper, accessible spot away from the wet equipment. On many older installations the panel is still tucked inside or right on top of the pump, which is exactly where you do not want it. Correcting that is part of a thorough [pool electrical repair](/services/pool-electrical).
 
 ## The honest cadence
 
 People often ask how often any of this needs looking at, and the honest answer is once a year. A pool electrical inspection every year, ideally before heater season, is the right rhythm. Here that timing matters more than most places, because South Florida pools are heated and run right through the winter, so the season you most want everything working is the same season the equipment is under the most demand. Checking the bonding, the breaker, and the grounding before you fire up the heater is simply good timing. That is the whole cadence. Once a year, before heater season. We are not going to tell you to check it more often than it needs.
 
-If any of this rang a bell, whether it was a real tingle or just the realization that your pool has been quietly working for decades without a look, the right next step is a proper [pool grounding and bonding inspection](/services/pool-grounding-bonding-inspection). We come out, test what is actually happening at the rails and the equipment, and tell you plainly what we find.
+If any of this rang a bell, whether it was a real tingle or just the realization that your pool has been quietly working for decades without a look, the right next step is a proper [pool grounding and bonding inspection](/services/pool-electrical). We come out, test what is actually happening at the rails and the equipment, and tell you plainly what we find.
 
 ## When you are ready
 

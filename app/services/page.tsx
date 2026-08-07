@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { getServices } from "@/lib/content";
 import { routes } from "@/lib/routes";
 import { buildMetadata, absoluteUrl } from "@/lib/seo";
-import { categorizeServices } from "@/lib/categories";
 import {
   breadcrumbListNode,
   electricianNode,
@@ -20,6 +19,13 @@ const TITLE = "Electrical Services in Broward County | Ghost Crown Electric";
 const DESCRIPTION =
   "Licensed electrical service, repair, and restoration across Broward County and South Florida. One accountable team from the first call to the final inspection.";
 
+// Short assurances shown above the grid. Plain promises, no hype.
+const ASSURANCES = [
+  "One licensed crew, from the first call to the final inspection",
+  "A $240 service call, and one honest price before any bigger work",
+  "We answer day or night, and we meet the inspector in person",
+];
+
 export function generateMetadata(): Metadata {
   return buildMetadata({
     title: TITLE,
@@ -30,7 +36,6 @@ export function generateMetadata(): Metadata {
 
 export default function ServicesIndexPage() {
   const services = getServices();
-  const { categories, uncategorized } = categorizeServices(services);
 
   const trail: Crumb[] = [
     { label: "Home", href: routes.home },
@@ -55,8 +60,21 @@ export default function ServicesIndexPage() {
           as="h1"
           eyebrow="What we do"
           title="Electrical services for Broward County and South Florida"
-          description="Every job is run by our licensed crew, from the first call to the final inspection. Find what you need below, and if you are not sure, call and we will point you the right way."
+          description="Eight core services cover nearly everything we are called for, from panels and service upgrades to pool electrical and backup power. Not sure which fits? Call and we will point you the right way."
         />
+
+        {services.length > 0 ? (
+          <ul className="mt-8 grid grid-cols-1 gap-x-8 gap-y-3 sm:grid-cols-3">
+            {ASSURANCES.map((item) => (
+              <li key={item} className="flex items-start gap-2.5">
+                <CheckIcon />
+                <span className="text-sm leading-snug text-ink-muted">
+                  {item}
+                </span>
+              </li>
+            ))}
+          </ul>
+        ) : null}
 
         {services.length === 0 ? (
           <p className="mt-10 text-ink-muted">
@@ -64,50 +82,36 @@ export default function ServicesIndexPage() {
             plainly whether we can help.
           </p>
         ) : (
-          <div className="mt-12 flex flex-col gap-14">
-            {categories.map((category) => (
-              <section
-                key={category.id}
-                id={category.id}
-                className="scroll-mt-28"
-              >
-                <SectionHeading
-                  as="h2"
-                  title={category.label}
-                  description={category.blurb}
-                  className="mb-6"
-                />
-                <ul className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-                  {category.services.map((service) => (
-                    <li key={service.slug}>
-                      <ServiceCard service={service} titleAs="h3" />
-                    </li>
-                  ))}
-                </ul>
-              </section>
+          <ul className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {services.map((service) => (
+              <li key={service.slug}>
+                <ServiceCard service={service} titleAs="h2" />
+              </li>
             ))}
-            {uncategorized.length > 0 ? (
-              <section id="more-services" className="scroll-mt-28">
-                <SectionHeading
-                  as="h2"
-                  title="More electrical work"
-                  description="Other services handled by our in-house crew."
-                  className="mb-6"
-                />
-                <ul className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-                  {uncategorized.map((service) => (
-                    <li key={service.slug}>
-                      <ServiceCard service={service} titleAs="h3" />
-                    </li>
-                  ))}
-                </ul>
-              </section>
-            ) : null}
-          </div>
+          </ul>
         )}
       </div>
 
       <CTABand />
     </>
+  );
+}
+
+function CheckIcon() {
+  return (
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 20 20"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      className="mt-0.5 shrink-0 text-accent"
+    >
+      <path d="M4 10.5 L8 14.5 L16 5.5" />
+    </svg>
   );
 }

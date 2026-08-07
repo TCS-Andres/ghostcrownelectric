@@ -3,10 +3,10 @@
   "name": "EV Charger Installation",
   "shortName": "EV Charger",
   "tier": "money",
-  "metaTitle": "EV Charger Installation in Broward | Ghost Crown",
-  "metaDescription": "EV charger installation in Broward County by a licensed master electrician. We confirm your service can carry the load, then install it right. Book a visit.",
+  "metaTitle": "EV Charger Installation in Broward County | Ghost Crown",
+  "metaDescription": "EV charger installation in Broward County by a licensed crew. We confirm your service can carry a Level 2 charger, then install it right. Book a visit.",
   "h1": "EV Charger Installation in Broward County",
-  "intro": "You bought the car, and now you need a way to charge it at home. Maybe the dealer handed you a cord, or maybe you are still deciding which charger to buy. Either way, the question that matters is not the charger. It is whether your home's electrical service can safely carry it. A charger pulls a lot of power for hours at a time, and an older service was never built for it. We start every EV job the same way. We look at your panel and your service first, and we tell you plainly what it can handle. If your home needs an upgrade before the charger goes in, we say so, once, and we leave the decision with you. You are paying for the experience, and the honest answer is part of what you get.",
+  "intro": "A home EV charger is only as safe as the electrical service behind it, so that is where we start. You bought the car, and now you need a way to charge it at home. The question that matters is not which charger you buy. It is whether your panel and your service can safely carry a Level 2 charger pulling a heavy, steady load for hours at a time. Our licensed crew looks at your service first and tells you plainly what it can handle. If your home needs an upgrade before the charger goes in, we say so, once, and we leave the decision with you. The honest answer is part of what you get.",
   "definition": {
     "heading": "What is EV charger installation",
     "body": "EV charger installation is the work of adding a dedicated circuit and a charging unit to a home or commercial property so an electric vehicle can charge safely and quickly. A home charger, often called Level 2, runs on a 240 volt circuit and draws a large, steady current for hours while the car fills up. That is very different from a lamp or a television that pulls a little power now and then. Because of that steady draw, the real work is not mounting the box on the wall. It is confirming that the panel, the wiring, and the incoming service can carry the extra load without heat, without nuisance breaker trips, and without cutting into everything else the home needs to run at the same time."
@@ -29,12 +29,12 @@
       "body": "Your service was sized decades ago for a home that never imagined an electric car in the driveway. The wiring may be sound, but the capacity question is real, and it should be answered before you commit to a charger."
     },
     {
-      "title": "A commercial lot adding chargers",
-      "body": "You manage a property and tenants or staff are asking for charging. Commercial installs raise the same load question at a larger scale, and the service has to be checked before the first unit is mounted."
-    },
-    {
       "title": "A warm cord or a discolored outlet",
       "body": "The charging cord feels hot to the touch, or the outlet has browned around the plug. That is heat where there should be none, and it is a fire risk. Stop using it and have the circuit assessed right away."
+    },
+    {
+      "title": "A commercial lot adding chargers",
+      "body": "You manage a property and tenants or staff are asking for charging. Commercial installs raise the same load question at a larger scale, and the service has to be checked before the first unit is mounted."
     }
   ],
   "process": [
@@ -51,12 +51,12 @@
       "body": "We forecast the job from what we saw and give you one price. If the service can take the charger, that is the number. If it needs an upgrade first, we tell you that plainly, once, and let you decide. We price it once, and we price it right."
     },
     {
-      "title": "The in-house crew does the work",
-      "body": "Our own three-person crew runs the circuit, mounts the unit, and makes the connections. No day-labor, no rotating subs. The same people who priced the job are the people who stand behind it, and we are on it from start to finish."
+      "title": "Our in-house crew does the work",
+      "body": "Our own crew runs the circuit, mounts the unit, and makes the connections. No day-labor, no rotating subs. The same people who priced the job are the people who stand behind it, and we are on it from start to finish."
     },
     {
       "title": "Permit, inspection, and a follow-up call",
-      "body": "Where a permit is required we pull it, and we meet the inspector in person. When the inspection passes and the charger is live, we follow up to make sure the car is charging the way it should and you are not left wondering."
+      "body": "Where a permit is required we pull it in our own name, and we meet the inspector in person. When the inspection passes and the charger is live, we follow up to make sure the car is charging the way it should and you are not left wondering."
     }
   ],
   "benefits": [
@@ -70,7 +70,7 @@
     },
     {
       "title": "One accountable company, first call to inspection",
-      "body": "The licensed team that takes your call prices the job, does the work, and meets the inspector. You get one accountable company from the first call to the final inspection."
+      "body": "The licensed crew that takes your call prices the job, does the work, and meets the inspector. You get one accountable company from the first call to the final inspection."
     },
     {
       "title": "Charge at home with peace of mind",
@@ -85,15 +85,8 @@
     {
       "heading": "Heat, humidity, and salt air are part of the job",
       "body": "Electrical work in South Florida lives with heat, humidity, and, near the coast, salt in the air. Those conditions are hard on connections and hardware over time. A charging circuit runs warm by nature, because it carries a heavy load for hours, and it does that in a climate that is already warm and damp for most of the year. That combination is exactly why the quality of the install matters so much. Loose or undersized connections that might limp along in a mild climate will find trouble faster here. When we install an EV charger, we account for the environment it has to live in: proper conductors, solid terminations, and hardware rated for the location, whether that is a shaded garage wall or an exposed exterior run. The goal is a charger that still works safely years from now, not just on the day it is switched on."
-    },
-    {
-      "heading": "Permits and inspections in Broward County",
-      "body": "Adding a dedicated 240 volt circuit for an EV charger is electrical work that a local building department expects to see permitted and inspected, and the rules can differ from one municipality to the next across Broward County. That is not red tape for its own sake. The permit and the inspection are an independent check that the work was done to code, and they protect you as the property owner. We pull the permit where it is required and we meet the inspector in person, because the team that did the work should be the one answering for it. If you ever sell the home or file a claim, a properly permitted install is part of a clean record. We handle that side so you are not left chasing paperwork or wondering whether the job was ever signed off."
-    },
-    {
-      "heading": "What insurance carriers look at",
-      "body": "Insurance carriers in Florida have grown careful about electrical systems, and they pay attention to how work was done and whether it was permitted. An EV charger is a visible, high-load addition to a home, and an unpermitted or amateur install is exactly the kind of thing that can complicate a claim later. We are not in the business of scaring anyone. The point is simply that a licensed installation with the permit on record is the version that holds up. When we pull the permit, do the work, and pass the inspection, you have documentation that the charger was added correctly. That record can matter at renewal time and it can matter if you ever have to file a claim. Doing it right the first time is the least expensive path in the long run, which is why we do not cut corners to win a job."
-  }],
+    }
+  ],
   "guide": {
     "title": "The honest guide to installing an EV charger at home in South Florida",
     "sections": [
@@ -111,23 +104,11 @@
       },
       {
         "heading": "When a panel or service upgrade comes first",
-        "body": "Sometimes the honest answer is that the charger cannot go in safely until the electrical service is brought up to what the job needs. Maybe the panel is full with no room for a new circuit. Maybe the service is undersized for the added load. Maybe the panel is one of the problem brands that should be replaced regardless of the charger. When that is the case, we say so plainly, one time, and we leave the decision with you. We do not dress it up and we do not pressure you. If a full residential electrical service rebuild is what the home needs, that work runs in the range of 5,000 to 8,000 dollars, and the charger install follows once the service is sound. It may not be the answer you were hoping for, but it is the true one. Mounting a charger on a service that cannot carry it is not a favor to anyone. It is a fire risk, and we will not do it just to close the job. We stay in our lane, and our lane is doing it right."
-      },
-      {
-        "heading": "What the day of installation looks like",
-        "body": "On install day, our own in-house crew arrives and does the work start to finish. We run a dedicated circuit from the panel to where the charger will live, whether that is a garage wall, a carport, or an exterior spot. We mount the unit, make the connections, and account for the South Florida environment with proper conductors and solid terminations that will hold up to heat and humidity over the years. A straightforward install is often an in and out type of situation, done in a day. If the work is larger, because the panel or service is being addressed at the same time, we tell you that ahead of time so there are no surprises. Throughout, we are on the job, because the team that priced it should be the one standing behind it. When the charger is live, we make sure it is actually charging the car the way it should before we consider the job finished."
+        "body": "Sometimes the honest answer is that the charger cannot go in safely until the electrical service is brought up to what the job needs. Maybe the panel is full with no room for a new circuit. Maybe the service is undersized for the added load. Maybe the panel is one of the problem brands that should be replaced regardless of the charger. When that is the case, we say so plainly, one time, and we leave the decision with you. We do not dress it up and we do not pressure you. If a full residential electrical service rebuild is what the home needs, that work runs in the range of 5,000 to 8,000 dollars, and the charger install follows once the service is sound. It may not be the answer you were hoping for, but it is the true one. Mounting a charger on a service that cannot carry it is not a favor to anyone. It is a fire risk, and we will not do it just to close the job."
       },
       {
         "heading": "What a proper install actually includes",
-        "body": "It is worth knowing what goes into a charger install done right, because the difference between a good one and a careless one is mostly invisible once the cover is back on. A proper install starts with a dedicated circuit, meaning the charger has its own path back to the panel and shares a line with nothing else. Sharing a circuit is how you get nuisance trips and heat, and it is a shortcut we do not take. The conductors are sized for the steady load the charger will pull, not for the smallest wire that will technically pass, because an undersized wire runs warm, and warm is where trouble begins in a hot, humid climate. The breaker is matched to the circuit and the charger, and the connections are made solid, since a loose termination is the single most common source of heat in any electrical system. Where the run passes through a wall, a garage, or an exterior stretch, it is protected the right way for that location. And the unit itself is mounted securely, at a sensible height, positioned so the cord reaches the car without strain. None of this shows once the job is done, which is exactly why a cut-rate installer finds it easy to skip. We do it because a charger pulls hard for hours a night for years, and the only install worth paying for is the one built to carry that load safely for all of them."
-      },
-      {
-        "heading": "An honest word about cost",
-        "body": "EV charger pricing moves with the market and, more than that, with what your particular service requires, so we quote it per property after we have seen the home. There is no honest flat price for this work sight unseen, and anyone who gives you one over the phone is guessing. If you want us to come out purely to diagnose a problem, our service call is 240 dollars, which covers roughly two hours including travel, arrival, and the diagnosis, and if the issue can be handled on the spot there is no separate return charge. For a charger install, the assessment feeds directly into one honest, forecast-based price for the whole job. If the service needs a full rebuild first, that residential rebuild falls in the 5,000 to 8,000 dollar range. Beyond those figures, everything is quoted for your specific property, because every home is different and we would rather price it once and price it right than lowball you and come back with surprises."
-      },
-      {
-        "heading": "How to choose the contractor who installs it",
-        "body": "An EV charger is a permanent, high-load addition to your home, so the person who installs it matters as much as the equipment. Ask whether they are licensed. Ghost Crown Electric is a Florida Certified Electrical Contractor with statewide authority and a Broward County Master Electrician, with 286 permitted projects on public record. Ask whether they will pull a permit and have the work inspected, because a contractor who wants to skip the permit is telling you something. Ask who actually does the work, in-house crew or whoever they found that week. And listen for honesty about your service. A contractor who will tell you your home needs an upgrade before the charger, even when it costs them the easy sale, is a contractor who will tell you the truth about everything else too. We do not run down anyone else to win your trust. We just do the work correctly, put our name on it, and let ten years of showing up when we said we would speak for itself."
+        "body": "It is worth knowing what goes into a charger install done right, because the difference between a good one and a careless one is mostly invisible once the cover is back on. A proper install starts with a dedicated circuit, meaning the charger has its own path back to the panel and shares a line with nothing else. Sharing a circuit is how you get nuisance trips and heat, and it is a shortcut we do not take. The conductors are sized for the steady load the charger will pull, not for the smallest wire that will technically pass, because an undersized wire runs warm, and warm is where trouble begins in a hot, humid climate. The breaker is matched to the circuit and the charger, and the connections are made solid, since a loose termination is the single most common source of heat in any electrical system. Where the run passes through a wall, a garage, or an exterior stretch, it is protected the right way for that location, and the unit is mounted securely at a sensible height so the cord reaches the car without strain. None of this shows once the job is done, which is exactly why a cut-rate installer finds it easy to skip. We do it because a charger pulls hard for hours a night for years, and the only install worth paying for is the one built to carry that load safely for all of them."
       }
     ]
   },
@@ -146,7 +127,7 @@
     },
     {
       "question": "Do I need a permit for an EV charger?",
-      "answer": "In most cases, yes. Adding a dedicated 240 volt circuit is electrical work that Broward County building departments expect to see permitted and inspected. That protects you as the owner and keeps a clean record on the home. We pull the permit where it is required and we meet the inspector in person, so you are not left chasing paperwork."
+      "answer": "In most cases, yes. Adding a dedicated 240 volt circuit is electrical work that Broward County building departments expect to see permitted and inspected. That protects you as the owner and keeps a clean record on the home. We pull the permit in our own name where it is required and we meet the inspector in person, so you are not left chasing paperwork."
     },
     {
       "question": "What is the difference between Level 1 and Level 2 charging?",
@@ -157,7 +138,7 @@
       "answer": "Yes. We install chargers for both homes and commercial properties across Broward County. Commercial installs raise the same core question about whether the service can carry the added load, just at a larger scale. We assess the service, forecast the work, and give you one honest price, the same way we do for a home."
     }
   ],
-  "related": ["electrical-panel-upgrade", "electrical-service-rebuild", "electrical-safety-check", "whole-home-surge-protection"],
+  "related": ["electrical-panel-upgrade", "electrical-service-rebuild", "generators-and-surge-protection", "electrical-safety-check"],
   "pricing": {
     "display": "Quoted per property after an on-site assessment",
     "notes": "EV charger pricing moves with the market and with what your service requires, so it is quoted per property once we have seen the home. A diagnostic service call is 240 dollars, roughly two hours including travel, arrival, and diagnosis. If your service needs a full residential rebuild first, that work runs 5,000 to 8,000 dollars."

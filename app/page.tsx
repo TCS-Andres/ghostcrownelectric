@@ -5,7 +5,6 @@ import { getBusiness, getServices, getPosts } from "@/lib/content";
 import { routes } from "@/lib/routes";
 import { buildMetadata, absoluteUrl } from "@/lib/seo";
 import { cityLinks } from "@/lib/links";
-import { categorizeServices } from "@/lib/categories";
 import { coverageByCounty } from "@/lib/coverage";
 import { postImage } from "@/lib/imagery";
 import { formatPostDate } from "@/lib/blog";
@@ -19,7 +18,7 @@ import {
 import type { Faq } from "@/lib/content";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Media } from "@/components/ui/Media";
-import { CategoryCard } from "@/components/ui/CategoryCard";
+import { ServiceCard } from "@/components/ui/ServiceCard";
 import { CoverageMap } from "@/components/ui/CoverageMap";
 import { CTABand } from "@/components/ui/CTABand";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
@@ -97,7 +96,7 @@ export function generateMetadata(): Metadata {
 export default function HomePage() {
   const business = getBusiness();
   const services = getServices();
-  const { categories } = categorizeServices(services);
+  const featuredServices = services.slice(0, 6);
   const cities = cityLinks();
   const coverage = coverageByCounty();
   const posts = getPosts().slice(0, 3);
@@ -222,15 +221,15 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 3. Services by category */}
+      {/* 3. Services */}
       <section className="bg-surface-2">
         <div className="container-page py-16 sm:py-20">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <SectionHeading
               as="h2"
               eyebrow="What we do"
-              title="Electrical work, sorted so you can find it fast"
-              description="From panels and meters to pool electrical and backup power, this is the work we are called for most. Pick a category, or see the full list."
+              title="The electrical work we are called for most"
+              description="From panels and service upgrades to pool electrical and backup power, one licensed crew handles it from the first call to the final inspection."
             />
             <Link
               href={routes.services}
@@ -240,10 +239,10 @@ export default function HomePage() {
             </Link>
           </div>
 
-          <ul className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {categories.map((category) => (
-              <li key={category.id}>
-                <CategoryCard category={category} titleAs="h3" />
+          <ul className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {featuredServices.map((service) => (
+              <li key={service.slug}>
+                <ServiceCard service={service} titleAs="h3" />
               </li>
             ))}
           </ul>

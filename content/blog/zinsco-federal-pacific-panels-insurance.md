@@ -3,7 +3,7 @@ title: "Why Your Insurance Company Cares About Your Electrical Panel"
 description: "Florida insurers are dropping homes with Zinsco and Federal Pacific panels. A licensed Broward electrician explains the four-point rule and what to do next."
 date: "2026-07-21"
 tags: ["electrical panels", "insurance", "home safety", "property managers"]
-relatedServices: ["zinsco-panel-replacement", "federal-pacific-panel-replacement", "electrical-panel-upgrade"]
+relatedServices: ["electrical-panel-upgrade", "electrical-safety-check", "electrical-service-rebuild"]
 ---
 
 If you own or manage a home in South Florida, you may have opened a letter from your insurance carrier lately that asked, in so many words, about the gray metal box on the side of your house. For most people that letter is the first time they have ever given their electrical panel a second thought. It has sat there quietly for thirty or forty years and never once asked for attention. So why is it suddenly the thing standing between you and a renewed policy?
@@ -42,7 +42,7 @@ It starts with a phone call. I take the call myself, ask what your letter says, 
 
 Then you get one price, built from a real forecast of the actual work. Price it once, price it right. That number does not move in the middle of the job. If something genuinely hidden turns up once a wall or a cover is opened, you hear about it before another minute of work happens, and you decide. The work itself is done by our own in-house crew, not a rotating cast of subcontractors. We pull the permit, and when the inspection is scheduled, I meet the inspector personally. That is not a detail we delegate.
 
-If your flagged panel is a Zinsco, the fix lives here: [Zinsco panel replacement](/services/zinsco-panel-replacement). If it is a Federal Pacific, start here: [Federal Pacific panel replacement](/services/federal-pacific-panel-replacement). If the panel simply needs to grow with the house, that is a [panel upgrade](/services/electrical-panel-upgrade).
+If your flagged panel is a Zinsco, the fix lives here: [Zinsco panel replacement](/services/electrical-panel-upgrade). If it is a Federal Pacific, start here: [Federal Pacific panel replacement](/services/electrical-panel-upgrade). If the panel simply needs to grow with the house, that is a [panel upgrade](/services/electrical-panel-upgrade).
 
 ## How to read a replacement bid
 

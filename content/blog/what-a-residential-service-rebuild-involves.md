@@ -3,7 +3,7 @@ title: "What an Electrical Service Rebuild Actually Involves (and Costs)"
 description: "What a residential electrical service rebuild involves, from meter to panel, and why it typically runs $5,000 to $8,000, priced once by a licensed Broward pro."
 date: "2026-07-21"
 tags: ["service rebuild", "electrical panel", "cost guide", "homeowners"]
-relatedServices: ["electrical-service-rebuild", "electrical-panel-upgrade", "meter-socket-replacement"]
+relatedServices: ["electrical-service-rebuild", "electrical-panel-upgrade", "meter-bank-replacement"]
 ---
 
 Electrical service rebuild is one of those phrases that sounds bigger and more alarming than it needs to. When people hear it, they often picture the whole house being torn open. In practice it is a defined, well understood piece of work, and it happens to be the core of what we do. So let us take the mystery out of it: what the electrical service actually is, how you know a rebuild is coming, exactly how the job runs from the first phone call to the final inspection, and what it honestly costs.
@@ -26,7 +26,7 @@ If you are seeing any of that, the honest first move is a look, not a guess. A s
 
 Here is the whole process, start to finish, with nothing hidden.
 
-It begins on the phone. I take the call myself and do a real triage: what you are seeing, how old the house is, what your insurance may be asking for. That conversation tells us whether you likely need a full [electrical service rebuild](/services/electrical-service-rebuild), a narrower [panel upgrade](/services/electrical-panel-upgrade), or something as focused as a [meter socket replacement](/services/meter-socket-replacement).
+It begins on the phone. I take the call myself and do a real triage: what you are seeing, how old the house is, what your insurance may be asking for. That conversation tells us whether you likely need a full [electrical service rebuild](/services/electrical-service-rebuild), a narrower [panel upgrade](/services/electrical-panel-upgrade), or something as focused as a [meter socket replacement](/services/electrical-service-rebuild).
 
 Next comes the site visit and assessment. This is where the real forecast happens. We look at the meter, the disconnect, the panel, the mast, the grounding, and the condition of what feeds the house, so the price we give you is built on what is actually there and not on a hopeful guess.
 

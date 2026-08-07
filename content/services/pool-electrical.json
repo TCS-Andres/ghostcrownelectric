@@ -1,0 +1,155 @@
+{
+  "slug": "pool-electrical",
+  "name": "Pool & Spa Electrical",
+  "shortName": "Pool & Spa Electrical",
+  "tier": "pool",
+  "metaTitle": "Pool & Spa Electrical in Broward | Ghost Crown Electric",
+  "metaDescription": "Pool and spa electrical across Broward County by a licensed crew. Bonding inspection, repair, GFCI breakers, and full code correction. We test, not guess. Call us.",
+  "h1": "Pool and Spa Electrical in Broward County",
+  "intro": "Water and electricity together demand a special kind of protection, and a lot of older South Florida pools no longer have it. On a pool that has been in the ground for decades, the grounding, bonding, and breakers that keep swimmers safe can quietly fail while everything still looks fine. Sometimes the warning is a breaker that will not stay on, a light that has gone dark, or a faint tingle someone feels on a rail. Our licensed crew handles the whole picture: grounding and bonding inspection, repair and troubleshooting, ground fault breaker replacement, and full code correction when a pool service is too far gone to patch. We test instead of guess, tell you plainly what we find, and fix the cause, not the symptom.",
+  "definition": {
+    "heading": "What pool and spa electrical work covers",
+    "body": "Pool and spa electrical is everything on the electrical side of your pool: the pump and heater circuits, the lighting, the salt system, the breakers that protect it all, and the grounding and bonding that ties it together safely. Bonding links every metal part around the water so it all sits at the same electrical level and a swimmer feels no difference in charge. Grounding gives a fault a safe path back so the breaker can sense it and shut off. Ground fault breakers add fast-tripping protection built for water. Our work covers inspecting that system and proving it under test, troubleshooting and repairing faults down to the real cause, replacing missing or worn-out safety breakers, and rebuilding a pool service from the feeder up when the problems are structural. We measure it, we do not guess, and where the job calls for a permit the building department closes it out."
+  },
+  "symptoms": [
+    {
+      "title": "A tingle in the water",
+      "body": "Someone feels a faint buzz or tingle when they touch a rail, a ladder, or the light, and it fades when they let go. That is current reaching metal it should never reach, usually a broken bond, and it is the clearest warning sign there is. Get everyone out and have it checked before the pool is used again."
+    },
+    {
+      "title": "A pool breaker that keeps tripping",
+      "body": "A pump, heater, or light breaker keeps tripping, and resetting it only buys a little time. On a pool circuit that usually means the breaker is sensing a real ground fault and doing exactly what it should. The trip is the warning, not the problem."
+    },
+    {
+      "title": "A pool light out or flickering",
+      "body": "Your pool light has gone dark, flickers, or trips its breaker when you switch it on. Because the light sits in the water, a light fault is exactly where you want a fast, correct repair rather than a quick guess."
+    },
+    {
+      "title": "Your pool still runs on its original breakers",
+      "body": "The pool was built decades ago and still runs on the breakers it came with, or on a GFCI whose test button does nothing. Fast-tripping ground fault protection may never have been installed on the pump, heater, and light circuits, or it has aged out and no longer trips the way it should."
+    },
+    {
+      "title": "New equipment on old protection",
+      "body": "A new pump, heater, or salt system went in, but the bonding wire and the breakers protecting it were left as they were. New equipment on an old bond, or on an ordinary breaker, is one of the most common ways protection quietly disappears."
+    },
+    {
+      "title": "The repairs keep stacking up",
+      "body": "You fix one pool circuit and another fails soon after, the panel is sitting somewhere code no longer allows, and every closer look turns up another violation. That pattern usually means the trouble is deeper than any single circuit and the whole service needs to be examined."
+    }
+  ],
+  "process": [
+    {
+      "title": "You call and we talk it through",
+      "body": "You reach a licensed electrician directly, day or night. We ask what you are seeing, whether anyone has felt tingling, how old the pool is, and what equipment or breakers have changed. That phone triage tells us what to bring and how soon you need us."
+    },
+    {
+      "title": "We come out and test the system",
+      "body": "Our crew inspects the pool electrical system in person. We locate the bonding grid, check continuity across the rails, ladder, lights, and equipment, confirm which circuits have proper ground fault protection, and trace any fault to where current is actually leaking. Electricity is something you feel the effect of, so we measure it instead of guessing."
+    },
+    {
+      "title": "One honest price, based on what we find",
+      "body": "We show you what passed and what did not, in plain language, and give you one straightforward price for the work. We price it once and price it right, so there are no surprises after we start. If it is a quick fix we can handle on the spot, we tell you that too."
+    },
+    {
+      "title": "Our own crew does the work",
+      "body": "Our in-house crew makes the corrections: reconnecting bonds, replacing corroded lugs, repairing failed circuits, installing the correct water-rated breakers, and where a pool has aged out across the board, rebuilding the service from the feeder up. We stay in our lane and do the complete job, not a patch that fails next season."
+    },
+    {
+      "title": "Permit, inspection, and a follow-up",
+      "body": "When the work calls for it, we pull the permit, do the work to current code, and meet the inspector in person to prove the grounding under test. Once it passes, the safety question is settled on the public record. Then we follow up to make sure the pool is running right and you are comfortable."
+    }
+  ],
+  "benefits": [
+    {
+      "title": "The cause fixed, not the symptom",
+      "body": "We find why the breaker trips or the water tingles and correct that, so you stop resetting and start trusting the pool again. A breaker that no longer nuisance-trips is one you can rely on when it truly matters."
+    },
+    {
+      "title": "Protection you can count on",
+      "body": "When every metal part is bonded and the right fast-tripping breakers are in place, a real fault trips instead of reaching a body. Proper bonding protects your family, your home, and your investment as a whole, and you get to stop wondering."
+    },
+    {
+      "title": "Fast, honest diagnosis",
+      "body": "We troubleshoot in person and tell you plainly what is wrong and what it costs. No swapping parts on your dime, no scare tactics, no mystery. You will understand the problem before we ever talk about fixing it."
+    },
+    {
+      "title": "Work that stands up to our climate",
+      "body": "Our repairs use materials and connections built for South Florida heat, humidity, and pool chemistry, so the protection you pay for is still there years from now instead of failing again next swim season."
+    }
+  ],
+  "localSections": [
+    {
+      "heading": "Older South Florida pools, older services, deeper faults",
+      "body": "A lot of South Florida pools went in during the building waves of the 1960s through the 1980s, and many homes from West Palm Beach down to North Miami Beach still have their original pools. The bonding and grounding standards those pools were built to were looser than what code asks for today, and some were wired with shortcuts common back then, like using metal conduit as the grounding path instead of a proper ground wire. Add decades of pumps, heaters, and lights swapped in and out, and every one of those changes was a chance to leave a bond off or make a connection that would not last. On top of that, our climate is hard on the whole system. Year round humidity, salt in the air near the coast, heat cycles, and pool chemistry attack the lugs, clamps, breakers, and conductors that hold it together, and because our pools run all year they are worked harder than pools up north. None of this shows from the deck. It happens slowly at the lug and inside the conduit, and in older communities it matters more, because a younger body can shrug off a shock that an older person cannot."
+    },
+    {
+      "heading": "Permits, inspection, and your insurance in Broward",
+      "body": "Pool electrical work is exactly the kind of job building departments across Broward County watch closely, and that is a good thing for you. Inspectors are thorough on bonding and grounding because they know what is at stake, and a permit means a second trained set of eyes confirms the work is right. When a correction needs a permit, we pull it, do the work to current code, and meet the inspector in person to prove the grounding under test. Some smaller fixes do not require a permit, and we will tell you honestly which is which. What we will not do is cut a corner to skip an inspection. The insurance side follows the same logic. Carriers in South Florida look closely at anything that mixes water and electricity, and a closed permit with a passed inspection gives you documentation that the work was handled correctly by a licensed contractor. We do not speak for your carrier, and every policy is different, so we will not promise how yours will treat it. What we can say is that a clear paper trail tends to help far more than a verbal assurance ever could."
+    }
+  ],
+  "guide": {
+    "title": "The complete guide to pool and spa electrical",
+    "sections": [
+      {
+        "heading": "Bonding and grounding: two jobs, one safety net",
+        "body": "Two words get used like they mean the same thing, and they do not: bonding and grounding. Bonding ties every piece of metal in and around your pool into one connected network, the rails, the ladder, the pump housing, the heater, the light niche, the rebar in the deck, even the water itself through a bonding fitting, so everything sits at the same electrical level. When everything is at the same level, there is no difference in charge between two things a swimmer might touch at once, and with no difference, there is nothing to feel. Grounding is the separate job of giving fault current a fast, safe path back to the source so the breaker can sense it and shut off. Bonding keeps you from feeling a difference. Grounding makes sure a real fault trips the breaker. On a healthy pool, a wire that starts leaking current sends that fault straight back through the ground path, the breaker trips in a fraction of a second, and the swimmer never knows anything happened. On a pool where the bond is broken or the ground path has corroded through, that same leak sits on a metal rail and waits for a hand. Everything on the surface looks identical, so the only way to tell them apart is to test. That is the whole reason an inspection exists. When we come out, we start at the equipment pad where the bonding grid ties together and corrosion shows up first, then work outward to the rails, ladder, light housing, and deck bonding, confirming that every metal part is electrically connected with no break and no high-resistance corroded joint pretending to be a connection."
+      },
+      {
+        "heading": "A tripping breaker is a warning, not a nuisance",
+        "body": "The single most important thing to understand about pool electrical problems is what a tripping breaker is telling you. A breaker on a pool circuit is a safety device, and when it trips it is usually because it sensed exactly the kind of fault it exists to catch: current escaping the wiring and looking for a path to ground. It shuts the circuit off fast, before that current can find a slower, more dangerous path, like a person standing in the water holding a metal rail. So the reset button is the worst thing to lean on. Resetting does not fix anything; it re-energizes a circuit the breaker already judged unsafe, and it buys a few minutes until the fault builds up enough to trip again. The classic case is a heater that fires up, runs a while, and then knocks its breaker out over and over. The wrong reaction is to assume the breaker is too small and put in a bigger one, which only raises the amount of current that can flow before the protection reacts. That is the opposite of safe. The real fix is to verify the bonding and the fault path, then correct what failed so the leakage has somewhere safe to go. When a pool breaker keeps tripping, the answer is almost never a bigger breaker. It is finding out what the breaker is trying to tell you, and correcting the cause so the breaker can go back to sitting quietly, ready for the day it is truly needed."
+      },
+      {
+        "heading": "Why a pool needs a different kind of breaker",
+        "body": "Water lets current flow through a body far too easily. On dry land your skin has enough resistance that a small fault is often something you would barely notice; in a pool that resistance drops, and a small leak that would be harmless on land can be dangerous. That is why a pool cannot rely on the same protection as the rest of the house. A standard breaker watches the size of the current and trips on an overload or a dead short to protect the wiring. It may not see a small leak to ground at all, because that current is well within what the wire can carry. A ground fault breaker watches the balance of the current: it compares what goes out with what comes back, and the instant they do not match, meaning current is escaping to ground, it trips, in a fraction of a second and at a leak far too small for a standard breaker to notice. Code calls for this fast-tripping protection on the pump, the heater, and the lighting. Many older pools never had it, or had it once and no longer really do, because a ground fault breaker is a mechanical and electrical device and our heat, humidity, and salt air wear it down until it may no longer trip in the time it was built to. A GFCI is only protection if it actually trips, and the only way to know is to test it. Every one has a test button for that reason; a breaker that fails its own test is a device pretending to be protection while providing none, and it needs replacing, not ignoring. We test every breaker we install before we leave."
+      },
+      {
+        "heading": "When a repair becomes a rebuild",
+        "body": "Most pool electrical problems are repairs. A breaker trips, we find the fault, we fix it, and the pool is safe again. A rebuild is different, and we will never steer you into one lightly. The signal is a pattern rather than a single fault: you fix one circuit and another fails, swimmers keep feeling current in ways that do not trace to one clean cause, the grounding turns out to have never been right, the panel is sitting inside the pump enclosure where code no longer allows it, and every closer look turns up another violation. At that point patching one piece at a time is the expensive path, because each repair only reveals the next while the underlying condition stays broken. The clearest example we can give is a community pool where swimmers were getting shocked. The pool was fed from a service roughly 150 feet away, and there was no ground in the circuit at all. The original installers had used the metal conduit itself as the grounding path, a known shortcut in its era, and over the decades corrosion broke that path down until the ground was simply gone. There is no patching that. We pulled the old conductors out and ran new wire with a proper, dedicated ground the full 150 feet, proved the grounding under test, and passed inspection. The inspector, knowing what the job involved, told us plainly that if we did it, he would shake our hand, and he did. A rebuild follows one principle: when you touch it, you have to fix it completely, and every violation found comes with it. That is the only version that truly settles it."
+      },
+      {
+        "heading": "What it costs, and why per property is the honest answer",
+        "body": "People want a number over the phone, and we understand why, but the honest answer for pool electrical is that it depends on what we find. Our service call is $240, which covers roughly two hours including travel, arrival, and diagnosis, and if the problem is something we can handle on the spot within that visit, there is no separate return charge. That is often the case with a single corroded lug, a bad connection, or a straightforward breaker swap. From there, corrections, repairs, and rebuilds are quoted per property after we have tested the system, because no two older pools have failed the same way. One pool needs a single lug replaced and re-bonded. Another has three connections that were never made, a light niche that was never tied in, a feeder with no ground, and a panel that has to be relocated. Pricing the second one like the first would be a guess, and a guess is how people get overcharged or undercharged. We price it once and price it right, based on what the test actually shows. On a larger job we forecast the whole scope and give you one price up front, so a big job does not turn into a running meter. And if what looks like a pool problem ties back to the home main electrical service, or your existing protection is already safe and current, we will tell you honestly rather than sell you work you do not need."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "What is the difference between bonding and grounding?",
+      "answer": "Bonding ties all the metal around your pool into one network so everything sits at the same electrical level and a swimmer feels no difference in charge. Grounding gives fault current a safe path back so the breaker trips. Bonding keeps you from feeling a fault; grounding makes sure the breaker catches it. A safe pool needs both, connected correctly."
+    },
+    {
+      "question": "My pool breaker keeps tripping. Can I just reset it, or add a bigger one?",
+      "answer": "Please do neither. On a pool circuit, a breaker that trips is usually sensing a real ground fault and shutting off before that current can reach a swimmer. Resetting re-energizes a circuit the breaker already judged unsafe, and a bigger breaker just lets more current flow before the protection reacts, which is the opposite of safe. Let us find why it is tripping and fix the cause."
+    },
+    {
+      "question": "Someone felt a tingle in the pool. What should we do?",
+      "answer": "Get everyone out and have it checked before the pool is used again. A tingle usually means current is reaching a metal part that is not properly bonded, and the breaker cannot sense a fault that has no path back to it, so it never trips and the swimmer becomes the path instead. It is the clearest warning sign there is. We find the leak, restore the bond, and prove the breaker trips as it should."
+    },
+    {
+      "question": "How do I know if my pool already has proper ground fault protection?",
+      "answer": "A ground fault breaker usually has a small test button on its face, and pressing it should make the breaker trip. If your pool breakers have test buttons, that is a good sign, though it does not confirm they still work. If they are plain breakers, the circuits are likely on standard protection. A breaker can also look correct and have aged past reliable tripping. The only way to be sure is to test, which is part of what we do on a visit."
+    },
+    {
+      "question": "How do I know if my pool needs a rebuild instead of a repair?",
+      "answer": "The signal is a pattern, not a single fault. When you fix one circuit and another fails, when swimmers keep feeling current, when the grounding was never right, when the panel is somewhere code no longer allows, and when every closer look finds another violation, the problem is the whole service, not one part. At that point patching one piece only exposes the next. A rebuild addresses the feeder, the ground, the panel, and the violations together."
+    },
+    {
+      "question": "What does pool electrical work cost, and do you pull permits?",
+      "answer": "The service call is $240, which covers roughly two hours including travel, arrival, and diagnosis, with no separate return charge if we can fix it on the spot. Corrections, repairs, and rebuilds are quoted per property after we test the system, because no two older pools fail the same way. When the work calls for a permit we pull it gladly and meet the inspector, because that passed inspection is your proof the pool is right. Some minor fixes do not need one, and we will tell you which is which."
+    }
+  ],
+  "related": ["electrical-safety-check", "electrical-panel-upgrade", "emergency-electrician", "electrical-service-rebuild"],
+  "pricing": {
+    "display": "Service call $240 for diagnosis; corrections and repairs quoted per property",
+    "notes": "The $240 service call covers roughly two hours including travel, arrival, and diagnosis. If the issue can be handled on the spot, there is no separate return charge. Corrections, repairs, and rebuilds are quoted per property after we test the system, and a larger job is forecast and priced once, up front. After-hours and emergency visits carry a premium."
+  },
+  "stats": [
+    {"value": "286", "label": "Permitted projects on public record"},
+    {"value": "Master", "label": "Broward County Master Electrician"},
+    {"value": "One company", "label": "From first call to final inspection"}
+  ],
+  "cta": {
+    "headline": "Book your pool and spa electrical checkup",
+    "body": "If a breaker keeps tripping, a light is out, someone felt a tingle, or your pool has never been tested, call us day or night. We will test the system, tell you plainly what it needs, and fix it so the inspector signs it off."
+  }
+}
