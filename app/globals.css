@@ -321,3 +321,62 @@ h6 {
     transition-duration: 200ms;
   }
 }
+
+/* Coverage map (Mapbox): brand-colored city markers and popups over the dark
+   base map. Marker color is set per county via the --marker-color variable. */
+.gce-marker {
+  width: 14px;
+  height: 14px;
+  border-radius: 9999px;
+  background: var(--marker-color, #22cfea);
+  border: 2px solid #08203a;
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--marker-color, #22cfea) 35%, transparent);
+  cursor: pointer;
+  transition: transform 0.15s ease, opacity 0.25s ease;
+}
+.gce-marker:hover {
+  transform: scale(1.25);
+}
+.gce-marker--home {
+  width: 18px;
+  height: 18px;
+  box-shadow: 0 0 0 5px color-mix(in oklab, var(--marker-color, #22cfea) 30%, transparent);
+}
+.mapboxgl-popup-content {
+  background: var(--color-navy-800);
+  color: var(--color-ink-on-dark);
+  border: 1px solid var(--color-navy-600);
+  border-radius: 12px;
+  padding: 0;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+}
+[class*="mapboxgl-popup-anchor-top"] .mapboxgl-popup-tip {
+  border-bottom-color: var(--color-navy-800);
+}
+[class*="mapboxgl-popup-anchor-bottom"] .mapboxgl-popup-tip {
+  border-top-color: var(--color-navy-800);
+}
+[class*="mapboxgl-popup-anchor-left"] .mapboxgl-popup-tip {
+  border-right-color: var(--color-navy-800);
+}
+[class*="mapboxgl-popup-anchor-right"] .mapboxgl-popup-tip {
+  border-left-color: var(--color-navy-800);
+}
+.gce-map-popup {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px 14px;
+  text-decoration: none;
+  color: var(--color-ink-on-dark);
+  font-weight: 600;
+  font-size: 14px;
+}
+.gce-map-popup__cta {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-cyan);
+}
+.gce-map-popup:hover .gce-map-popup__cta {
+  text-decoration: underline;
+}

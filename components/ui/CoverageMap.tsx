@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import dynamic from "next/dynamic";
 import Link from "next/link";
 import { routes } from "@/lib/routes";
 import { cn } from "@/lib/cn";
@@ -21,6 +22,15 @@ const COUNTY_COLOR: Record<CountyId, string> = {
   broward: "#22cfea", // cyan (home county)
   "miami-dade": "#a3bcd4", // steel (southern edge)
 };
+
+// The live Mapbox map (client-only, loaded on demand). It renders only when a
+// public token is configured (NEXT_PUBLIC_MAPBOX_TOKEN); otherwise we fall back
+// to the schematic SVG below so the widget always works.
+const CoverageMapGL = dynamic(() => import("./CoverageMapGL"), {
+  ssr: false,
+  loading: () => null,
+});
+const HAS_MAPBOX = Boolean(process.env.NEXT_PUBLIC_MAPBOX_TOKEN);
 
 // Map canvas in SVG user units. Portrait, because our coverage is a coastal
 // corridor that runs north to south.
@@ -222,6 +232,14 @@ export function CoverageMap({
 
       {/* Map */}
       <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-navy-600/60 bg-navy sm:aspect-[16/11] lg:aspect-auto lg:min-h-[420px]">
+        {HAS_MAPBOX ? (
+          <CoverageMapGL
+            groups={groups}
+            selected={selected}
+            countyColor={COUNTY_COLOR}
+            homeSlug={homeSlug}
+          />
+        ) : (
         <svg
           viewBox={`0 0 ${W} ${H}`}
           className="h-full w-full"
@@ -362,6 +380,7 @@ export function CoverageMap({
             );
           })}
         </svg>
+        )}
       </div>
     </div>
   );
