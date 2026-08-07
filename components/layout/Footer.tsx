@@ -1,7 +1,8 @@
+import Image from "next/image";
 import Link from "next/link";
 import { getBusiness, getCities, getServices } from "@/lib/content";
 import { routes } from "@/lib/routes";
-import { CrownMark } from "./CrownMark";
+import logoLockupOnDark from "../../public/brand/logo-lockup-ondark.png";
 
 // Renders a license line. Labels always show. The number shows only once it is a
 // real value; while it is still the "PLACEHOLDER" sentinel we show a calm
@@ -32,16 +33,16 @@ export function Footer() {
       <div className="container-page grid grid-cols-1 gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4">
         {/* Brand block */}
         <div className="sm:col-span-2 lg:col-span-1">
-          <div className="flex items-center gap-2.5">
-            <CrownMark />
-            <span className="font-heading text-lg font-bold text-ink-on-dark">
-              {business.name}
-            </span>
-          </div>
-          <p className="mt-4 max-w-xs text-sm text-ink-muted-on-dark">
+          <Image
+            src={logoLockupOnDark}
+            alt={business.name}
+            sizes="240px"
+            className="h-20 w-auto"
+          />
+          <p className="mt-5 max-w-xs text-sm text-ink-muted-on-dark">
             Licensed electrical service, repair, and restoration for South
-            Florida homes and properties. Owner led from the first call to the
-            final inspection.
+            Florida homes and properties. Licensed and local from the first call
+            to the final inspection.
           </p>
           <p className="mt-4 font-heading text-base font-semibold text-gold">
             {business.tagline}

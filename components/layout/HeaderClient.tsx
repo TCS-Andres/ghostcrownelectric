@@ -1,11 +1,12 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { routes } from "@/lib/routes";
 import { cn } from "@/lib/cn";
 import { Button } from "@/components/ui/Button";
-import { CrownMark } from "./CrownMark";
+import logoLockup from "../../public/brand/logo-lockup.png";
 
 export interface NavLink {
   label: string;
@@ -73,20 +74,24 @@ export function HeaderClient({
       ref={navRef}
       className="sticky top-0 z-50 border-b border-border/70 bg-surface/70 backdrop-blur-xl"
     >
-      <div className="container-page flex h-16 items-center justify-between gap-4">
+      <div className="container-page flex h-20 items-center justify-between gap-4">
         {/* Brand */}
         <Link
           href={routes.home}
-          className="flex items-center gap-2.5"
+          className="flex items-center"
+          aria-label={brandName}
           onClick={() => {
             setOpenMenu(null);
             setMobileOpen(false);
           }}
         >
-          <CrownMark />
-          <span className="font-heading text-lg font-bold tracking-tight text-ink">
-            {brandName}
-          </span>
+          <Image
+            src={logoLockup}
+            alt={brandName}
+            priority
+            sizes="220px"
+            className="h-14 w-auto"
+          />
         </Link>
 
         {/* Desktop nav */}

@@ -144,10 +144,10 @@ export default function HomePage() {
         {/* Dark on the left for legibility, lighter on the right so the video shows */}
         <div
           aria-hidden="true"
-          className="absolute inset-0 -z-10 bg-gradient-to-r from-navy via-navy/85 to-navy/40"
+          className="absolute inset-0 -z-10 bg-gradient-to-r from-navy via-navy/80 to-navy/25"
         />
 
-        <div className="container-page py-16 sm:py-20 lg:py-24">
+        <div className="container-page flex min-h-[40rem] flex-col justify-center py-16 sm:py-20 lg:min-h-[48rem] lg:py-24">
           <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
             <div className="max-w-2xl">
               <ul className="flex flex-wrap gap-2 text-sm text-ink-muted-on-dark">
