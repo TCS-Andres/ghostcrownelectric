@@ -46,6 +46,15 @@
   --color-mist-200: #dbe7f3;
   --color-mist-300: #c2d5e7;
 
+  /* Brand gold: the crown accent, reintroduced alongside electric blue to match
+     the logo (gold crown + cyan bolt). Like cyan, gold is low-contrast on white,
+     so it is used for premium brand accents on dark surfaces or as large
+     decorative fills, never as small text on white.
+     Contrast: gold #c9a24a on navy #08203a is about 6.8:1 (AA). */
+  --color-gold: #c9a24a;
+  --color-gold-600: #a5822f;
+  --color-gold-300: #e6c98a;
+
   /* Semantic tokens (generate utilities such as bg-surface, text-ink, bg-accent) */
   --color-surface: #ffffff;
   --color-surface-2: #f1f6fb;

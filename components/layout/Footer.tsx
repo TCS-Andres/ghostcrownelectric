@@ -43,7 +43,7 @@ export function Footer() {
             Florida homes and properties. Owner led from the first call to the
             final inspection.
           </p>
-          <p className="mt-4 font-heading text-base font-semibold text-accent">
+          <p className="mt-4 font-heading text-base font-semibold text-gold">
             {business.tagline}
           </p>
           <ul className="mt-6 flex flex-col gap-3">

@@ -15,8 +15,8 @@ import { getBusiness, SITE_URL } from "@/lib/content";
   that constant rather than defining a second one.
 */
 
-// Branded social share image. Static placeholder asset (see PLACEHOLDERS.md).
-export const OG_IMAGE_PATH = "/og-default.png";
+// Branded social share image: crown lockup on navy with tagline (1200x630).
+export const OG_IMAGE_PATH = "/og-ghost-crown.png";
 export const OG_IMAGE_WIDTH = 1200;
 export const OG_IMAGE_HEIGHT = 630;
 
