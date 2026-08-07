@@ -37,7 +37,7 @@ type Status = "idle" | "submitting" | "success" | "error";
 const OTHER_SERVICE = "Something else / not sure";
 const OTHER_CITY = "Other";
 
-const STEPS = ["What you need", "Where you are", "How to reach you"] as const;
+const STEPS = ["Service", "Location", "Contact"] as const;
 
 export function LeadForm({
   services,

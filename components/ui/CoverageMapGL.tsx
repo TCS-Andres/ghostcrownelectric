@@ -60,6 +60,7 @@ export default function CoverageMapGL({
     let cancelled = false;
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     let map: any;
+    let cleanupExtra = () => {};
 
     (async () => {
       const mapboxgl = (await import("mapbox-gl")).default;
@@ -111,9 +112,31 @@ export default function CoverageMapGL({
       const b = boundsOf(allCities);
       if (b) map.fitBounds(b, { padding: 48, maxZoom: 11, duration: 0 });
 
-      // A resize once the container has settled avoids a blank first paint when
-      // the widget starts life below the fold.
-      map.once("idle", () => map.resize());
+      // Mapbox pauses rendering while the map is hidden or off-screen, so a map
+      // created far down the page (or in a background tab) can stay blank until
+      // something forces a frame. Nudge a resize + repaint whenever the widget
+      // scrolls into view or the tab becomes visible.
+      const nudge = () => {
+        try {
+          map.resize();
+          map.triggerRepaint();
+        } catch {
+          // map may already be gone
+        }
+      };
+      map.once("idle", nudge);
+      const io = new IntersectionObserver(
+        (entries) => {
+          if (entries.some((e) => e.isIntersecting)) nudge();
+        },
+        { rootMargin: "200px" },
+      );
+      if (containerRef.current) io.observe(containerRef.current);
+      document.addEventListener("visibilitychange", nudge);
+      cleanupExtra = () => {
+        io.disconnect();
+        document.removeEventListener("visibilitychange", nudge);
+      };
 
       readyRef.current = true;
       applySelection(selected);
@@ -123,6 +146,7 @@ export default function CoverageMapGL({
       cancelled = true;
       readyRef.current = false;
       markersRef.current = [];
+      cleanupExtra();
       if (map) map.remove();
       mapRef.current = null;
     };
@@ -134,10 +158,11 @@ export default function CoverageMapGL({
   function applySelection(sel: CountyId | "all") {
     const map = mapRef.current;
     if (!map || !readyRef.current) return;
+    // Show only the selected county's pins (hide the rest) so the map does not
+    // look cluttered. "All" shows every pin.
     for (const m of markersRef.current) {
       const active = sel === "all" || m.countyId === sel;
-      m.el.style.opacity = active ? "1" : "0.25";
-      m.el.style.zIndex = active ? "2" : "1";
+      m.el.style.display = active ? "" : "none";
     }
     const scope =
       sel === "all" ? allCities : allCities.filter((c) => c.countyId === sel);
