@@ -22,7 +22,7 @@ const DESCRIPTION =
 // Short assurances shown above the grid. Plain promises, no hype.
 const ASSURANCES = [
   "One licensed crew, from the first call to the final inspection",
-  "A $240 service call, and one honest price before any bigger work",
+  "One honest price before any bigger work, so there are no surprises",
   "We answer day or night, and we meet the inspector in person",
 ];
 

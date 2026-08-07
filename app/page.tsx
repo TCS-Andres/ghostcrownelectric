@@ -51,7 +51,7 @@ const HOME_FAQS: Faq[] = [
   {
     question: "How does the service call work?",
     answer:
-      "The service call is $240. That covers roughly two hours, including travel, arrival, and diagnosis. If we can solve it on the spot in that window, there is no separate return charge. If the job is bigger, you get one honest price before any further work begins, so you always know the number before we start.",
+      "You reach a licensed electrician, not a call center. We start with an on-site visit to see the problem in person and diagnose it. If the job is bigger, you get one honest price before any further work begins, so you always know the number before we start.",
   },
   {
     question: "My insurance company flagged my panel. Can you help?",
@@ -292,7 +292,7 @@ export default function HomePage() {
         <div className="container-page py-16 sm:py-20">
           <SectionHeading
             as="h2"
-            eyebrow="Straight pricing"
+            eyebrow="How we price"
             title="We price it once, and we price it right."
             description="No games and no moving numbers. Here is how it works before you ever call."
           />
@@ -304,46 +304,46 @@ export default function HomePage() {
             <ul className="grid grid-cols-1 gap-4 lg:grid-cols-3">
               <li>
                 <div className="glass-dark flex h-full flex-col rounded-2xl p-6">
-                  <h3 className="font-heading text-lg font-semibold text-ink-on-dark">
-                    The service call
-                  </h3>
-                  <p className="mt-2 font-heading text-3xl font-bold text-cyan-300">
-                    $240
+                  <p className="font-heading text-2xl font-bold text-cyan-300">
+                    On site
                   </p>
+                  <h3 className="mt-2 font-heading text-lg font-semibold text-ink-on-dark">
+                    We start in person
+                  </h3>
                   <p className="mt-2 text-ink-muted-on-dark">
-                    That covers roughly two hours, including travel, arrival, and
-                    diagnosis. If we can handle it on the spot in that window,
-                    there is no separate return charge.
+                    We come out and diagnose the problem in person, not with a
+                    guess over the phone. You meet a licensed electrician who
+                    tells you what is actually going on.
                   </p>
                 </div>
               </li>
               <li>
                 <div className="glass-dark flex h-full flex-col rounded-2xl p-6">
-                  <h3 className="font-heading text-lg font-semibold text-ink-on-dark">
-                    After hours and emergencies
-                  </h3>
-                  <p className="mt-2 font-heading text-3xl font-bold text-cyan-300">
-                    A premium
+                  <p className="font-heading text-2xl font-bold text-cyan-300">
+                    Up front
                   </p>
+                  <h3 className="mt-2 font-heading text-lg font-semibold text-ink-on-dark">
+                    One honest price
+                  </h3>
                   <p className="mt-2 text-ink-muted-on-dark">
-                    When you need us in the middle of the night, that visit carries
-                    a premium. You are paying for real availability, day or night,
-                    and we tell you plainly before we roll.
+                    For any bigger job, you get a single price before the work
+                    begins, forecast from what we actually see, so you always
+                    know the number first.
                   </p>
                 </div>
               </li>
               <li>
                 <div className="glass-dark flex h-full flex-col rounded-2xl p-6">
-                  <h3 className="font-heading text-lg font-semibold text-ink-on-dark">
-                    A residential service rebuild
-                  </h3>
-                  <p className="mt-2 font-heading text-3xl font-bold text-cyan-300">
-                    $5,000 to $8,000
+                  <p className="font-heading text-2xl font-bold text-cyan-300">
+                    Locked in
                   </p>
+                  <h3 className="mt-2 font-heading text-lg font-semibold text-ink-on-dark">
+                    No moving numbers
+                  </h3>
                   <p className="mt-2 text-ink-muted-on-dark">
-                    A full residential electrical service rebuild typically lands
-                    in this range. The exact number comes after we see the property,
-                    and it is quoted per property.
+                    The number we quote is the number you pay. We do not change
+                    it in the middle of the job. If something truly hidden turns
+                    up, you decide before we go on.
                   </p>
                 </div>
               </li>

@@ -48,13 +48,6 @@ export async function generateMetadata({
   });
 }
 
-function slugifyHeading(heading: string): string {
-  return heading
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/(^-|-$)/g, "");
-}
-
 export default async function ServicePage({
   params,
 }: {
@@ -292,74 +285,25 @@ export default async function ServicePage({
         </section>
       ) : null}
 
-      {/* Definitive guide */}
+      {/* Good to know: the deeper detail, collapsed so the page stays scannable
+          while the full text stays in the document for search engines. */}
       {service.guide.sections.length > 0 ? (
         <section className="bg-surface-2">
           <div className="container-page py-14 sm:py-20">
             <div className="max-w-3xl">
               <SectionHeading
                 as="h2"
-                eyebrow="The complete guide"
+                eyebrow="Good to know"
                 title={service.guide.title}
               />
-              {service.guide.sections.length > 2 ? (
-                <nav
-                  aria-label="Guide contents"
-                  className="mt-8 rounded-xl border border-border bg-surface p-6"
-                >
-                  <p className="font-heading text-sm font-semibold uppercase tracking-[0.12em] text-ink">
-                    On this page
-                  </p>
-                  <ul className="mt-4 flex flex-col gap-2">
-                    {service.guide.sections.map((section) => (
-                      <li key={section.heading}>
-                        <a
-                          href={`#${slugifyHeading(section.heading)}`}
-                          className="text-sm text-ink-muted hover:text-accent-hover"
-                        >
-                          {section.heading}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </nav>
-              ) : null}
-              <div className="mt-10 flex flex-col gap-10">
-                {service.guide.sections.map((section) => (
-                  <div
-                    key={section.heading}
-                    id={slugifyHeading(section.heading)}
-                    className="scroll-mt-24"
-                  >
-                    <h3 className="font-heading text-xl font-semibold text-ink sm:text-2xl">
-                      {section.heading}
-                    </h3>
-                    <p className="mt-3 leading-relaxed text-ink-muted">
-                      {section.body}
-                    </p>
-                  </div>
-                ))}
-              </div>
+              <FAQAccordion
+                items={service.guide.sections.map((section) => ({
+                  question: section.heading,
+                  answer: section.body,
+                }))}
+                className="mt-8"
+              />
             </div>
-          </div>
-        </section>
-      ) : null}
-
-      {/* Pricing note */}
-      {service.pricing?.display ? (
-        <section className="container-page py-14 sm:py-20">
-          <div className="max-w-3xl rounded-2xl border border-border bg-surface p-8 shadow-[var(--shadow-card)]">
-            <p className="font-heading text-sm font-semibold uppercase tracking-[0.12em] text-accent">
-              Straight talk on price
-            </p>
-            <p className="mt-3 font-heading text-2xl font-semibold text-ink">
-              {service.pricing.display}
-            </p>
-            {service.pricing.notes ? (
-              <p className="mt-3 leading-relaxed text-ink-muted">
-                {service.pricing.notes}
-              </p>
-            ) : null}
           </div>
         </section>
       ) : null}

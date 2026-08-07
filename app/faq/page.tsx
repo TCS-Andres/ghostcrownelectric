@@ -83,9 +83,9 @@ const GROUPS: { heading: string; items: Faq[] }[] = [
     heading: "Pricing",
     items: [
       {
-        question: "How much is a service call?",
+        question: "How does a service call work?",
         answer:
-          "A service call is $240. That covers roughly two hours, including travel, arrival, and diagnosis. If the problem can be handled on the spot within that visit, there is no separate return charge. You are paying for the experience of a licensed electrician who can tell you what is wrong and what it takes to fix it.",
+          "You reach a licensed electrician, not a call center, and we start with an on-site visit to see the problem in person. You are paying for the experience of an electrician who can tell you what is wrong and what it takes to fix it. If the job turns out to be bigger, you get one price before any further work begins.",
       },
       {
         question: "Is the rate different after hours?",
@@ -93,9 +93,9 @@ const GROUPS: { heading: string; items: Faq[] }[] = [
           "Yes. After-hours and emergency visits carry a premium, because getting a licensed crew to you day or night costs more to provide. We will always be upfront about that before we head out, so there are no surprises. You decide whether it needs to happen tonight or whether it can wait for regular hours.",
       },
       {
-        question: "How much does a service rebuild cost?",
+        question: "What does a service rebuild cost?",
         answer:
-          "A residential electrical service rebuild generally runs $5,000 to $8,000. Every situation is different, though, so that range is a starting point, not a quote. The site visit always comes first. We look at the whole picture, then give you one honest number for your specific property before any work begins.",
+          "Every property is different, so we quote it after we see it, never over the phone. The site visit always comes first. We look at the whole picture, then give you one honest number for your specific property before any work begins.",
       },
       {
         question: "Will the price change once work starts?",

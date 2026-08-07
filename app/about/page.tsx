@@ -27,31 +27,19 @@ const DESCRIPTION =
 const VALUES: { title: string; body: string }[] = [
   {
     title: "Trust comes first",
-    body: "Before price, before speed, before anything, we lead with trust and licensing. If you cannot trust the person working in your panel, nothing else really matters.",
+    body: "We lead with trust and licensing. If you cannot trust the person working in your panel, nothing else matters.",
   },
   {
     title: "We show up when we say we will",
-    body: "A time we give you is a promise. Day or night, when we say we are coming, we come. That is the whole reputation, and we protect it.",
+    body: "A time we give you is a promise. Day or night, when we say we are coming, we come.",
   },
   {
     title: "Do it right so you can forget about it",
-    body: "The goal is simple. Do the work right the first time so you are not thinking about it after we leave. Peace of mind is the real deliverable.",
-  },
-  {
-    title: "Give more than you pay for",
-    body: "We would rather hand a customer more than they paid for than nickel and dime a job. Electricity is something we do not see, we only feel the effect.",
-  },
-  {
-    title: "We stay in our lane",
-    body: "We do service, repair, and restoration, and we do it well. We do not chase every job. Staying focused is why we are fast and why we are good.",
+    body: "We do the work right the first time, so you are not thinking about it after we leave. Peace of mind is the real deliverable.",
   },
   {
     title: "Price it once, price it right",
-    body: "We look at the whole situation, give you one honest number, and stand behind it. There are no surprises after the work has started.",
-  },
-  {
-    title: "Grow slow, grow safe",
-    body: "We grow at a pace we can stand behind, so every job still gets our full attention. Bigger is not the goal. Better is the goal.",
+    body: "We look at the whole situation, give you one honest number, and stand behind it. No surprises once work has started.",
   },
 ];
 
@@ -184,19 +172,13 @@ export default function AboutPage() {
           />
           <div className="mt-6 flex flex-col gap-4 text-lg leading-relaxed text-ink-muted">
             <p>
-              The company was built about ten years ago servicing South
-              Florida&apos;s commercial and residential move away from metal
-              halide and high pressure sodium lighting toward LED. That was good
-              work, and for a while there was plenty of it.
-            </p>
-            <p>
-              Over time it commoditized. Anyone could sell a retrofit, and price
-              became the only thing that mattered. So we made a deliberate
-              choice. We moved the center of gravity of the business to the work
-              that still needs a licensed, experienced hand: service rebuilds,
-              panel and meter equipment replacement, power restoration, and
-              emergency response. That is the work we are known for now, and it
-              is the work we are built to do well.
+              We started about ten years ago retrofitting South Florida lighting
+              to LED. Good work, until it commoditized and price became the only
+              thing that mattered. So we moved the business to the work that
+              still needs a licensed, experienced hand: service rebuilds, panel
+              and meter replacement, power restoration, and emergency response.
+              That is what we are known for now, and what we are built to do
+              well.
             </p>
           </div>
         </div>
@@ -233,32 +215,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* The record, in words */}
-      <section className="container-page py-14 sm:py-20">
-        <div className="max-w-3xl">
-          <SectionHeading
-            as="h2"
-            eyebrow="The record"
-            title="Written down, in public"
-          />
-          <div className="mt-6 flex flex-col gap-4 text-lg leading-relaxed text-ink-muted">
-            <p>
-              Electrical work is inspected work, and the permit record is where a
-              contractor&apos;s history gets written down in public. Ours shows
-              286 permitted projects, and it places us in the top tier of Florida
-              contractors by permit quality.
-            </p>
-            <p>
-              We hold a Florida Certified Electrical Contractor license with
-              statewide authority and a Broward County Master Electrician
-              license. We have been actively operating for ten years, and twelve
-              since the company was formed. None of that is marketing. It is on
-              the record, and you are welcome to check it.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Values in plain language */}
       <section className="bg-surface-2">
         <div className="container-page py-14 sm:py-20">
@@ -268,7 +224,7 @@ export default function AboutPage() {
             title="What we stand on"
             description="These are not slogans on a wall. They are the reasons people call us back and send us to their neighbors."
           />
-          <ul className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <ul className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2">
             {VALUES.map((value) => (
               <li key={value.title}>
                 <Card as="div" className="h-full">
@@ -293,17 +249,12 @@ export default function AboutPage() {
           />
           <div className="mt-6 flex flex-col gap-4 text-lg leading-relaxed text-ink-muted">
             <p>
-              Ghost Crown Electric runs three trucks and a three person, in-house
-              crew. That lets us keep three jobs moving at once across the
-              service area without ever handing your work to a subcontractor we
-              do not know. One member of the crew has been with the company more
-              than eight years.
-            </p>
-            <p>
-              The people who show up at your property are our people, trained the
-              way we work. We keep the team small on purpose, because that is how
-              the quality stays consistent and the owner stays close to every
-              job.
+              Ghost Crown Electric runs three trucks and a three person in-house
+              crew, so we keep three jobs moving at once without handing your
+              work to a subcontractor we do not know. One member of the crew has
+              been with us more than eight years. The people who show up are our
+              people, trained the way we work, and we keep the team small on
+              purpose so the quality stays consistent.
             </p>
           </div>
         </div>

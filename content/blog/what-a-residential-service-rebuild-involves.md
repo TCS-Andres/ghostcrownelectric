@@ -1,6 +1,6 @@
 ---
 title: "What an Electrical Service Rebuild Actually Involves (and Costs)"
-description: "What a residential electrical service rebuild involves, from meter to panel, and why it typically runs $5,000 to $8,000, priced once by a licensed Broward pro."
+description: "What a residential electrical service rebuild involves, from meter to panel, and how it is scoped and priced once, up front, by a licensed Broward pro."
 date: "2026-07-21"
 tags: ["service rebuild", "electrical panel", "cost guide", "homeowners"]
 relatedServices: ["electrical-service-rebuild", "electrical-panel-upgrade", "meter-bank-replacement"]
@@ -20,7 +20,7 @@ A service rebuild rarely arrives out of nowhere. Usually the house has been hint
 
 Age is the big one. If your home and its original service date back several decades and nothing has been touched, the equipment is simply near the end of its designed life. Visible damage is another: rust streaking down the meter can, a panel that is warm to the touch, scorch marks, or a mast pulling away from the wall. Insurance letters count too, since the same carrier requirements that flag an old panel often point at the whole service. And then there is the pattern of repeated failures, breakers that will not stay set, lights that dim when the air conditioner starts, circuits that trip for no clear reason. One of those on its own may be a small repair. Several of them together are the house telling you the service is tired. Property managers often notice the pattern first, because they are fielding the same tenant complaints across a building and can see when one unit after another starts acting up.
 
-If you are seeing any of that, the honest first move is a look, not a guess. A single trip charge covers a real diagnosis. Our service call is $240, which covers roughly the first two hours including travel, our arrival, and the diagnosis itself. If the problem turns out to be something we can handle on the spot, there is no separate return charge. You are not paying for a sales visit. You are paying for an experienced electrician to tell you the truth about your system.
+If you are seeing any of that, the honest first move is a look, not a guess. It starts with an on-site visit, where we diagnose the problem in person instead of guessing at it over the phone. You are not paying for a sales visit. You are paying for an experienced electrician to tell you the truth about your system.
 
 ## How the job actually runs
 
@@ -30,7 +30,7 @@ It begins on the phone. I take the call myself and do a real triage: what you ar
 
 Next comes the site visit and assessment. This is where the real forecast happens. We look at the meter, the disconnect, the panel, the mast, the grounding, and the condition of what feeds the house, so the price we give you is built on what is actually there and not on a hopeful guess.
 
-Then you get one price. Residential service rebuilds in our area typically run $5,000 to $8,000, depending on the condition of the existing service and the scope of what has to be renewed. That is the honest range, and where a given home lands inside it comes from the assessment, not from a phone estimate. Whatever the number is, it is priced once, from a real forecast, and it does not get revisited in the middle of the job. Price it once, price it right. If something truly hidden appears once we are into the work, you hear about it and decide before anything continues.
+Then you get one price. What a rebuild costs depends on the condition of the existing service and the scope of what has to be renewed, so the number comes from the assessment, not from a phone estimate. Whatever it is, it is priced once, from a real forecast, and it does not get revisited in the middle of the job. Price it once, price it right. If something truly hidden appears once we are into the work, you hear about it and decide before anything continues.
 
 The work is done by our own in-house crew. We pull the permit, and when the inspection comes, I meet the inspector personally. That final inspection is not a formality we hand off. It is the moment the county confirms the work is right, and I want to be standing there for it.
 
