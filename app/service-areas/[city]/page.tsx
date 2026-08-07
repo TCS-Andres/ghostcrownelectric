@@ -121,7 +121,7 @@ export default async function CityPage({
                   <span className="glass-dark inline-flex items-center gap-2 rounded-full px-4 py-2">
                     <span
                       aria-hidden="true"
-                      className="h-2 w-2 rounded-full bg-accent"
+                      className="h-2 w-2 rounded-full bg-accent-bright"
                     />
                     <span className="text-sm font-medium text-ink-on-dark">
                       Serving {city.name}, day or night

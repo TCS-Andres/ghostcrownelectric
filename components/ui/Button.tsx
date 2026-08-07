@@ -7,14 +7,15 @@ type Size = "sm" | "md" | "lg";
 
 const base =
   "inline-flex items-center justify-center gap-2 rounded-md font-semibold " +
-  "font-heading tracking-tight transition-colors duration-150 " +
+  "font-heading tracking-tight transition duration-150 " +
   "disabled:cursor-not-allowed disabled:opacity-60";
 
 const variants: Record<Variant, string> = {
-  // Crown gold with navy ink: about 7.1 to 1 contrast, passes AA.
-  primary: "bg-accent text-accent-ink hover:bg-accent-hover",
-  // Charcoal surface with warm off-white text.
-  secondary: "bg-navy text-ink-on-dark hover:bg-navy-800",
+  // Bright cyan gradient with deep-navy ink: about 8.3 to 1 contrast, passes AA.
+  primary:
+    "bg-gradient-to-r from-cyan to-cyan-600 text-accent-bright-ink shadow-sm hover:brightness-110",
+  // Deep blue surface with white text, for a solid secondary action.
+  secondary: "bg-accent text-accent-ink hover:bg-accent-hover",
   // Calm outline for secondary actions on light surfaces.
   outline: "border border-mist-300 text-ink hover:bg-surface-2",
   // Outline for use on navy surfaces.

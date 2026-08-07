@@ -76,7 +76,7 @@ export function Footer() {
             <li>
               <Link
                 href={routes.services}
-                className="text-sm font-semibold text-accent hover:text-gold-300"
+                className="text-sm font-semibold text-accent hover:text-cyan-300"
               >
                 View all services
               </Link>
@@ -103,7 +103,7 @@ export function Footer() {
             <li>
               <Link
                 href={routes.serviceAreas}
-                className="text-sm font-semibold text-accent hover:text-gold-300"
+                className="text-sm font-semibold text-accent hover:text-cyan-300"
               >
                 View all service areas
               </Link>

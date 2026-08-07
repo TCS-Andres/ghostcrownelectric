@@ -33,7 +33,12 @@ export function SectionHeading({
       )}
     >
       {eyebrow ? (
-        <span className="text-sm font-semibold uppercase tracking-[0.14em] text-accent">
+        <span
+          className={cn(
+            "text-sm font-semibold uppercase tracking-[0.14em]",
+            onDark ? "text-accent-bright" : "text-accent",
+          )}
+        >
           {eyebrow}
         </span>
       ) : null}

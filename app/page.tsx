@@ -20,7 +20,6 @@ import {
 import type { Faq } from "@/lib/content";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Card } from "@/components/ui/Card";
-import { Media } from "@/components/ui/Media";
 import { ServiceCard } from "@/components/ui/ServiceCard";
 import { CTABand } from "@/components/ui/CTABand";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
@@ -133,7 +132,7 @@ export default function HomePage() {
                 >
                   <span
                     aria-hidden="true"
-                    className="h-1.5 w-1.5 rounded-full bg-accent"
+                    className="h-1.5 w-1.5 rounded-full bg-accent-bright"
                   />
                   {license.label}
                 </li>
@@ -141,7 +140,8 @@ export default function HomePage() {
             </ul>
 
             <h1 className="mt-5 text-4xl text-ink-on-dark sm:text-5xl lg:text-6xl">
-              Electrician in Broward County, on call day or night.
+              Electrician in Broward County,{" "}
+              <span className="text-accent-bright">on call day or night.</span>
             </h1>
 
             <p className="mt-5 max-w-2xl text-lg text-ink-muted-on-dark">
@@ -159,7 +159,7 @@ export default function HomePage() {
                   <span className="glass-dark inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 text-sm text-ink-on-dark">
                     <span
                       aria-hidden="true"
-                      className="h-1.5 w-1.5 shrink-0 rounded-full bg-accent"
+                      className="h-1.5 w-1.5 shrink-0 rounded-full bg-accent-bright"
                     />
                     {chip}
                   </span>
@@ -168,77 +168,28 @@ export default function HomePage() {
             </ul>
             </div>
 
-            <div className="hidden lg:block">
-              <Media
-                src="/images/hero-electrician.jpg"
-                alt="An electrician installing breakers inside a modern electrical panel"
-                priority
-                sizes="(min-width: 1024px) 42vw, 0px"
-                className="aspect-[4/5] rounded-2xl border border-navy-600"
-              >
-                <div className="absolute inset-x-4 bottom-4">
-                  <div className="glass-dark flex items-center gap-3 rounded-xl px-4 py-3">
-                    <span
-                      aria-hidden="true"
-                      className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-accent/90 text-accent-ink"
-                    >
-                      <svg
-                        width="18"
-                        height="18"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      >
-                        <path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z" />
-                        <path d="M9 12l2 2 4-4" />
-                      </svg>
-                    </span>
-                    <div>
-                      <p className="text-sm font-semibold text-ink-on-dark">
-                        Licensed and insured
-                      </p>
-                      <p className="text-xs text-ink-muted-on-dark">
-                        Broward County Master Electrician
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </Media>
+            {/* Request-service form, front and center in the hero */}
+            <div id="request-service" className="scroll-mt-24">
+              <LeadForm
+                services={services.map((service) => service.shortName || service.name)}
+                cities={cities}
+                phoneDisplay={business.phoneDisplay}
+                phoneTel={business.phoneTel}
+                title="Request service"
+                subtitle="We answer day or night"
+              />
+              <p className="mt-4 text-center text-sm text-ink-muted-on-dark">
+                Prefer to talk now? Call{" "}
+                <a
+                  href={`tel:${business.phoneTel}`}
+                  className="font-semibold text-ink-on-dark hover:text-accent-bright"
+                >
+                  {business.phoneDisplay}
+                </a>{" "}
+                day or night.
+              </p>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* 2. Lead form */}
-      <section className="bg-surface-2">
-        <div className="container-page grid grid-cols-1 gap-10 py-16 sm:py-20 lg:grid-cols-2 lg:gap-14">
-          <div className="lg:pt-4">
-            <SectionHeading
-              as="h2"
-              eyebrow="Tell us what is going on"
-              title="Start with a plain description. We take it from there."
-              description="Three quick steps: what you need, where you are, and how to reach you. Damean or the crew follows up to talk it through. Nothing automated, no pressure."
-            />
-            <p className="mt-6 text-ink-muted">
-              Prefer to talk now? Call{" "}
-              <a
-                href={`tel:${business.phoneTel}`}
-                className="font-semibold text-ink hover:text-accent-hover"
-              >
-                {business.phoneDisplay}
-              </a>
-              . We answer day or night.
-            </p>
-          </div>
-          <LeadForm
-            services={services.map((service) => service.shortName || service.name)}
-            cities={cities}
-            phoneDisplay={business.phoneDisplay}
-            phoneTel={business.phoneTel}
-          />
         </div>
       </section>
 
@@ -278,7 +229,7 @@ export default function HomePage() {
                 key={stat.label}
                 className="glass-dark flex flex-col gap-2 rounded-2xl p-6"
               >
-                <dt className="font-heading text-3xl font-bold text-gold-300">
+                <dt className="font-heading text-3xl font-bold text-cyan-300">
                   {stat.value}
                 </dt>
                 <dd className="text-sm text-ink-muted-on-dark">{stat.label}</dd>
@@ -366,7 +317,7 @@ export default function HomePage() {
                   <h3 className="font-heading text-lg font-semibold text-ink-on-dark">
                     The service call
                   </h3>
-                  <p className="mt-2 font-heading text-3xl font-bold text-gold-300">
+                  <p className="mt-2 font-heading text-3xl font-bold text-cyan-300">
                     $240
                   </p>
                   <p className="mt-2 text-ink-muted-on-dark">
@@ -381,7 +332,7 @@ export default function HomePage() {
                   <h3 className="font-heading text-lg font-semibold text-ink-on-dark">
                     After hours and emergencies
                   </h3>
-                  <p className="mt-2 font-heading text-3xl font-bold text-gold-300">
+                  <p className="mt-2 font-heading text-3xl font-bold text-cyan-300">
                     A premium
                   </p>
                   <p className="mt-2 text-ink-muted-on-dark">
@@ -396,7 +347,7 @@ export default function HomePage() {
                   <h3 className="font-heading text-lg font-semibold text-ink-on-dark">
                     A residential service rebuild
                   </h3>
-                  <p className="mt-2 font-heading text-3xl font-bold text-gold-300">
+                  <p className="mt-2 font-heading text-3xl font-bold text-cyan-300">
                     $5,000 to $8,000
                   </p>
                   <p className="mt-2 text-ink-muted-on-dark">

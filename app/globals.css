@@ -2,19 +2,24 @@
 
 /*
   Ghost Crown Electric design system.
-  Direction: deep navy blue plus crown gold. Navy surfaces, warm crown gold
-  accent, white and cool neutral content surfaces. Premium, trustworthy,
-  trade service.
+  Direction: electric blue with a bright cyan accent. Deep navy for anchoring
+  panels, a rich brand blue for hero and feature surfaces, cyan for action.
+  Modern, high-energy, trade service.
+
+  The accent is split in two because cyan cannot carry text on white:
+  - `accent` is a deep blue, safe for accent TEXT and fills on light surfaces
+  - `accent-bright` is the cyan, for buttons, glows, and accents on dark
 
   Contrast notes (WCAG AA verified):
-  - Ink #0D1B2E on white:              about 17.3 to 1  (AAA)
-  - Ink muted #4B5F78 on white:        about 6.6 to 1   (AA, AAA for large)
-  - Gold #C9A227 with navy ink:        about 7.1 to 1   (AA for all text)
-  - Ink on dark #EFF4FA on navy:       about 15.6 to 1  (AAA)
-  - Muted on dark #A7B8CE on navy:     about 8.5 to 1   (AAA)
-  - Gold 300 #E0C463 on navy:          about 10.1 to 1  (AAA)
-  Gold is used as a surface or accent, never as small text on white
-  (gold on white is only about 2.4 to 1 and would fail AA).
+  - Ink #0A2035 on white:                about 16.5 to 1 (AAA)
+  - Ink muted #4A6076 on white:          about 6.6 to 1  (AA, AAA for large)
+  - Accent #0F63B5 on white:             about 6.1 to 1  (AA)
+  - White on accent #0F63B5:             about 6.1 to 1  (AA)
+  - Ink on dark #EEF5FB on navy:         about 14.9 to 1 (AAA)
+  - Muted on dark #A3BCD4 on navy:       about 8.4 to 1  (AAA)
+  - Cyan #22CFEA on navy:                about 8.7 to 1  (AAA)
+  - Cyan #22CFEA with its ink #06253D:   about 8.3 to 1  (AA for all text)
+  Cyan on white is only about 1.9 to 1, so it is never used as text on light.
 */
 
 @theme {
@@ -23,37 +28,43 @@
   --font-heading: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
 
   /* Brand palette */
-  --color-navy: #0d1b2e;
-  --color-navy-800: #152840;
-  --color-navy-700: #21395a;
-  --color-navy-600: #35527d;
+  --color-navy: #08203a;
+  --color-navy-800: #0e2f52;
+  --color-navy-700: #17436f;
+  --color-navy-600: #2a5c8f;
 
-  --color-gold: #c9a227;
-  --color-gold-600: #b8901e;
-  --color-gold-300: #e0c463;
-  --color-gold-100: #f3e9c7;
+  --color-blue: #0f63b5;
+  --color-blue-600: #0b4d8f;
+  --color-blue-400: #3b8ede;
 
-  --color-mist: #f3f6fa;
-  --color-mist-200: #dfe7f1;
-  --color-mist-300: #c9d5e4;
+  --color-cyan: #22cfea;
+  --color-cyan-600: #0fb0cf;
+  --color-cyan-300: #7ce4f6;
+  --color-cyan-100: #d3f4fb;
+
+  --color-mist: #f1f6fb;
+  --color-mist-200: #dbe7f3;
+  --color-mist-300: #c2d5e7;
 
   /* Semantic tokens (generate utilities such as bg-surface, text-ink, bg-accent) */
   --color-surface: #ffffff;
-  --color-surface-2: #f3f6fa;
-  --color-surface-dark: #0d1b2e;
-  --color-surface-dark-2: #152840;
+  --color-surface-2: #f1f6fb;
+  --color-surface-dark: #08203a;
+  --color-surface-dark-2: #0e2f52;
 
-  --color-ink: #0d1b2e;
-  --color-ink-muted: #4b5f78;
-  --color-ink-on-dark: #eff4fa;
-  --color-ink-muted-on-dark: #a7b8ce;
+  --color-ink: #0a2035;
+  --color-ink-muted: #4a6076;
+  --color-ink-on-dark: #eef5fb;
+  --color-ink-muted-on-dark: #a3bcd4;
 
-  --color-accent: #c9a227;
-  --color-accent-hover: #b8901e;
-  --color-accent-ink: #0d1b2e;
+  --color-accent: #0f63b5;
+  --color-accent-hover: #0b4d8f;
+  --color-accent-ink: #ffffff;
+  --color-accent-bright: #22cfea;
+  --color-accent-bright-ink: #06253d;
 
-  --color-border: #dfe7f1;
-  --color-border-dark: #21395a;
+  --color-border: #dbe7f3;
+  --color-border-dark: #17436f;
 
   /* Radius scale */
   --radius-sm: 0.25rem;
@@ -166,7 +177,7 @@ h6 {
 @utility glow-ambient {
   background: radial-gradient(
     closest-side,
-    color-mix(in oklab, #3f83e8 48%, transparent),
+    color-mix(in oklab, var(--color-cyan) 42%, transparent),
     transparent
   );
 }

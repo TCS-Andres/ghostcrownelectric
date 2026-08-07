@@ -98,7 +98,7 @@ export default function AboutPage() {
           <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
             <div>
               <div className="max-w-2xl">
-                <span className="text-sm font-semibold uppercase tracking-[0.14em] text-accent">
+                <span className="text-sm font-semibold uppercase tracking-[0.14em] text-accent-bright">
                   About the company
                 </span>
                 <h1 className="mt-3 text-3xl text-ink-on-dark sm:text-4xl md:text-5xl">
@@ -128,7 +128,7 @@ export default function AboutPage() {
                   <span className="glass-dark inline-flex items-center gap-2 rounded-full px-4 py-2">
                     <span
                       aria-hidden="true"
-                      className="h-2 w-2 rounded-full bg-accent"
+                      className="h-2 w-2 rounded-full bg-accent-bright"
                     />
                     <span className="text-sm font-medium text-ink-on-dark">
                       286 permitted projects on public record

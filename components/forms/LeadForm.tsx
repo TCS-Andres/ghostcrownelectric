@@ -27,6 +27,9 @@ interface LeadFormProps {
   phoneDisplay: string;
   phoneTel: string;
   className?: string;
+  /** When set, renders a dark panel header above the form (used in the hero). */
+  title?: string;
+  subtitle?: string;
 }
 
 type Status = "idle" | "submitting" | "success" | "error";
@@ -42,6 +45,8 @@ export function LeadForm({
   phoneDisplay,
   phoneTel,
   className,
+  title,
+  subtitle,
 }: LeadFormProps) {
   const baseId = useId();
   const [step, setStep] = useState(0);
@@ -118,31 +123,56 @@ export function LeadForm({
     }
   }
 
+  // Optional dark panel header, shared by the form and its success state, so the
+  // form reads as a "request service" panel in the hero.
+  const panelHeader = title ? (
+    <div className="bg-navy px-6 py-5 text-ink-on-dark">
+      <div className="flex items-center gap-2 text-accent-bright">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z" />
+        </svg>
+        {subtitle ? (
+          <span className="text-xs font-semibold uppercase tracking-[0.16em]">
+            {subtitle}
+          </span>
+        ) : null}
+      </div>
+      <p className="mt-1 font-heading text-xl font-bold text-ink-on-dark">
+        {title}
+      </p>
+    </div>
+  ) : null;
+
+  const shellClass = title
+    ? "overflow-hidden rounded-2xl border border-white/10 shadow-[var(--shadow-lift)]"
+    : "glass rounded-2xl p-6 sm:p-7";
+  const bodyClass = title ? "glass p-6 sm:p-7" : undefined;
+
   if (status === "success") {
     return (
       <div
-        className={cn(
-          "glass rounded-2xl p-6",
-          className,
-        )}
+        className={cn(title ? shellClass : "glass rounded-2xl p-6", className)}
         role="status"
         aria-live="polite"
       >
-        <h3 className="font-heading text-xl font-semibold text-ink">
-          Thank you. We have your request.
-        </h3>
-        <p className="mt-3 text-ink-muted">
-          Damean or the crew will reach out to talk through what is going on. If
-          it is urgent, do not wait on us. Call {phoneDisplay}, day or night.
-        </p>
-        <Button
-          href={`tel:${phoneTel}`}
-          variant="primary"
-          size="md"
-          className="mt-5"
-        >
-          Call {phoneDisplay}
-        </Button>
+        {panelHeader}
+        <div className={bodyClass}>
+          <h3 className="font-heading text-xl font-semibold text-ink">
+            Thank you. We have your request.
+          </h3>
+          <p className="mt-3 text-ink-muted">
+            Damean or the crew will reach out to talk through what is going on. If
+            it is urgent, do not wait on us. Call {phoneDisplay}, day or night.
+          </p>
+          <Button
+            href={`tel:${phoneTel}`}
+            variant="primary"
+            size="md"
+            className="mt-5"
+          >
+            Call {phoneDisplay}
+          </Button>
+        </div>
       </div>
     );
   }
@@ -152,12 +182,11 @@ export function LeadForm({
   return (
     <form
       onSubmit={handleSubmit}
-      className={cn(
-        "glass rounded-2xl p-6 sm:p-7",
-        className,
-      )}
+      className={cn(shellClass, className)}
       noValidate
     >
+      {panelHeader}
+      <div className={bodyClass}>
       {/* Progress indicator */}
       <ol className="mb-6 flex items-center gap-2" aria-label="Progress">
         {STEPS.map((label, index) => {
@@ -403,6 +432,7 @@ export function LeadForm({
             Continue
           </Button>
         )}
+      </div>
       </div>
     </form>
   );
