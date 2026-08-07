@@ -91,7 +91,6 @@ const IMAGE_ALT: Record<string, string> = {
 };
 
 const SERVICE_FALLBACK = "panel-upgrade";
-const CITY_FALLBACK = "city-north-lauderdale";
 
 export function imagePath(name: string): string {
   return `/images/${name}.jpg`;
@@ -109,8 +108,12 @@ export function serviceImage(slug: string): { src: string; alt: string } {
   return resolve(SERVICE_IMAGE[slug] ?? SERVICE_FALLBACK);
 }
 
-export function cityImage(slug: string): { src: string; alt: string } {
-  return resolve(CITY_IMAGE[slug] ?? CITY_FALLBACK);
+// Only the original set of cities has bespoke golden-hour photography. Newer
+// service-area cities return null so their page renders an honest text hero
+// rather than a mislabeled, repeated image.
+export function cityImage(slug: string): { src: string; alt: string } | null {
+  const name = CITY_IMAGE[slug];
+  return name ? resolve(name) : null;
 }
 
 // Articles without a mapped image return null so the template can skip cleanly.

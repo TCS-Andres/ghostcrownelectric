@@ -1,0 +1,58 @@
+{
+  "slug": "boynton-beach",
+  "name": "Boynton Beach",
+  "county": "Palm Beach",
+  "lat": 26.5318,
+  "lng": -80.0905,
+  "metaTitle": "Electrician in Boynton Beach, FL | Ghost Crown Electric",
+  "metaDescription": "Licensed electrician in Boynton Beach, FL. Panel upgrades, older-home wiring, and pool electrical across Palm Beach County, day or night. Book today.",
+  "h1": "Electrician in Boynton Beach, FL",
+  "intro": "Boynton Beach grew from a small coastal settlement into a city that now mixes established, older neighborhoods near the water with newer development further west. That combination means a service call here can mean anything from a decades-old panel a few blocks from the Intracoastal to a modern setup in a community built within the last twenty years. We run north into Palm Beach County regularly, and Boynton Beach is part of that steady coverage. Salt air off the coast wears on older equipment near downtown and the waterfront, while pools show up across nearly every neighborhood regardless of age. When breakers trip without a clear reason or an inspection flags the panel, you want a licensed crew that reads the home in front of them rather than guessing. We come out, look in person, and give you one honest price.",
+  "neighborhoods": [
+    "Downtown Boynton Beach",
+    "Leisureville",
+    "Golfview Harbour",
+    "Ridgewood",
+    "Lake Eden",
+    "Chapel Hill",
+    "Citrus Cove",
+    "Palm Beach Leisureville",
+    "Hunters Run",
+    "Quantum Park",
+    "Colonial Estates"
+  ],
+  "housingNotes": "Boynton Beach's older neighborhoods, many built as retirement and starter communities from the 1960s through the 1980s, sit closer to downtown and the coast, while newer construction has filled in west of Interstate 95 in the decades since. That range means original panels and early breaker equipment still show up in the established communities, some carrying brands the industry no longer considers safe. Salt air off the coast adds an extra factor for homes near downtown and the waterfront, corroding lugs and terminations over the years even when the wiring looks fine on the surface. Pools are common in both the older communities and the newer developments, so bonding and grounding deserve a look regardless of when the home was built. Newer construction further west is generally well protected. It is the established, older sections of the city where an aging panel most often turns up first.",
+  "permitNote": "In Boynton Beach, service changes and pool electrical corrections are permitted work, handled through the city's building department under the Florida Building Code. That process puts a licensed contractor and an inspector between you and a costly mistake, whether the home is an older coastal property or a newer build further west. Ghost Crown Electric pulls the permit in our own name, schedules the inspection, and our licensed crew attends it in person, so the work is documented and signed off correctly.",
+  "challenges": [
+    {
+      "heading": "Salt air near downtown and the coast",
+      "body": "Homes near downtown Boynton Beach and the waterfront sit in steady salt air, which corrodes the lugs, bus bars, and terminations inside a panel and meter over time. A corroded connection runs hotter than it should. On a coastal call our crew looks closely at every connection before forecasting the work."
+    },
+    {
+      "heading": "Older retirement communities with original panels",
+      "body": "Many of Boynton Beach's established communities were built from the 1960s through the 1980s and still run on original panels, some from brands carriers no longer insure. When that equipment is decades old, it is worth a plain-spoken look before it becomes an emergency call."
+    },
+    {
+      "heading": "Pools across older and newer sections alike",
+      "body": "Pools are common in both Boynton Beach's older communities and its newer developments. Bonding and grounding can loosen or corrode over the years, especially in older installations near salt air. A once-a-year pool electrical inspection, ideally before heater season, catches those issues before they become a safety problem."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Do you serve Boynton Beach day or night?",
+      "answer": "Yes. We run north into Palm Beach County regularly, and Boynton Beach is a steady part of that coverage. We answer the phone whenever you call, day or night, and after-hours or emergency visits carry a premium that we tell you plainly before we roll. You reach a licensed electrician, not a call center."
+    },
+    {
+      "question": "My older home in Boynton Beach had its panel flagged. What now?",
+      "answer": "That is common in the established communities here. Send us the notice or the 4-point report and we will read it with you. Usually the fix is a modern, code-compliant panel that passes inspection. We assess the service in person, pull the permit, and meet the inspector so the objection standing between you and coverage gets cleared."
+    },
+    {
+      "question": "My pool is decades old. How often should the electrical be checked?",
+      "answer": "About once a year, ideally before heater season. Many Boynton Beach pools, especially in the older communities, have bonding and grounding that can loosen or corrode over time. We will tell you honestly what we find during an inspection, with no pressure to do more than what the pool actually needs."
+    },
+    {
+      "question": "What does a service call cost in Boynton Beach?",
+      "answer": "Our service call is $240, which covers roughly two hours including travel, arrival, and diagnosis. If we solve the problem on the spot in that window, there is no separate return charge. Larger work like a panel replacement or pool electrical is forecast and priced once before we begin, and that price does not change mid-job."
+    }
+  ]
+}

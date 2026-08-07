@@ -1,0 +1,56 @@
+{
+  "slug": "weston",
+  "name": "Weston",
+  "county": "Broward",
+  "lat": 26.1004,
+  "lng": -80.3998,
+  "metaTitle": "Electrician in Weston, FL | Ghost Crown Electric",
+  "metaDescription": "Licensed electrician in Weston, FL. Panel checks, pool electrical, and EV charger and generator circuits across Broward, day or night. Call today.",
+  "h1": "Electrician in Weston, FL",
+  "intro": "Weston did not grow up slowly like most of Broward. Arvida began building it out of drained Everglades land in the mid-1980s, and the city incorporated in 1996 as one of the newest and most deliberately planned in the county. That means most Weston homes are younger, with service panels and wiring built to more recent code, but the electrical demands have grown fast too. Bigger homes, whole-home generators, pool equipment, and EV chargers are common, and even newer panels can run into trouble under that kind of load. The older Bonaventure section, built as its own golf community before Weston existed, carries equipment closer in age to what we see in the rest of Broward. We assess your home in person, size the work correctly, and give you one honest price. Our licensed crew handles the job through the final inspection.",
+  "neighborhoods": [
+    "Bonaventure",
+    "Windmill Ranch Estates",
+    "Weston Hills",
+    "Country Isles",
+    "Tequesta Trace",
+    "Savanna",
+    "Windmill Reserve",
+    "Emerald Estates",
+    "Weston Town Center"
+  ],
+  "housingNotes": "Weston is one of the youngest cities in Broward, built out of former Everglades land starting in the mid-1980s and incorporated in 1996. Most homes here, from Windmill Ranch Estates to Windmill Reserve to Country Isles, were built under more recent codes with panels and service sized closer to modern standards. That does not mean the electrical side takes care of itself. Weston homes tend to be larger, and residents add pools, whole-home generators, and EV charger circuits at a higher rate than older Broward cities, which pushes real load onto a service that may not have been sized for it. Bonaventure is the exception, developed as its own golf resort community in the 1970s before Weston existed and later folded into the city, and its older section carries equipment closer to what we see elsewhere in Broward. Across Weston, growing electrical demand is a bigger factor than aging equipment.",
+  "permitNote": "In Weston, service changes and pool electrical work are permitted through the city's building department under the Florida Building Code. Because Weston was built entirely under a single master plan, most homes already meet current code, but any new work, whether it is an EV charger circuit, a whole-home generator, or an older panel in Bonaventure, still needs its own permit and inspection. Ghost Crown Electric pulls the permit in our own name and we attend the inspection in person, so the work on your home is documented and signed off correctly the first time.",
+  "challenges": [
+    {
+      "heading": "Bigger homes, bigger loads",
+      "body": "Weston homes tend to run more air conditioning, more pool equipment, and increasingly a whole-home generator or an EV charger, sometimes all at once. Even a newer panel can be pushed past what it was rated for when load gets added over the years without anyone checking the math. We look at the whole service, not just the newest addition, before we recommend anything."
+    },
+    {
+      "heading": "Bonaventure's older stock in a young city",
+      "body": "Bonaventure was its own golf community years before Weston incorporated, and its original section carries equipment closer in age to older Broward neighborhoods than to the rest of Weston. On a Bonaventure service call we treat the panel the same way we would anywhere else in the county, checking it on its own merits instead of assuming a newer city means a newer panel."
+    },
+    {
+      "heading": "Pools everywhere, and the bonding that goes with them",
+      "body": "Nearly every Weston community, from Windmill Reserve to Savanna to Emerald Estates, was built around pools as a standard feature. That is a lot of bonding and grounding out there, most of it still in its original condition. A yearly pool electrical check, ideally before heater season, is a simple way to catch a loose bond or a worn connection before it becomes a bigger repair."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Weston homes are newer. Do you still get called out much?",
+      "answer": "We do. Newer does not mean maintenance free. Weston homes carry heavier loads than most, with pools, generators, and EV chargers layered onto service that was sized years ago. We diagnose the actual cause instead of assuming a young home cannot have an electrical problem, and we give you one honest price for the fix."
+    },
+    {
+      "question": "Can you add a circuit for an EV charger or a whole-home generator?",
+      "answer": "Yes, and it is one of the most common calls we get in Weston. We assess your existing panel and service size in person, tell you honestly whether it can handle the new load or needs an upgrade first, and forecast one price before we start. Either way, we pull the permit and meet the inspector."
+    },
+    {
+      "question": "My home is in Bonaventure and the panel looks original. Is that a problem?",
+      "answer": "It can be. Bonaventure predates the rest of Weston, and some original panels there are from brands carriers no longer favor. Send us the age of the home or an insurance notice if you have one, and we will assess the service in person and tell you plainly whether a replacement is the right call."
+    },
+    {
+      "question": "What does a service call cost in Weston?",
+      "answer": "Our service call is $240, which covers roughly two hours including travel, arrival, and diagnosis. If we solve it in that window, there is no separate return charge. Larger jobs, like a service upgrade for a generator or a full pool electrical repair, are forecast and priced once before we begin, and that price does not change mid-job."
+    }
+  ]
+}

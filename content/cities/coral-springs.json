@@ -1,0 +1,58 @@
+{
+  "slug": "coral-springs",
+  "name": "Coral Springs",
+  "county": "Broward",
+  "lat": 26.2712,
+  "lng": -80.2706,
+  "metaTitle": "Electrician in Coral Springs, FL | Ghost Crown Electric",
+  "metaDescription": "Licensed electrician in Coral Springs, FL. Panel upgrades, pool electrical, and emergency work for Broward's planned communities, day or night. Call today.",
+  "h1": "Electrician in Coral Springs, FL",
+  "intro": "Coral Springs was carved out of Broward farmland and chartered in 1963, built from the ground up as a planned community with curving streets, golf courses, and tree canopy in place of a downtown core. Neighborhoods like Eagle Trace and Heron Bay grew up around that plan through the 1970s and 1980s, and much of that original electrical stock is still in the walls today. Add South Florida's summer storm pattern rolling through inland Broward, and older panels and service equipment take a real beating over the decades. When a breaker trips for no reason, when a pool needs a fresh look, or when an inspection flags the panel, you want a licensed crew that knows these communities. We come out, we look in person, and we give you one honest price. Our team runs your job from the first call to the final inspection.",
+  "neighborhoods": [
+    "Eagle Trace",
+    "Turtle Run",
+    "Heron Bay",
+    "The Hunt Club",
+    "Ramblewood",
+    "Kensington",
+    "Cypress Run",
+    "Maplewood",
+    "Wyndham Lakes",
+    "Whispering Woods",
+    "Running Brook Hills"
+  ],
+  "housingNotes": "Coral Springs was incorporated in 1963 and built out in phases by a single master developer, so entire sections of the city went up within a few years of each other. The neighborhoods that filled in through the 1970s and into the 1980s, places like Ramblewood, Kensington, and the golf course communities around Eagle Trace, carry the panels and service equipment of that era, and much of it is now decades past its original service life. Some of those panels come from breaker brands the insurance industry no longer accepts. Coral Springs sits inland, away from the direct salt air that ages equipment on the coast, but the same summer heat and heavy storm season put real stress on aging gear over time. Pools are common across nearly every neighborhood here, so bonding and grounding deserve a look alongside the panel itself. Newer construction toward the western edge of the city is generally well protected, which is exactly why the original 1970s and 1980s stock stands out.",
+  "permitNote": "In Coral Springs, service changes and pool electrical are permitted work, handled through the city's building department under the Florida Building Code. That process exists to put a licensed contractor and an inspector between you and a costly mistake, especially in a city built around so many community pools. Ghost Crown Electric pulls the permit in our own name, schedules the inspection, and we attend it in person, so the work on your home is documented and signed off the way it should be.",
+  "challenges": [
+    {
+      "heading": "A single building boom, decades later",
+      "body": "Coral Springs went up fast, largely through the 1970s and 1980s, so whole neighborhoods share the same generation of panel. That means original breaker panels and some now-uninsurable brands still turn up block after block. Ten years of Broward service calls means we usually recognize what is behind the cover before we open it, and we tell you plainly what it will take to bring it current."
+    },
+    {
+      "heading": "Pools in nearly every neighborhood",
+      "body": "From the golf course communities around Eagle Trace to the family neighborhoods further west, Coral Springs was built with pools in mind. The bonding and grounding that keep a pool safe can loosen or corrode over decades of use. A once-a-year pool electrical inspection, ideally before heater season, catches those issues before they become a hazard."
+    },
+    {
+      "heading": "Summer storms on inland equipment",
+      "body": "Coral Springs sits under Broward's heaviest summer storm activity, with frequent lightning and tree canopy pressing close to service lines. That combination puts real stress on panels and meter equipment over the years, even without the salt air that ages coastal homes faster. We check surge protection and service condition as a matter of course on every visit."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Do you work in Coral Springs day or night?",
+      "answer": "Yes. Coral Springs sits right next to our North Lauderdale home base, and we show up whenever you call, day or night. After-hours and emergency visits carry a premium, and we will tell you plainly what to expect before we come out. You always reach a licensed electrician who answers the phone, not a call center."
+    },
+    {
+      "question": "My insurance company flagged the panel on my Coral Springs home. What now?",
+      "answer": "That is common in neighborhoods built through the 1970s and 1980s. Send us the notice or the 4-point report and we will read it with you. Usually the fix is a modern, code-compliant panel that passes inspection. We assess the service in person, pull the permit, and we meet the inspector so the electrical objection standing between you and coverage is cleared."
+    },
+    {
+      "question": "How often should my pool's electrical be checked?",
+      "answer": "About once a year, ideally before heater season. Coral Springs has pools in nearly every neighborhood, and the bonding and grounding that keep one safe can loosen or corrode over time. We will tell you honestly what we find during a pool electrical inspection, with no pressure to do more than what the pool actually needs."
+    },
+    {
+      "question": "What does a service call cost in Coral Springs?",
+      "answer": "Our service call is $240, which covers roughly two hours including travel, arrival, and diagnosis. If we can solve the problem on the spot, there is no separate return charge. Larger work like a panel replacement or a pool electrical upgrade is forecast and priced once before we begin, and that price does not change mid-job."
+    }
+  ]
+}

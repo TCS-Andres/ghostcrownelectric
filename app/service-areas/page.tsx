@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { getBusiness } from "@/lib/content";
 import { routes } from "@/lib/routes";
 import { buildMetadata, absoluteUrl } from "@/lib/seo";
-import { cityLinks } from "@/lib/links";
+import { coverageByCounty, coverageTotals } from "@/lib/coverage";
 import {
   breadcrumbListNode,
   electricianNode,
@@ -14,12 +13,13 @@ import type { Crumb } from "@/components/layout/Breadcrumbs";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Card } from "@/components/ui/Card";
+import { CoverageMap } from "@/components/ui/CoverageMap";
 import { CTABand } from "@/components/ui/CTABand";
 import { JsonLd } from "@/components/seo/JsonLd";
 
-const TITLE = "Electrician Service Areas in Broward County | Ghost Crown";
+const TITLE = "Electrician Service Areas in South Florida | Ghost Crown";
 const DESCRIPTION =
-  "Licensed electrician serving Broward County and South Florida, from West Palm Beach down to North Miami. Find your city and reach out today.";
+  "Licensed electrician serving all of Broward and Palm Beach counties, south to North Miami Beach. Find your city and reach out day or night.";
 
 export function generateMetadata(): Metadata {
   return buildMetadata({
@@ -30,8 +30,8 @@ export function generateMetadata(): Metadata {
 }
 
 export default function ServiceAreasIndexPage() {
-  const business = getBusiness();
-  const cities = cityLinks();
+  const coverage = coverageByCounty();
+  const totals = coverageTotals(coverage);
 
   const trail: Crumb[] = [
     { label: "Home", href: routes.home },
@@ -55,50 +55,60 @@ export default function ServiceAreasIndexPage() {
         <SectionHeading
           as="h1"
           eyebrow="Where we work"
-          title="Serving Broward County and South Florida"
-          description="We run from West Palm Beach down to North Miami, with the Broward County core as our home ground. The owner takes the call, prices the job, and meets the inspector, wherever you are in the service area."
+          title="Serving all of South Florida"
+          description={`Our licensed crew covers ${totals.cities} cities across ${totals.counties} counties, all of Broward and Palm Beach and as far south as North Miami Beach. North Lauderdale is home base, so Broward is where we respond fastest, and we run north through Palm Beach every week. We take the call, price the job, and meet the inspector, wherever you are in the service area.`}
         />
 
-        {/* Corridor block */}
-        <div className="mt-10 rounded-2xl border border-border bg-surface-2 p-8">
-          <h2 className="font-heading text-xl font-semibold text-ink">
-            The West Palm Beach to North Miami corridor
-          </h2>
-          <p className="mt-3 max-w-3xl leading-relaxed text-ink-muted">
-            {business.serviceArea}. Our three trucks let us keep three jobs
-            moving at once across that stretch, so a call from Broward gets the
-            same licensed, accountable attention whether it is a panel that
-            failed its 4-point inspection or a pool that needs its bonding
-            checked. If your
-            town is not listed below, call anyway. We will tell you honestly
-            whether we reach you.
-          </p>
+        {/* Coverage map */}
+        <CoverageMap groups={coverage} className="mt-10" />
+
+        {/* Cities by county */}
+        <div className="mt-14 flex flex-col gap-12">
+          {coverage.map((group) => (
+            <section key={group.id}>
+              <div className="flex items-baseline justify-between gap-4">
+                <h2 className="font-heading text-xl font-semibold text-ink">
+                  {group.name}
+                </h2>
+                <span className="text-sm text-ink-muted">
+                  {group.cities.length} cities
+                </span>
+              </div>
+              <p className="mt-2 max-w-3xl text-sm leading-relaxed text-ink-muted">
+                {group.blurb}
+              </p>
+              <ul className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+                {group.cities.map((city) => (
+                  <li key={city.slug}>
+                    <Link
+                      href={routes.city(city.slug)}
+                      className="group block h-full"
+                    >
+                      <Card interactive className="flex h-full flex-col">
+                        <h3 className="font-heading text-lg font-semibold text-ink group-hover:text-accent-hover">
+                          {city.name}
+                        </h3>
+                        <p className="mt-2 flex-1 text-sm text-ink-muted">
+                          Licensed electrical service, repair, and restoration in{" "}
+                          {city.name} and nearby.
+                        </p>
+                        <span className="mt-4 text-sm font-semibold text-accent">
+                          View {city.name}
+                        </span>
+                      </Card>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          ))}
         </div>
 
-        {/* City grid */}
-        <ul className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {cities.map((city) => (
-            <li key={city.slug}>
-              <Link
-                href={routes.city(city.slug)}
-                className="group block h-full"
-              >
-                <Card interactive className="flex h-full flex-col">
-                  <h3 className="font-heading text-lg font-semibold text-ink group-hover:text-accent-hover">
-                    {city.name}
-                  </h3>
-                  <p className="mt-2 flex-1 text-sm text-ink-muted">
-                    Licensed electrical service, repair, and restoration in{" "}
-                    {city.name} and nearby.
-                  </p>
-                  <span className="mt-4 text-sm font-semibold text-accent">
-                    View {city.name}
-                  </span>
-                </Card>
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <p className="mt-12 max-w-3xl leading-relaxed text-ink-muted">
+          If your town is not listed, call anyway. If you are within range we
+          will be there, and if the drive is longer we will quote it honestly by
+          distance, so there are no surprises.
+        </p>
       </div>
 
       <CTABand />

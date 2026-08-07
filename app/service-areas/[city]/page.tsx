@@ -98,7 +98,13 @@ export default async function CityPage({
           className="glow-ambient pointer-events-none absolute -right-40 top-0 -z-10 h-[34rem] w-[34rem] opacity-50"
         />
         <div className="container-page py-14 sm:py-20">
-          <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
+          <div
+            className={
+              heroImage
+                ? "grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14"
+                : ""
+            }
+          >
             <div>
               <div className="max-w-2xl">
                 <h1 className="text-3xl text-ink-on-dark sm:text-4xl md:text-5xl">
@@ -109,6 +115,7 @@ export default async function CityPage({
               <HeroTrust className="mt-8" />
               <CallToActions className="mt-8" />
             </div>
+            {heroImage ? (
             <div className="hidden lg:block">
               <Media
                 src={heroImage.src}
@@ -130,6 +137,7 @@ export default async function CityPage({
                 </div>
               </Media>
             </div>
+            ) : null}
           </div>
         </div>
       </section>

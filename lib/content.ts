@@ -43,6 +43,7 @@ export const SERVICE_SLUGS = [
 ] as const;
 
 export const CITY_SLUGS = [
+  // Broward County (home county)
   "north-lauderdale",
   "fort-lauderdale",
   "lauderhill",
@@ -51,6 +52,24 @@ export const CITY_SLUGS = [
   "plantation",
   "pompano-beach",
   "hollywood",
+  "coral-springs",
+  "coconut-creek",
+  "margate",
+  "deerfield-beach",
+  "davie",
+  "weston",
+  "pembroke-pines",
+  "miramar",
+  // Palm Beach County
+  "boca-raton",
+  "delray-beach",
+  "boynton-beach",
+  "west-palm-beach",
+  "wellington",
+  // Miami-Dade County (southern edge of our service area)
+  "north-miami-beach",
+  "aventura",
+  "sunny-isles-beach",
 ] as const;
 
 /* ----------------------------------------------------------------------------

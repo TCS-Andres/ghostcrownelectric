@@ -1,0 +1,55 @@
+{
+  "slug": "aventura",
+  "name": "Aventura",
+  "county": "Miami-Dade",
+  "lat": 25.9565,
+  "lng": -80.1393,
+  "metaTitle": "Electrician in Aventura, FL | Ghost Crown Electric",
+  "metaDescription": "Licensed electrician in Aventura, FL. High-rise condo electrical, salt-air corrosion repair, and HOA-coordinated work, day or night. Call today.",
+  "h1": "Electrician in Aventura, FL",
+  "intro": "Aventura was master planned in the 1970s around the Turnberry Isle golf resort and grew into one of Miami-Dade's densest clusters of high-rise condo towers, incorporated as its own city only in 1995. Most of what we see here is not a single-family panel, it is a building's electrical room, a unit's subpanel, or rooftop equipment that answers to a board before it answers to a permit. Add the Intracoastal Waterway running along the city's edge, and salt air works on lugs and terminations the same way it does anywhere else on the coast. Aventura also sits at the southern edge of our service area, about as far south into Miami-Dade as we go. You get the same licensed crew and the same honest pricing we bring closer to home. We assess in person and coordinate with your board before we start.",
+  "neighborhoods": [
+    "Turnberry Isle",
+    "Williams Island",
+    "The Waterways",
+    "Hidden Bay",
+    "Marina Palms",
+    "The Point",
+    "the Aventura Mall district",
+    "the Country Club Drive high-rise corridor"
+  ],
+  "housingNotes": "Aventura's housing stock looks different from most of the cities we serve, because it is almost entirely vertical. High-rise towers built from the 1980s through today line the Intracoastal Waterway and the golf course at Turnberry Isle, with communities like Williams Island and The Waterways adding gated, mid-rise sections in between. Electrical work in a building like this rarely means a single panel. It means a unit subpanel behind a closet door, a building's main electrical room, or rooftop equipment serving pumps, elevators, and common areas, all of it reviewed by a condo board or property management company before a contractor sets foot on site. The waterway that gives Aventura its views also feeds salt air into that equipment, and rooftop and pool deck electrical takes the worst of it. Older towers from the 1980s and 1990s are the ones most likely to carry original wiring and equipment that predates current code.",
+  "permitNote": "In Aventura, service changes and any electrical work tied to pool or rooftop equipment are permitted through the city's building department under the Florida Building Code and Miami-Dade County's electrical requirements. In a city built mostly of condo towers, that city permit is usually only half the process, since most buildings also require board or property management approval before work begins. Ghost Crown Electric pulls the permit in our own name, provides whatever documentation your association needs, and attends the inspection in person.",
+  "challenges": [
+    {
+      "heading": "High-rise electrical rooms and board approval",
+      "body": "Most Aventura buildings require sign-off from a condo board or property manager before any electrical work starts, on top of the city permit. We are used to that layered process, and we provide the documentation, insurance certificates, and scheduling boards ask for so a job does not stall waiting on paperwork."
+    },
+    {
+      "heading": "Salt air on rooftop and waterway facing equipment",
+      "body": "Aventura's towers sit along the Intracoastal Waterway, and rooftop equipment, pool decks, and any panel exposed to the outside air take the brunt of salt corrosion. Lugs and terminations wear faster up high and near the water than they would in a sealed interior space, so we inspect that equipment closely on every visit."
+    },
+    {
+      "heading": "Original equipment in older towers",
+      "body": "Some of Aventura's towers date to the 1980s and 1990s, and their original electrical equipment, from subpanels to common area wiring, is now decades old. As buildings age, boards increasingly ask for an electrical assessment as part of larger reserve or recertification work, and we are glad to walk a board through what we find."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Do you work in Aventura, even though it's south of your home base?",
+      "answer": "We do. Aventura sits at the southern edge of our service area, about as far south into Miami-Dade as we go. Within that range you get the same licensed crew and the same $240 service call we bring to jobs near North Lauderdale. Call ahead so we can plan the drive into your visit and give you an honest arrival window."
+    },
+    {
+      "question": "Can you work directly with my condo board or property manager?",
+      "answer": "Yes, and in Aventura it is usually necessary. We provide the certificates of insurance, licensing documentation, and scheduling information most boards require, and we coordinate directly with property management so the work fits the building's rules. We pull the city permit in our own name and meet the inspector in person, same as we would on any job."
+    },
+    {
+      "question": "Does salt air really matter for a high-rise unit that isn't on the roof?",
+      "answer": "It can. Salt air travels, and any electrical equipment exposed to balconies, terraces, or the building's exterior faces some of the same corrosion rooftop equipment does. A unit's subpanel is usually indoors and better protected, but exterior outlets, lighting, and anything near a balcony door are worth a look if they are original to an older tower."
+    },
+    {
+      "question": "What does a service call in Aventura cost?",
+      "answer": "Our service call is $240, covering roughly two hours including travel, arrival, and diagnosis. If we solve it on the spot, there is no separate return charge. Larger work like a subpanel replacement, rooftop equipment repair, or anything tied to a building's electrical room is forecast and priced once before we begin."
+    }
+  ]
+}

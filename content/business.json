@@ -14,7 +14,7 @@
     {"label": "Florida Certified Electrical Contractor", "number": "PLACEHOLDER"},
     {"label": "Broward County Master Electrician", "number": "PLACEHOLDER"}
   ],
-  "serviceArea": "West Palm Beach to North Miami, Broward County core",
+  "serviceArea": "All of Broward and Palm Beach counties, south to North Miami Beach",
   "geo": {"lat": 26.2174, "lng": -80.2256},
   "stats": {"permittedProjects": 286, "yearsActive": 10, "trucks": 3},
   "social": []

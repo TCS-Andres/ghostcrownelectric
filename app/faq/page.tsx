@@ -110,7 +110,7 @@ const GROUPS: { heading: string; items: Faq[] }[] = [
       {
         question: "What areas do you serve?",
         answer:
-          "We cover Broward County and the surrounding South Florida area, from West Palm Beach down to North Miami. North Lauderdale is home base. Three trucks let us keep jobs moving across that stretch. If your town is not listed on the site, call anyway and we will tell you honestly whether we reach you.",
+          "We cover all of Broward and Palm Beach counties, and we reach as far south as North Miami Beach. North Lauderdale is home base, so Broward is where we are quickest, and we run north through Palm Beach every week. Three trucks let us keep jobs moving across that stretch. If your town is not listed on the site, call anyway and we will tell you honestly whether we reach you.",
       },
     ],
   },

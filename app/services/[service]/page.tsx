@@ -386,7 +386,7 @@ export default async function ServicePage({
           as="h2"
           eyebrow="Service area"
           title={`Where we provide ${service.shortName || service.name}`}
-          description="We cover Broward County and South Florida, from West Palm Beach down to North Miami. Pick your city or call and we will confirm we reach you."
+          description="We cover all of Broward and Palm Beach counties, south to North Miami Beach. Pick your city or call and we will confirm we reach you."
         />
         <ul className="mt-8 flex flex-wrap gap-2.5">
           {cities.map((city) => (

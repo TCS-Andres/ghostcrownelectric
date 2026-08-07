@@ -6,6 +6,7 @@ import { routes } from "@/lib/routes";
 import { buildMetadata, absoluteUrl } from "@/lib/seo";
 import { cityLinks } from "@/lib/links";
 import { categorizeServices } from "@/lib/categories";
+import { coverageByCounty } from "@/lib/coverage";
 import { postImage } from "@/lib/imagery";
 import { formatPostDate } from "@/lib/blog";
 import {
@@ -19,6 +20,7 @@ import type { Faq } from "@/lib/content";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Media } from "@/components/ui/Media";
 import { CategoryCard } from "@/components/ui/CategoryCard";
+import { CoverageMap } from "@/components/ui/CoverageMap";
 import { CTABand } from "@/components/ui/CTABand";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { CallToActions } from "@/components/sections/CallToActions";
@@ -35,7 +37,7 @@ const HOME_FAQS: Faq[] = [
   {
     question: "What areas do you serve?",
     answer:
-      "We run Broward County top to bottom, from West Palm Beach down to North Miami. That covers North Lauderdale, Fort Lauderdale, and the cities around them. If you sit a little outside that ring, call us anyway. We will be honest about it and quote the trip based on distance, so there are no surprises.",
+      "We cover all of Broward and Palm Beach counties, and we reach as far south as North Miami Beach. Broward is home base, so that is where we are quickest, but we run north through Palm Beach every week. North Miami Beach is about as far into Miami-Dade as we go. If you sit right at the edge, call us anyway and we will be honest about it, quoting the trip by distance so there are no surprises.",
   },
   {
     question: "Do you handle both commercial and residential work?",
@@ -97,6 +99,7 @@ export default function HomePage() {
   const services = getServices();
   const { categories } = categorizeServices(services);
   const cities = cityLinks();
+  const coverage = coverageByCounty();
   const posts = getPosts().slice(0, 3);
   const pageUrl = absoluteUrl(routes.home);
 
@@ -452,21 +455,10 @@ export default function HomePage() {
           <SectionHeading
             as="h2"
             eyebrow="Where we work"
-            title="Broward County at the core, and a little beyond"
-            description="We are based in North Lauderdale and run Broward County as our home turf. We also reach up into southern Palm Beach County and down into northern Miami-Dade, from West Palm Beach to North Miami. These are the areas with a page so far. More are on the way."
+            title="Broward and Palm Beach, south to North Miami Beach"
+            description="We are based in North Lauderdale and run Broward County as our home turf, cover all of Palm Beach County to the north, and reach as far south as North Miami Beach. Pick a county to see the cities we serve."
           />
-          <ul className="mt-10 flex flex-wrap gap-2.5">
-            {cities.map((city) => (
-              <li key={city.slug}>
-                <Link
-                  href={routes.city(city.slug)}
-                  className="inline-flex items-center rounded-full border border-border bg-surface px-4 py-2 text-sm font-medium text-ink hover:text-accent-hover"
-                >
-                  {city.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
+          <CoverageMap groups={coverage} className="mt-10" />
           <p className="mt-6 text-ink-muted">
             Do not see your city? Call us. If you are within range we will be
             there, and if the drive is longer we will quote it honestly by

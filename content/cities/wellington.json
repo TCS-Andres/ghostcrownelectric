@@ -1,0 +1,58 @@
+{
+  "slug": "wellington",
+  "name": "Wellington",
+  "county": "Palm Beach",
+  "lat": 26.6618,
+  "lng": -80.2683,
+  "metaTitle": "Electrician in Wellington, FL | Ghost Crown Electric",
+  "metaDescription": "Licensed electrician in Wellington, FL. Panel upgrades, generator hookups, and pool electrical for the equestrian suburb, day or night. Book a visit.",
+  "h1": "Electrician in Wellington, FL",
+  "intro": "Wellington grew up as a western suburb built around its equestrian community, and that shows in the housing stock, larger properties on generous lots, pools, and homes built mostly from the 1970s onward rather than the older bungalows you find closer to the coast. We run north into Palm Beach County regularly, and Wellington sits solidly on that route. The equipment here tends to be newer, but larger homes carry heavier electrical loads, and generators have become a standard part of storm preparation for a lot of Wellington households. When a panel cannot keep up with a growing property, when a pool's bonding needs a look, or when a generator needs a proper transfer switch, you want a licensed crew that plans the work correctly the first time. We come out, we look in person, and we give you one honest price before we begin.",
+  "neighborhoods": [
+    "Wellington Aero Club",
+    "Palm Beach Point",
+    "Grand Prix Village",
+    "Saddle Trail Park",
+    "Paddock Park",
+    "Wellington Reserve",
+    "Binks Forest",
+    "Olympia",
+    "Versailles",
+    "Palm Beach Polo and Country Club",
+    "Wellington Environmental Preserve area"
+  ],
+  "housingNotes": "Wellington's housing stock leans newer than most of the cities we serve, built out largely from the 1970s onward as the community grew around its equestrian roots. Properties here tend to run larger, with more acreage, more pools, and more outbuildings than a typical suburban lot, which means the electrical service supporting them often needs to carry a heavier load than the original panel was sized for. Generators are common across Wellington, since larger properties with horses and equipment depend on reliable power through storm season, and a generator installed without the right transfer switch and permitting can create more risk than it solves. Pools are close to standard on Wellington properties, so bonding and grounding matter here as much as anywhere else in our service area. Because the stock is newer, catastrophic old-panel failures are less common, but growing loads, generator additions, and larger-property wiring are where Wellington homes most often need an honest assessment.",
+  "permitNote": "In Wellington, service changes, generator installations, and pool electrical corrections are permitted work, handled through the village's building department under the Florida Building Code. That process matters as much on a newer, larger property as it does on an older home, since a generator or a service upgrade sized wrong can create real risk. Ghost Crown Electric pulls the permit in our own name, schedules the inspection, and our licensed crew attends it in person, so the work is documented and signed off correctly.",
+  "challenges": [
+    {
+      "heading": "Larger properties with growing electrical loads",
+      "body": "Wellington's equestrian-suburb lots tend to run larger than a typical property, often with barns, outbuildings, and pools added over time. The original panel was not always sized for everything that eventually got plugged into it. We assess the full property, not just the main house, before forecasting the work."
+    },
+    {
+      "heading": "Generators without proper transfer switches",
+      "body": "Reliable power matters for storm season here, and a lot of Wellington households run generators. A generator installed without a correctly permitted transfer switch can backfeed the grid or damage equipment. Our licensed crew installs and inspects generator hookups the way the code requires, not just the way that gets the lights on fastest."
+    },
+    {
+      "heading": "Pools on larger properties",
+      "body": "Pools are close to standard across Wellington properties, and the bonding and grounding around them can loosen or corrode over the years just like anywhere else. A once-a-year pool electrical inspection, ideally before heater season, catches those issues before they become a real safety problem for your family."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Do you serve Wellington day or night?",
+      "answer": "Yes. We run north into Palm Beach County regularly, and Wellington is a steady part of that coverage. We answer the phone whenever you call, day or night, and after-hours or emergency visits carry a premium that we tell you plainly before we roll. You reach a licensed electrician, not a call center."
+    },
+    {
+      "question": "Can you install a generator with a proper transfer switch?",
+      "answer": "Yes. We assess your panel and your property's load, size the transfer switch correctly, pull the permit in our own name, and meet the inspector in person. A generator installed without the right transfer switch can backfeed the grid or damage your equipment, so this is not a step worth skipping."
+    },
+    {
+      "question": "My property has grown over the years. Can my panel keep up?",
+      "answer": "It depends on what has been added since the original panel was sized, barns, pools, outbuildings, and larger equipment all add load. We assess the property as it actually stands today, not just the main house, and give you an honest read on whether the panel needs an upgrade."
+    },
+    {
+      "question": "What does a service call cost in Wellington?",
+      "answer": "Our service call is $240, which covers roughly two hours including travel, arrival, and diagnosis. If we solve the problem on the spot in that window, there is no separate return charge. Larger work like a panel upgrade, generator installation, or pool electrical is forecast and priced once before we begin, and that price does not change mid-job."
+    }
+  ]
+}

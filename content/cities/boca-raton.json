@@ -1,0 +1,58 @@
+{
+  "slug": "boca-raton",
+  "name": "Boca Raton",
+  "county": "Palm Beach",
+  "lat": 26.3683,
+  "lng": -80.1289,
+  "metaTitle": "Electrician in Boca Raton, FL | Ghost Crown Electric",
+  "metaDescription": "Licensed electrician in Boca Raton, FL. Panel upgrades, coastal estate wiring, and pool electrical across Palm Beach County, day or night. Book a visit.",
+  "h1": "Electrician in Boca Raton, FL",
+  "intro": "Boca Raton grew from Addison Mizner's 1920s vision into one of Palm Beach County's most established cities, and its housing stock reflects decades of building in two very different directions. Established coastal neighborhoods sit alongside newer gated communities further west, so a single service call can mean anything from a decades-old panel near the Intracoastal to a modern setup that just needs an honest look. We run north into Palm Beach County regularly, and Boca Raton is a steady part of that route. When breakers trip without a clear reason, when a pool needs its bonding checked, or when an inspection flags the panel, you want a licensed crew that knows both eras of this city. We come out, we look in person, and we give you one honest price before we begin.",
+  "neighborhoods": [
+    "Boca Raton Estates",
+    "Royal Palm Yacht and Country Club",
+    "Old Floresta",
+    "Boca Del Mar",
+    "Millionaire's Row",
+    "East Boca",
+    "Boca Isles",
+    "Mizner Park area",
+    "Woodfield Country Club",
+    "Boca Pointe",
+    "Broken Sound"
+  ],
+  "housingNotes": "Boca Raton's housing spans nearly a century, from Mizner-era estates and early coastal homes built through the 1940s and 1950s to the master-planned, gated communities that filled in west of the Turnpike from the 1980s onward. The older coastal stock, especially near the Intracoastal and the beach, still carries original panels and service equipment that has spent decades absorbing salt air, and that corrosion works on lugs and terminations even when the wiring looks fine from the outside. Pools are common across nearly every era here, so bonding and grounding deserve a look on both an older estate and a newer gated home. Newer construction west of the city is generally well protected, wired to modern code with panels built for higher electrical loads. It is the established coastal homes, and the pools that come with them, where an aging panel most often turns up.",
+  "permitNote": "In Boca Raton, service changes and pool electrical corrections are permitted work, handled through the city's building division under the Florida Building Code. That process exists to put a licensed contractor and an inspector between you and a costly mistake, whether the home is a Mizner-era estate or a newer build in a gated community. Ghost Crown Electric pulls the permit in our own name, schedules the inspection, and our licensed crew attends it in person, so the work is documented and signed off the way it should be.",
+  "challenges": [
+    {
+      "heading": "Salt air on established coastal homes",
+      "body": "From the Intracoastal to the beachfront estates, salt air corrodes the lugs, bus bars, and terminations inside a panel and meter over the decades. A corroded connection runs hotter than it should, and heat is what wears a panel out early. On a coastal Boca Raton call we look closely at the condition of every connection before we forecast the work."
+    },
+    {
+      "heading": "Two eras of housing in one city",
+      "body": "Boca Raton runs from Mizner-era construction and mid-century coastal homes to newer gated communities built from the 1980s forward. Each era brings its own panel types, brands, and quirks. Our crew has spent years telling the difference before the cover ever comes off, which keeps the visit efficient."
+    },
+    {
+      "heading": "Pools across gated and coastal communities alike",
+      "body": "Pools are common in nearly every Boca Raton neighborhood, whether an older coastal estate or a newer gated section. Bonding and grounding can loosen or corrode over time, especially near salt air. A once-a-year pool electrical inspection, ideally before heater season, catches those issues before they become a safety problem for your family."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Do you serve Boca Raton day or night?",
+      "answer": "Yes. We run north into Palm Beach County regularly, and Boca Raton is a steady part of that coverage. We answer the phone whenever you call, day or night, and after-hours or emergency visits carry a premium that we tell you plainly before we roll. You reach a licensed electrician, not a call center."
+    },
+    {
+      "question": "My older coastal home in Boca Raton had its panel flagged. What now?",
+      "answer": "That is common in the established coastal neighborhoods here. Send us the notice or the 4-point report and we will read it with you. Usually the fix is a modern, code-compliant panel that passes inspection. We assess the service in person, pull the permit, and meet the inspector so the objection standing between you and coverage gets cleared."
+    },
+    {
+      "question": "I live in a newer gated community. Do older-home issues still apply to me?",
+      "answer": "Less often, but not never. Newer Boca Raton construction is generally well protected, though pools, generator hookups, and heavier modern loads still deserve an honest look now and then. We assess what is actually in front of us rather than assuming based on the neighborhood's age."
+    },
+    {
+      "question": "What does a service call cost in Boca Raton?",
+      "answer": "Our service call is $240, which covers roughly two hours including travel, arrival, and diagnosis. If we solve the problem on the spot in that window, there is no separate return charge. Larger work like a panel replacement or pool electrical is forecast and priced once before we begin, and that price does not change mid-job."
+    }
+  ]
+}

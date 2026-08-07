@@ -1,0 +1,55 @@
+{
+  "slug": "sunny-isles-beach",
+  "name": "Sunny Isles Beach",
+  "county": "Miami-Dade",
+  "lat": 25.929,
+  "lng": -80.1226,
+  "metaTitle": "Electrician in Sunny Isles Beach, FL | Ghost Crown Electric",
+  "metaDescription": "Licensed electrician in Sunny Isles Beach, FL. Oceanfront tower electrical, salt-air corrosion repair, and HOA-coordinated work. Call today.",
+  "h1": "Electrician in Sunny Isles Beach, FL",
+  "intro": "Sunny Isles Beach spent the 1950s and 1960s as a strip of oceanfront motels along Collins Avenue, and since incorporating as its own city in 1997 it has rebuilt itself into one of the densest stretches of oceanfront condo towers in South Florida. That direct exposure to open ocean means salt air is not a background factor here, it is the main thing working against every panel, meter, and piece of rooftop equipment on the barrier island. Sunny Isles Beach also marks the southern edge of where we work. We do not go farther south into Miami-Dade than this stretch of coast. Inside that range, you get the same licensed crew and the same honest pricing we bring to jobs near our North Lauderdale base. We assess in person and work through your board before we start.",
+  "neighborhoods": [
+    "Golden Isles",
+    "Winston Towers",
+    "the Collins Avenue oceanfront tower corridor",
+    "the Intracoastal bayside corridor",
+    "Sunny Isles Beach Town Center",
+    "the Haulover Cut area",
+    "the oceanfront boardwalk corridor",
+    "the area near the Golden Beach town line"
+  ],
+  "housingNotes": "Sunny Isles Beach's housing is almost entirely vertical and almost entirely coastal. Oceanfront towers built from the 1960s and 1970s, like the older buildings around Winston Towers, sit alongside luxury high-rises built since the 2000s along Collins Avenue, while Golden Isles on the bay side holds a pocket of older single-family and low-rise waterfront homes that predate the tower boom. Every building on the barrier island faces the same reality: direct salt air off the Atlantic, which corrodes meter cans, panel enclosures, and rooftop and pool deck equipment faster than almost anywhere else we work. Older towers from the 1960s and 1970s are the most likely to carry original wiring and equipment well past its service life. Newer towers are built to a stricter coastal code and generally hold up better, at least for now. Electrical work in any of these buildings typically means coordinating with a condo board or property manager before the permit even enters the picture.",
+  "permitNote": "In Sunny Isles Beach, service changes and any work tied to pool or rooftop equipment are permitted through the city's building department under the Florida Building Code's high velocity hurricane zone provisions and Miami-Dade County's electrical requirements. Nearly every building here is a condo or co-op, so board or association approval typically comes before the city permit even gets filed. Ghost Crown Electric pulls the permit in our own name, supplies the documentation your association asks for, and attends the inspection in person.",
+  "challenges": [
+    {
+      "heading": "Direct salt air on an oceanfront barrier island",
+      "body": "Sunny Isles Beach sits directly on the Atlantic, and that ocean exposure corrodes meter cans, panel enclosures, and rooftop equipment faster than almost anywhere else we work. Lugs and terminations that would last years inland can wear out in a fraction of the time out here. We check every connection closely on a coastal service call, because heat from a corroded termination is what fails a panel early."
+    },
+    {
+      "heading": "Board approval before the city permit",
+      "body": "Nearly every building in Sunny Isles Beach is a condo or co-op, and electrical work typically needs board or property management sign-off before the city permit even gets filed. We are used to that sequence, and we provide the insurance certificates and licensing documentation boards ask for so the process moves without unnecessary delay."
+    },
+    {
+      "heading": "Original equipment in older oceanfront towers",
+      "body": "Some of Sunny Isles Beach's towers date to the 1960s and 1970s, well before the newer luxury buildings that now define the skyline, and their original electrical equipment is decades past a reasonable service life. As those buildings go through reserve studies and recertification, boards increasingly want an honest electrical assessment, and we are glad to provide one."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Do you come out to Sunny Isles Beach?",
+      "answer": "We do, and it sits at the very southern edge of our service area. We do not go farther south into Miami-Dade than this stretch of coast. Within that range you get the same licensed crew and the same $240 service call we bring to jobs near our North Lauderdale base. Call ahead so we can plan the drive into your visit."
+    },
+    {
+      "question": "Is salt air really worse here than other coastal cities you serve?",
+      "answer": "It can be. Sunny Isles Beach sits directly on the open Atlantic with no barrier between the towers and the ocean, so salt air works on exposed equipment faster than it does in bay side or inland cities. Rooftop and pool deck electrical takes the worst of it, which is why we look closely at that equipment on every coastal visit."
+    },
+    {
+      "question": "My condo board wants a licensed electrician for a reserve study. Can you help?",
+      "answer": "Yes. We regularly work with boards and property managers on electrical assessments tied to reserve studies and recertification. We will walk the building with you, document what we find honestly, and give the board a clear, prioritized picture, without pressure to do more work than the building actually needs."
+    },
+    {
+      "question": "What does the $240 service call cover?",
+      "answer": "Our service call is $240, covering roughly two hours including travel, arrival, and diagnosis. If we solve it on the spot, there is no separate return charge. Larger work like a subpanel replacement or rooftop equipment repair is forecast and priced once before we begin, and that price does not change mid-job."
+    }
+  ]
+}
