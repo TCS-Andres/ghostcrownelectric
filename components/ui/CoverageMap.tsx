@@ -57,6 +57,9 @@ export function CoverageMap({
 }: CoverageMapProps) {
   const [selected, setSelected] = useState<CountyId | "all">("all");
   const [hovered, setHovered] = useState<string | null>(null);
+  // If the live Mapbox map fails (bad/URL-restricted token, blocked network, no
+  // WebGL), drop to the schematic SVG so the widget is never a blank box.
+  const [glError, setGlError] = useState(false);
 
   const cities = useMemo(() => groups.flatMap((g) => g.cities), [groups]);
   const totalCities = cities.length;
@@ -232,12 +235,13 @@ export function CoverageMap({
 
       {/* Map */}
       <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-navy-600/60 bg-navy sm:aspect-[16/11] lg:aspect-auto lg:min-h-[420px]">
-        {HAS_MAPBOX ? (
+        {HAS_MAPBOX && !glError ? (
           <CoverageMapGL
             groups={groups}
             selected={selected}
             countyColor={COUNTY_COLOR}
             homeSlug={homeSlug}
+            onError={() => setGlError(true)}
           />
         ) : (
         <svg

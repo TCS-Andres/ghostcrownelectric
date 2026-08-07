@@ -11,11 +11,12 @@ import "mapbox-gl/dist/mapbox-gl.css";
   with ssr:false, so mapbox-gl (which needs window) never runs on the server.
 
   One marker per city, colored by county and linking to that city's page.
-  Selecting a county in the control panel dims the others and zooms to fit.
+  Selecting a county shows only that county's pins and zooms to fit.
 
-  Markers are added as soon as the map exists, NOT on the 'load' event: mapbox
-  v3 defers 'load' when the map is offscreen at init (this widget is usually
-  below the fold), and markers are DOM overlays that do not need the style.
+  If the map fails to load (bad or URL-restricted token, blocked network, no
+  WebGL), we call onError so the parent can show the schematic SVG instead of a
+  blank box. Markers are added as soon as the map exists, NOT on the 'load'
+  event, which mapbox v3 defers while the widget is below the fold.
 */
 
 const TOKEN = process.env.NEXT_PUBLIC_MAPBOX_TOKEN;
@@ -25,6 +26,7 @@ interface CoverageMapGLProps {
   selected: CountyId | "all";
   countyColor: Record<CountyId, string>;
   homeSlug: string;
+  onError?: () => void;
 }
 
 // A little padding around a set of cities, returned as a Mapbox bounds array.
@@ -45,6 +47,7 @@ export default function CoverageMapGL({
   selected,
   countyColor,
   homeSlug,
+  onError,
 }: CoverageMapGLProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -61,23 +64,60 @@ export default function CoverageMapGL({
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     let map: any;
     let cleanupExtra = () => {};
+    let failTimer: ReturnType<typeof setTimeout> | undefined;
+
+    const fail = (why: string) => {
+      console.error("[Ghost Crown map]", why);
+      if (!cancelled) onError?.();
+    };
 
     (async () => {
-      const mapboxgl = (await import("mapbox-gl")).default;
+      let mapboxgl;
+      try {
+        mapboxgl = (await import("mapbox-gl")).default;
+      } catch (e) {
+        fail("mapbox-gl failed to load: " + (e as Error)?.message);
+        return;
+      }
       if (cancelled || !containerRef.current) return;
-      mapboxgl.accessToken = TOKEN;
 
-      map = new mapboxgl.Map({
-        container: containerRef.current,
-        style: "mapbox://styles/mapbox/dark-v11",
-        center: [-80.15, 26.35],
-        zoom: 8,
-        cooperativeGestures: true,
-        dragRotate: false,
-        pitchWithRotate: false,
-        attributionControl: true,
-      });
+      try {
+        mapboxgl.accessToken = TOKEN;
+        map = new mapboxgl.Map({
+          container: containerRef.current,
+          style: "mapbox://styles/mapbox/dark-v11",
+          center: [-80.15, 26.35],
+          zoom: 8,
+          cooperativeGestures: true,
+          dragRotate: false,
+          pitchWithRotate: false,
+          attributionControl: true,
+        });
+      } catch (e) {
+        fail("map init threw: " + (e as Error)?.message);
+        return;
+      }
       mapRef.current = map;
+
+      // Fall back if the style never loads (the usual symptom of a bad or
+      // URL-restricted token), or on an auth error.
+      let styleLoaded = false;
+      failTimer = setTimeout(() => {
+        if (!styleLoaded) fail("style did not load within 8s (token or network?)");
+      }, 8000);
+      map.on("style.load", () => {
+        styleLoaded = true;
+        if (failTimer) clearTimeout(failTimer);
+      });
+      map.on("error", (e: unknown) => {
+        const err = (e as { error?: { status?: number; message?: string } })
+          ?.error;
+        console.error("[Ghost Crown map] error:", err?.message || e);
+        if (err?.status === 401 || err?.status === 403) {
+          fail("token not authorized for this domain (status " + err.status + ")");
+        }
+      });
+
       map.addControl(
         new mapboxgl.NavigationControl({ showCompass: false }),
         "top-right",
@@ -127,7 +167,7 @@ export default function CoverageMapGL({
       map.once("idle", nudge);
       const io = new IntersectionObserver(
         (entries) => {
-          if (entries.some((e) => e.isIntersecting)) nudge();
+          if (entries.some((entry) => entry.isIntersecting)) nudge();
         },
         { rootMargin: "200px" },
       );
@@ -146,6 +186,7 @@ export default function CoverageMapGL({
       cancelled = true;
       readyRef.current = false;
       markersRef.current = [];
+      if (failTimer) clearTimeout(failTimer);
       cleanupExtra();
       if (map) map.remove();
       mapRef.current = null;
@@ -154,12 +195,10 @@ export default function CoverageMapGL({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // Dim non-selected pins and zoom to fit the active county.
+  // Show only the selected county's pins (hide the rest) and zoom to fit.
   function applySelection(sel: CountyId | "all") {
     const map = mapRef.current;
     if (!map || !readyRef.current) return;
-    // Show only the selected county's pins (hide the rest) so the map does not
-    // look cluttered. "All" shows every pin.
     for (const m of markersRef.current) {
       const active = sel === "all" || m.countyId === sel;
       m.el.style.display = active ? "" : "none";

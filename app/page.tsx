@@ -138,7 +138,7 @@ export default function HomePage() {
             preload="auto"
             poster="/images/hero-video-poster.jpg"
           >
-            <source src="/videos/gce-ambient-web-v2.mp4" type="video/mp4" />
+            <source src="/videos/gce-ambient-web-v3.mp4" type="video/mp4" />
           </video>
         </div>
         {/* Dark on the left for legibility, lighter on the right so the video shows */}
