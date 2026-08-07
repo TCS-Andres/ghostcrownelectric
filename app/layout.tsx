@@ -6,6 +6,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { StickyCallBar } from "@/components/layout/StickyCallBar";
 import { ExitIntentPopup } from "@/components/layout/ExitIntentPopup";
+import { Preloader } from "@/components/ui/Preloader";
 
 const business = getBusiness();
 
@@ -37,6 +38,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${archivo.variable} ${inter.variable}`}>
       <body className="flex min-h-dvh flex-col bg-surface text-ink">
+        <Preloader />
         <Header />
         <main className="flex-1 pb-16 lg:pb-0">{children}</main>
         <Footer />
