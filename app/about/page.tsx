@@ -90,7 +90,7 @@ export default function AboutPage() {
                   About the company
                 </span>
                 <h1 className="mt-3 text-3xl text-ink-on-dark sm:text-4xl md:text-5xl">
-                  The licensed hand behind the work
+                  The licensed team behind the work
                 </h1>
                 <p className="mt-5 text-lg text-ink-muted-on-dark">
                   Ghost Crown Electric is a licensed electrical service, repair, and
@@ -106,8 +106,8 @@ export default function AboutPage() {
             </div>
             <div className="hidden lg:block">
               <Media
-                src="/images/about-craft.jpg"
-                alt="An electrician testing a circuit with a multimeter"
+                src="/images/damean-blueprints.jpg"
+                alt="A Ghost Crown Electric electrician reviewing plans with the crew on a South Florida job site"
                 priority
                 sizes="(min-width: 1024px) 45vw, 0px"
                 className="aspect-[4/3] rounded-2xl border border-navy-600"
@@ -184,32 +184,39 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* The owner block */}
+      {/* Meet the owner: one contained section about Damean */}
       <section className="bg-surface-2">
         <div className="container-page py-14 sm:py-20">
-          <div className="max-w-3xl">
-            <SectionHeading
-              as="h2"
-              eyebrow="The owner"
-              title="A working owner who leads the crew"
+          <div className="grid items-center gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-14">
+            <Media
+              src="/images/damean-warehouse.jpg"
+              alt={`${ownerName}, owner and ${ownerTitle} at Ghost Crown Electric`}
+              sizes="(min-width: 1024px) 38vw, 100vw"
+              className="aspect-[4/3] rounded-2xl border border-border shadow-[var(--shadow-card)]"
             />
-            <div className="mt-6 flex flex-col gap-4 text-lg leading-relaxed text-ink-muted">
-              <p>
-                {ownerName} is a working owner and {ownerTitle}. He is not behind
-                a desk. He leads a licensed crew that takes the first call, walks
-                the property, prices the job, does the work, pulls the permit, and
-                meets the inspector when it is time to close it out. Then we make
-                the follow-up call to be sure you are settled.
-              </p>
-              <p className="border-l-2 border-accent pl-5 font-heading text-xl font-semibold text-ink">
-                &ldquo;I am the opener and the closer.&rdquo;
-              </p>
-              <p>
-                When you hire Ghost Crown Electric, you are hiring one accountable
-                company, answerable for the result from the first call to the final
-                inspection. That is a rare thing in this trade, and it is the
-                heart of how we work.
-              </p>
+            <div>
+              <SectionHeading
+                as="h2"
+                eyebrow="Meet the owner"
+                title="A working owner who leads the crew"
+              />
+              <div className="mt-6 flex flex-col gap-4 text-lg leading-relaxed text-ink-muted">
+                <p>
+                  {ownerName} is a working owner and {ownerTitle}. He is not
+                  behind a desk. He leads a licensed crew that takes the first
+                  call, walks the property, prices the job, does the work, pulls
+                  the permit, and meets the inspector when it is time to close it
+                  out.
+                </p>
+                <p className="border-l-2 border-accent pl-5 font-heading text-xl font-semibold text-ink">
+                  &ldquo;I am the opener and the closer.&rdquo;
+                </p>
+                <p>
+                  When you hire Ghost Crown Electric, you are hiring one
+                  accountable company, answerable for the result from the first
+                  call to the final inspection.
+                </p>
+              </div>
             </div>
           </div>
         </div>

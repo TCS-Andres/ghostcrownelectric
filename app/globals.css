@@ -145,6 +145,15 @@ h6 {
   }
 }
 
+/* Skip the ambient video on phones. Decoding a full-bleed loop is the main
+   source of hero jank on mobile, so we show the crisp poster image instead and
+   keep the page smooth. */
+@media (max-width: 767px) {
+  .hero-video {
+    display: none;
+  }
+}
+
 /* Consistent, visible focus ring for keyboard users */
 :focus-visible {
   outline: 2px solid var(--color-accent);
