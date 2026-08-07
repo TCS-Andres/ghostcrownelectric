@@ -67,8 +67,9 @@ export default function ServiceAreasIndexPage() {
           <p className="mt-3 max-w-3xl leading-relaxed text-ink-muted">
             {business.serviceArea}. Our three trucks let us keep three jobs
             moving at once across that stretch, so a call from Broward gets the
-            same owner-led attention whether it is a panel that failed its
-            4-point inspection or a pool that needs its bonding checked. If your
+            same licensed, accountable attention whether it is a panel that
+            failed its 4-point inspection or a pool that needs its bonding
+            checked. If your
             town is not listed below, call anyway. We will tell you honestly
             whether we reach you.
           </p>

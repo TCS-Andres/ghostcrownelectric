@@ -161,8 +161,8 @@ export function LeadForm({
             Thank you. We have your request.
           </h3>
           <p className="mt-3 text-ink-muted">
-            Damean or the crew will reach out to talk through what is going on. If
-            it is urgent, do not wait on us. Call {phoneDisplay}, day or night.
+            We will reach out to talk through what is going on. If it is urgent,
+            do not wait on us. Call {phoneDisplay}, day or night.
           </p>
           <Button
             href={`tel:${phoneTel}`}

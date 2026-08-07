@@ -17,7 +17,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 
 const TITLE = "Contact Ghost Crown Electric | Broward County Electrician";
 const DESCRIPTION =
-  "Reach Ghost Crown Electric, a licensed Broward County electrician. Call day or night or send a note, and Damean will tell you plainly what it takes.";
+  "Reach Ghost Crown Electric, a licensed Broward County electrician. Call day or night or send a note, and we will tell you plainly what it takes.";
 
 export function generateMetadata(): Metadata {
   return buildMetadata({
@@ -55,7 +55,7 @@ export default function ContactPage() {
           as="h1"
           eyebrow="Contact"
           title="Talk to the electrician who takes the call"
-          description="Damean answers, prices the job, and meets the inspector himself. Call, send a note, or use the form and we will get right back to you."
+          description="We answer, price the job, and meet the inspector. Call, send a note, or use the form and we will get right back to you."
         />
 
         <div className="mt-12 grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
@@ -134,8 +134,8 @@ export default function ContactPage() {
                 ))}
               </ul>
               <p className="mt-4 text-sm text-ink-muted">
-                License numbers available on request. The work is owner led from
-                the first call to the final inspection.
+                License numbers available on request. The work is licensed and
+                local from the first call to the final inspection.
               </p>
             </div>
           </div>

@@ -27,7 +27,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 
 const TITLE = "Electrician in Broward County, FL | Ghost Crown Electric";
 const DESCRIPTION =
-  "Licensed electrician serving Broward County and South Florida, day or night. Owner led from the first call to the final inspection. Call for honest pricing.";
+  "Licensed electrician serving Broward County and South Florida, day or night. One accountable team from the first call to the final inspection. Call for honest pricing.";
 
 // The six FAQs previewed on the home page. Written once and used for both the
 // visible accordion and the FAQPage schema so the markup matches the page.
@@ -60,7 +60,7 @@ const HOME_FAQS: Faq[] = [
   {
     question: "Are you licensed?",
     answer:
-      "Yes. Ghost Crown Electric is a Florida Certified Electrical Contractor with statewide authority, and Damean is a Broward County Master Electrician. He pulls the permits himself and personally meets the inspector on every job. With 286 permitted projects on public record, the work is documented and verifiable, not just a promise.",
+      "Yes. Ghost Crown Electric is a Florida Certified Electrical Contractor with statewide authority and holds a Broward County Master Electrician license. We pull the permits and meet the inspector on every job. With 286 permitted projects on public record, the work is documented and verifiable, not just a promise.",
   },
 ];
 
@@ -165,10 +165,9 @@ export default function HomePage() {
               </h1>
 
               <p className="mt-5 max-w-2xl text-lg text-ink-muted-on-dark">
-                Licensed, owner led, and calm under pressure. Damean takes your
-                call, prices the job himself, and meets the inspector on site.
-                From a panel that keeps tripping to a house with no power, we show
-                up when we say we will.
+                Licensed, local, and calm under pressure. We take your call, price
+                the job, and meet the inspector on site. From a panel that keeps
+                tripping to a house with no power, we show up when we say we will.
               </p>
 
               <CallToActions className="mt-8" />
@@ -395,10 +394,10 @@ export default function HomePage() {
                   </h3>
                   <p className="mt-3 text-ink-muted-on-dark">
                     We ran a 150-foot pool feeder rewire and did it to the letter.
-                    When the inspector came out, he looked it over and shook
-                    Damean's hand. Pool electrical is unforgiving work, and getting
-                    the grounding and bonding right is how you protect the water
-                    and everyone in it.
+                    When the inspector came out, he looked it over and shook our
+                    electrician's hand. Pool electrical is unforgiving work, and
+                    getting the grounding and bonding right is how you protect the
+                    water and everyone in it.
                   </p>
                 </div>
               </li>
@@ -504,7 +503,7 @@ export default function HomePage() {
                 label: "Actively in business",
               },
               {
-                value: "Owner led",
+                value: "Licensed team",
                 label: "From the first call to the final inspection",
               },
             ].map((stat) => (
@@ -597,7 +596,7 @@ export default function HomePage() {
       {/* 12. Final CTA */}
       <CTABand
         headline={business.tagline}
-        body="That is the whole promise. Damean answers, prices the job, does the work, and meets the inspector himself. Reach out and we will tell you plainly what it takes and what it costs."
+        body="That is the whole promise. We answer, price the job, do the work, and meet the inspector. Reach out and we will tell you plainly what it takes and what it costs."
       />
     </>
   );

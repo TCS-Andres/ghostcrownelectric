@@ -131,7 +131,7 @@ export default async function ServicePage({
                       className="h-2 w-2 rounded-full bg-accent-bright"
                     />
                     <span className="text-sm font-medium text-ink-on-dark">
-                      Licensed, permitted, and owner-led
+                      Licensed, permitted, and local
                     </span>
                   </span>
                 </div>
@@ -219,7 +219,7 @@ export default async function ServicePage({
             as="h2"
             eyebrow="How we work"
             title="From your first call to the final inspection"
-            description="The owner takes the call, prices the job, and meets the inspector. Here is how a job goes."
+            description="We take the call, price the job, and meet the inspector. Here is how a job goes."
           />
           <ol className="mt-10 flex flex-col gap-6">
             {service.process.map((step, index) => (

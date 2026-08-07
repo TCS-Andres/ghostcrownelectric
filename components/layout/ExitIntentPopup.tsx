@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/Button";
   Desktop exit-intent popup promoting the Electrical Safety Check as a defined
   scope walkthrough of the panel, meter socket, and overall system condition.
   No price is shown and there is no free-offer language: it is an invitation to
-  book, in Damean's calm voice.
+  book, in Ghost Crown's calm voice.
 
   Frequency cap: once a visitor closes it or follows the link, we do not show it
   again for 14 days (stored in localStorage). It also shows at most once per

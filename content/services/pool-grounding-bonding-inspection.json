@@ -40,7 +40,7 @@
   "process": [
     {
       "title": "You call and we talk it through",
-      "body": "You reach Damean directly, day or night. He asks what you are seeing, whether anyone has felt tingling, how old the pool is, and what equipment has changed. That phone triage tells us what to bring and how soon you need us."
+      "body": "You reach a licensed electrician directly, day or night. We ask what you are seeing, whether anyone has felt tingling, how old the pool is, and what equipment has changed. That phone triage tells us what to bring and how soon you need us."
     },
     {
       "title": "We come out and test the system",
@@ -56,7 +56,7 @@
     },
     {
       "title": "Permit, inspection, and a follow-up",
-      "body": "When the work calls for it, we pull the permit and the building department signs it off, with Damean there to meet the inspector. Once it passes, the safety question is settled on the record. Then we follow up to make sure you are comfortable."
+      "body": "When the work calls for it, we pull the permit and the building department signs it off, and we are there to meet the inspector. Once it passes, the safety question is settled on the record. Then we follow up to make sure you are comfortable."
     }
   ],
   "benefits": [
@@ -88,7 +88,7 @@
     },
     {
       "heading": "How Broward handles pool electrical work",
-      "body": "Pool electrical work is exactly the kind of job building departments across Broward County watch closely, and that is a good thing for you. Inspectors are thorough on bonding and grounding because they know what is at stake, and a permit means a second trained set of eyes confirms the work is right. When a correction needs a permit, we pull it, do the work to current code, and Damean meets the inspector personally to prove the grounding under test. Once it passes, the responsibility question is settled on the public record, not on somebody word. Some smaller fixes do not require a permit, and we will tell you honestly which is which. What we will not do is cut a corner to skip an inspection. The whole value of doing pool work correctly is that the building department gets to say it is correct."
+      "body": "Pool electrical work is exactly the kind of job building departments across Broward County watch closely, and that is a good thing for you. Inspectors are thorough on bonding and grounding because they know what is at stake, and a permit means a second trained set of eyes confirms the work is right. When a correction needs a permit, we pull it, do the work to current code, and we meet the inspector in person to prove the grounding under test. Once it passes, the responsibility question is settled on the public record, not on somebody word. Some smaller fixes do not require a permit, and we will tell you honestly which is which. What we will not do is cut a corner to skip an inspection. The whole value of doing pool work correctly is that the building department gets to say it is correct."
     },
     {
       "heading": "What this means with your insurance",
@@ -143,7 +143,7 @@
     },
     {
       "question": "Do you pull a permit for pool bonding work?",
-      "answer": "When the correction calls for it, yes, and we are glad to. A permit means the building department confirms the work is right, and inspectors are thorough on pool bonding for good reason. Damean meets the inspector personally to prove the grounding under test. Once it passes, the safety is settled on the public record. Some minor fixes do not need a permit, and we will tell you which is which."
+      "answer": "When the correction calls for it, yes, and we are glad to. A permit means the building department confirms the work is right, and inspectors are thorough on pool bonding for good reason. We meet the inspector in person to prove the grounding under test. Once it passes, the safety is settled on the public record. Some minor fixes do not need a permit, and we will tell you which is which."
     },
     {
       "question": "My pool looks fine. Could the bonding still be bad?",
@@ -162,10 +162,10 @@
   "stats": [
     {"value": "286", "label": "Permitted projects on public record"},
     {"value": "Master", "label": "Broward County Master Electrician"},
-    {"value": "Owner-led", "label": "From first call to final inspection"}
+    {"value": "One company", "label": "From first call to final inspection"}
   ],
   "cta": {
     "headline": "Book your pool bonding inspection",
-    "body": "If someone has felt a tingle, or your pool has never been tested, let us check it before heater season. Call Damean day or night, and we will test the system and tell you plainly what it needs."
+    "body": "If someone has felt a tingle, or your pool has never been tested, let us check it before heater season. Call us day or night, and we will test the system and tell you plainly what it needs."
   }
 }

@@ -20,7 +20,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 
 const TITLE = "About Ghost Crown Electric | Broward Electrician";
 const DESCRIPTION =
-  "Meet Ghost Crown Electric, a licensed, owner led electrical service and repair company serving Broward County and South Florida. Ten years, 286 permitted jobs.";
+  "Meet Ghost Crown Electric, a licensed, local electrical service and repair company serving Broward County and South Florida. Ten years, 286 permitted jobs.";
 
 // Plain-language values, framed around the customer's peace of mind. The client
 // is the hero here; the company is the guide.
@@ -51,7 +51,7 @@ const VALUES: { title: string; body: string }[] = [
   },
   {
     title: "Grow slow, grow safe",
-    body: "We grow at a pace we can stand behind, so every job still gets the owner's attention. Bigger is not the goal. Better is the goal.",
+    body: "We grow at a pace we can stand behind, so every job still gets our full attention. Bigger is not the goal. Better is the goal.",
   },
 ];
 
@@ -107,10 +107,10 @@ export default function AboutPage() {
                 <p className="mt-5 text-lg text-ink-muted-on-dark">
                   Ghost Crown Electric is a licensed electrical service, repair, and
                   restoration company based in North Lauderdale, serving Broward
-                  County and South Florida. The owner takes your first call, prices
-                  the job, and meets the inspector himself. We stay in our lane, we
-                  show up when we say we will, and we would rather do the work right
-                  once than come back twice.
+                  County and South Florida. We take your first call, price the job,
+                  and meet the inspector in person. We stay in our lane, we show up
+                  when we say we will, and we would rather do the work right once
+                  than come back twice.
                 </p>
               </div>
               <HeroTrust className="mt-8" />
@@ -209,22 +209,22 @@ export default function AboutPage() {
             <SectionHeading
               as="h2"
               eyebrow="The owner"
-              title="The owner takes the call"
+              title="A working owner who leads the crew"
             />
             <div className="mt-6 flex flex-col gap-4 text-lg leading-relaxed text-ink-muted">
               <p>
                 {ownerName} is a working owner and {ownerTitle}. He is not behind
-                a desk. He takes the first call, walks the property, prices the
-                job, does the work with his crew, pulls the permit, and meets
-                the inspector when it is time to close it out. Then he makes the
-                follow-up call to be sure you are settled.
+                a desk. He leads a licensed crew that takes the first call, walks
+                the property, prices the job, does the work, pulls the permit, and
+                meets the inspector when it is time to close it out. Then we make
+                the follow-up call to be sure you are settled.
               </p>
               <p className="border-l-2 border-accent pl-5 font-heading text-xl font-semibold text-ink">
                 &ldquo;I am the opener and the closer.&rdquo;
               </p>
               <p>
-                When you hire Ghost Crown Electric, you are hiring the person who
-                is accountable for the result, from the first call to the final
+                When you hire Ghost Crown Electric, you are hiring one accountable
+                company, answerable for the result from the first call to the final
                 inspection. That is a rare thing in this trade, and it is the
                 heart of how we work.
               </p>

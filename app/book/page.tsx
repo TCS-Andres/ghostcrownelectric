@@ -30,7 +30,7 @@ const PLAN: { title: string; body: string }[] = [
   },
   {
     title: "We do the work and close it out",
-    body: "Our in-house crew does the work, the inspection passes, and Damean follows up personally to make sure you are set.",
+    body: "Our in-house crew does the work, the inspection passes, and we follow up to make sure you are set.",
   },
 ];
 
@@ -70,7 +70,7 @@ export default function BookPage() {
           as="h1"
           eyebrow="Request service"
           title="Tell us what is going on"
-          description="Fill this out and Damean or the crew will follow up to talk it through. Nothing automated, no pressure. If it is urgent, do not wait on us. Call, day or night."
+          description="Fill this out and our crew will follow up to talk it through. Nothing automated, no pressure. If it is urgent, do not wait on us. Call, day or night."
         />
 
         <div className="mt-12 grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
@@ -98,8 +98,8 @@ export default function BookPage() {
               How it works
             </h2>
             <p className="mt-3 text-ink-muted">
-              Three steps, start to finish, with the same person on the call and
-              at the inspection.
+              Three steps, start to finish, with the same licensed team on the call
+              and at the inspection.
             </p>
             <ol className="mt-8 flex flex-col gap-6">
               {PLAN.map((step, index) => (

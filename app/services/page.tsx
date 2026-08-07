@@ -18,7 +18,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 
 const TITLE = "Electrical Services in Broward County | Ghost Crown Electric";
 const DESCRIPTION =
-  "Licensed electrical service, repair, and restoration across Broward County and South Florida. Owner led from the first call to the final inspection.";
+  "Licensed electrical service, repair, and restoration across Broward County and South Florida. One accountable team from the first call to the final inspection.";
 
 export function generateMetadata(): Metadata {
   return buildMetadata({
@@ -55,7 +55,7 @@ export default function ServicesIndexPage() {
           as="h1"
           eyebrow="What we do"
           title="Electrical services for Broward County and South Florida"
-          description="Every job is run by the owner, from the first call to the final inspection. Find what you need below, and if you are not sure, call and we will point you the right way."
+          description="Every job is run by our licensed crew, from the first call to the final inspection. Find what you need below, and if you are not sure, call and we will point you the right way."
         />
 
         {services.length === 0 ? (

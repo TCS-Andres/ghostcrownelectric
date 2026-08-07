@@ -3,7 +3,7 @@ import { getBusiness } from "@/lib/content";
 import { routes } from "@/lib/routes";
 
 // Mobile-only bottom bar. Always within thumb reach: browse all services or
-// call the owner directly. Hidden on large screens where the header handles it.
+// call the team directly. Hidden on large screens where the header handles it.
 export function StickyCallBar() {
   const business = getBusiness();
   return (

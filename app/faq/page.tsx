@@ -70,7 +70,7 @@ const GROUPS: { heading: string; items: Faq[] }[] = [
       {
         question: "Do you do new construction or build-outs?",
         answer:
-          "No. We are a service, repair, and restoration contractor, and we stay in that lane on purpose. Taking on new construction and tenant build-outs would slow us down and compromise the fast, owner-led response our clients rely on. When you call us, that focus is exactly what you are paying for.",
+          "No. We are a service, repair, and restoration contractor, and we stay in that lane on purpose. Taking on new construction and tenant build-outs would slow us down and compromise the fast, local response our clients rely on. When you call us, that focus is exactly what you are paying for.",
       },
       {
         question: "Do you do solar?",
@@ -125,7 +125,7 @@ const GROUPS: { heading: string; items: Faq[] }[] = [
       {
         question: "Who actually does the work?",
         answer:
-          "Our own three-person, in-house crew, led by the owner. We do not hand your job to a subcontractor we do not know. The owner takes the first call, prices the job, works alongside the crew, pulls the permit, and meets the inspector. The people at your property are our people.",
+          "Our own three-person, in-house crew does the work. We do not hand your job to a subcontractor we do not know. We take the first call, price the job, pull the permit, and meet the inspector. The people at your property are our people.",
       },
     ],
   },
