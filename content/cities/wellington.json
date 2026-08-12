@@ -5,9 +5,9 @@
   "lat": 26.6618,
   "lng": -80.2683,
   "metaTitle": "Electrician in Wellington, FL | Ghost Crown Electric",
-  "metaDescription": "Licensed electrician in Wellington, FL. Panel upgrades, generator hookups, and pool electrical for the equestrian suburb, day or night. Book a visit.",
+  "metaDescription": "Licensed electrician in Wellington, FL. Panel upgrades, pool electrical, and surge protection for the equestrian suburb, day or night. Book a visit.",
   "h1": "Electrician in Wellington, FL",
-  "intro": "Wellington is an equestrian suburb of larger lots, pools, and homes built mostly from the 1970s onward. The equipment here runs newer, but bigger properties carry heavier loads, and generators are now standard storm prep. When a panel cannot keep up, a pool needs bonding, or a generator needs a proper transfer switch, our licensed crew plans it right the first time.",
+  "intro": "Wellington is an equestrian suburb of larger lots, pools, and homes built mostly from the 1970s onward. The equipment here runs newer, but bigger properties carry heavier loads, and storm season tests every one of them. When a panel cannot keep up, a pool needs bonding, or the whole property needs surge protection, our licensed crew plans it right the first time.",
   "neighborhoods": [
     "Wellington Aero Club",
     "Palm Beach Point",
@@ -18,16 +18,16 @@
     "Binks Forest",
     "Olympia"
   ],
-  "housingNotes": "Wellington's housing leans newer than most cities we serve, built out largely from the 1970s onward around its equestrian roots. Properties run larger, with more acreage, pools, and outbuildings, so the service often carries more load than the original panel was sized for. Generators are common here, and one installed without the right transfer switch adds risk. Pools are near standard, so bonding and grounding matter as much as anywhere.",
-  "permitNote": "In Wellington, service changes, generator installations, and pool electrical corrections are permitted work through the village building department under the Florida Building Code. Ghost Crown Electric pulls the permit in our own name, schedules the inspection, and our licensed crew meets the inspector in person, so the work is documented and signed off correctly.",
+  "housingNotes": "Wellington's housing leans newer than most cities we serve, built out largely from the 1970s onward around its equestrian roots. Properties run larger, with more acreage, pools, and outbuildings, so the service often carries more load than the original panel was sized for. Storm season sends surges down every one of those long feeder runs, so protection at the panel earns its keep here. Pools are near standard, so bonding and grounding matter as much as anywhere.",
+  "permitNote": "In Wellington, service changes, panel upgrades, and pool electrical corrections are permitted work through the village building department under the Florida Building Code. Ghost Crown Electric pulls the permit in our own name, schedules the inspection, and our licensed crew meets the inspector in person, so the work is documented and signed off correctly.",
   "challenges": [
     {
       "heading": "Larger properties with growing electrical loads",
       "body": "Wellington's lots run larger than typical, often with barns, outbuildings, and pools added over time. The original panel was not always sized for everything that got plugged into it. We assess the whole property, not just the main house, before forecasting the work."
     },
     {
-      "heading": "Generators without proper transfer switches",
-      "body": "Storm season makes reliable power essential, and many Wellington households run generators. One installed without a correctly permitted transfer switch can backfeed the grid or damage equipment. Our licensed crew installs and inspects generator hookups the way the code requires."
+      "heading": "Storm surges across spread-out properties",
+      "body": "Storm season pushes voltage spikes onto the lines every summer, and a spread-out Wellington property takes them across every feeder run to the barn, the pool pad, and the outbuildings. Whole-home surge protection at the panel, installed on grounding we have verified, guards the entire property from one point."
     },
     {
       "heading": "Pools on larger properties",
@@ -40,8 +40,8 @@
       "answer": "Yes. We run north into Palm Beach County regularly, and Wellington is a steady part of that coverage. We answer the phone whenever you call, day or night, and you reach a licensed electrician, not a call center."
     },
     {
-      "question": "Can you install a generator with a proper transfer switch?",
-      "answer": "Yes. We assess your panel and your property's load, size the transfer switch correctly, pull the permit in our own name, and meet the inspector in person. A generator installed without the right transfer switch can backfeed the grid or damage equipment, so it is not a step worth skipping."
+      "question": "Can you protect a property like this from storm season surges?",
+      "answer": "Yes. Whole-home surge protection installs at your panel and guards every circuit, including the long runs out to barns, pool equipment, and outbuildings. We verify the grounding it depends on first, then give you one honest price for the property."
     },
     {
       "question": "My property has grown over the years. Can my panel keep up?",

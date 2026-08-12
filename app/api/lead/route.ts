@@ -4,9 +4,15 @@ import { NextResponse } from "next/server";
   Lead intake endpoint.
 
   The three step form on the site posts here. We validate on the server, then
-  forward to LEAD_WEBHOOK_URL when it is set, or log to the server console when it
-  is not, so nothing is lost during launch. The webhook destination is still
-  undecided (see PLACEHOLDERS.md).
+  deliver the lead through the first configured channel:
+
+  1. Email via Resend (RESEND_API_KEY + LEAD_TO_EMAIL set). This is the intended
+     production path: requests land in the owner's inbox. LEAD_FROM_EMAIL can
+     override the sender once a domain is verified in Resend; until then the
+     Resend onboarding sender is used, which only delivers to the Resend account
+     owner's address.
+  2. Webhook (LEAD_WEBHOOK_URL set), kept as an alternative integration path.
+  3. Server console log, so nothing is lost during launch while neither is set.
 
   We never echo the submitted data back. The response is only a confirmation, so a
   bot cannot use this route to reflect content and a person only ever sees a calm
@@ -81,7 +87,73 @@ export async function POST(request: Request): Promise<Response> {
     submittedAt: new Date().toISOString(),
   };
 
+  const resendKey = process.env.RESEND_API_KEY;
+  const toEmail = process.env.LEAD_TO_EMAIL;
   const webhook = process.env.LEAD_WEBHOOK_URL;
+
+  if (resendKey && toEmail) {
+    const lines = [
+      `Service: ${lead.service}`,
+      `City: ${lead.city}`,
+      lead.locationDetail ? `Street or neighborhood: ${lead.locationDetail}` : "",
+      "",
+      `Name: ${lead.name}`,
+      `Phone: ${lead.phone}`,
+      lead.email ? `Email: ${lead.email}` : "Email: not provided",
+      "",
+      lead.description ? `Notes: ${lead.description}` : "Notes: none",
+      "",
+      `Agreed to be contacted: yes`,
+      `Submitted: ${lead.submittedAt}`,
+    ].filter((line, i, arr) => line !== "" || arr[i - 1] !== "");
+
+    try {
+      const sent = await fetch("https://api.resend.com/emails", {
+        method: "POST",
+        headers: {
+          authorization: `Bearer ${resendKey}`,
+          "content-type": "application/json",
+        },
+        body: JSON.stringify({
+          from:
+            process.env.LEAD_FROM_EMAIL ??
+            "Ghost Crown Website <onboarding@resend.dev>",
+          to: [toEmail],
+          reply_to: lead.email || undefined,
+          subject: `New service request: ${lead.service} in ${lead.city}`,
+          text: lines.join("\n"),
+        }),
+      });
+      if (!sent.ok) {
+        const detail = await sent.text().catch(() => "");
+        console.error(
+          `lead: email send failed with status ${sent.status}: ${detail.slice(0, 300)}`,
+        );
+        return NextResponse.json(
+          {
+            ok: false,
+            error: "We could not send that right now. Please call us instead.",
+          },
+          { status: 502 },
+        );
+      }
+    } catch (error) {
+      console.error(
+        `lead: email request failed: ${
+          error instanceof Error ? error.message : String(error)
+        }`,
+      );
+      return NextResponse.json(
+        {
+          ok: false,
+          error: "We could not send that right now. Please call us instead.",
+        },
+        { status: 502 },
+      );
+    }
+    return NextResponse.json({ ok: true });
+  }
+
   if (webhook) {
     try {
       const forwarded = await fetch(webhook, {

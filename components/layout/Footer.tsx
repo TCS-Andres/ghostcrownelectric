@@ -146,8 +146,8 @@ export function Footer() {
       <div className="border-t border-border-dark">
         <div className="container-page flex flex-col gap-4 py-6 text-sm text-ink-muted-on-dark sm:flex-row sm:items-center sm:justify-between">
           <p>
-            {"©"} {year} {business.legalName}. Serving Broward, Palm Beach, and
-            north Miami-Dade.
+            {"©"} {year} {business.legalName}. Serving all of Broward and Palm
+            Beach, south to North Miami Beach.
           </p>
           <ul className="flex items-center gap-5">
             <li>

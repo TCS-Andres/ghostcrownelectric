@@ -17,7 +17,7 @@ Never hard-code any of these values in copy or components: always render from
 | ~~Logo artwork~~ RESOLVED | Real logo wired in: crown+bolt icon at `public/brand/crown-icon.png` (rendered by `components/layout/CrownMark.tsx` in header/footer); full lockup at `public/brand/logo-full.png`; favicons at `app/icon.png` and `app/apple-icon.png` | Done. Generated (Nano Banana Pro, concept D: gold crown + electric-blue bolt) on 2026-08-07. Source + all sizes (4K, transparent, web, favicon) in `Files/Generated Content/logos/final/`. | Damean (approved concept D) | Header brand mark, Footer brand mark, favicon and app icons |
 | ~~Open Graph / social share image~~ RESOLVED | Branded OG image wired in: `public/og-ghost-crown.png` (1200x630, dark crown lockup on navy + tagline), referenced by `lib/seo.ts` as `/og-ghost-crown.png` | Done. Built 2026-08-07 from the dark logo lockup. Source in `Files/Generated Content/logos/final/og-share-navy.png`. Old `og-default.png` placeholder retired. | Damean (approved) | Social link previews across the site (metadata layer) |
 | Canonical site URL | `NEXT_PUBLIC_SITE_URL` env var; fallback constant `SITE_URL` in `lib/content.ts` | Real production domain (for absolute URLs in sitemap, robots, canonical tags, OG) | Damean | `app/sitemap.ts`, `app/robots.ts`, metadata base |
-| Lead webhook destination | `LEAD_WEBHOOK_URL` env var (unset); `app/api/lead/route.ts` logs to the server console while it is unset | Lead destination is undecided (email, CRM, or GHL). Set the env var to the chosen endpoint. | Damean | `app/api/lead/route.ts`, the lead form on the home, `/book`, and `/contact` pages |
+| Lead delivery email | `RESEND_API_KEY` and `LEAD_TO_EMAIL` env vars (unset). `app/api/lead/route.ts` emails the lead when both are set, falls back to `LEAD_WEBHOOK_URL` if that is set instead, and logs to the server console while nothing is configured, so no lead is ever lost. | Damean's real inbox. Setup: create a free resend.com account, then in Vercel set `RESEND_API_KEY` and `LEAD_TO_EMAIL` (his address). Until a domain is verified in Resend, mail sends from the Resend onboarding sender and only delivers to the Resend account owner's email, so verify `ghostcrownelectric.com` in Resend and set `LEAD_FROM_EMAIL` (for example `Ghost Crown Electric <requests@ghostcrownelectric.com>`) for production. | Andres (setup) + Damean (inbox) | `app/api/lead/route.ts`, the lead form on the home, `/book`, and `/contact` pages |
 
 ## Founder name: files to update in one sweep
 
@@ -34,12 +34,10 @@ Source of truth (change this first):
 
 - `content/business.json` (`founder.name`)
 
-Service content JSON with the first name in prose (the four pool pages):
+Service content JSON with the first name in prose:
 
-- `content/services/pool-electrical-repair.json`
-- `content/services/pool-electrical-service-rebuild.json`
-- `content/services/pool-gfci-breaker-replacement.json`
-- `content/services/pool-grounding-bonding-inspection.json`
+- `content/services/pool-electrical.json` (the four granular pool pages
+  consolidated here on 2026-08-07)
 
 Page and component copy with the first name:
 

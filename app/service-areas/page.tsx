@@ -32,6 +32,10 @@ export function generateMetadata(): Metadata {
 export default function ServiceAreasIndexPage() {
   const coverage = coverageByCounty();
   const totals = coverageTotals(coverage);
+  // Broward and Palm Beach are the promoted counties; Miami-Dade is the quiet
+  // southern edge (client direction 2026-08-12: do not market Miami-Dade).
+  const promoted = coverage.filter((group) => group.id !== "miami-dade");
+  const edge = coverage.find((group) => group.id === "miami-dade") ?? null;
 
   const trail: Crumb[] = [
     { label: "Home", href: routes.home },
@@ -56,7 +60,7 @@ export default function ServiceAreasIndexPage() {
           as="h1"
           eyebrow="Where we work"
           title="Serving all of South Florida"
-          description={`Our licensed crew covers ${totals.cities} cities across ${totals.counties} counties, all of Broward and Palm Beach and as far south as North Miami Beach. North Lauderdale is home base, so Broward is where we respond fastest, and we run north through Palm Beach every week. We take the call, price the job, and meet the inspector, wherever you are in the service area.`}
+          description={`Our licensed crew covers all of Broward and Palm Beach counties, ${totals.cities} cities and counting, and reaches south to North Miami Beach. North Lauderdale is home base, so Broward is where we respond fastest, and we run north through Palm Beach every week. We take the call, price the job, and meet the inspector, wherever you are in the service area.`}
         />
 
         {/* Coverage map */}
@@ -64,7 +68,7 @@ export default function ServiceAreasIndexPage() {
 
         {/* Cities by county */}
         <div className="mt-14 flex flex-col gap-12">
-          {coverage.map((group) => (
+          {promoted.map((group) => (
             <section key={group.id}>
               <div className="flex items-baseline justify-between gap-4">
                 <h2 className="font-heading text-xl font-semibold text-ink">
@@ -102,6 +106,29 @@ export default function ServiceAreasIndexPage() {
               </ul>
             </section>
           ))}
+
+          {edge ? (
+            <section>
+              <h2 className="font-heading text-xl font-semibold text-ink">
+                South to North Miami Beach
+              </h2>
+              <p className="mt-2 max-w-3xl text-sm leading-relaxed text-ink-muted">
+                {edge.blurb}
+              </p>
+              <ul className="mt-4 flex flex-wrap gap-x-6 gap-y-2">
+                {edge.cities.map((city) => (
+                  <li key={city.slug}>
+                    <Link
+                      href={routes.city(city.slug)}
+                      className="text-sm font-semibold text-accent hover:underline"
+                    >
+                      {city.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          ) : null}
         </div>
 
         <p className="mt-12 max-w-3xl leading-relaxed text-ink-muted">

@@ -15,7 +15,16 @@ import type { CountyGroup, CountyId } from "@/lib/coverage";
   longitude. Selecting a county highlights its region and pins and reveals its
   city links. The map is intentionally schematic, a brand illustration of our
   coverage, not a live street map, so it needs no external map service.
+
+  Per the client (2026-08-12): actively promote Broward and Palm Beach, and do
+  NOT market Miami-Dade as a co-equal county. He takes select Miami-Dade jobs
+  but does not want that traffic, so Miami-Dade renders as a quiet footnote
+  (down to North Miami Beach) rather than a selectable county card.
 */
+
+// The county demoted to a footnote. Its pins stay on the map (the coverage is
+// real) but it never gets a promoted, selectable card.
+const EDGE_COUNTY: CountyId = "miami-dade";
 
 const COUNTY_COLOR: Record<CountyId, string> = {
   "palm-beach": "#e6c98a", // gold
@@ -51,7 +60,7 @@ export function CoverageMap({
   groups,
   eyebrow = "Coverage network",
   title = "Serving all of South Florida",
-  subtitle = "Licensed electricians across the tri-county area, day or night. Pick a county to see the cities we cover.",
+  subtitle = "Licensed electricians across all of Broward and Palm Beach, day or night. Pick a county to see the cities we cover.",
   homeSlug = "north-lauderdale",
   className,
 }: CoverageMapProps) {
@@ -63,6 +72,8 @@ export function CoverageMap({
 
   const cities = useMemo(() => groups.flatMap((g) => g.cities), [groups]);
   const totalCities = cities.length;
+  const promoted = groups.filter((g) => g.id !== EDGE_COUNTY);
+  const edge = groups.find((g) => g.id === EDGE_COUNTY) ?? null;
 
   // Projection: convert lat/lng to canvas coordinates, preserving aspect with a
   // cosine correction on longitude so the shape does not stretch east to west.
@@ -149,7 +160,7 @@ export function CoverageMap({
             </span>
           </button>
 
-          {groups.map((group) => {
+          {promoted.map((group) => {
             const active = selected === group.id;
             return (
               <div
@@ -205,6 +216,28 @@ export function CoverageMap({
               </div>
             );
           })}
+
+          {edge ? (
+            <div className="rounded-xl border border-navy-600/40 bg-white/[0.03] px-4 py-3">
+              <p className="text-xs leading-relaxed text-ink-muted-on-dark">
+                Plus our nearest Miami-Dade neighbors, down to North Miami
+                Beach.
+              </p>
+              <div className="mt-2 flex flex-wrap gap-1.5">
+                {edge.cities.map((city) => (
+                  <Link
+                    key={city.slug}
+                    href={routes.city(city.slug)}
+                    onMouseEnter={() => setHovered(city.slug)}
+                    onMouseLeave={() => setHovered(null)}
+                    className="rounded-full border border-navy-600/50 bg-navy-800/40 px-2.5 py-1 text-xs font-medium text-ink-muted-on-dark hover:border-accent-bright hover:text-accent-bright"
+                  >
+                    {city.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          ) : null}
         </div>
 
         <div className="mt-6 flex items-center gap-6 border-t border-navy-600/60 pt-5">
@@ -218,10 +251,10 @@ export function CoverageMap({
           </div>
           <div>
             <div className="font-heading text-2xl font-semibold text-accent-bright">
-              {groups.length}
+              {promoted.length}
             </div>
             <div className="text-xs uppercase tracking-wide text-ink-muted-on-dark">
-              Counties
+              Full counties
             </div>
           </div>
           <Link
@@ -248,7 +281,7 @@ export function CoverageMap({
           viewBox={`0 0 ${W} ${H}`}
           className="h-full w-full"
           role="img"
-          aria-label={`Map of the ${totalCities} South Florida cities Ghost Crown Electric serves across ${groups.length} counties`}
+          aria-label={`Map of the ${totalCities} cities Ghost Crown Electric serves across Broward and Palm Beach counties, south to North Miami Beach`}
         >
           <defs>
             <linearGradient id="cov-sky" x1="0" y1="0" x2="1" y2="1">

@@ -110,7 +110,7 @@
       "answer": "Yes. We install chargers for both homes and commercial properties across Broward County. Commercial installs raise the same core question about whether the service can carry the added load, just at a larger scale, so we assess the service and give you one honest price the same way we do for a home."
     }
   ],
-  "related": ["electrical-panel-upgrade", "electrical-service-rebuild", "generators-and-surge-protection", "electrical-safety-check"],
+  "related": ["electrical-panel-upgrade", "electrical-service-rebuild", "surge-protection", "electrical-safety-check"],
   "pricing": {
     "display": "Quoted per property after an on-site visit",
     "notes": ""

@@ -110,7 +110,7 @@
       "answer": "No. If your system is sound, we say so and you are done. If we find something, we tell you how serious it is and let you choose your own timing, with no pressure, because we do not invent work."
     }
   ],
-  "related": ["electrical-panel-upgrade", "pool-electrical", "generators-and-surge-protection", "electrical-service-rebuild"],
+  "related": ["electrical-panel-upgrade", "pool-electrical", "surge-protection", "electrical-service-rebuild"],
   "pricing": {
     "display": "Quoted as a defined scope when you book",
     "notes": ""

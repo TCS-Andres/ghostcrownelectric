@@ -11,7 +11,7 @@
 
 // One image per service. No two services share an image. Uses the on-brand
 // Damean action photography for the human-facing services, with illustration
-// for generators/surge. Maps to the 8 consolidated services (see SERVICE_SLUGS).
+// for surge protection. Maps to the 7 consolidated services (see SERVICE_SLUGS).
 const SERVICE_IMAGE: Record<string, string> = {
   "electrical-panel-upgrade": "damean-panel",
   "electrical-service-rebuild": "service-entrance",
@@ -19,7 +19,7 @@ const SERVICE_IMAGE: Record<string, string> = {
   "pool-electrical": "damean-pool",
   "ev-charger-installation": "damean-ev",
   "meter-bank-replacement": "damean-meter",
-  "generators-and-surge-protection": "generator-surge",
+  "surge-protection": "surge-protection",
   "electrical-safety-check": "damean-consult",
 };
 
@@ -55,7 +55,6 @@ const IMAGE_ALT: Record<string, string> = {
   "meter-bank": "A bank of electrical meter sockets on the exterior of a building",
   "ev-charger": "A modern EV charger mounted on the exterior wall of a home",
   "safety-check": "An open electrical panel being inspected during a safety check",
-  "generator-surge": "A whole-home standby generator beside a house",
   "surge-protection": "A panel-mounted whole-home surge protection device",
   "pool-bonding": "Pool equipotential bonding, a grounding lug and copper wire on pool equipment",
   "pool-repair": "A poolside equipment pad with pump, heater, and electrical at dusk",

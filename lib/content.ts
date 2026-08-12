@@ -24,8 +24,10 @@ const CONTENT_DIR = path.join(process.cwd(), "content");
 // Master ordering used to sort nav and listings deterministically. These mirror
 // the master slug lists in the shared style and schema contract.
 // Consolidated 2026-08-07 from 16 granular services to 8 general ones (client
-// direction: fewer, broader service pages). Order here is the master display
-// order; the header and footer show the first six. Old slugs redirect to their
+// direction: fewer, broader service pages). Generators retired 2026-08-12 per
+// the client (he does not install them and does not want the traffic); surge
+// protection stands alone, leaving 7. Order here is the master display order;
+// the header and footer show the first six. Old slugs redirect to their
 // consolidated target in next.config.ts.
 export const SERVICE_SLUGS = [
   "electrical-panel-upgrade",
@@ -34,7 +36,7 @@ export const SERVICE_SLUGS = [
   "pool-electrical",
   "ev-charger-installation",
   "meter-bank-replacement",
-  "generators-and-surge-protection",
+  "surge-protection",
   "electrical-safety-check",
 ] as const;
 
