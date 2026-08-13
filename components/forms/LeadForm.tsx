@@ -55,6 +55,7 @@ export function LeadForm({
 
   // Field state.
   const [service, setService] = useState("");
+  const [propertyType, setPropertyType] = useState("");
   const [city, setCity] = useState("");
   const [locationDetail, setLocationDetail] = useState("");
   const [name, setName] = useState("");
@@ -106,6 +107,7 @@ export function LeadForm({
         headers: { "content-type": "application/json" },
         body: JSON.stringify({
           service,
+          propertyType,
           city,
           locationDetail,
           name,
@@ -257,6 +259,38 @@ export function LeadForm({
                 </option>
               ))}
             </select>
+          </div>
+          <div className="flex flex-col gap-1.5">
+            <span
+              id={`${baseId}-property-label`}
+              className="text-sm font-medium text-ink"
+            >
+              Property type <span className="text-ink-muted">(optional)</span>
+            </span>
+            <div
+              role="group"
+              aria-labelledby={`${baseId}-property-label`}
+              className="grid grid-cols-2 gap-2"
+            >
+              {(["Residential", "Commercial"] as const).map((option) => (
+                <button
+                  key={option}
+                  type="button"
+                  aria-pressed={propertyType === option}
+                  onClick={() =>
+                    setPropertyType((prev) => (prev === option ? "" : option))
+                  }
+                  className={cn(
+                    "h-11 rounded-md border text-sm font-medium transition",
+                    propertyType === option
+                      ? "border-accent bg-accent/10 font-semibold text-accent"
+                      : "border-mist-300 bg-surface text-ink hover:bg-surface-2",
+                  )}
+                >
+                  {option}
+                </button>
+              ))}
+            </div>
           </div>
         </fieldset>
       ) : null}

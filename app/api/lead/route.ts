@@ -24,6 +24,7 @@ export const dynamic = "force-dynamic";
 
 interface LeadPayload {
   service?: unknown;
+  propertyType?: unknown;
   city?: unknown;
   locationDetail?: unknown;
   name?: unknown;
@@ -77,6 +78,7 @@ export async function POST(request: Request): Promise<Response> {
 
   const lead = {
     service: fieldOrDefault(data.service, "Not specified"),
+    propertyType: fieldOrDefault(data.propertyType, "Not specified"),
     city: fieldOrDefault(data.city, "Not specified"),
     locationDetail: fieldOrDefault(data.locationDetail, ""),
     name: (data.name as string).trim(),
@@ -94,6 +96,7 @@ export async function POST(request: Request): Promise<Response> {
   if (resendKey && toEmail) {
     const lines = [
       `Service: ${lead.service}`,
+      `Property type: ${lead.propertyType}`,
       `City: ${lead.city}`,
       lead.locationDetail ? `Street or neighborhood: ${lead.locationDetail}` : "",
       "",

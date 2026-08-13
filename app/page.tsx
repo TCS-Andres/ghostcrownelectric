@@ -17,6 +17,7 @@ import {
 } from "@/lib/schema";
 import type { Faq } from "@/lib/content";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { StatValue } from "@/components/ui/StatValue";
 import { Media } from "@/components/ui/Media";
 import { ServiceCard } from "@/components/ui/ServiceCard";
 import { CoverageMap } from "@/components/ui/CoverageMap";
@@ -230,7 +231,7 @@ export default function HomePage() {
               as="h2"
               eyebrow="What we do"
               title="The electrical work we are called for most"
-              description="From panels and service upgrades to pool electrical and backup power, one licensed crew handles it from the first call to the final inspection."
+              description="From panels and service upgrades to pool electrical and everyday lighting and repairs, one licensed crew handles it from the first call to the final inspection."
             />
             <Link
               href={routes.services}
@@ -504,7 +505,7 @@ export default function HomePage() {
                 className="glass-dark flex flex-col gap-2 rounded-2xl p-6"
               >
                 <dt className="font-heading text-3xl font-bold text-cyan-300">
-                  {stat.value}
+                  <StatValue value={stat.value} />
                 </dt>
                 <dd className="text-sm text-ink-muted-on-dark">{stat.label}</dd>
               </div>

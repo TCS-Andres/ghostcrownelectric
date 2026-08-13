@@ -36,6 +36,7 @@ export const SERVICE_SLUGS = [
   "pool-electrical",
   "ev-charger-installation",
   "meter-bank-replacement",
+  "lighting-fans-outlets",
   "surge-protection",
   "electrical-safety-check",
 ] as const;

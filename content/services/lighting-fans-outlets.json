@@ -1,0 +1,127 @@
+{
+  "slug": "lighting-fans-outlets",
+  "name": "Lighting, Fans & Outlets",
+  "shortName": "Lighting & Outlets",
+  "tier": "core",
+  "metaTitle": "Lighting, Fans & Outlets in Broward County | Ghost Crown",
+  "metaDescription": "Recessed lighting, ceiling fans, outlets, dimmers, and smart home devices installed by a licensed Broward County crew. One honest price per visit. Call today.",
+  "h1": "Lighting, Fans & Outlets in Broward County",
+  "intro": "Not every call is a panel or a rebuild. Some days the job is recessed lighting in the living room, a ceiling fan over the patio, new outlets where the extension cords have taken over, or a smart switch that outsmarted its last installer. Our licensed crew handles the everyday work with the same care as the big jobs, and you still get one honest price before we start.",
+  "definition": {
+    "heading": "What our everyday electrical service covers",
+    "body": "This is the work that keeps a home comfortable: indoor and outdoor lighting, recessed cans and LED upgrades, ceiling fans, new outlets and switches, GFCI protection, dimmers, USB outlets, and smart home devices like video doorbells and connected switches. Small jobs still ride on the wiring behind the wall, which is why a licensed electrician is worth having for them."
+  },
+  "symptoms": [
+    {
+      "title": "Extension cords doing a wall's job",
+      "body": "If power strips and extension cords have become permanent fixtures, the room needs more outlets. Cords across a floor are a trip hazard and a fire risk that a few properly wired outlets retire for good."
+    },
+    {
+      "title": "Rooms the builder left too dark",
+      "body": "Recessed lighting, pendants, or under-cabinet light change how a room works. We lay it out, wire it, and patch in cleanly, so it looks planned rather than added."
+    },
+    {
+      "title": "A ceiling fan that wobbles, hums, or is not there yet",
+      "body": "Fans need a properly rated box and correct wiring, not just a hook and hope. We hang them so they run smooth and quiet, indoors or out on the patio."
+    },
+    {
+      "title": "Switches, dimmers, and smart devices acting up",
+      "body": "Warm switch plates, dimmers that buzz, three-way switches wired wrong, or a smart switch that refuses to behave. We sort out the wiring behind the symptom instead of swapping parts blind."
+    }
+  ],
+  "process": [
+    {
+      "title": "Tell us the list",
+      "body": "You call or send the request and we talk through everything on your list, because grouping small jobs into one visit is the economical way to do them."
+    },
+    {
+      "title": "One visit, priced up front",
+      "body": "For a defined list we give you one honest price before we start. What we quote is what you pay."
+    },
+    {
+      "title": "Licensed work, done cleanly",
+      "body": "Our own crew does the work, protects the space, and leaves it clean. Anything near water gets the GFCI protection the code requires."
+    },
+    {
+      "title": "A quick look at the bigger picture",
+      "body": "While we are there, we keep an eye on the panel and wiring the new work rides on, and tell you honestly if something bigger deserves attention. No pressure, just a straight read."
+    }
+  ],
+  "benefits": [
+    {
+      "title": "One visit instead of five errands",
+      "body": "Lighting, fans, outlets, and smart devices grouped into a single planned visit by one licensed crew."
+    },
+    {
+      "title": "Safety built into the small stuff",
+      "body": "GFCI where code requires it, fan-rated boxes, and connections made right, because small jobs cause real fires when they are done casually."
+    },
+    {
+      "title": "It looks like it was always there",
+      "body": "Clean layout, straight trims, patched drywall, and no mystery switches. Good work should disappear into the home."
+    },
+    {
+      "title": "A licensed record, even for small work",
+      "body": "Where a permit applies, we pull it in our own name and meet the inspector, the same as we do on a full service rebuild."
+    }
+  ],
+  "localSections": [
+    {
+      "heading": "South Florida makes small electrical work bigger",
+      "body": "Outdoor living is standard here, so patio fans, landscape lighting, and outdoor outlets do heavy duty in heat, humidity, and salt air. Corrosion finds casual work quickly. We use rated fixtures, weather-resistant devices, and in-use covers that meet code, so the work lasts more than a season or two."
+    },
+    {
+      "heading": "Older wiring behind new devices",
+      "body": "A smart switch or a new dimmer is only as reliable as the wiring behind it, and plenty of Broward County homes still run on wiring from their first owner. Missing grounds, crowded boxes, and tired connections show up mid-job all the time. We tell you plainly what we find, fix what you approve, and never bury a problem behind a new plate."
+    }
+  ],
+  "guide": {
+    "title": "The honest guide to everyday electrical work",
+    "sections": [
+      {
+        "heading": "Why small jobs still deserve a licensed hand",
+        "body": "Most electrical fires start at connections, and connections are exactly what lighting, fan, and outlet work is made of. A fixture hung on the wrong box or an outlet back-stabbed instead of properly terminated can sit quietly for years before it becomes a problem. A licensed crew does the small work to the same standard as a service rebuild, and that standard is the whole point."
+      },
+      {
+        "heading": "Lighting and fans that actually fit the room",
+        "body": "Good lighting is layout first: where the cans go, what the dimmer controls, and how warm the light runs. We plan that with you before we cut a single hole. Fans have their own rules, a fan-rated box that can carry the weight and motion, correct switch wiring, and damp or wet rated models anywhere the weather reaches. That is the difference between a fan that disappears into the room and one that wobbles over your head."
+      },
+      {
+        "heading": "Outlets, GFCI, and the smart home layer",
+        "body": "Code requires GFCI protection where water lives: kitchens, bathrooms, garages, laundry, and outdoors. If your home predates those rules, adding protection is one of the cheapest safety upgrades that exists. Smart switches add one more wrinkle, since many need a neutral wire that older switch boxes never carried. We check first, tell you what will work in your home, and install devices that behave."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "Do you really take small jobs?",
+      "answer": "Yes. A lot of customers meet us on a small job first and call us for the big ones later, and we like it that way. The one thing we ask is the chance to group your list into a single visit, because one planned trip is the economical way to handle small work for everyone involved."
+    },
+    {
+      "question": "Can you install a ceiling fan where there is only a light now?",
+      "answer": "Usually, yes. The existing box almost never rates for a fan, so we swap in a fan-rated box, sort the switching so the fan and light control the way you want, and hang the fan so it runs smooth. On a patio we use damp or wet rated fans that stand up to South Florida weather."
+    },
+    {
+      "question": "Why does my new smart switch not work in my older home?",
+      "answer": "Most often because the switch box has no neutral wire, which many smart switches need to stay powered. Older homes wired before that was standard catch people out constantly. We check what your boxes actually carry, tell you which devices will work as-is, and wire in what is missing where it makes sense."
+    },
+    {
+      "question": "Do lighting or outlet jobs need a permit?",
+      "answer": "It depends on the scope. Swapping a fixture or replacing a device like for like generally does not, while new circuits and new outlet locations generally do. You do not have to figure that out yourself: we tell you plainly what your job needs, and where a permit applies we pull it in our own name and meet the inspector."
+    }
+  ],
+  "related": ["electrical-safety-check", "electrical-panel-upgrade", "surge-protection", "ev-charger-installation"],
+  "pricing": {
+    "display": "One price for your list, quoted before we start",
+    "notes": ""
+  },
+  "stats": [
+    {"value": "Statewide", "label": "Florida Certified Electrical Contractor"},
+    {"value": "286", "label": "Permitted projects on public record"},
+    {"value": "10 years", "label": "Serving South Florida, licensed and local"}
+  ],
+  "cta": {
+    "headline": "Got a list going?",
+    "body": "Send it over or call. We will group it into one visit, give you one honest price, and knock it out cleanly, with the same licensed crew that handles our biggest jobs."
+  }
+}

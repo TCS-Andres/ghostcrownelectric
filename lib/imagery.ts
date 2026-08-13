@@ -19,6 +19,7 @@ const SERVICE_IMAGE: Record<string, string> = {
   "pool-electrical": "damean-pool",
   "ev-charger-installation": "damean-ev",
   "meter-bank-replacement": "damean-meter",
+  "lighting-fans-outlets": "damean-recessed",
   "surge-protection": "surge-protection",
   "electrical-safety-check": "damean-consult",
 };
@@ -81,6 +82,8 @@ const IMAGE_ALT: Record<string, string> = {
   "damean-consult": "A Ghost Crown Electric electrician meeting a homeowner at the door",
   "damean-switchgear": "A Ghost Crown Electric electrician testing commercial switchgear",
   "damean-cabletray": "A Ghost Crown Electric electrician running cable in a commercial ceiling",
+  "damean-recessed": "A Ghost Crown Electric electrician installing recessed lighting in a ceiling",
+  "damean-outlet": "A Ghost Crown Electric electrician wiring a new wall outlet",
 };
 
 const SERVICE_FALLBACK = "panel-upgrade";

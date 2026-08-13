@@ -48,6 +48,11 @@ const GROUPS: { heading: string; items: Faq[] }[] = [
           "Yes, once we know your home can carry it. A charger is a real load, so the first step is an honest look at your electrical service and panel capacity. If your service can take it, we install it right. If it cannot, we will tell you what it would take first, rather than overload a system that is not ready.",
       },
       {
+        question: "Do you handle smaller jobs like lighting, fans, and outlets?",
+        answer:
+          "Yes. Recessed lighting, ceiling fans, new outlets and switches, dimmers, and smart home devices are all steady work for us. Small does not mean careless: the same licensed crew does the work, anything near water gets the GFCI protection code requires, and we will happily group your whole list into one visit with one honest price.",
+      },
+      {
         question: "Do you offer surge protection?",
         answer:
           "Yes. A panel-mounted surge protective device is the first line of defense for the whole home, and it is work we do often. Proper protection looks after your family, your home, and your investment as a whole. We will explain what it does and does not cover so you know exactly what you are getting.",

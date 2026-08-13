@@ -3,6 +3,7 @@ import "./globals.css";
 import { archivo, inter } from "@/lib/fonts";
 import { getBusiness, SITE_URL } from "@/lib/content";
 import { Header } from "@/components/layout/Header";
+import { TopBar } from "@/components/layout/TopBar";
 import { Footer } from "@/components/layout/Footer";
 import { StickyCallBar } from "@/components/layout/StickyCallBar";
 import { ExitIntentPopup } from "@/components/layout/ExitIntentPopup";
@@ -39,6 +40,7 @@ export default function RootLayout({
     <html lang="en" className={`${archivo.variable} ${inter.variable}`}>
       <body className="flex min-h-dvh flex-col bg-surface text-ink">
         <Preloader />
+        <TopBar />
         <Header />
         <main className="flex-1 pb-16 lg:pb-0">{children}</main>
         <Footer />
