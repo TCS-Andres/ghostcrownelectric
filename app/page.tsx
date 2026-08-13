@@ -295,7 +295,7 @@ export default function HomePage() {
                 cities={cities}
                 phoneDisplay={business.phoneDisplay}
                 phoneTel={business.phoneTel}
-                title="Request service"
+                title="Request Service"
                 subtitle="We answer day or night"
               />
               <p className="mt-4 text-center text-sm text-ink-muted-on-dark">

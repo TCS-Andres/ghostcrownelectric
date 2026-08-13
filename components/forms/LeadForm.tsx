@@ -85,6 +85,10 @@ export function LeadForm({
       setMessage("Pick the closest match, or choose not sure. We will sort it out.");
       return;
     }
+    if (step === 0 && !propertyType) {
+      setMessage("Choose residential or commercial so we can plan the visit.");
+      return;
+    }
     if (step === 1 && !city) {
       setMessage("Let us know roughly where the work is so we can plan the trip.");
       return;
@@ -291,7 +295,7 @@ export function LeadForm({
               id={`${baseId}-property-label`}
               className="text-sm font-medium text-ink"
             >
-              Property type <span className="text-ink-muted">(optional)</span>
+              Property Type
             </span>
             <div
               role="group"

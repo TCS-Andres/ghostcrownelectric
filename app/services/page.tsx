@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import { Users, BadgeDollarSign, Clock } from "lucide-react";
-import { getServices } from "@/lib/content";
+import { Users, BadgeDollarSign, Clock, Phone, Zap } from "lucide-react";
+import { getServices, getBusiness } from "@/lib/content";
 import { routes } from "@/lib/routes";
 import { buildMetadata, absoluteUrl } from "@/lib/seo";
 import {
@@ -14,6 +14,7 @@ import type { Crumb } from "@/components/layout/Breadcrumbs";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ServiceCard } from "@/components/ui/ServiceCard";
+import { Button } from "@/components/ui/Button";
 import { CTABand } from "@/components/ui/CTABand";
 import { GradientBadge, BADGE_TONES } from "@/components/ui/GradientBadge";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -48,6 +49,7 @@ export function generateMetadata(): Metadata {
 
 export default function ServicesIndexPage() {
   const services = getServices();
+  const business = getBusiness();
 
   const trail: Crumb[] = [
     { label: "Home", href: routes.home },
@@ -105,6 +107,44 @@ export default function ServicesIndexPage() {
                 <ServiceCard service={service} titleAs="h2" />
               </li>
             ))}
+            {/* The service count leaves a gap in the last grid row; fill it with
+                the two main calls to action. */}
+            <li className="sm:col-span-2">
+              <div className="relative flex h-full min-h-[13rem] flex-col justify-center overflow-hidden rounded-2xl bg-surface-dark p-8 text-ink-on-dark">
+                <div
+                  aria-hidden="true"
+                  className="glow-ambient pointer-events-none absolute -right-16 -top-16 -z-0 h-72 w-72 opacity-40"
+                />
+                <div className="relative">
+                  <h2 className="font-heading text-2xl font-bold text-ink-on-dark sm:text-3xl">
+                    Not Sure Which Service You Need?
+                  </h2>
+                  <p className="mt-2 max-w-xl text-ink-muted-on-dark">
+                    Call and a licensed electrician will point you the right way,
+                    or send a request and we will get back to you. No obligation,
+                    day or night.
+                  </p>
+                  <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+                    <Button
+                      href={`tel:${business.phoneTel}`}
+                      variant="primary"
+                      size="md"
+                    >
+                      <Phone size={18} aria-hidden="true" />
+                      Call {business.phoneDisplay}
+                    </Button>
+                    <Button
+                      href={routes.book}
+                      variant="outlineOnDark"
+                      size="md"
+                    >
+                      <Zap size={18} aria-hidden="true" />
+                      Request Service
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </li>
           </ul>
         )}
       </div>

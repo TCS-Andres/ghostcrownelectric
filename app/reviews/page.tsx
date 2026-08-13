@@ -107,16 +107,17 @@ export default function ReviewsPage() {
                 <Zap size={20} aria-hidden="true" />
               </GradientBadge>
               <h3 className="font-heading text-xl font-semibold text-ink">
-                A ten-meter bank, restored after a vehicle fire
+                A nine-meter bank, back to life after a fire
               </h3>
               <p className="mt-3 leading-relaxed text-ink-muted">
-                A vehicle fire took out a ten-meter bank at a multi-unit
-                property, cutting power to every unit tied to it. That is the
-                kind of call that does not wait for morning. We restored the
-                meter bank, coordinated the permit and inspection, and got
-                families back on their own power. Restoration work like this is
-                exactly why we moved the business toward the jobs that need a
-                licensed, experienced hand.
+                A fire took out a nine-meter meter bank at a multi-unit property
+                and left the whole building dark, with tenants without power for
+                a week. That is the kind of call that does not wait for morning.
+                We rebuilt the electrical, cleaned up and repaired the
+                fire-damaged wall around it, pulled the permit, and had families
+                back on their own power within two weeks of the fire.
+                Restoration work like this is exactly why we moved the business
+                toward the jobs that need a licensed, experienced hand.
               </p>
             </Card>
             <Card as="article" className="flex h-full flex-col">

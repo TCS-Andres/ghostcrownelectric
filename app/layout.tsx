@@ -1,11 +1,11 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { archivo, inter } from "@/lib/fonts";
-import { getBusiness, SITE_URL } from "@/lib/content";
+import { getBusiness, getServices, getCities, SITE_URL } from "@/lib/content";
 import { Header } from "@/components/layout/Header";
 import { TopBar } from "@/components/layout/TopBar";
 import { Footer } from "@/components/layout/Footer";
-import { StickyCallBar } from "@/components/layout/StickyCallBar";
+import { RequestServiceDock } from "@/components/layout/RequestServiceDock";
 import { PlanSection } from "@/components/sections/PlanSection";
 import { PlanGate } from "@/components/sections/PlanGate";
 import { ExitIntentPopup } from "@/components/layout/ExitIntentPopup";
@@ -38,6 +38,14 @@ export const viewport: Viewport = {
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
+  const dockServices = getServices().map(
+    (service) => service.shortName || service.name,
+  );
+  const dockCities = getCities().map((city) => ({
+    slug: city.slug,
+    name: city.name,
+  }));
+
   return (
     <html lang="en" className={`${archivo.variable} ${inter.variable}`}>
       <body className="flex min-h-dvh flex-col bg-surface text-ink">
@@ -54,7 +62,12 @@ export default function RootLayout({
           </PlanGate>
         </main>
         <Footer />
-        <StickyCallBar />
+        <RequestServiceDock
+          services={dockServices}
+          cities={dockCities}
+          phoneDisplay={business.phoneDisplay}
+          phoneTel={business.phoneTel}
+        />
         <ExitIntentPopup />
       </body>
     </html>

@@ -16,12 +16,12 @@
 // hero shows the actual work rather than a generic pose.
 const SERVICE_IMAGE: Record<string, string> = {
   "electrical-panel-upgrade": "damean-panel",
-  "electrical-service-rebuild": "service-entrance",
+  "electrical-service-rebuild": "work-service-rebuild",
   "emergency-electrician": "emergency-night",
   "commercial-lighting": "commercial-lighting-night",
   "pool-electrical": "damean-pool",
   "ev-charger-installation": "damean-ev",
-  "meter-bank-replacement": "damean-meter",
+  "meter-bank-replacement": "work-meter-bank",
   "lighting-fans-outlets": "damean-recessed",
   "surge-protection": "surge-protection",
   "electrical-safety-check": "safety-check",
@@ -93,6 +93,8 @@ const IMAGE_ALT: Record<string, string> = {
   "commercial-lighting-before": "The Ghost Crown Electric bucket truck at a storefront sign repair in progress",
   "commercial-lighting-after": "The repaired storefront sign at dusk, every letter back in place",
   "commercial-lighting-night": "The storefront sign fully lit at night after the Ghost Crown relight",
+  "work-service-rebuild": "A Ghost Crown Electric electrical service entrance rebuild in progress",
+  "work-meter-bank": "A multi-tenant electrical meter bank serviced by Ghost Crown Electric",
 };
 
 const SERVICE_FALLBACK = "panel-upgrade";
