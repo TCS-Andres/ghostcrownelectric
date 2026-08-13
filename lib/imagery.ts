@@ -11,18 +11,20 @@
 
 // One image per service. No two services share an image. Uses the on-brand
 // Damean action photography for the human-facing services, with illustration
-// for surge protection. Maps to the 7 consolidated services (see SERVICE_SLUGS).
+// for surge protection. Maps to the 10 services (see SERVICE_SLUGS). Emergency
+// uses the night scene and the safety check uses the inspection shot, so each
+// hero shows the actual work rather than a generic pose.
 const SERVICE_IMAGE: Record<string, string> = {
   "electrical-panel-upgrade": "damean-panel",
   "electrical-service-rebuild": "service-entrance",
-  "emergency-electrician": "damean-rooftop",
+  "emergency-electrician": "emergency-night",
   "commercial-lighting": "commercial-lighting-night",
   "pool-electrical": "damean-pool",
   "ev-charger-installation": "damean-ev",
   "meter-bank-replacement": "damean-meter",
   "lighting-fans-outlets": "damean-recessed",
   "surge-protection": "surge-protection",
-  "electrical-safety-check": "damean-consult",
+  "electrical-safety-check": "safety-check",
 };
 
 // One golden-hour location image per city.

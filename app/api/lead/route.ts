@@ -3,20 +3,18 @@ import { NextResponse } from "next/server";
 /*
   Lead intake endpoint.
 
-  The three step form on the site posts here. We validate on the server, then
-  deliver the lead through the first configured channel:
+  NOTE: The live form submits directly to Web3Forms from the browser (client
+  side), because Web3Forms blocks server-side submissions on the Pro plan. This
+  route is kept as an alternative/fallback intake and is not on the current
+  submission path. It validates on the server, then delivers through the first
+  configured channel:
 
-  1. Web3Forms (WEB3FORMS_ACCESS_KEY, with a built-in public-key fallback). This
-     is the active production path: the submission is emailed to the recipient
-     configured on the Ghost Crown Electric form in the Web3Forms dashboard. The
-     access key is a public key (safe in source per Web3Forms) and stays
-     server-side here, so it is never exposed to the browser.
-  2. Email via Resend (RESEND_API_KEY + LEAD_TO_EMAIL set). LEAD_FROM_EMAIL can
+  1. Email via Resend (RESEND_API_KEY + LEAD_TO_EMAIL set). LEAD_FROM_EMAIL can
      override the sender once a domain is verified in Resend; until then the
      Resend onboarding sender is used, which only delivers to the Resend account
      owner's address.
-  3. Webhook (LEAD_WEBHOOK_URL set), kept as an alternative integration path.
-  4. Server console log, so nothing is lost while none of the above is set.
+  2. Webhook (LEAD_WEBHOOK_URL set), kept as an alternative integration path.
+  3. Server console log, so nothing is lost during launch while neither is set.
 
   We never echo the submitted data back. The response is only a confirmation, so a
   bot cannot use this route to reflect content and a person only ever sees a calm

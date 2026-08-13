@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
+import { ShieldCheck, Clock, BadgeCheck, BadgeDollarSign } from "lucide-react";
 import { getBusiness } from "@/lib/content";
 import { routes } from "@/lib/routes";
 import { buildMetadata, absoluteUrl } from "@/lib/seo";
@@ -12,6 +14,7 @@ import type { Crumb } from "@/components/layout/Breadcrumbs";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Card } from "@/components/ui/Card";
+import { GradientBadge, BADGE_TONES } from "@/components/ui/GradientBadge";
 import { Media } from "@/components/ui/Media";
 import { CTABand } from "@/components/ui/CTABand";
 import { HeroTrust } from "@/components/sections/HeroTrust";
@@ -24,22 +27,26 @@ const DESCRIPTION =
 
 // Plain-language values, framed around the customer's peace of mind. The client
 // is the hero here; the company is the guide.
-const VALUES: { title: string; body: string }[] = [
+const VALUES: { title: string; body: string; icon: ReactNode }[] = [
   {
     title: "Trust comes first",
     body: "We lead with trust and licensing. If you cannot trust the person working in your panel, nothing else matters.",
+    icon: <ShieldCheck size={20} aria-hidden="true" />,
   },
   {
     title: "We show up when we say we will",
     body: "A time we give you is a promise. Day or night, when we say we are coming, we come.",
+    icon: <Clock size={20} aria-hidden="true" />,
   },
   {
     title: "Do it right so you can forget about it",
     body: "We do the work right the first time, so you are not thinking about it after we leave. Peace of mind is the real deliverable.",
+    icon: <BadgeCheck size={20} aria-hidden="true" />,
   },
   {
     title: "Price it once, price it right",
     body: "We look at the whole situation, give you one honest number, and stand behind it. No surprises once work has started.",
+    icon: <BadgeDollarSign size={20} aria-hidden="true" />,
   },
 ];
 
@@ -164,23 +171,31 @@ export default function AboutPage() {
 
       {/* The origin */}
       <section className="container-page py-14 sm:py-20">
-        <div className="max-w-3xl">
-          <SectionHeading
-            as="h2"
-            eyebrow="Where we started"
-            title="Built on lighting, moved to the work that lasts"
-          />
-          <div className="mt-6 flex flex-col gap-4 text-lg leading-relaxed text-ink-muted">
-            <p>
-              We started about ten years ago retrofitting South Florida lighting
-              to LED. Good work, until it commoditized and price became the only
-              thing that mattered. So we moved the business to the work that
-              still needs a licensed, experienced hand: service rebuilds, panel
-              and meter replacement, power restoration, and emergency response.
-              That is what we are known for now, and what we are built to do
-              well.
-            </p>
+        <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
+          <div className="max-w-2xl">
+            <SectionHeading
+              as="h2"
+              eyebrow="Where we started"
+              title="Built on lighting, moved to the work that lasts"
+            />
+            <div className="mt-6 flex flex-col gap-4 text-lg leading-relaxed text-ink-muted">
+              <p>
+                We started about ten years ago retrofitting South Florida
+                lighting to LED. Good work, until it commoditized and price
+                became the only thing that mattered. So we moved the business to
+                the work that still needs a licensed, experienced hand: service
+                rebuilds, panel and meter replacement, power restoration, and
+                emergency response. That is what we are known for now, and what
+                we are built to do well.
+              </p>
+            </div>
           </div>
+          <Media
+            src="/images/work-service-upgrade.jpg"
+            alt="A Ghost Crown Electric electrician upgrading an exterior electrical service"
+            sizes="(min-width: 1024px) 45vw, 100vw"
+            className="aspect-[4/3] rounded-2xl border border-border shadow-[var(--shadow-card)]"
+          />
         </div>
       </section>
 
@@ -189,8 +204,8 @@ export default function AboutPage() {
         <div className="container-page py-14 sm:py-20">
           <div className="grid items-center gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-14">
             <Media
-              src="/images/damean-warehouse.jpg"
-              alt={`${ownerName}, owner and ${ownerTitle} at Ghost Crown Electric`}
+              src="/images/damean-consult.jpg"
+              alt={`${ownerName}, owner and ${ownerTitle} at Ghost Crown Electric, greeting a customer at the door`}
               sizes="(min-width: 1024px) 38vw, 100vw"
               className="aspect-[4/3] rounded-2xl border border-border shadow-[var(--shadow-card)]"
             />
@@ -198,23 +213,28 @@ export default function AboutPage() {
               <SectionHeading
                 as="h2"
                 eyebrow="Meet the owner"
-                title="A working owner who leads the crew"
+                title="A Working Owner Who Takes It Personally"
               />
               <div className="mt-6 flex flex-col gap-4 text-lg leading-relaxed text-ink-muted">
                 <p>
                   {ownerName} is a working owner and {ownerTitle}. He is not
                   behind a desk. He leads a licensed crew that takes the first
                   call, walks the property, prices the job, does the work, pulls
-                  the permit, and meets the inspector when it is time to close it
-                  out.
+                  the permit, and meets the inspector. But ask him what the job is
+                  really about, and he does not start with panels. He starts with
+                  the people who live behind them.
                 </p>
                 <p className="border-l-2 border-accent pl-5 font-heading text-xl font-semibold text-ink">
-                  &ldquo;I am the opener and the closer.&rdquo;
+                  &ldquo;I treat every home like it is my own family&rsquo;s. You
+                  are trusting me with where your family lives, and I do not rest
+                  until you can stop worrying about it.&rdquo;
                 </p>
                 <p>
-                  When you hire Ghost Crown Electric, you are hiring one
-                  accountable company, answerable for the result from the first
-                  call to the final inspection.
+                  That is why he answers the phone himself, tells you the truth
+                  even when it is not the easy sell, and treats a first-time
+                  customer the same as one he has looked after for years. When you
+                  hire Ghost Crown Electric, you are hiring someone who takes your
+                  home personally.
                 </p>
               </div>
             </div>
@@ -232,10 +252,16 @@ export default function AboutPage() {
             description="These are not slogans on a wall. They are the reasons people call us back and send us to their neighbors."
           />
           <ul className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2">
-            {VALUES.map((value) => (
+            {VALUES.map((value, index) => (
               <li key={value.title}>
-                <Card as="div" className="h-full">
-                  <h3 className="font-heading text-lg font-semibold text-ink">
+                <Card as="div" className="group h-full">
+                  <GradientBadge
+                    tone={BADGE_TONES[index % BADGE_TONES.length]}
+                    size="md"
+                  >
+                    {value.icon}
+                  </GradientBadge>
+                  <h3 className="mt-4 font-heading text-lg font-semibold text-ink">
                     {value.title}
                   </h3>
                   <p className="mt-2 text-sm text-ink-muted">{value.body}</p>
@@ -248,21 +274,25 @@ export default function AboutPage() {
 
       {/* The crew */}
       <section className="container-page py-14 sm:py-20">
-        <div className="max-w-3xl">
-          <SectionHeading
-            as="h2"
-            eyebrow="The crew"
-            title="Small on purpose"
+        <div className="grid items-center gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-14">
+          <Media
+            src="/images/work-bucket-truck.jpg"
+            alt="The Ghost Crown Electric bucket truck at a South Florida job site"
+            sizes="(min-width: 1024px) 38vw, 100vw"
+            className="order-last aspect-[4/3] rounded-2xl border border-border shadow-[var(--shadow-card)] lg:order-first"
           />
-          <div className="mt-6 flex flex-col gap-4 text-lg leading-relaxed text-ink-muted">
-            <p>
-              Ghost Crown Electric runs three trucks and a three person in-house
-              crew, so we keep three jobs moving at once without handing your
-              work to a subcontractor we do not know. One member of the crew has
-              been with us more than eight years. The people who show up are our
-              people, trained the way we work, and we keep the team small on
-              purpose so the quality stays consistent.
-            </p>
+          <div className="max-w-2xl">
+            <SectionHeading as="h2" eyebrow="The crew" title="Small on purpose" />
+            <div className="mt-6 flex flex-col gap-4 text-lg leading-relaxed text-ink-muted">
+              <p>
+                Ghost Crown Electric runs three trucks and a three person
+                in-house crew, so we keep three jobs moving at once without
+                handing your work to a subcontractor we do not know. One member
+                of the crew has been with us more than eight years. The people
+                who show up are our people, trained the way we work, and we keep
+                the team small on purpose so the quality stays consistent.
+              </p>
+            </div>
           </div>
         </div>
       </section>

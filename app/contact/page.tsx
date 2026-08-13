@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { getBusiness, getServices } from "@/lib/content";
+import { Mail, Map, MapPin, PhoneCall, Clock, ShieldCheck } from "lucide-react";
+import { getBusiness, getServices, primaryLicenseNumber } from "@/lib/content";
 import { routes } from "@/lib/routes";
 import { buildMetadata, absoluteUrl } from "@/lib/seo";
 import { cityLinks } from "@/lib/links";
@@ -12,6 +13,7 @@ import {
 import type { Crumb } from "@/components/layout/Breadcrumbs";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { GradientBadge, BADGE_TONES } from "@/components/ui/GradientBadge";
 import { LeadForm } from "@/components/forms/LeadForm";
 import { JsonLd } from "@/components/seo/JsonLd";
 
@@ -31,6 +33,50 @@ export default function ContactPage() {
   const business = getBusiness();
   const services = getServices();
   const cities = cityLinks();
+  const licenseNumber = primaryLicenseNumber(business);
+
+  const contactMethods = [
+    {
+      label: "Phone",
+      icon: <PhoneCall size={20} aria-hidden="true" />,
+      value: (
+        <a
+          href={`tel:${business.phoneTel}`}
+          className="font-semibold text-ink hover:text-accent-hover"
+        >
+          {business.phoneDisplay}
+        </a>
+      ),
+      note: "We answer day or night.",
+    },
+    {
+      label: "Email",
+      icon: <Mail size={20} aria-hidden="true" />,
+      value: (
+        <a
+          href={`mailto:${business.email}`}
+          className="break-all text-ink hover:text-accent-hover"
+        >
+          {business.email}
+        </a>
+      ),
+    },
+    {
+      label: "Based in",
+      icon: <MapPin size={20} aria-hidden="true" />,
+      value: `${business.address.locality}, ${business.address.region}`,
+    },
+    {
+      label: "Hours",
+      icon: <Clock size={20} aria-hidden="true" />,
+      value: business.hours,
+    },
+    {
+      label: "Service area",
+      icon: <Map size={20} aria-hidden="true" />,
+      value: business.serviceArea,
+    },
+  ];
 
   const trail: Crumb[] = [
     { label: "Home", href: routes.home },
@@ -61,82 +107,65 @@ export default function ContactPage() {
         <div className="mt-12 grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Contact details from business.json */}
           <div className="flex flex-col gap-8">
-            <dl className="flex flex-col gap-6">
-              <div>
-                <dt className="text-sm font-semibold uppercase tracking-[0.12em] text-accent">
-                  Phone
-                </dt>
-                <dd className="mt-1 text-lg">
-                  <a
-                    href={`tel:${business.phoneTel}`}
-                    className="font-semibold text-ink hover:text-accent-hover"
+            <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              {contactMethods.map((method, index) => (
+                <li
+                  key={method.label}
+                  className="group flex items-start gap-3.5 rounded-xl border border-border bg-surface p-5 shadow-[var(--shadow-card)]"
+                >
+                  <GradientBadge
+                    tone={BADGE_TONES[index % BADGE_TONES.length]}
+                    size="md"
                   >
-                    {business.phoneDisplay}
-                  </a>
-                </dd>
-                <p className="mt-1 text-sm text-ink-muted">
-                  We answer day or night.
+                    {method.icon}
+                  </GradientBadge>
+                  <div className="min-w-0">
+                    <p className="text-xs font-semibold uppercase tracking-[0.12em] text-accent">
+                      {method.label}
+                    </p>
+                    <div className="mt-1 text-ink">{method.value}</div>
+                    {method.note ? (
+                      <p className="mt-0.5 text-sm text-ink-muted">
+                        {method.note}
+                      </p>
+                    ) : null}
+                  </div>
+                </li>
+              ))}
+            </ul>
+
+            {/* Licensing labels with the live state license number */}
+            <div className="flex items-start gap-3.5 rounded-xl border border-border bg-surface-2 p-6">
+              <GradientBadge tone="blue" size="md">
+                <ShieldCheck size={20} aria-hidden="true" />
+              </GradientBadge>
+              <div>
+                <h2 className="font-heading text-base font-semibold text-ink">
+                  Licensed and Accountable
+                </h2>
+                <ul className="mt-3 flex flex-col gap-1.5">
+                  {business.licenses.map((license) => {
+                    const hasNumber =
+                      license.number && license.number !== "PLACEHOLDER";
+                    return (
+                      <li key={license.label} className="text-sm text-ink">
+                        {license.label}
+                        {hasNumber ? (
+                          <span className="font-semibold">
+                            {" "}
+                            #{license.number}
+                          </span>
+                        ) : null}
+                      </li>
+                    );
+                  })}
+                </ul>
+                <p className="mt-3 text-sm text-ink-muted">
+                  {licenseNumber
+                    ? "Licensed and local from the first call to the final inspection."
+                    : "License numbers available on request. Licensed and local from the first call to the final inspection."}
                 </p>
               </div>
-
-              <div>
-                <dt className="text-sm font-semibold uppercase tracking-[0.12em] text-accent">
-                  Email
-                </dt>
-                <dd className="mt-1">
-                  <a
-                    href={`mailto:${business.email}`}
-                    className="break-all text-ink hover:text-accent-hover"
-                  >
-                    {business.email}
-                  </a>
-                </dd>
-              </div>
-
-              <div>
-                <dt className="text-sm font-semibold uppercase tracking-[0.12em] text-accent">
-                  Based in
-                </dt>
-                <dd className="mt-1 text-ink">
-                  {business.address.locality}, {business.address.region}
-                </dd>
-              </div>
-
-              <div>
-                <dt className="text-sm font-semibold uppercase tracking-[0.12em] text-accent">
-                  Hours
-                </dt>
-                <dd className="mt-1 text-ink">{business.hours}</dd>
-              </div>
-
-              <div>
-                <dt className="text-sm font-semibold uppercase tracking-[0.12em] text-accent">
-                  Service area
-                </dt>
-                <dd className="mt-1 text-ink">{business.serviceArea}</dd>
-              </div>
-            </dl>
-
-            {/* Licensing labels, numbers held per PLACEHOLDERS.md */}
-            <div className="rounded-xl border border-border bg-surface-2 p-6">
-              <h2 className="font-heading text-base font-semibold text-ink">
-                Licensed and Accountable
-              </h2>
-              <ul className="mt-4 flex flex-col gap-2">
-                {business.licenses.map((license) => (
-                  <li key={license.label} className="flex items-start gap-2 text-sm text-ink">
-                    <span
-                      aria-hidden="true"
-                      className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"
-                    />
-                    {license.label}
-                  </li>
-                ))}
-              </ul>
-              <p className="mt-4 text-sm text-ink-muted">
-                License numbers available on request. The work is licensed and
-                local from the first call to the final inspection.
-              </p>
             </div>
           </div>
 

@@ -34,6 +34,16 @@ interface LeadFormProps {
 
 type Status = "idle" | "submitting" | "success" | "error";
 
+// Web3Forms public access key for the Ghost Crown Electric form. Public by
+// design (Web3Forms says it is safe in client-side code); submissions are
+// emailed to the recipient configured on the form's Web3Forms dashboard.
+// NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY overrides it. We submit from the browser
+// because Web3Forms blocks server-side submissions on the Pro plan.
+const WEB3FORMS_ACCESS_KEY =
+  process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY ??
+  "103f77bc-91ed-4a7d-9b1b-01ee9e773092";
+const WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
+
 const OTHER_SERVICE = "Something else / not sure";
 const OTHER_CITY = "Other";
 
@@ -102,23 +112,39 @@ export function LeadForm({
 
     setStatus("submitting");
     try {
-      const res = await fetch("/api/lead", {
+      const res = await fetch(WEB3FORMS_ENDPOINT, {
         method: "POST",
-        headers: { "content-type": "application/json" },
+        headers: {
+          "content-type": "application/json",
+          accept: "application/json",
+        },
         body: JSON.stringify({
-          service,
-          propertyType,
-          city,
-          locationDetail,
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: `New service request: ${service || "Not specified"} in ${
+            city || "Not specified"
+          }`,
+          from_name: "Ghost Crown Electric Website",
+          // Web3Forms uses this for the email's reply-to when present.
+          replyto: email || undefined,
           name,
           phone,
-          email,
-          description,
-          consent,
-          company,
+          email: email || "Not provided",
+          Service: service || "Not specified",
+          "Property type": propertyType || "Not specified",
+          City: city || "Not specified",
+          "Street or neighborhood": locationDetail || "Not provided",
+          Notes: description || "None",
+          "Agreed to be contacted": consent ? "Yes" : "No",
+          // Honeypot: real visitors leave this blank, bots tend to fill it.
+          botcheck: company,
         }),
       });
-      if (!res.ok) throw new Error(`Request failed with ${res.status}`);
+      const data = (await res.json().catch(() => null)) as {
+        success?: boolean;
+      } | null;
+      if (!res.ok || !data?.success) {
+        throw new Error(`Request failed with ${res.status}`);
+      }
       setStatus("success");
     } catch {
       setStatus("error");
