@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
+import { Clock, MessageSquare, BadgeDollarSign, Zap, Cable } from "lucide-react";
 import { getBusiness } from "@/lib/content";
 import { routes } from "@/lib/routes";
 import { buildMetadata, absoluteUrl } from "@/lib/seo";
@@ -12,6 +14,7 @@ import type { Crumb } from "@/components/layout/Breadcrumbs";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Card } from "@/components/ui/Card";
+import { GradientBadge, BADGE_TONES } from "@/components/ui/GradientBadge";
 import { CTABand } from "@/components/ui/CTABand";
 import { JsonLd } from "@/components/seo/JsonLd";
 
@@ -21,18 +24,21 @@ const DESCRIPTION =
 
 // The recurring themes we hear in referrals, stated as themes, not as quotes we
 // put in anyone's mouth. No names, no star ratings, no invented testimonials.
-const THEMES: { title: string; body: string }[] = [
+const THEMES: { title: string; body: string; icon: ReactNode }[] = [
   {
     title: "We show up when we say we will",
     body: "The time we give you is a promise. People notice when a contractor keeps it, and they remember it.",
+    icon: <Clock size={20} aria-hidden="true" />,
   },
   {
     title: "We explain it plainly, then fix it",
     body: "You get the problem in everyday language, what it takes to fix, and what it costs, without being talked down to.",
+    icon: <MessageSquare size={20} aria-hidden="true" />,
   },
   {
     title: "The number we quote is the number you pay",
     body: "We price the job once, before the work starts, and we stand behind it. No surprises at the end.",
+    icon: <BadgeDollarSign size={20} aria-hidden="true" />,
   },
 ];
 
@@ -97,6 +103,9 @@ export default function ReviewsPage() {
           />
           <div className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-2">
             <Card as="article" className="flex h-full flex-col">
+              <GradientBadge tone="cyan" size="md" className="mb-4">
+                <Zap size={20} aria-hidden="true" />
+              </GradientBadge>
               <h3 className="font-heading text-xl font-semibold text-ink">
                 A ten-meter bank, restored after a vehicle fire
               </h3>
@@ -111,6 +120,9 @@ export default function ReviewsPage() {
               </p>
             </Card>
             <Card as="article" className="flex h-full flex-col">
+              <GradientBadge tone="gold" size="md" className="mb-4">
+                <Cable size={20} aria-hidden="true" />
+              </GradientBadge>
               <h3 className="font-heading text-xl font-semibold text-ink">
                 A 150-foot pool rewire, and a handshake from the inspector
               </h3>
@@ -137,10 +149,16 @@ export default function ReviewsPage() {
           description="We are not going to put quotation marks around words no one said. But across ten years of referrals, the same few things come up again and again, and we are comfortable telling you what they are."
         />
         <ul className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-3">
-          {THEMES.map((theme) => (
+          {THEMES.map((theme, index) => (
             <li key={theme.title}>
-              <Card as="div" className="h-full">
-                <h3 className="font-heading text-lg font-semibold text-ink">
+              <Card as="div" className="group h-full">
+                <GradientBadge
+                  tone={BADGE_TONES[index % BADGE_TONES.length]}
+                  size="md"
+                >
+                  {theme.icon}
+                </GradientBadge>
+                <h3 className="mt-4 font-heading text-lg font-semibold text-ink">
                   {theme.title}
                 </h3>
                 <p className="mt-2 text-sm text-ink-muted">{theme.body}</p>

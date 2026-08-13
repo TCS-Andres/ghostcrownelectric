@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
+import { Wrench, BadgeDollarSign, MapPin, ShieldCheck } from "lucide-react";
 import type { Faq } from "@/lib/content";
 import { routes } from "@/lib/routes";
+import { titleCase } from "@/lib/text";
 import { buildMetadata, absoluteUrl } from "@/lib/seo";
 import {
   breadcrumbListNode,
@@ -12,6 +15,7 @@ import {
 import type { Crumb } from "@/components/layout/Breadcrumbs";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { GradientBadge, BADGE_TONES } from "@/components/ui/GradientBadge";
 import { CTABand } from "@/components/ui/CTABand";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -23,9 +27,10 @@ const DESCRIPTION =
 // Grouped questions for the visible page. The same items, flattened, feed the
 // FAQPage JSON-LD so the markup and the page match exactly. This is the only
 // page allowed to carry the solar and build-out denials.
-const GROUPS: { heading: string; items: Faq[] }[] = [
+const GROUPS: { heading: string; icon: ReactNode; items: Faq[] }[] = [
   {
     heading: "About the work",
+    icon: <Wrench size={20} aria-hidden="true" />,
     items: [
       {
         question: "Do you work on both commercial and residential properties?",
@@ -81,6 +86,7 @@ const GROUPS: { heading: string; items: Faq[] }[] = [
   },
   {
     heading: "Pricing",
+    icon: <BadgeDollarSign size={20} aria-hidden="true" />,
     items: [
       {
         question: "How does a service call work?",
@@ -106,6 +112,7 @@ const GROUPS: { heading: string; items: Faq[] }[] = [
   },
   {
     heading: "Service area",
+    icon: <MapPin size={20} aria-hidden="true" />,
     items: [
       {
         question: "What areas do you serve?",
@@ -116,6 +123,7 @@ const GROUPS: { heading: string; items: Faq[] }[] = [
   },
   {
     heading: "Licensing",
+    icon: <ShieldCheck size={20} aria-hidden="true" />,
     items: [
       {
         question: "Are you licensed?",
@@ -171,9 +179,19 @@ export default function FaqPage() {
         />
 
         <div className="mt-12 flex flex-col gap-14">
-          {GROUPS.map((group) => (
+          {GROUPS.map((group, index) => (
             <section key={group.heading}>
-              <SectionHeading as="h2" title={group.heading} className="mb-4" />
+              <div className="mb-5 flex items-center gap-3">
+                <GradientBadge
+                  tone={BADGE_TONES[index % BADGE_TONES.length]}
+                  size="md"
+                >
+                  {group.icon}
+                </GradientBadge>
+                <h2 className="font-heading text-2xl font-semibold text-ink sm:text-3xl">
+                  {titleCase(group.heading)}
+                </h2>
+              </div>
               <FAQAccordion items={group.items} />
             </section>
           ))}
