@@ -24,6 +24,7 @@ import { CoverageMap } from "@/components/ui/CoverageMap";
 import { CTABand } from "@/components/ui/CTABand";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { CallToActions } from "@/components/sections/CallToActions";
+import { PlanSection } from "@/components/sections/PlanSection";
 import { LeadForm } from "@/components/forms/LeadForm";
 import { JsonLd } from "@/components/seo/JsonLd";
 
@@ -420,7 +421,7 @@ export default function HomePage() {
           <SectionHeading
             as="h2"
             eyebrow="Commercial lighting"
-            title="Your sign is your storefront after dark"
+            title="Your Sign Is Your Storefront After Dark"
             description="Signs, parking lot pole lights, and building lighting for South Florida businesses. Our crew runs its own bucket truck, so high work happens on our schedule, not a rental company's."
           />
           <Link
@@ -478,6 +479,9 @@ export default function HomePage() {
           </a>
         </div>
       </section>
+
+      {/* 7b. The three step plan, right after the emergency hook */}
+      <PlanSection />
 
       {/* 8. FAQ preview */}
       <section className="container-page py-16 sm:py-20">
