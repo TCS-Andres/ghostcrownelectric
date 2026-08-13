@@ -6,7 +6,7 @@ import { routes } from "@/lib/routes";
 import { buildMetadata, absoluteUrl } from "@/lib/seo";
 import { cityLinks } from "@/lib/links";
 import { coverageByCounty } from "@/lib/coverage";
-import { postImage } from "@/lib/imagery";
+import { imageAlt, imagePath, postImage } from "@/lib/imagery";
 import { formatPostDate } from "@/lib/blog";
 import {
   electricianNode,
@@ -97,7 +97,11 @@ export function generateMetadata(): Metadata {
 export default function HomePage() {
   const business = getBusiness();
   const services = getServices();
-  const featuredServices = services.slice(0, 6);
+  // Commercial lighting gets its own dedicated section below, so the featured
+  // grid skips it rather than saying the same thing twice.
+  const featuredServices = services
+    .filter((service) => service.slug !== "commercial-lighting")
+    .slice(0, 6);
   const cities = cityLinks();
   const coverage = coverageByCounty();
   const posts = getPosts().slice(0, 3);
@@ -408,6 +412,49 @@ export default function HomePage() {
             </ul>
           </div>
         </div>
+      </section>
+
+      {/* 6b. Commercial lighting, told with real job photos */}
+      <section className="container-page py-16 sm:py-20">
+        <div className="flex flex-wrap items-end justify-between gap-4">
+          <SectionHeading
+            as="h2"
+            eyebrow="Commercial lighting"
+            title="Your sign is your storefront after dark"
+            description="Signs, parking lot pole lights, and building lighting for South Florida businesses. Our crew runs its own bucket truck, so high work happens on our schedule, not a rental company's."
+          />
+          <Link
+            href={routes.service("commercial-lighting")}
+            className="text-sm font-semibold text-accent hover:text-accent-hover"
+          >
+            Explore commercial lighting
+          </Link>
+        </div>
+        <ul className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-3">
+          {[
+            { name: "commercial-lighting-before", label: "Before" },
+            { name: "commercial-lighting-after", label: "After" },
+            { name: "commercial-lighting-night", label: "After, at night" },
+          ].map((photo) => (
+            <li key={photo.name}>
+              <Media
+                src={imagePath(photo.name)}
+                alt={imageAlt(photo.name)}
+                sizes="(min-width: 640px) 33vw, 100vw"
+                className="aspect-[4/5] rounded-2xl border border-border shadow-[var(--shadow-card)]"
+              >
+                <span className="absolute left-4 top-4 rounded-full bg-navy/85 px-3 py-1 text-xs font-semibold uppercase tracking-[0.1em] text-ink-on-dark backdrop-blur">
+                  {photo.label}
+                </span>
+              </Media>
+            </li>
+          ))}
+        </ul>
+        <p className="mt-6 max-w-2xl text-ink-muted">
+          A recent storefront sign relight by our crew: from damaged and dark to
+          every letter burning bright. If your sign or your lot has gone dark,
+          call and we will get eyes on it fast.
+        </p>
       </section>
 
       {/* 7. Emergency strip */}

@@ -16,6 +16,7 @@ const SERVICE_IMAGE: Record<string, string> = {
   "electrical-panel-upgrade": "damean-panel",
   "electrical-service-rebuild": "service-entrance",
   "emergency-electrician": "damean-rooftop",
+  "commercial-lighting": "commercial-lighting-night",
   "pool-electrical": "damean-pool",
   "ev-charger-installation": "damean-ev",
   "meter-bank-replacement": "damean-meter",
@@ -84,6 +85,12 @@ const IMAGE_ALT: Record<string, string> = {
   "damean-cabletray": "A Ghost Crown Electric electrician running cable in a commercial ceiling",
   "damean-recessed": "A Ghost Crown Electric electrician installing recessed lighting in a ceiling",
   "damean-outlet": "A Ghost Crown Electric electrician wiring a new wall outlet",
+  // Real Ghost Crown job photography (client-supplied): a storefront sign
+  // relight, before and after. Unlike the illustrative imagery above, these may
+  // be described as actual Ghost Crown work.
+  "commercial-lighting-before": "The Ghost Crown Electric bucket truck at a storefront sign repair in progress",
+  "commercial-lighting-after": "The repaired storefront sign at dusk, every letter back in place",
+  "commercial-lighting-night": "The storefront sign fully lit at night after the Ghost Crown relight",
 };
 
 const SERVICE_FALLBACK = "panel-upgrade";

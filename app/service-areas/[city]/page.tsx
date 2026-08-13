@@ -23,6 +23,7 @@ import { CTABand } from "@/components/ui/CTABand";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { HeroTrust } from "@/components/sections/HeroTrust";
 import { CallToActions } from "@/components/sections/CallToActions";
+import { MidPageCTA } from "@/components/sections/MidPageCTA";
 import { JsonLd } from "@/components/seo/JsonLd";
 
 export const dynamicParams = false;
@@ -207,6 +208,12 @@ export default async function CityPage({
           </div>
         </section>
       ) : null}
+
+      {/* Mid-page conversion strip */}
+      <MidPageCTA
+        title={`Need an electrician in ${city.name}?`}
+        body="Call now or send the request. We will talk it through right away, day or night."
+      />
 
       {/* Neighborhoods */}
       {city.neighborhoods.length > 0 ? (

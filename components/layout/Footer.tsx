@@ -24,7 +24,7 @@ function LicenseLine({ label, number }: { label: string; number: string }) {
 
 export function Footer() {
   const business = getBusiness();
-  const services = getServices().slice(0, 6);
+  const services = getServices().slice(0, 7);
   const cities = getCities().slice(0, 6);
   const year = new Date().getFullYear();
 

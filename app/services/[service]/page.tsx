@@ -24,6 +24,7 @@ import { CTABand } from "@/components/ui/CTABand";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { HeroTrust } from "@/components/sections/HeroTrust";
 import { CallToActions } from "@/components/sections/CallToActions";
+import { MidPageCTA } from "@/components/sections/MidPageCTA";
 import { JsonLd } from "@/components/seo/JsonLd";
 
 export const dynamicParams = false;
@@ -261,6 +262,9 @@ export default async function ServicePage({
           </div>
         </section>
       ) : null}
+
+      {/* Mid-page conversion strip */}
+      <MidPageCTA />
 
       {/* Local sections */}
       {service.localSections.length > 0 ? (

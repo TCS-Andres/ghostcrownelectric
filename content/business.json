@@ -11,7 +11,7 @@
   "address": {"locality": "North Lauderdale", "region": "FL", "country": "US", "streetIsPlaceholder": true},
   "hours": "Monday to Friday, with emergency response day or night",
   "licenses": [
-    {"label": "Florida Certified Electrical Contractor", "number": "PLACEHOLDER"},
+    {"label": "Florida Certified Electrical Contractor", "number": "EC13010704"},
     {"label": "Broward County Master Electrician", "number": "PLACEHOLDER"}
   ],
   "serviceArea": "All of Broward and Palm Beach counties, south to North Miami Beach",
