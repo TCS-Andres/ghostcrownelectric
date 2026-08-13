@@ -96,7 +96,7 @@ export default function BookPage() {
 
           <div className="lg:pt-2">
             <h2 className="font-heading text-2xl font-semibold text-ink">
-              How it works
+              How It Works
             </h2>
             <p className="mt-3 text-ink-muted">
               Three steps, start to finish, with the same licensed team on the call

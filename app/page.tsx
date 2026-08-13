@@ -19,8 +19,8 @@ import type { Faq } from "@/lib/content";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { StatValue } from "@/components/ui/StatValue";
 import { GradientBadge, BADGE_TONES } from "@/components/ui/GradientBadge";
-import { HeroTrust } from "@/components/sections/HeroTrust";
 import { Media } from "@/components/ui/Media";
+import { BeforeAfterSlider } from "@/components/ui/BeforeAfterSlider";
 import { ServiceCard } from "@/components/ui/ServiceCard";
 import { CoverageMap } from "@/components/ui/CoverageMap";
 import { CTABand } from "@/components/ui/CTABand";
@@ -33,6 +33,50 @@ import { JsonLd } from "@/components/seo/JsonLd";
 const TITLE = "Electrician in Broward County, FL | Ghost Crown Electric";
 const DESCRIPTION =
   "Licensed electrician serving Broward County and South Florida, day or night. One accountable team from the first call to the final inspection. Call for honest pricing.";
+
+// Real job photos from the field, shown in the "Recent work" gallery.
+const WORK_PHOTOS: { src: string; alt: string; label: string }[] = [
+  {
+    src: "/images/work-service-rebuild.jpg",
+    alt: "An exterior electrical service entrance rebuilt with new conduit and wiring",
+    label: "Service entrance rebuild",
+  },
+  {
+    src: "/images/work-meter-bank.jpg",
+    alt: "A multi-tenant electrical meter bank on a building exterior",
+    label: "Multi-meter service",
+  },
+  {
+    src: "/images/work-service-upgrade.jpg",
+    alt: "A Ghost Crown Electric electrician upgrading an exterior electrical service",
+    label: "Service upgrade in progress",
+  },
+  {
+    src: "/images/work-panel-rewire.jpg",
+    alt: "An electrical panel rewired with neatly routed circuits",
+    label: "Panel rewire",
+  },
+  {
+    src: "/images/work-service-subpanels.jpg",
+    alt: "A new exterior meter, service disconnect, and subpanels on a stucco wall",
+    label: "Meter, service & subpanels",
+  },
+  {
+    src: "/images/work-bucket-truck.jpg",
+    alt: "The Ghost Crown Electric bucket truck at a job site",
+    label: "Our bucket truck on site",
+  },
+  {
+    src: "/images/work-panel-replace.jpg",
+    alt: "A residential electrical panel being replaced",
+    label: "Panel replacement",
+  },
+  {
+    src: "/images/work-residential-dusk.jpg",
+    alt: "A South Florida home at dusk after an electrical service upgrade",
+    label: "Residential service, Broward",
+  },
+];
 
 // The six FAQs previewed on the home page. Written once and used for both the
 // visible accordion and the FAQPage schema so the markup matches the page.
@@ -110,6 +154,17 @@ export default function HomePage() {
   const posts = getPosts().slice(0, 3);
   const pageUrl = absoluteUrl(routes.home);
 
+  // The value stack under the hero: the two license credentials (with the state
+  // license number on the one that carries it) and the day-or-night line.
+  const valueStack = [
+    ...business.licenses.map((license) =>
+      license.number && license.number !== "PLACEHOLDER"
+        ? `${license.label} #${license.number}`
+        : license.label,
+    ),
+    "Available day or night",
+  ];
+
   const nodes: JsonLdNode[] = [
     electricianNode(business),
     founderNode(business),
@@ -152,11 +207,13 @@ export default function HomePage() {
         <div className="container-page flex min-h-[40rem] flex-col justify-center py-16 sm:py-20 lg:min-h-[48rem] lg:py-24">
           <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
             <div className="max-w-2xl">
-              <HeroTrust />
+              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-accent-bright">
+                Residential &amp; Commercial Electrical Services
+              </p>
 
-              <h1 className="mt-5 text-4xl text-ink-on-dark sm:text-5xl lg:text-6xl">
+              <h1 className="mt-4 text-4xl text-ink-on-dark sm:text-5xl lg:text-6xl">
                 Electrician in Broward County,{" "}
-                <span className="text-accent-bright">on call day or night.</span>
+                <span className="text-accent-bright">on Call Day or Night.</span>
               </h1>
 
               <p className="mt-5 max-w-2xl text-lg text-ink-muted-on-dark">
@@ -192,6 +249,23 @@ export default function HomePage() {
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* 2. Value stack: the thin credentials strip under the hero video */}
+      <section className="border-b border-border bg-surface">
+        <div className="container-page">
+          <ul className="grid grid-cols-1 gap-x-8 gap-y-4 py-6 sm:grid-cols-3">
+            {valueStack.map((item, index) => (
+              <li key={item} className="group flex items-center gap-2.5">
+                <GradientBadge
+                  tone={BADGE_TONES[index % BADGE_TONES.length]}
+                  size="sm"
+                />
+                <span className="text-sm font-semibold text-ink">{item}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
@@ -341,24 +415,33 @@ export default function HomePage() {
             title="Two jobs that tell you how we work"
           />
           <div className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-[0.85fr_1.15fr] lg:gap-10">
-            <Media
-              src="/images/damean-cabletray.jpg"
-              alt="A Ghost Crown Electric electrician running cable in a commercial ceiling"
-              sizes="(min-width: 1024px) 35vw, 100vw"
-              className="aspect-[4/3] rounded-2xl border border-navy-600 lg:aspect-auto lg:h-full"
-            />
+            <div>
+              <BeforeAfterSlider
+                beforeSrc="/images/meter-fire-before.jpg"
+                afterSrc="/images/meter-fire-after.jpg"
+                beforeAlt="A nine-meter service bank and the surrounding wall with heavy fire and soot damage"
+                afterAlt="The same nine-meter service bank and wall fully restored, cleaned, and repainted"
+                sizes="(min-width: 1024px) 35vw, 100vw"
+                className="aspect-[3/4] rounded-2xl border border-navy-600"
+              />
+              <p className="mt-3 text-sm text-ink-muted-on-dark">
+                Drag the slider: the nine-meter bank and the fire-damaged
+                wall around it, fully restored.
+              </p>
+            </div>
             <ul className="grid grid-cols-1 gap-6">
               <li>
                 <div className="h-full rounded-2xl border border-navy-600 bg-surface-dark-2 p-6 sm:p-7">
                   <h3 className="font-heading text-lg font-semibold text-ink-on-dark">
-                    A ten-meter bank, back to life after a vehicle fire
+                    A nine-meter bank, back to life after a fire
                   </h3>
                   <p className="mt-3 text-ink-muted-on-dark">
-                    A vehicle fire took out a ten-meter meter bank and left the
-                    whole building dark. Tenants had been without power for a week.
-                    We got in, rebuilt the electrical in a week, and the building
-                    was back online within two weeks of the fire. That is the kind
-                    of situation you want handled by someone who has done it before.
+                    A fire took out a nine-meter meter bank and left the whole
+                    building dark. Tenants had been without power for a week. We
+                    got in, rebuilt the electrical, cleaned up and repaired the
+                    wall around it, and had the building back online within two
+                    weeks of the fire. That is the kind of situation you want
+                    handled by someone who has done it before.
                   </p>
                 </div>
               </li>
@@ -379,6 +462,33 @@ export default function HomePage() {
             </ul>
           </div>
         </div>
+      </section>
+
+      {/* 6a. Recent work gallery: real job photos from the field */}
+      <section className="container-page py-16 sm:py-20">
+        <SectionHeading
+          as="h2"
+          eyebrow="Recent work"
+          title="Straight from our trucks"
+          description="Real panels, meter banks, and service upgrades our crew has handled across Broward County and South Florida."
+        />
+        <ul className="mt-10 grid grid-cols-2 gap-4 sm:gap-5 md:grid-cols-3 lg:grid-cols-4">
+          {WORK_PHOTOS.map((photo) => (
+            <li key={photo.src}>
+              <Media
+                src={photo.src}
+                alt={photo.alt}
+                sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
+                className="aspect-[4/5] rounded-xl border border-border shadow-[var(--shadow-card)]"
+                imageClassName="transition-transform duration-300 hover:scale-[1.03]"
+              >
+                <span className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy/85 via-navy/40 to-transparent px-3 pb-2.5 pt-10 text-xs font-semibold text-ink-on-dark">
+                  {photo.label}
+                </span>
+              </Media>
+            </li>
+          ))}
+        </ul>
       </section>
 
       {/* 6b. Commercial lighting, told with real job photos */}
@@ -429,7 +539,7 @@ export default function HomePage() {
         <div className="container-page flex flex-col items-start gap-5 py-10 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <h2 className="font-heading text-2xl font-bold sm:text-3xl">
-              Power out, or something that does not feel safe?
+              Power Out, or Something That Does Not Feel Safe?
             </h2>
             <p className="mt-1.5 font-medium text-accent-bright-ink/80">
               Call day or night. We will talk it through right away and head your

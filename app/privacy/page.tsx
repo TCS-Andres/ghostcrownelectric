@@ -57,7 +57,7 @@ export default function PrivacyPage() {
           <div className="mt-10 flex flex-col gap-10 leading-relaxed text-ink-muted">
             <section>
               <h2 className="font-heading text-xl font-semibold text-ink">
-                What we collect
+                What We Collect
               </h2>
               <p className="mt-3">
                 When you reach out through our contact form, we collect your
@@ -69,7 +69,7 @@ export default function PrivacyPage() {
 
             <section>
               <h2 className="font-heading text-xl font-semibold text-ink">
-                How we use it
+                How We Use It
               </h2>
               <p className="mt-3">
                 We use what you share to respond to your request, to understand
@@ -80,7 +80,7 @@ export default function PrivacyPage() {
 
             <section>
               <h2 className="font-heading text-xl font-semibold text-ink">
-                Call and text consent
+                Call and Text Consent
               </h2>
               <p className="mt-3">
                 By submitting the form or giving us your number, you consent to
@@ -93,7 +93,7 @@ export default function PrivacyPage() {
 
             <section>
               <h2 className="font-heading text-xl font-semibold text-ink">
-                We do not sell your data
+                We Do Not Sell Your Data
               </h2>
               <p className="mt-3">
                 We do not sell, rent, or trade your personal information to
@@ -104,7 +104,7 @@ export default function PrivacyPage() {
 
             <section>
               <h2 className="font-heading text-xl font-semibold text-ink">
-                Website analytics
+                Website Analytics
               </h2>
               <p className="mt-3">
                 We may use basic website analytics to understand how visitors

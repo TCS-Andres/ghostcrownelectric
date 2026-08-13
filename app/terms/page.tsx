@@ -57,7 +57,7 @@ export default function TermsPage() {
           <div className="mt-10 flex flex-col gap-10 leading-relaxed text-ink-muted">
             <section>
               <h2 className="font-heading text-xl font-semibold text-ink">
-                About this site
+                About This Site
               </h2>
               <p className="mt-3">
                 The content on this website is provided for general information
@@ -70,7 +70,7 @@ export default function TermsPage() {
 
             <section>
               <h2 className="font-heading text-xl font-semibold text-ink">
-                No guarantee without an on-site assessment
+                No Guarantee Without an On-Site Assessment
               </h2>
               <p className="mt-3">
                 Every electrical situation is different. We do not guarantee a
@@ -83,7 +83,7 @@ export default function TermsPage() {
 
             <section>
               <h2 className="font-heading text-xl font-semibold text-ink">
-                Pricing information
+                Pricing Information
               </h2>
               <p className="mt-3">
                 Any figures shown on this site are general references meant to

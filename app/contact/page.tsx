@@ -120,7 +120,7 @@ export default function ContactPage() {
             {/* Licensing labels, numbers held per PLACEHOLDERS.md */}
             <div className="rounded-xl border border-border bg-surface-2 p-6">
               <h2 className="font-heading text-base font-semibold text-ink">
-                Licensed and accountable
+                Licensed and Accountable
               </h2>
               <ul className="mt-4 flex flex-col gap-2">
                 {business.licenses.map((license) => (
@@ -143,7 +143,7 @@ export default function ContactPage() {
           {/* Form */}
           <div>
             <h2 className="font-heading text-2xl font-semibold text-ink">
-              Send us the details
+              Send Us the Details
             </h2>
             <p className="mt-3 text-ink-muted">
               Tell us what is going on and how to reach you. If it is urgent,

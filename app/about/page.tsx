@@ -90,7 +90,7 @@ export default function AboutPage() {
                   About the company
                 </span>
                 <h1 className="mt-3 text-3xl text-ink-on-dark sm:text-4xl md:text-5xl">
-                  The licensed team behind the work
+                  The Licensed Team Behind the Work
                 </h1>
                 <p className="mt-5 text-lg text-ink-muted-on-dark">
                   Ghost Crown Electric is a licensed electrical service, repair, and

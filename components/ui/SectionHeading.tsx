@@ -1,5 +1,6 @@
 import type { ElementType, ReactNode } from "react";
 import { cn } from "@/lib/cn";
+import { titleCase } from "@/lib/text";
 
 interface SectionHeadingProps {
   /** Small overline label above the title, in gold. */
@@ -48,7 +49,7 @@ export function SectionHeading({
           onDark ? "text-ink-on-dark" : "text-ink",
         )}
       >
-        {title}
+        {typeof title === "string" ? titleCase(title) : title}
       </Heading>
       {description ? (
         <p
