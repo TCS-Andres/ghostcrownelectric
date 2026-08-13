@@ -197,11 +197,9 @@ export function generateMetadata(): Metadata {
 export default function HomePage() {
   const business = getBusiness();
   const services = getServices();
-  // Commercial lighting gets its own dedicated section below, so the featured
-  // grid skips it rather than saying the same thing twice.
-  const featuredServices = services
-    .filter((service) => service.slug !== "commercial-lighting")
-    .slice(0, 6);
+  // The top services (commercial lighting included). The uneven last grid row is
+  // filled by a call-to-action card below.
+  const featuredServices = services.slice(0, 7);
   const cities = cityLinks();
   const coverage = coverageByCounty();
   const posts = getPosts().slice(0, 3);
@@ -358,6 +356,27 @@ export default function HomePage() {
                 <ServiceCard service={service} titleAs="h3" />
               </li>
             ))}
+            {/* The seventh card leaves a gap in the last row; fill it with the
+                two main calls to action. */}
+            <li className="sm:col-span-2">
+              <div className="relative flex h-full min-h-[13rem] flex-col justify-center overflow-hidden rounded-2xl bg-surface-dark p-8 text-ink-on-dark">
+                <div
+                  aria-hidden="true"
+                  className="glow-ambient pointer-events-none absolute -right-16 -top-16 h-72 w-72 opacity-40"
+                />
+                <div className="relative">
+                  <h3 className="font-heading text-2xl font-bold text-ink-on-dark sm:text-3xl">
+                    Need Help Choosing a Service?
+                  </h3>
+                  <p className="mt-2 max-w-xl text-ink-muted-on-dark">
+                    Call and a licensed electrician will point you the right way,
+                    or send a request and we will get back to you. No obligation,
+                    day or night.
+                  </p>
+                  <CallToActions className="mt-6" />
+                </div>
+              </div>
+            </li>
           </ul>
         </div>
       </section>
