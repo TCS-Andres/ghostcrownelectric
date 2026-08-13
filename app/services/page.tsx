@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
+import { Users, BadgeDollarSign, Clock } from "lucide-react";
 import { getServices } from "@/lib/content";
 import { routes } from "@/lib/routes";
 import { buildMetadata, absoluteUrl } from "@/lib/seo";
@@ -21,10 +23,19 @@ const DESCRIPTION =
   "Licensed electrical service, repair, and restoration across Broward County and South Florida. One accountable team from the first call to the final inspection.";
 
 // Short assurances shown above the grid. Plain promises, no hype.
-const ASSURANCES = [
-  "One licensed crew, from the first call to the final inspection",
-  "One honest price before any bigger work, so there are no surprises",
-  "We answer day or night, and we meet the inspector in person",
+const ASSURANCES: { text: string; icon: ReactNode }[] = [
+  {
+    text: "One licensed crew, from the first call to the final inspection",
+    icon: <Users size={18} aria-hidden="true" />,
+  },
+  {
+    text: "One honest price before any bigger work, so there are no surprises",
+    icon: <BadgeDollarSign size={18} aria-hidden="true" />,
+  },
+  {
+    text: "We answer day or night, and we meet the inspector in person",
+    icon: <Clock size={18} aria-hidden="true" />,
+  },
 ];
 
 export function generateMetadata(): Metadata {
@@ -67,13 +78,15 @@ export default function ServicesIndexPage() {
         {services.length > 0 ? (
           <ul className="mt-8 grid grid-cols-1 gap-x-8 gap-y-4 sm:grid-cols-3">
             {ASSURANCES.map((item, index) => (
-              <li key={item} className="group flex items-start gap-3">
+              <li key={item.text} className="group flex items-start gap-3">
                 <GradientBadge
                   tone={BADGE_TONES[index % BADGE_TONES.length]}
                   size="sm"
-                />
+                >
+                  {item.icon}
+                </GradientBadge>
                 <span className="text-sm leading-snug text-ink-muted">
-                  {item}
+                  {item.text}
                 </span>
               </li>
             ))}

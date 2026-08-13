@@ -1,6 +1,21 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import {
+  ShieldCheck,
+  BadgeDollarSign,
+  Clock,
+  FileCheck2,
+  Zap,
+  Gauge,
+  PlugZap,
+  Cable,
+  SquareStack,
+  Truck,
+  CircuitBoard,
+  House,
+} from "lucide-react";
 import { getBusiness, getServices, getPosts } from "@/lib/content";
 import { routes } from "@/lib/routes";
 import { buildMetadata, absoluteUrl } from "@/lib/seo";
@@ -19,6 +34,7 @@ import type { Faq } from "@/lib/content";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { StatValue } from "@/components/ui/StatValue";
 import { GradientBadge, BADGE_TONES } from "@/components/ui/GradientBadge";
+import { ExpandingCards, type CardItem } from "@/components/ui/expanding-cards";
 import { Media } from "@/components/ui/Media";
 import { BeforeAfterSlider } from "@/components/ui/BeforeAfterSlider";
 import { ServiceCard } from "@/components/ui/ServiceCard";
@@ -34,47 +50,80 @@ const TITLE = "Electrician in Broward County, FL | Ghost Crown Electric";
 const DESCRIPTION =
   "Licensed electrician serving Broward County and South Florida, day or night. One accountable team from the first call to the final inspection. Call for honest pricing.";
 
-// Real job photos from the field, shown in the "Recent work" gallery.
-const WORK_PHOTOS: { src: string; alt: string; label: string }[] = [
+// Real job photos from the field, shown in the interactive "Recent work"
+// gallery. Each card carries a short note on what the job was and its own icon.
+const WORK_ITEMS: CardItem[] = [
   {
-    src: "/images/work-service-rebuild.jpg",
+    id: "service-rebuild",
+    title: "Service Entrance Rebuild",
+    description:
+      "A full exterior service entrance rebuilt with new conduit, weatherhead, and wiring, then permitted and inspected.",
+    imgSrc: "/images/work-service-rebuild.jpg",
     alt: "An exterior electrical service entrance rebuilt with new conduit and wiring",
-    label: "Service entrance rebuild",
+    icon: <Zap size={24} aria-hidden="true" />,
   },
   {
-    src: "/images/work-meter-bank.jpg",
+    id: "meter-bank",
+    title: "Multi-Meter Service",
+    description:
+      "A multi-tenant meter bank serviced on a building exterior, keeping a whole building's power safe and up to code.",
+    imgSrc: "/images/work-meter-bank.jpg",
     alt: "A multi-tenant electrical meter bank on a building exterior",
-    label: "Multi-meter service",
+    icon: <Gauge size={24} aria-hidden="true" />,
   },
   {
-    src: "/images/work-service-upgrade.jpg",
+    id: "service-upgrade",
+    title: "Service Upgrade",
+    description:
+      "Upgrading an exterior service to carry a modern home's load, from air conditioning to EV charging.",
+    imgSrc: "/images/work-service-upgrade.jpg",
     alt: "A Ghost Crown Electric electrician upgrading an exterior electrical service",
-    label: "Service upgrade in progress",
+    icon: <PlugZap size={24} aria-hidden="true" />,
   },
   {
-    src: "/images/work-panel-rewire.jpg",
+    id: "panel-rewire",
+    title: "Panel Rewire",
+    description:
+      "An electrical panel rewired with every circuit cleanly routed and clearly labeled.",
+    imgSrc: "/images/work-panel-rewire.jpg",
     alt: "An electrical panel rewired with neatly routed circuits",
-    label: "Panel rewire",
+    icon: <Cable size={24} aria-hidden="true" />,
   },
   {
-    src: "/images/work-service-subpanels.jpg",
+    id: "subpanels",
+    title: "Meter, Service & Subpanels",
+    description:
+      "A new meter, service disconnect, and subpanels set clean on a stucco wall.",
+    imgSrc: "/images/work-service-subpanels.jpg",
     alt: "A new exterior meter, service disconnect, and subpanels on a stucco wall",
-    label: "Meter, service & subpanels",
+    icon: <SquareStack size={24} aria-hidden="true" />,
   },
   {
-    src: "/images/work-bucket-truck.jpg",
+    id: "bucket-truck",
+    title: "Our Bucket Truck On Site",
+    description:
+      "Our own bucket truck on the job, so overhead service and sign work happens on our schedule, not a rental company's.",
+    imgSrc: "/images/work-bucket-truck.jpg",
     alt: "The Ghost Crown Electric bucket truck at a job site",
-    label: "Our bucket truck on site",
+    icon: <Truck size={24} aria-hidden="true" />,
   },
   {
-    src: "/images/work-panel-replace.jpg",
+    id: "panel-replace",
+    title: "Panel Replacement",
+    description:
+      "A residential panel replaced with a modern, code-compliant one, often the fix an insurer wants to see.",
+    imgSrc: "/images/work-panel-replace.jpg",
     alt: "A residential electrical panel being replaced",
-    label: "Panel replacement",
+    icon: <CircuitBoard size={24} aria-hidden="true" />,
   },
   {
-    src: "/images/work-residential-dusk.jpg",
+    id: "residential-dusk",
+    title: "Residential Service, Broward",
+    description:
+      "A Broward County home at dusk after a completed service upgrade, back to full, reliable power.",
+    imgSrc: "/images/work-residential-dusk.jpg",
     alt: "A South Florida home at dusk after an electrical service upgrade",
-    label: "Residential service, Broward",
+    icon: <House size={24} aria-hidden="true" />,
   },
 ];
 
@@ -114,22 +163,26 @@ const HOME_FAQS: Faq[] = [
 ];
 
 // The reasons to choose Ghost Crown, shown beside a photo of the work.
-const WHY_FEATURES: { title: string; body: string }[] = [
+const WHY_FEATURES: { title: string; body: string; icon: ReactNode }[] = [
   {
     title: "Licensed and certified",
     body: "Florida Certified Electrical Contractor and Broward County Master Electrician, in a market full of unlicensed labor.",
+    icon: <ShieldCheck size={18} aria-hidden="true" />,
   },
   {
     title: "One honest price",
     body: "We forecast the job, quote it once, and never change the number mid job. No surprises when the work is done.",
+    icon: <BadgeDollarSign size={18} aria-hidden="true" />,
   },
   {
     title: "Day or night",
     body: "Power does not wait for business hours. We answer the phone and show up when we say we will.",
+    icon: <Clock size={18} aria-hidden="true" />,
   },
   {
     title: "A documented record",
     body: "286 permitted projects on public record, ranked in the top tier of Florida contractors by permit quality.",
+    icon: <FileCheck2 size={18} aria-hidden="true" />,
   },
 ];
 
@@ -155,14 +208,22 @@ export default function HomePage() {
   const pageUrl = absoluteUrl(routes.home);
 
   // The value stack under the hero: the two license credentials (with the state
-  // license number on the one that carries it) and the day-or-night line.
-  const valueStack = [
-    ...business.licenses.map((license) =>
-      license.number && license.number !== "PLACEHOLDER"
-        ? `${license.label} #${license.number}`
-        : license.label,
-    ),
-    "Available day or night",
+  // license number on the one that carries it) and the day-or-night line, each
+  // with its own icon.
+  const valueStack: { label: string; icon: ReactNode }[] = [
+    ...business.licenses.map((license, index) => ({
+      label:
+        license.number && license.number !== "PLACEHOLDER"
+          ? `${license.label} #${license.number}`
+          : license.label,
+      icon:
+        index === 0 ? (
+          <ShieldCheck size={18} aria-hidden="true" />
+        ) : (
+          <Zap size={18} aria-hidden="true" />
+        ),
+    })),
+    { label: "Available day or night", icon: <Clock size={18} aria-hidden="true" /> },
   ];
 
   const nodes: JsonLdNode[] = [
@@ -257,12 +318,16 @@ export default function HomePage() {
         <div className="container-page">
           <ul className="grid grid-cols-1 gap-x-8 gap-y-4 py-6 sm:grid-cols-3">
             {valueStack.map((item, index) => (
-              <li key={item} className="group flex items-center gap-2.5">
+              <li key={item.label} className="group flex items-center gap-2.5">
                 <GradientBadge
                   tone={BADGE_TONES[index % BADGE_TONES.length]}
                   size="sm"
-                />
-                <span className="text-sm font-semibold text-ink">{item}</span>
+                >
+                  {item.icon}
+                </GradientBadge>
+                <span className="text-sm font-semibold text-ink">
+                  {item.label}
+                </span>
               </li>
             ))}
           </ul>
@@ -320,7 +385,9 @@ export default function HomePage() {
                     tone={BADGE_TONES[index % BADGE_TONES.length]}
                     size="sm"
                     className="mt-0.5"
-                  />
+                  >
+                    {feature.icon}
+                  </GradientBadge>
                   <div>
                     <h3 className="font-heading text-base font-semibold text-ink">
                       {feature.title}
@@ -470,25 +537,9 @@ export default function HomePage() {
           as="h2"
           eyebrow="Recent work"
           title="Straight from our trucks"
-          description="Real panels, meter banks, and service upgrades our crew has handled across Broward County and South Florida."
+          description="Real panels, meter banks, and service upgrades our crew has handled across Broward County and South Florida. Hover or tap a photo to see the job."
         />
-        <ul className="mt-10 grid grid-cols-2 gap-4 sm:gap-5 md:grid-cols-3 lg:grid-cols-4">
-          {WORK_PHOTOS.map((photo) => (
-            <li key={photo.src}>
-              <Media
-                src={photo.src}
-                alt={photo.alt}
-                sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
-                className="aspect-[4/5] rounded-xl border border-border shadow-[var(--shadow-card)]"
-                imageClassName="transition-transform duration-300 hover:scale-[1.03]"
-              >
-                <span className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy/85 via-navy/40 to-transparent px-3 pb-2.5 pt-10 text-xs font-semibold text-ink-on-dark">
-                  {photo.label}
-                </span>
-              </Media>
-            </li>
-          ))}
-        </ul>
+        <ExpandingCards items={WORK_ITEMS} className="mt-10" />
       </section>
 
       {/* 6b. Commercial lighting, told with real job photos */}

@@ -214,5 +214,16 @@ export default function CoverageMapGL({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selected]);
 
-  return <div ref={containerRef} className="absolute inset-0" />;
+  // The outer wrapper owns the fill positioning (absolute inset-0). Mapbox mounts
+  // into the INNER div and adds its own `.mapboxgl-map` class. We must not put the
+  // positioning on that inner element: mapbox-gl.css sets `.mapboxgl-map {
+  // position: relative }`, and under Tailwind v4 that unlayered rule beats the
+  // layered `absolute` utility (unlayered CSS always wins over @layer), which
+  // would flip the container back to `relative`, collapse it to height 0, and
+  // render a blank box. Filling via h-full/w-full avoids the position conflict.
+  return (
+    <div className="absolute inset-0">
+      <div ref={containerRef} className="h-full w-full" />
+    </div>
+  );
 }
