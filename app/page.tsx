@@ -18,6 +18,8 @@ import {
 import type { Faq } from "@/lib/content";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { StatValue } from "@/components/ui/StatValue";
+import { GradientBadge, BADGE_TONES } from "@/components/ui/GradientBadge";
+import { HeroTrust } from "@/components/sections/HeroTrust";
 import { Media } from "@/components/ui/Media";
 import { ServiceCard } from "@/components/ui/ServiceCard";
 import { CoverageMap } from "@/components/ui/CoverageMap";
@@ -114,12 +116,6 @@ export default function HomePage() {
     faqPageNode(HOME_FAQS, pageUrl),
   ];
 
-  const trustItems = [
-    ...business.licenses.map((license) => license.label),
-    `${business.stats.permittedProjects} permitted projects`,
-    "Available day or night",
-  ];
-
   return (
     <>
       <JsonLd data={graph(nodes)} />
@@ -156,17 +152,7 @@ export default function HomePage() {
         <div className="container-page flex min-h-[40rem] flex-col justify-center py-16 sm:py-20 lg:min-h-[48rem] lg:py-24">
           <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
             <div className="max-w-2xl">
-              <ul className="flex flex-wrap gap-2 text-sm text-ink-muted-on-dark">
-                {business.licenses.map((license) => (
-                  <li key={license.label} className="inline-flex items-center gap-2">
-                    <span
-                      aria-hidden="true"
-                      className="h-1.5 w-1.5 rounded-full bg-accent-bright"
-                    />
-                    {license.label}
-                  </li>
-                ))}
-              </ul>
+              <HeroTrust />
 
               <h1 className="mt-5 text-4xl text-ink-on-dark sm:text-5xl lg:text-6xl">
                 Electrician in Broward County,{" "}
@@ -206,25 +192,6 @@ export default function HomePage() {
               </p>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* 2. Trust bar */}
-      <section className="border-b border-border bg-surface">
-        <div className="container-page">
-          <ul className="grid grid-cols-2 gap-x-6 gap-y-4 py-6 sm:grid-cols-4">
-            {trustItems.map((item) => (
-              <li key={item} className="flex items-center gap-2.5">
-                <span
-                  aria-hidden="true"
-                  className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-accent/10 text-accent"
-                >
-                  <CheckIcon />
-                </span>
-                <span className="text-sm font-semibold text-ink">{item}</span>
-              </li>
-            ))}
-          </ul>
         </div>
       </section>
 
@@ -273,14 +240,13 @@ export default function HomePage() {
               description="You cannot see your electrical system, so you are trusting the person who works on it. Here is why property managers and homeowners keep calling us back."
             />
             <ul className="mt-8 flex flex-col gap-5">
-              {WHY_FEATURES.map((feature) => (
-                <li key={feature.title} className="flex gap-3.5">
-                  <span
-                    aria-hidden="true"
-                    className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-accent/10 text-accent"
-                  >
-                    <CheckIcon />
-                  </span>
+              {WHY_FEATURES.map((feature, index) => (
+                <li key={feature.title} className="group flex gap-3.5">
+                  <GradientBadge
+                    tone={BADGE_TONES[index % BADGE_TONES.length]}
+                    size="sm"
+                    className="mt-0.5"
+                  />
                   <div>
                     <h3 className="font-heading text-base font-semibold text-ink">
                       {feature.title}
@@ -643,24 +609,6 @@ export default function HomePage() {
         body="That is the whole promise. We answer, price the job, do the work, and meet the inspector. Reach out and we will tell you plainly what it takes and what it costs."
       />
     </>
-  );
-}
-
-function CheckIcon() {
-  return (
-    <svg
-      width="14"
-      height="14"
-      viewBox="0 0 16 16"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-    >
-      <path d="M3 8.5l3.5 3.5L13 4.5" />
-    </svg>
   );
 }
 

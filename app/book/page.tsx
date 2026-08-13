@@ -12,6 +12,7 @@ import {
 import type { Crumb } from "@/components/layout/Breadcrumbs";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { GradientBadge, BADGE_TONES } from "@/components/ui/GradientBadge";
 import { LeadForm } from "@/components/forms/LeadForm";
 import { JsonLd } from "@/components/seo/JsonLd";
 
@@ -103,13 +104,13 @@ export default function BookPage() {
             </p>
             <ol className="mt-8 flex flex-col gap-6">
               {PLAN.map((step, index) => (
-                <li key={step.title} className="flex gap-4">
-                  <span
-                    aria-hidden="true"
-                    className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-accent font-heading text-base font-bold text-accent-ink"
+                <li key={step.title} className="group flex gap-4">
+                  <GradientBadge
+                    tone={BADGE_TONES[index % BADGE_TONES.length]}
+                    size="md"
                   >
                     {index + 1}
-                  </span>
+                  </GradientBadge>
                   <div>
                     <h3 className="font-heading text-lg font-semibold text-ink">
                       {step.title}

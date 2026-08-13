@@ -22,6 +22,7 @@ import { Card } from "@/components/ui/Card";
 import { Media } from "@/components/ui/Media";
 import { CTABand } from "@/components/ui/CTABand";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
+import { GradientBadge, BADGE_TONES } from "@/components/ui/GradientBadge";
 import { HeroTrust } from "@/components/sections/HeroTrust";
 import { CallToActions } from "@/components/sections/CallToActions";
 import { MidPageCTA } from "@/components/sections/MidPageCTA";
@@ -217,13 +218,13 @@ export default async function ServicePage({
           />
           <ol className="mt-10 flex flex-col gap-6">
             {service.process.map((step, index) => (
-              <li key={step.title} className="flex gap-5">
-                <span
-                  aria-hidden="true"
-                  className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-accent font-heading text-lg font-bold text-accent-ink"
+              <li key={step.title} className="group flex gap-5">
+                <GradientBadge
+                  tone={BADGE_TONES[index % BADGE_TONES.length]}
+                  size="lg"
                 >
                   {index + 1}
-                </span>
+                </GradientBadge>
                 <div>
                   <h3 className="font-heading text-lg font-semibold text-ink">
                     {step.title}

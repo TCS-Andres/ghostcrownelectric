@@ -13,6 +13,7 @@ import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ServiceCard } from "@/components/ui/ServiceCard";
 import { CTABand } from "@/components/ui/CTABand";
+import { GradientBadge, BADGE_TONES } from "@/components/ui/GradientBadge";
 import { JsonLd } from "@/components/seo/JsonLd";
 
 const TITLE = "Electrical Services in Broward County | Ghost Crown Electric";
@@ -60,14 +61,17 @@ export default function ServicesIndexPage() {
           as="h1"
           eyebrow="What we do"
           title="Electrical services for Broward County and South Florida"
-          description="Eight core services cover nearly everything we are called for, from panels and service upgrades to pool electrical and backup power. Not sure which fits? Call and we will point you the right way."
+          description="Our core services cover nearly everything we are called for, from panels and service upgrades to commercial lighting, pool electrical, and everyday repairs. Not sure which fits? Call and we will point you the right way."
         />
 
         {services.length > 0 ? (
-          <ul className="mt-8 grid grid-cols-1 gap-x-8 gap-y-3 sm:grid-cols-3">
-            {ASSURANCES.map((item) => (
-              <li key={item} className="flex items-start gap-2.5">
-                <CheckIcon />
+          <ul className="mt-8 grid grid-cols-1 gap-x-8 gap-y-4 sm:grid-cols-3">
+            {ASSURANCES.map((item, index) => (
+              <li key={item} className="group flex items-start gap-3">
+                <GradientBadge
+                  tone={BADGE_TONES[index % BADGE_TONES.length]}
+                  size="sm"
+                />
                 <span className="text-sm leading-snug text-ink-muted">
                   {item}
                 </span>
@@ -94,24 +98,5 @@ export default function ServicesIndexPage() {
 
       <CTABand />
     </>
-  );
-}
-
-function CheckIcon() {
-  return (
-    <svg
-      width="20"
-      height="20"
-      viewBox="0 0 20 20"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-      className="mt-0.5 shrink-0 text-accent"
-    >
-      <path d="M4 10.5 L8 14.5 L16 5.5" />
-    </svg>
   );
 }

@@ -229,6 +229,16 @@ function orderBySlug<T extends { slug: string }>(
    Public loaders
 ---------------------------------------------------------------------------- */
 
+// The primary, verifiable license number for header/hero/footer display. Returns
+// the first license whose number is a real value (skips any "PLACEHOLDER"
+// sentinel), or null while none is set yet.
+export function primaryLicenseNumber(business: Business): string | null {
+  const licensed = business.licenses.find(
+    (license) => license.number && license.number !== "PLACEHOLDER",
+  );
+  return licensed?.number ?? null;
+}
+
 export function getBusiness(): Business {
   const business = readJsonFile<Business>(
     path.join(CONTENT_DIR, "business.json"),
