@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import { Clock, MessageSquare, BadgeDollarSign, Zap, Cable } from "lucide-react";
+import { BrandIcon } from "@/components/ui/BrandIcon";
 import { getBusiness } from "@/lib/content";
 import { routes } from "@/lib/routes";
 import { buildMetadata, absoluteUrl } from "@/lib/seo";
@@ -28,17 +28,17 @@ const THEMES: { title: string; body: string; icon: ReactNode }[] = [
   {
     title: "We show up when we say we will",
     body: "The time we give you is a promise. People notice when a contractor keeps it, and they remember it.",
-    icon: <Clock size={20} aria-hidden="true" />,
+    icon: <BrandIcon name="call-day-or-night" size={20} />,
   },
   {
     title: "We explain it plainly, then fix it",
     body: "You get the problem in everyday language, what it takes to fix, and what it costs, without being talked down to.",
-    icon: <MessageSquare size={20} aria-hidden="true" />,
+    icon: <BrandIcon name="five-star-work" size={20} />,
   },
   {
     title: "The number we quote is the number you pay",
     body: "We price the job once, before the work starts, and we stand behind it. No surprises at the end.",
-    icon: <BadgeDollarSign size={20} aria-hidden="true" />,
+    icon: <BrandIcon name="one-honest-number" size={20} />,
   },
 ];
 
@@ -104,7 +104,7 @@ export default function ReviewsPage() {
           <div className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-2">
             <Card as="article" className="flex h-full flex-col">
               <GradientBadge tone="cyan" size="md" className="mb-4">
-                <Zap size={20} aria-hidden="true" />
+                <BrandIcon name="meter-bank" size={20} />
               </GradientBadge>
               <h3 className="font-heading text-xl font-semibold text-ink">
                 A nine-meter bank, back to life after a fire
@@ -122,7 +122,7 @@ export default function ReviewsPage() {
             </Card>
             <Card as="article" className="flex h-full flex-col">
               <GradientBadge tone="gold" size="md" className="mb-4">
-                <Cable size={20} aria-hidden="true" />
+                <BrandIcon name="pool-spa-electrical" size={20} />
               </GradientBadge>
               <h3 className="font-heading text-xl font-semibold text-ink">
                 A 150-foot pool rewire, and a handshake from the inspector

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Mail, Map, MapPin, PhoneCall, Clock, ShieldCheck } from "lucide-react";
+import { Mail } from "lucide-react";
+import { BrandIcon } from "@/components/ui/BrandIcon";
 import { getBusiness, getServices, primaryLicenseNumber } from "@/lib/content";
 import { routes } from "@/lib/routes";
 import { buildMetadata, absoluteUrl } from "@/lib/seo";
@@ -38,7 +39,7 @@ export default function ContactPage() {
   const contactMethods = [
     {
       label: "Phone",
-      icon: <PhoneCall size={20} aria-hidden="true" />,
+      icon: <BrandIcon name="call-day-or-night" size={20} />,
       value: (
         <a
           href={`tel:${business.phoneTel}`}
@@ -63,17 +64,17 @@ export default function ContactPage() {
     },
     {
       label: "Based in",
-      icon: <MapPin size={20} aria-hidden="true" />,
+      icon: <BrandIcon name="service-area-pin" size={20} />,
       value: `${business.address.locality}, ${business.address.region}`,
     },
     {
       label: "Hours",
-      icon: <Clock size={20} aria-hidden="true" />,
+      icon: <BrandIcon name="book-a-visit" size={20} />,
       value: business.hours,
     },
     {
       label: "Service area",
-      icon: <Map size={20} aria-hidden="true" />,
+      icon: <BrandIcon name="service-truck" size={20} />,
       value: business.serviceArea,
     },
   ];
@@ -137,7 +138,7 @@ export default function ContactPage() {
             {/* Licensing labels with the live state license number */}
             <div className="flex items-start gap-3.5 rounded-xl border border-border bg-surface-2 p-6">
               <GradientBadge tone="blue" size="md">
-                <ShieldCheck size={20} aria-hidden="true" />
+                <BrandIcon name="licensed-shield" size={20} />
               </GradientBadge>
               <div>
                 <h2 className="font-heading text-base font-semibold text-ink">

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import { ShieldCheck, Clock, BadgeCheck, BadgeDollarSign } from "lucide-react";
+import { BrandIcon } from "@/components/ui/BrandIcon";
 import { getBusiness } from "@/lib/content";
 import { routes } from "@/lib/routes";
 import { buildMetadata, absoluteUrl } from "@/lib/seo";
@@ -31,22 +31,22 @@ const VALUES: { title: string; body: string; icon: ReactNode }[] = [
   {
     title: "Trust comes first",
     body: "We lead with trust and licensing. If you cannot trust the person working in your panel, nothing else matters.",
-    icon: <ShieldCheck size={20} aria-hidden="true" />,
+    icon: <BrandIcon name="licensed-shield" size={20} />,
   },
   {
     title: "We show up when we say we will",
     body: "A time we give you is a promise. Day or night, when we say we are coming, we come.",
-    icon: <Clock size={20} aria-hidden="true" />,
+    icon: <BrandIcon name="call-day-or-night" size={20} />,
   },
   {
     title: "Do it right so you can forget about it",
     body: "We do the work right the first time, so you are not thinking about it after we leave. Peace of mind is the real deliverable.",
-    icon: <BadgeCheck size={20} aria-hidden="true" />,
+    icon: <BrandIcon name="five-star-work" size={20} />,
   },
   {
     title: "Price it once, price it right",
     body: "We look at the whole situation, give you one honest number, and stand behind it. No surprises once work has started.",
-    icon: <BadgeDollarSign size={20} aria-hidden="true" />,
+    icon: <BrandIcon name="one-honest-number" size={20} />,
   },
 ];
 

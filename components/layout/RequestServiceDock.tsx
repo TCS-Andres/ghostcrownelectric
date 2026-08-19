@@ -1,9 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Zap, Phone, X } from "lucide-react";
+import { X } from "lucide-react";
 import { cn } from "@/lib/cn";
 import { Button } from "@/components/ui/Button";
+import { BrandIcon } from "@/components/ui/BrandIcon";
 import { LeadForm, type LeadFormCity } from "@/components/forms/LeadForm";
 
 /*
@@ -82,7 +83,7 @@ export function RequestServiceDock({
                 variant="outlineOnDark"
                 size="md"
               >
-                <Phone size={18} aria-hidden="true" />
+                <BrandIcon name="call-day-or-night" size={18} />
                 Call
               </Button>
               <Button
@@ -91,7 +92,7 @@ export function RequestServiceDock({
                 size="md"
                 onClick={() => setOpen(true)}
               >
-                <Zap size={18} aria-hidden="true" />
+                <BrandIcon name="book-a-visit" size={18} />
                 Request Service
               </Button>
             </div>

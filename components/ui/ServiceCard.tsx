@@ -4,6 +4,7 @@ import type { Service } from "@/lib/content";
 import { routes } from "@/lib/routes";
 import { serviceImage } from "@/lib/imagery";
 import { firstSentence } from "@/lib/links";
+import { BrandIcon, serviceBrandIcon } from "@/components/ui/BrandIcon";
 
 interface ServiceCardProps {
   service: Service;
@@ -35,6 +36,9 @@ export function ServiceCard({ service, titleAs: Title = "h3" }: ServiceCardProps
           aria-hidden="true"
           className="absolute inset-0 bg-gradient-to-t from-navy/45 via-transparent to-transparent"
         />
+        <span className="absolute left-3 top-3 flex h-9 w-9 items-center justify-center rounded-lg bg-navy/85 text-accent-bright ring-1 ring-white/15 backdrop-blur-sm">
+          <BrandIcon name={serviceBrandIcon(service.slug)} size={18} />
+        </span>
       </div>
 
       <div className="flex flex-1 flex-col p-5">

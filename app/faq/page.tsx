@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import { Wrench, BadgeDollarSign, MapPin, ShieldCheck } from "lucide-react";
+import { BrandIcon } from "@/components/ui/BrandIcon";
 import type { Faq } from "@/lib/content";
 import { routes } from "@/lib/routes";
 import { titleCase } from "@/lib/text";
@@ -30,7 +30,7 @@ const DESCRIPTION =
 const GROUPS: { heading: string; icon: ReactNode; items: Faq[] }[] = [
   {
     heading: "About the work",
-    icon: <Wrench size={20} aria-hidden="true" />,
+    icon: <BrandIcon name="service-truck" size={20} />,
     items: [
       {
         question: "Do you work on both commercial and residential properties?",
@@ -86,7 +86,7 @@ const GROUPS: { heading: string; icon: ReactNode; items: Faq[] }[] = [
   },
   {
     heading: "Pricing",
-    icon: <BadgeDollarSign size={20} aria-hidden="true" />,
+    icon: <BrandIcon name="one-honest-number" size={20} />,
     items: [
       {
         question: "How does a service call work?",
@@ -112,7 +112,7 @@ const GROUPS: { heading: string; icon: ReactNode; items: Faq[] }[] = [
   },
   {
     heading: "Service area",
-    icon: <MapPin size={20} aria-hidden="true" />,
+    icon: <BrandIcon name="service-area-pin" size={20} />,
     items: [
       {
         question: "What areas do you serve?",
@@ -123,7 +123,7 @@ const GROUPS: { heading: string; icon: ReactNode; items: Faq[] }[] = [
   },
   {
     heading: "Licensing",
-    icon: <ShieldCheck size={20} aria-hidden="true" />,
+    icon: <BrandIcon name="licensed-shield" size={20} />,
     items: [
       {
         question: "Are you licensed?",

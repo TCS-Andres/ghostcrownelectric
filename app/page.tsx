@@ -3,10 +3,6 @@ import type { ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
-  ShieldCheck,
-  BadgeDollarSign,
-  Clock,
-  FileCheck2,
   Zap,
   Gauge,
   PlugZap,
@@ -34,6 +30,7 @@ import type { Faq } from "@/lib/content";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { StatValue } from "@/components/ui/StatValue";
 import { GradientBadge, BADGE_TONES } from "@/components/ui/GradientBadge";
+import { BrandIcon } from "@/components/ui/BrandIcon";
 import { ExpandingCards, type CardItem } from "@/components/ui/expanding-cards";
 import { Media } from "@/components/ui/Media";
 import { BeforeAfterSlider } from "@/components/ui/BeforeAfterSlider";
@@ -167,22 +164,22 @@ const WHY_FEATURES: { title: string; body: string; icon: ReactNode }[] = [
   {
     title: "Licensed and certified",
     body: "Florida Certified Electrical Contractor and Broward County Master Electrician, in a market full of unlicensed labor.",
-    icon: <ShieldCheck size={18} aria-hidden="true" />,
+    icon: <BrandIcon name="licensed-shield" size={18} />,
   },
   {
     title: "One honest price",
     body: "We forecast the job, quote it once, and never change the number mid job. No surprises when the work is done.",
-    icon: <BadgeDollarSign size={18} aria-hidden="true" />,
+    icon: <BrandIcon name="one-honest-number" size={18} />,
   },
   {
     title: "Day or night",
     body: "Power does not wait for business hours. We answer the phone and show up when we say we will.",
-    icon: <Clock size={18} aria-hidden="true" />,
+    icon: <BrandIcon name="call-day-or-night" size={18} />,
   },
   {
     title: "A documented record",
     body: "286 permitted projects on public record, ranked in the top tier of Florida contractors by permit quality.",
-    icon: <FileCheck2 size={18} aria-hidden="true" />,
+    icon: <BrandIcon name="five-star-work" size={18} />,
   },
 ];
 
@@ -216,12 +213,15 @@ export default function HomePage() {
           : license.label,
       icon:
         index === 0 ? (
-          <ShieldCheck size={18} aria-hidden="true" />
+          <BrandIcon name="licensed-shield" size={18} />
         ) : (
-          <Zap size={18} aria-hidden="true" />
+          <BrandIcon name="crown-bolt" size={18} />
         ),
     })),
-    { label: "Available day or night", icon: <Clock size={18} aria-hidden="true" /> },
+    {
+      label: "Available day or night",
+      icon: <BrandIcon name="call-day-or-night" size={18} />,
+    },
   ];
 
   const nodes: JsonLdNode[] = [
@@ -607,14 +607,21 @@ export default function HomePage() {
       {/* 7. Emergency strip */}
       <section className="bg-gradient-to-r from-cyan-600 to-cyan text-accent-bright-ink">
         <div className="container-page flex flex-col items-start gap-5 py-10 sm:flex-row sm:items-center sm:justify-between">
-          <div>
-            <h2 className="font-heading text-2xl font-bold sm:text-3xl">
-              Power Out, or Something That Does Not Feel Safe?
-            </h2>
-            <p className="mt-1.5 font-medium text-accent-bright-ink/80">
-              Call day or night. We will talk it through right away and head your
-              way.
-            </p>
+          <div className="flex items-start gap-4">
+            <BrandIcon
+              name="emergency-247"
+              size={44}
+              className="mt-0.5 shrink-0"
+            />
+            <div>
+              <h2 className="font-heading text-2xl font-bold sm:text-3xl">
+                Power Out, or Something That Does Not Feel Safe?
+              </h2>
+              <p className="mt-1.5 font-medium text-accent-bright-ink/80">
+                Call day or night. We will talk it through right away and head
+                your way.
+              </p>
+            </div>
           </div>
           <a
             href={`tel:${business.phoneTel}`}

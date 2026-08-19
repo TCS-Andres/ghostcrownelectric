@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import { Users, BadgeDollarSign, Clock, Phone, Zap } from "lucide-react";
 import { getServices, getBusiness } from "@/lib/content";
 import { routes } from "@/lib/routes";
 import { buildMetadata, absoluteUrl } from "@/lib/seo";
@@ -17,6 +16,7 @@ import { ServiceCard } from "@/components/ui/ServiceCard";
 import { Button } from "@/components/ui/Button";
 import { CTABand } from "@/components/ui/CTABand";
 import { GradientBadge, BADGE_TONES } from "@/components/ui/GradientBadge";
+import { BrandIcon } from "@/components/ui/BrandIcon";
 import { JsonLd } from "@/components/seo/JsonLd";
 
 const TITLE = "Electrical Services in Broward County | Ghost Crown Electric";
@@ -27,15 +27,15 @@ const DESCRIPTION =
 const ASSURANCES: { text: string; icon: ReactNode }[] = [
   {
     text: "One licensed crew, from the first call to the final inspection",
-    icon: <Users size={18} aria-hidden="true" />,
+    icon: <BrandIcon name="service-truck" size={18} />,
   },
   {
     text: "One honest price before any bigger work, so there are no surprises",
-    icon: <BadgeDollarSign size={18} aria-hidden="true" />,
+    icon: <BrandIcon name="one-honest-number" size={18} />,
   },
   {
     text: "We answer day or night, and we meet the inspector in person",
-    icon: <Clock size={18} aria-hidden="true" />,
+    icon: <BrandIcon name="call-day-or-night" size={18} />,
   },
 ];
 
@@ -130,7 +130,7 @@ export default function ServicesIndexPage() {
                       variant="primary"
                       size="md"
                     >
-                      <Phone size={18} aria-hidden="true" />
+                      <BrandIcon name="call-day-or-night" size={18} />
                       Call {business.phoneDisplay}
                     </Button>
                     <Button
@@ -138,7 +138,7 @@ export default function ServicesIndexPage() {
                       variant="outlineOnDark"
                       size="md"
                     >
-                      <Zap size={18} aria-hidden="true" />
+                      <BrandIcon name="book-a-visit" size={18} />
                       Request Service
                     </Button>
                   </div>
