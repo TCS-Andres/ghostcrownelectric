@@ -204,8 +204,8 @@ export default function AboutPage() {
         <div className="container-page py-14 sm:py-20">
           <div className="grid items-center gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-14">
             <Media
-              src="/images/damean-consult.jpg"
-              alt={`${ownerName}, owner and ${ownerTitle} at Ghost Crown Electric, greeting a customer at the door`}
+              src="/images/damean-owner-truck.jpg"
+              alt={`${ownerName}, owner and ${ownerTitle} at Ghost Crown Electric, in front of the company bucket truck`}
               sizes="(min-width: 1024px) 38vw, 100vw"
               className="aspect-[4/3] rounded-2xl border border-border shadow-[var(--shadow-card)]"
             />

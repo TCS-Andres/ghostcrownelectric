@@ -385,10 +385,10 @@ export default function HomePage() {
       <section className="container-page py-16 sm:py-20">
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
           <Media
-            src="/images/damean-switchgear.jpg"
-            alt="A Ghost Crown Electric electrician testing commercial switchgear"
+            src="/images/damean-owner-truck.jpg"
+            alt="Damean Callum, owner of Ghost Crown Electric, in front of the company bucket truck"
             sizes="(min-width: 1024px) 45vw, 100vw"
-            className="aspect-square rounded-2xl border border-border shadow-[var(--shadow-card)]"
+            className="aspect-[4/3] rounded-2xl border border-border shadow-[var(--shadow-card)]"
           />
           <div>
             <SectionHeading
