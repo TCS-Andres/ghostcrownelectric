@@ -503,16 +503,16 @@ export default function HomePage() {
           <div className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-[0.85fr_1.15fr] lg:gap-10">
             <div>
               <BeforeAfterSlider
-                beforeSrc="/images/meter-fire-before.jpg"
-                afterSrc="/images/meter-fire-after.jpg"
-                beforeAlt="A nine-meter service bank and the surrounding wall with heavy fire and soot damage"
-                afterAlt="The same nine-meter service bank and wall fully restored, cleaned, and repainted"
+                beforeSrc="/images/meter-burnout-before.jpg"
+                afterSrc="/images/meter-burnout-after.jpg"
+                beforeAlt="Nine electrical meters melted and burned out of their sockets after a fire, with heavy soot on the wall behind them"
+                afterAlt="The same wall with a new nine-meter bank installed, every meter numbered and back in service"
                 sizes="(min-width: 1024px) 35vw, 100vw"
                 className="aspect-[3/4] rounded-2xl border border-navy-600"
               />
               <p className="mt-3 text-sm text-ink-muted-on-dark">
-                Drag the slider: the nine-meter bank and the fire-damaged
-                wall around it, fully restored.
+                Drag the slider: nine meters melted out of their sockets, and
+                the same wall back in service.
               </p>
             </div>
             <ul className="grid grid-cols-1 gap-6">

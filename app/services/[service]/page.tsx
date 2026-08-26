@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getService, getServices, type Service } from "@/lib/content";
 import { routes } from "@/lib/routes";
 import { buildMetadata, absoluteUrl } from "@/lib/seo";
 import { cityLinks, firstSentence } from "@/lib/links";
-import { serviceImage } from "@/lib/imagery";
+import { serviceImage, serviceGallery } from "@/lib/imagery";
 import {
   breadcrumbListNode,
   electricianNode,
@@ -23,12 +24,37 @@ import { Media } from "@/components/ui/Media";
 import { CTABand } from "@/components/ui/CTABand";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { GradientBadge, BADGE_TONES } from "@/components/ui/GradientBadge";
+import { StatValue } from "@/components/ui/StatValue";
+import { BrandIcon, serviceBrandIcon } from "@/components/ui/BrandIcon";
 import { HeroTrust } from "@/components/sections/HeroTrust";
 import { CallToActions } from "@/components/sections/CallToActions";
 import { MidPageCTA } from "@/components/sections/MidPageCTA";
+import { WorkPhotos } from "@/components/sections/WorkPhotos";
 import { JsonLd } from "@/components/seo/JsonLd";
 
 export const dynamicParams = false;
+
+// Rotating icon sets so no two cards in a row carry the same glyph. Symptoms
+// lean on the warning icons, benefits on the trust icons.
+const SYMPTOM_ICONS = [
+  "emergency-247",
+  "surge-protection",
+  "safety-inspection",
+  "panel-upgrades",
+] as const;
+
+const BENEFIT_ICONS = [
+  "licensed-shield",
+  "five-star-work",
+  "one-honest-number",
+  "book-a-visit",
+] as const;
+
+const LOCAL_ICONS = ["service-area-pin", "service-truck"] as const;
+
+// The three record stats read as scope, quality, and accountability, so each
+// gets its own glyph rather than three copies of the service icon.
+const STAT_ICONS = ["crown-bolt", "five-star-work", "licensed-shield"] as const;
 
 export function generateStaticParams() {
   return getServices().map((service) => ({ service: service.slug }));
@@ -64,12 +90,17 @@ export default async function ServicePage({
     .filter((item): item is Service => item !== null);
 
   const heroImage = serviceImage(service.slug);
+  const gallery = serviceGallery(service.slug);
+  // The first supporting photo sits beside the definition copy; the rest fill
+  // the captioned band further down the page.
+  const [detailPhoto, ...bandPhotos] = gallery;
   const cities = cityLinks();
+  const shortName = service.shortName || service.name;
 
   const trail: Crumb[] = [
     { label: "Home", href: routes.home },
     { label: "Services", href: routes.services },
-    { label: service.shortName || service.name },
+    { label: shortName },
   ];
   const pageUrl = absoluteUrl(routes.service(slug));
 
@@ -86,66 +117,76 @@ export default async function ServicePage({
         ])}
       />
 
-      {/* Breadcrumbs on the light page, above the dark hero */}
-      <div className="container-page pt-6">
-        <Breadcrumbs trail={trail} />
-      </div>
-
-      {/* Hero */}
-      <section className="relative isolate mt-6 overflow-hidden bg-surface-dark text-ink-on-dark">
+      {/*
+        Hero: the service photograph runs full bleed behind the copy at every
+        breakpoint, under a navy scrim that stays heavy on the text side and
+        opens up on the right so the picture reads on wide screens.
+      */}
+      <section className="relative isolate overflow-hidden bg-surface-dark text-ink-on-dark">
+        <Image
+          src={heroImage.src}
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="-z-20 object-cover object-center"
+        />
         <div
           aria-hidden="true"
-          className="glow-ambient pointer-events-none absolute -right-40 top-0 -z-10 h-[34rem] w-[34rem] opacity-50"
+          className="absolute inset-0 -z-10 bg-navy/88 lg:bg-gradient-to-r lg:from-navy lg:from-30% lg:via-navy/82 lg:via-58% lg:to-navy/20"
         />
-        <div className="container-page py-14 sm:py-20">
-          <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
-            <div>
-              <div className="max-w-2xl">
-                <h1 className="text-3xl text-ink-on-dark sm:text-4xl md:text-5xl">
-                  {service.h1}
-                </h1>
-                <p className="mt-5 text-lg text-ink-muted-on-dark">
-                  {service.intro}
-                </p>
-              </div>
-              <HeroTrust className="mt-8" />
-              <CallToActions className="mt-8" />
-            </div>
-            <div className="hidden lg:block">
-              <Media
-                src={heroImage.src}
-                alt={heroImage.alt}
-                priority
-                sizes="(min-width: 1024px) 45vw, 0px"
-                className="aspect-[4/3] rounded-2xl border border-navy-600"
-              >
-                <div className="absolute inset-x-4 bottom-4">
-                  <span className="glass-dark inline-flex items-center gap-2 rounded-full px-4 py-2">
-                    <span
-                      aria-hidden="true"
-                      className="h-2 w-2 rounded-full bg-accent-bright"
-                    />
-                    <span className="text-sm font-medium text-ink-on-dark">
-                      Licensed, permitted, and local
-                    </span>
-                  </span>
-                </div>
-              </Media>
-            </div>
+        <div
+          aria-hidden="true"
+          className="absolute inset-x-0 bottom-0 -z-10 h-32 bg-gradient-to-t from-navy to-transparent"
+        />
+        <div
+          aria-hidden="true"
+          className="glow-ambient pointer-events-none absolute -left-40 -top-40 -z-10 h-[32rem] w-[32rem] opacity-40"
+        />
+
+        <div className="container-page pb-24 pt-6 sm:pb-28 lg:pb-32">
+          <Breadcrumbs trail={trail} onDark />
+
+          <div className="mt-10 max-w-3xl">
+            <span className="inline-flex items-center gap-2.5 rounded-full border border-white/15 bg-white/10 px-4 py-1.5 text-sm font-semibold uppercase tracking-[0.12em] text-accent-bright backdrop-blur-sm">
+              <BrandIcon name={serviceBrandIcon(service.slug)} size={16} />
+              {shortName}
+            </span>
+            <h1 className="mt-5 text-3xl text-ink-on-dark sm:text-4xl md:text-5xl">
+              {service.h1}
+            </h1>
+            <p className="mt-5 text-lg text-ink-muted-on-dark">
+              {service.intro}
+            </p>
+            <HeroTrust className="mt-8" />
+            <CallToActions className="mt-8" />
           </div>
         </div>
       </section>
 
-      {/* Stats strip */}
+      {/* The record, lifted onto a card that overlaps the hero */}
       {service.stats.length > 0 ? (
-        <section className="border-b border-border bg-surface-2">
+        <section className="relative z-10 -mt-14 sm:-mt-16">
           <div className="container-page">
-            <dl className="grid grid-cols-1 divide-y divide-border sm:grid-cols-3 sm:divide-x sm:divide-y-0">
-              {service.stats.map((stat) => (
-                <div key={stat.label} className="px-2 py-8 text-center">
+            <dl className="grid grid-cols-1 divide-y divide-border overflow-hidden rounded-2xl border border-border bg-surface shadow-[var(--shadow-lift)] sm:grid-cols-3 sm:divide-x sm:divide-y-0">
+              {service.stats.map((stat, index) => (
+                <div
+                  key={stat.label}
+                  className="flex flex-col items-center px-4 py-7 text-center"
+                >
+                  <GradientBadge
+                    tone={BADGE_TONES[index % BADGE_TONES.length]}
+                    size="sm"
+                    className="mb-3"
+                  >
+                    <BrandIcon
+                      name={STAT_ICONS[index % STAT_ICONS.length]}
+                      size={16}
+                    />
+                  </GradientBadge>
                   <dt className="sr-only">{stat.label}</dt>
                   <dd className="font-heading text-3xl font-bold text-ink">
-                    {stat.value}
+                    <StatValue value={stat.value} />
                   </dd>
                   <p className="mt-1 text-sm text-ink-muted">{stat.label}</p>
                 </div>
@@ -155,26 +196,49 @@ export default async function ServicePage({
         </section>
       ) : null}
 
-      {/* Definition with related-service links */}
+      {/* Definition, with a supporting photo alongside it */}
       <section className="container-page py-14 sm:py-20">
-        <div className="max-w-3xl">
-          <SectionHeading as="h2" title={service.definition.heading} />
-          <p className="mt-4 text-lg leading-relaxed text-ink-muted">
-            {service.definition.body}
-          </p>
-          {related.length > 0 ? (
-            <div className="mt-6 flex flex-wrap items-center gap-2 text-sm">
-              <span className="font-semibold text-ink">Related:</span>
-              {related.map((item) => (
-                <Link
-                  key={item.slug}
-                  href={routes.service(item.slug)}
-                  className="rounded-full border border-border px-3 py-1 text-ink-muted hover:border-accent hover:text-accent-hover"
-                >
-                  {item.shortName || item.name}
-                </Link>
-              ))}
-            </div>
+        <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
+          <div className="max-w-2xl">
+            <SectionHeading as="h2" title={service.definition.heading} />
+            <p className="mt-4 text-lg leading-relaxed text-ink-muted">
+              {service.definition.body}
+            </p>
+            {related.length > 0 ? (
+              <div className="mt-6 flex flex-wrap items-center gap-2 text-sm">
+                <span className="font-semibold text-ink">Related:</span>
+                {related.map((item) => (
+                  <Link
+                    key={item.slug}
+                    href={routes.service(item.slug)}
+                    className="rounded-full border border-border px-3 py-1 text-ink-muted hover:border-accent hover:text-accent-hover"
+                  >
+                    {item.shortName || item.name}
+                  </Link>
+                ))}
+              </div>
+            ) : null}
+          </div>
+
+          {detailPhoto ? (
+            <figure className="lg:justify-self-end">
+              <Media
+                src={detailPhoto.src}
+                alt={detailPhoto.alt}
+                sizes="(min-width: 1024px) 45vw, 100vw"
+                className="aspect-[4/3] w-full rounded-2xl border border-border shadow-[var(--shadow-card)]"
+              >
+                {detailPhoto.real ? (
+                  <span className="absolute left-3 top-3 inline-flex items-center gap-1.5 rounded-full bg-navy/85 px-3 py-1 text-xs font-semibold uppercase tracking-[0.08em] text-accent-bright ring-1 ring-white/15 backdrop-blur-sm">
+                    <BrandIcon name="crown-bolt" size={13} />
+                    Our Work
+                  </span>
+                ) : null}
+              </Media>
+              <figcaption className="mt-3 text-sm leading-relaxed text-ink-muted">
+                {detailPhoto.caption}
+              </figcaption>
+            </figure>
           ) : null}
         </div>
       </section>
@@ -189,11 +253,20 @@ export default async function ServicePage({
               title="Signs you need this"
               description="If any of these sound familiar, it is worth a call. We will tell you plainly whether it is urgent or something to schedule."
             />
-            <ul className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-              {service.symptoms.map((symptom) => (
+            <ul className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+              {service.symptoms.map((symptom, index) => (
                 <li key={symptom.title}>
-                  <Card as="div" className="h-full">
-                    <h3 className="font-heading text-lg font-semibold text-ink">
+                  <Card as="div" className="group h-full">
+                    <GradientBadge
+                      tone={BADGE_TONES[index % BADGE_TONES.length]}
+                      size="md"
+                    >
+                      <BrandIcon
+                        name={SYMPTOM_ICONS[index % SYMPTOM_ICONS.length]}
+                        size={20}
+                      />
+                    </GradientBadge>
+                    <h3 className="mt-4 font-heading text-base font-semibold text-ink">
                       {symptom.title}
                     </h3>
                     <p className="mt-2 text-sm text-ink-muted">
@@ -207,7 +280,7 @@ export default async function ServicePage({
         </section>
       ) : null}
 
-      {/* How we work */}
+      {/* How we work: the steps run across on wide screens with a connecting rail */}
       {service.process.length > 0 ? (
         <section className="container-page py-14 sm:py-20">
           <SectionHeading
@@ -216,24 +289,34 @@ export default async function ServicePage({
             title="From your first call to the final inspection"
             description="We take the call, price the job, and meet the inspector. Here is how a job goes."
           />
-          <ol className="mt-10 flex flex-col gap-6">
-            {service.process.map((step, index) => (
-              <li key={step.title} className="group flex gap-5">
-                <GradientBadge
-                  tone={BADGE_TONES[index % BADGE_TONES.length]}
-                  size="lg"
-                >
-                  {index + 1}
-                </GradientBadge>
-                <div>
-                  <h3 className="font-heading text-lg font-semibold text-ink">
+          <div className="relative mt-12">
+            <div
+              aria-hidden="true"
+              className="absolute left-0 right-0 top-6 hidden h-px bg-gradient-to-r from-transparent via-mist-200 to-transparent lg:block"
+            />
+            <ol className="relative grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
+              {service.process.map((step, index) => (
+                <li key={step.title} className="group flex flex-col">
+                  <div className="flex items-center gap-3">
+                    <GradientBadge
+                      tone={BADGE_TONES[index % BADGE_TONES.length]}
+                      size="lg"
+                    >
+                      {index + 1}
+                    </GradientBadge>
+                    <span
+                      aria-hidden="true"
+                      className="h-px flex-1 bg-mist-200 lg:hidden"
+                    />
+                  </div>
+                  <h3 className="mt-4 font-heading text-lg font-semibold text-ink">
                     {step.title}
                   </h3>
-                  <p className="mt-1 text-ink-muted">{step.body}</p>
-                </div>
-              </li>
-            ))}
-          </ol>
+                  <p className="mt-2 text-ink-muted">{step.body}</p>
+                </li>
+              ))}
+            </ol>
+          </div>
         </section>
       ) : null}
 
@@ -247,10 +330,19 @@ export default async function ServicePage({
               title="Why this work is worth doing right"
             />
             <ul className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-              {service.benefits.map((benefit) => (
+              {service.benefits.map((benefit, index) => (
                 <li key={benefit.title}>
-                  <Card as="div" className="h-full">
-                    <h3 className="font-heading text-base font-semibold text-ink">
+                  <Card as="div" className="group h-full">
+                    <GradientBadge
+                      tone={BADGE_TONES[(index + 1) % BADGE_TONES.length]}
+                      size="md"
+                    >
+                      <BrandIcon
+                        name={BENEFIT_ICONS[index % BENEFIT_ICONS.length]}
+                        size={20}
+                      />
+                    </GradientBadge>
+                    <h3 className="mt-4 font-heading text-base font-semibold text-ink">
                       {benefit.title}
                     </h3>
                     <p className="mt-2 text-sm text-ink-muted">
@@ -264,6 +356,19 @@ export default async function ServicePage({
         </section>
       ) : null}
 
+      {/* The captioned photo band: what this work actually looks like */}
+      <WorkPhotos
+        photos={bandPhotos}
+        eyebrow="See the work"
+        title={`${shortName}, up close`}
+        description={
+          bandPhotos.some((photo) => photo.real)
+            ? "Real conditions we run into and what the finished work looks like. Photos marked with the crown are Ghost Crown jobs."
+            : "Real conditions we run into, and what the finished work looks like."
+        }
+        onDark
+      />
+
       {/* Mid-page conversion strip */}
       <MidPageCTA />
 
@@ -275,15 +380,30 @@ export default async function ServicePage({
             eyebrow="South Florida reality"
             title="What this work looks like down here"
           />
-          <div className="mt-10 grid grid-cols-1 gap-10 lg:grid-cols-2">
-            {service.localSections.map((local) => (
-              <div key={local.heading} className="max-w-2xl">
-                <h3 className="font-heading text-xl font-semibold text-ink">
-                  {local.heading}
-                </h3>
-                <p className="mt-3 leading-relaxed text-ink-muted">
-                  {local.body}
-                </p>
+          <div className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-2">
+            {service.localSections.map((local, index) => (
+              <div
+                key={local.heading}
+                className="group flex gap-4 rounded-2xl border border-border bg-surface-2 p-6"
+              >
+                <GradientBadge
+                  tone={BADGE_TONES[index % BADGE_TONES.length]}
+                  size="md"
+                  className="shrink-0"
+                >
+                  <BrandIcon
+                    name={LOCAL_ICONS[index % LOCAL_ICONS.length]}
+                    size={20}
+                  />
+                </GradientBadge>
+                <div>
+                  <h3 className="font-heading text-xl font-semibold text-ink">
+                    {local.heading}
+                  </h3>
+                  <p className="mt-3 leading-relaxed text-ink-muted">
+                    {local.body}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
@@ -334,7 +454,7 @@ export default async function ServicePage({
         <SectionHeading
           as="h2"
           eyebrow="Service area"
-          title={`Where we provide ${service.shortName || service.name}`}
+          title={`Where we provide ${shortName}`}
           description="We cover all of Broward and Palm Beach counties, south to North Miami Beach. Pick your city or call and we will confirm we reach you."
         />
         <ul className="mt-8 flex flex-wrap gap-2.5">
@@ -342,8 +462,11 @@ export default async function ServicePage({
             <li key={city.slug}>
               <Link
                 href={routes.city(city.slug)}
-                className="inline-flex rounded-full border border-border px-4 py-2 text-sm text-ink hover:border-accent hover:text-accent-hover"
+                className="inline-flex items-center gap-1.5 rounded-full border border-border px-4 py-2 text-sm text-ink hover:border-accent hover:text-accent-hover"
               >
+                <span className="text-accent">
+                  <BrandIcon name="service-area-pin" size={14} />
+                </span>
                 {city.name}
               </Link>
             </li>
@@ -357,14 +480,23 @@ export default async function ServicePage({
           <div className="container-page py-14 sm:py-20">
             <SectionHeading as="h2" eyebrow="Related work" title="You may also need" />
             <ul className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-              {related.map((item) => (
+              {related.map((item, index) => (
                 <li key={item.slug}>
                   <Link
                     href={routes.service(item.slug)}
                     className="group block h-full"
                   >
                     <Card interactive className="flex h-full flex-col">
-                      <h3 className="font-heading text-base font-semibold text-ink group-hover:text-accent-hover">
+                      <GradientBadge
+                        tone={BADGE_TONES[index % BADGE_TONES.length]}
+                        size="md"
+                      >
+                        <BrandIcon
+                          name={serviceBrandIcon(item.slug)}
+                          size={20}
+                        />
+                      </GradientBadge>
+                      <h3 className="mt-4 font-heading text-base font-semibold text-ink group-hover:text-accent-hover">
                         {item.shortName || item.name}
                       </h3>
                       <p className="mt-2 flex-1 text-sm text-ink-muted">

@@ -38,6 +38,9 @@ export function StatValue({
         if (started || !entries.some((entry) => entry.isIntersecting)) return;
         started = true;
         io.disconnect();
+        // A hidden document never services requestAnimationFrame, so the
+        // counter would sit on its start value. Show the final number instead.
+        if (document.visibilityState !== "visible") return;
         const t0 = performance.now();
         const tick = (now: number) => {
           const progress = Math.min((now - t0) / DURATION_MS, 1);

@@ -11,16 +11,23 @@ export interface Crumb {
 
 interface BreadcrumbsProps {
   trail: Crumb[];
+  /** Set true when the trail sits on a navy surface so the colors invert. */
+  onDark?: boolean;
   className?: string;
 }
 
 // Purely visual breadcrumbs. No structured data here (that is W2's job).
-export function Breadcrumbs({ trail, className }: BreadcrumbsProps) {
+export function Breadcrumbs({ trail, onDark = false, className }: BreadcrumbsProps) {
   if (trail.length === 0) return null;
 
   return (
     <nav aria-label="Breadcrumb" className={className}>
-      <ol className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-ink-muted">
+      <ol
+        className={cn(
+          "flex flex-wrap items-center gap-x-2 gap-y-1 text-sm",
+          onDark ? "text-ink-muted-on-dark" : "text-ink-muted",
+        )}
+      >
         {trail.map((crumb, index) => {
           const isLast = index === trail.length - 1;
           return (
@@ -28,20 +35,26 @@ export function Breadcrumbs({ trail, className }: BreadcrumbsProps) {
               {crumb.href && !isLast ? (
                 <Link
                   href={crumb.href}
-                  className="hover:text-accent-hover"
+                  className={onDark ? "hover:text-accent-bright" : "hover:text-accent-hover"}
                 >
                   {crumb.label}
                 </Link>
               ) : (
                 <span
-                  className={cn(isLast && "font-medium text-ink")}
+                  className={cn(
+                    isLast && "font-medium",
+                    isLast && (onDark ? "text-ink-on-dark" : "text-ink"),
+                  )}
                   aria-current={isLast ? "page" : undefined}
                 >
                   {crumb.label}
                 </span>
               )}
               {!isLast ? (
-                <span aria-hidden="true" className="text-mist-300">
+                <span
+                  aria-hidden="true"
+                  className={onDark ? "text-navy-600" : "text-mist-300"}
+                >
                   /
                 </span>
               ) : null}
