@@ -2,16 +2,6 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import {
-  Zap,
-  Gauge,
-  PlugZap,
-  Cable,
-  SquareStack,
-  Truck,
-  CircuitBoard,
-  House,
-} from "lucide-react";
 import { getBusiness, getServices, getPosts } from "@/lib/content";
 import { routes } from "@/lib/routes";
 import { buildMetadata, absoluteUrl } from "@/lib/seo";
@@ -30,7 +20,6 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { StatValue } from "@/components/ui/StatValue";
 import { GradientBadge, BADGE_TONES } from "@/components/ui/GradientBadge";
 import { BrandIcon } from "@/components/ui/BrandIcon";
-import { ExpandingCards, type CardItem } from "@/components/ui/expanding-cards";
 import { Media } from "@/components/ui/Media";
 import { BeforeAfterSlider } from "@/components/ui/BeforeAfterSlider";
 import { ServiceCard } from "@/components/ui/ServiceCard";
@@ -45,83 +34,6 @@ import { JsonLd } from "@/components/seo/JsonLd";
 const TITLE = "Electrician in Broward County, FL | Ghost Crown Electric";
 const DESCRIPTION =
   "Licensed electrician serving Broward and Palm Beach counties, day or night. Panels, service upgrades, meter banks, and emergency repairs. Call for one honest price.";
-
-// Real job photos from the field, shown in the interactive "Recent work"
-// gallery. Each card carries a short note on what the job was and its own icon.
-const WORK_ITEMS: CardItem[] = [
-  {
-    id: "service-rebuild",
-    title: "Service Entrance Rebuild",
-    description:
-      "New conduit, weatherhead, and wiring. Permitted and inspected.",
-    imgSrc: "/images/work-service-rebuild.jpg",
-    alt: "An exterior electrical service entrance rebuilt with new conduit and wiring",
-    icon: <Zap size={24} aria-hidden="true" />,
-  },
-  {
-    id: "meter-bank",
-    title: "Multi-Meter Service",
-    description:
-      "A multi-tenant meter bank brought back up to code.",
-    imgSrc: "/images/work-meter-bank.jpg",
-    alt: "A multi-tenant electrical meter bank on a building exterior",
-    icon: <Gauge size={24} aria-hidden="true" />,
-  },
-  {
-    id: "service-upgrade",
-    title: "Service Upgrade",
-    description:
-      "An exterior service upgraded to carry AC, pool, and EV charging.",
-    imgSrc: "/images/work-service-upgrade.jpg",
-    alt: "A Ghost Crown Electric electrician upgrading an exterior electrical service",
-    icon: <PlugZap size={24} aria-hidden="true" />,
-  },
-  {
-    id: "panel-rewire",
-    title: "Panel Rewire",
-    description:
-      "Every circuit cleanly routed and clearly labeled.",
-    imgSrc: "/images/work-panel-rewire.jpg",
-    alt: "An electrical panel rewired with neatly routed circuits",
-    icon: <Cable size={24} aria-hidden="true" />,
-  },
-  {
-    id: "subpanels",
-    title: "Meter, Service & Subpanels",
-    description:
-      "New meter, disconnect, and subpanels, set clean and square.",
-    imgSrc: "/images/work-service-subpanels.jpg",
-    alt: "A new exterior meter, service disconnect, and subpanels on a stucco wall",
-    icon: <SquareStack size={24} aria-hidden="true" />,
-  },
-  {
-    id: "bucket-truck",
-    title: "Our Bucket Truck On Site",
-    description:
-      "We own the truck, so overhead and sign work runs on our schedule.",
-    imgSrc: "/images/work-bucket-truck.jpg",
-    alt: "The Ghost Crown Electric bucket truck at a job site",
-    icon: <Truck size={24} aria-hidden="true" />,
-  },
-  {
-    id: "panel-replace",
-    title: "Panel Replacement",
-    description:
-      "A modern, code-compliant panel. Usually the fix an insurer wants.",
-    imgSrc: "/images/work-panel-replace.jpg",
-    alt: "A residential electrical panel being replaced",
-    icon: <CircuitBoard size={24} aria-hidden="true" />,
-  },
-  {
-    id: "residential-dusk",
-    title: "Residential Service, Broward",
-    description:
-      "A Broward home back to full power after a service upgrade.",
-    imgSrc: "/images/work-residential-dusk.jpg",
-    alt: "A South Florida home at dusk after an electrical service upgrade",
-    icon: <House size={24} aria-hidden="true" />,
-  },
-];
 
 // The six FAQs previewed on the home page. Written once and used for both the
 // visible accordion and the FAQPage schema so the markup matches the page.
@@ -538,17 +450,6 @@ export default function HomePage() {
             </ul>
           </div>
         </div>
-      </section>
-
-      {/* 6a. Recent work gallery: real job photos from the field */}
-      <section className="container-page py-16 sm:py-20">
-        <SectionHeading
-          as="h2"
-          eyebrow="Recent work"
-          title="Straight from our trucks"
-          description="Real panels, meter banks, and service upgrades from across Broward County. Tap a photo to see the job."
-        />
-        <ExpandingCards items={WORK_ITEMS} className="mt-10" />
       </section>
 
       {/* 6b. Commercial lighting, told with real job photos */}
