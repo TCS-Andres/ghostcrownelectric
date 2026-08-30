@@ -7,7 +7,7 @@
   "metaTitle": "Electrician in Delray Beach, FL | Ghost Crown Electric",
   "metaDescription": "Licensed electrician in Delray Beach, FL. Panel upgrades, older-home wiring, and pool electrical across Palm Beach County, day or night. Call today.",
   "h1": "Electrician in Delray Beach, FL",
-  "intro": "Delray Beach keeps its history close to the coast. Early 20th century cottages near downtown sit a short drive from newer construction west of Interstate 95, so a service call can turn up a decades-old fuse box or a modern panel. Salt air off the ocean wears on older equipment near downtown. We work Delray Beach often, and we come out, look in person, and give you one honest price.",
+  "intro": "Delray Beach keeps its history close to the coast. Early 20th century cottages near downtown sit a short drive from newer construction west of I-95, so a service call can turn up a decades-old fuse box or a modern panel. We look in person and give you one honest price.",
   "neighborhoods": [
     "Downtown Delray Beach",
     "Old School Square Historic District",
@@ -18,8 +18,8 @@
     "Rainberry Bay",
     "Delray Shores"
   ],
-  "housingNotes": "Delray Beach's oldest homes cluster near downtown and Old School Square, cottages and bungalows from the early to mid 20th century, while the rest of the city filled in from the 1970s on. Original fuse boxes and early breaker panels still show up near the coast, alongside brands the industry no longer considers safe. Salt air off the Atlantic corrodes lugs and terminations faster than they age inland, and pools are common citywide, so bonding and grounding deserve attention.",
-  "permitNote": "In Delray Beach, service changes and pool electrical corrections need a permit through the city's building department under the Florida Building Code. That keeps a licensed contractor and an inspector between you and a costly mistake. Ghost Crown Electric pulls the permit in our own name, schedules the inspection, and meets the inspector in person.",
+  "housingNotes": "Delray Beach's oldest homes cluster near downtown and Old School Square, cottages and bungalows from the early to mid 20th century, while the rest of the city filled in from the 1970s on.",
+  "permitNote": "In Delray Beach, service changes and pool electrical corrections need a permit through the city's building department under the Florida Building Code.",
   "challenges": [
     {
       "heading": "Salt air near downtown and the beach",
@@ -31,21 +31,21 @@
     },
     {
       "heading": "Pools across older and newer neighborhoods",
-      "body": "Pools show up in Delray Beach's historic pockets and newer developments alike. Bonding and grounding can loosen or corrode over the years, especially in older installations near salt air. A yearly pool electrical inspection before heater season catches those issues early."
+      "body": "Pools show up in Delray Beach's historic pockets and newer developments alike. A yearly pool electrical inspection before heater season catches those issues early."
     }
   ],
   "faqs": [
     {
       "question": "Do you work in Delray Beach day or night?",
-      "answer": "Yes. We run north into Palm Beach County regularly, and Delray Beach is a steady stop on that route. We answer the phone day or night, after-hours visits carry a premium we tell you plainly up front, and you reach a licensed electrician, not a call center."
+      "answer": "Yes. We answer the phone day or night, after-hours visits carry a premium we tell you plainly up front, and you reach a licensed electrician, not a call center."
     },
     {
       "question": "My home near downtown Delray Beach had its panel flagged. What now?",
-      "answer": "That is common in the older neighborhoods close to downtown and the coast. Send us the notice or the 4-point report and we will read it with you. Usually the fix is a modern, code-compliant panel that passes inspection, and we pull the permit and meet the inspector so the objection gets cleared."
+      "answer": "That is common in the older neighborhoods close to downtown and the coast. Usually the fix is a modern, code-compliant panel that passes inspection, and we pull the permit and meet the inspector so the objection gets cleared."
     },
     {
       "question": "My home is near the ocean. Does salt air really matter here?",
-      "answer": "It does. Salt air corrodes the connections inside panels and meter equipment, and corroded connections run hot. On homes near downtown and the beach we look closely at every termination during an assessment."
+      "answer": "It does. On homes near downtown and the beach we look closely at every termination during an assessment."
     }
   ]
 }

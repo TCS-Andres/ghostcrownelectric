@@ -7,7 +7,7 @@
   "metaTitle": "Electrician in Hollywood, FL | Ghost Crown Electric",
   "metaDescription": "Licensed electrician in Hollywood, FL. Panel upgrades, coastal and pool electrical, and emergency work in Broward, day or night. Book an on-site visit.",
   "h1": "Electrician in Hollywood, FL",
-  "intro": "Hollywood was dreamed up in the 1920s and grew through the 1950s, 1960s, and 1970s, so it holds the oldest housing around. Historic Hollywood Lakes carries homes from the 1920s, Beverly Park and Driftwood filled in after the war, and along Hollywood Beach salt air works on electrical equipment. When a 4-point inspection flags the electrical, we look in person and price the job once, day or night.",
+  "intro": "Hollywood was dreamed up in the 1920s and grew through the 1950s, 1960s, and 1970s, so it holds the oldest housing around. When a 4-point inspection flags the electrical, we look in person and price the job once, day or night.",
   "neighborhoods": [
     "Hollywood Lakes",
     "Emerald Hills",
@@ -18,8 +18,8 @@
     "Highland Gardens",
     "Park East"
   ],
-  "housingNotes": "Hollywood was founded in the 1920s and grew through the 1950s, 1960s, and 1970s, giving it the oldest housing around. Hollywood Lakes holds 1920s homes in Art Deco and Mediterranean styles, while post-war Beverly Park and Driftwood brought ranch homes with pools. Older stock often runs on original panels, and the oldest on early fuse boxes, along with brands carriers no longer accept. Along Hollywood Beach, salt air corrodes lugs, bus bars, and terminations, so coastal equipment ages faster.",
-  "permitNote": "In Hollywood, electrical service changes and pool electrical corrections require a permit and inspection through the city's building department, under the Florida Building Code and Broward County's requirements. Ghost Crown Electric pulls the permit in our own name and we attend the inspection in person, so the work is documented and signed off cleanly.",
+  "housingNotes": "Hollywood was founded in the 1920s and grew through the 1950s, 1960s, and 1970s, giving it the oldest housing around. Hollywood Lakes holds 1920s homes in Art Deco and Mediterranean styles, while post-war Beverly Park and Driftwood brought ranch homes with pools.",
+  "permitNote": "In Hollywood, electrical service changes and pool electrical corrections require a permit and inspection through the city's building department, under the Florida Building Code and Broward County's requirements.",
   "challenges": [
     {
       "heading": "Some of the oldest homes in the area",
@@ -27,25 +27,25 @@
     },
     {
       "heading": "Salt air off Hollywood Beach",
-      "body": "Along Hollywood Beach and the Intracoastal, salt air quietly corrodes the connections inside panels and meter equipment. A corroded connection runs hotter than it should, and heat wears a panel out early. On coastal homes we look closely at every termination."
+      "body": "Along Hollywood Beach and the Intracoastal, salt air quietly corrodes the connections inside panels and meter equipment. On coastal homes we look closely at every termination."
     },
     {
       "heading": "Post-war ranch homes with older pools",
-      "body": "Neighborhoods like Driftwood and Beverly Park brought ranch homes with backyard pools in the 1950s and 1960s. Many pools are decades old now, and their bonding and grounding can loosen or corrode over time. A yearly pool electrical inspection, before heater season, catches issues early."
+      "body": "Neighborhoods like Driftwood and Beverly Park brought ranch homes with backyard pools in the 1950s and 1960s. A yearly pool electrical inspection, before heater season, catches issues early."
     }
   ],
   "faqs": [
     {
       "question": "Do you work in Hollywood day or night?",
-      "answer": "Yes. Hollywood is at the southern end of our service area, and we show up whenever you call, day or night. You reach a licensed electrician who answers, not a call center."
+      "answer": "Yes. You reach a licensed electrician who answers, not a call center."
     },
     {
       "question": "My insurer flagged the panel on my older Hollywood home. What now?",
-      "answer": "That is common with Hollywood's older housing. Send us the notice or the 4-point report and we will read it together. Usually the fix is a modern, code-compliant panel, and we pull the permit and meet the inspector so the objection is cleared."
+      "answer": "That is common with Hollywood's older housing. Usually the fix is a modern, code-compliant panel, and we pull the permit and meet the inspector so the objection is cleared."
     },
     {
       "question": "How often should my pool's electrical be inspected?",
-      "answer": "About once a year, ideally before heater season. Many Hollywood pools are decades old, and near the coast salt air is hard on bonding and grounding, which can loosen or corrode over time. Book a pool electrical inspection and we will tell you honestly what we find."
+      "answer": "About once a year, ideally before heater season. Book a pool electrical inspection and we will tell you honestly what we find."
     }
   ]
 }

@@ -14,7 +14,7 @@ interface ServiceCardProps {
 
 // Service tile: a clean image header over a light body that carries the title,
 // a one-line plain-English summary, and a clear call to read more. The image is
-// on-brand illustration or Damean action photography; the words carry meaning.
+// on-brand trade photography or a real job photo; the words carry meaning.
 export function ServiceCard({ service, titleAs: Title = "h3" }: ServiceCardProps) {
   const image = serviceImage(service.slug);
   const summary = firstSentence(service.intro);

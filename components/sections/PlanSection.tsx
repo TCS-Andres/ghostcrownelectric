@@ -28,7 +28,7 @@ interface PlanStep {
 const PLAN_STEPS: PlanStep[] = [
   {
     title: "Call Us",
-    body: "We talk it through before we ever pull up, so we arrive already understanding the problem. Day or night, you reach a licensed electrician, not a call center.",
+    body: "Day or night, you reach a licensed electrician, not a call center.",
     badge: "from-cyan-300 to-cyan-600",
     glow: "bg-cyan",
     iconClass: "text-white",
@@ -36,7 +36,7 @@ const PLAN_STEPS: PlanStep[] = [
   },
   {
     title: "We Assess and Quote",
-    body: "We come to the site, see what actually needs to be done, and give you one honest number before any work begins.",
+    body: "We see what actually needs doing and give you one number before any work begins.",
     badge: "from-accent to-navy",
     glow: "bg-accent",
     iconClass: "text-white",
@@ -44,7 +44,7 @@ const PLAN_STEPS: PlanStep[] = [
   },
   {
     title: "We Do the Work and Close It Out",
-    body: "Our crew executes, the inspection passes, and we follow up to make sure you are happy. Then you go back to never thinking about your electrical.",
+    body: "Our crew executes, the inspection passes, and we follow up. Then you go back to never thinking about it.",
     badge: "from-gold-300 to-gold-600",
     glow: "bg-gold",
     iconClass: "text-navy",

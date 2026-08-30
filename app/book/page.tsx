@@ -6,7 +6,6 @@ import { cityLinks } from "@/lib/links";
 import {
   breadcrumbListNode,
   electricianNode,
-  founderNode,
   graph,
 } from "@/lib/schema";
 import type { Crumb } from "@/components/layout/Breadcrumbs";
@@ -18,20 +17,20 @@ import { JsonLd } from "@/components/seo/JsonLd";
 
 const TITLE = "Request Service | Ghost Crown Electric";
 const DESCRIPTION =
-  "Request licensed electrical service in Broward County. Tell us what is going on, get one honest price, and our in-house crew handles it start to finish.";
+  "Request licensed electrical service in Broward County. Tell us what is going on and get one honest price from an in-house crew.";
 
 const PLAN: { title: string; body: string }[] = [
   {
     title: "Call us first",
-    body: "We talk through what is happening before we ever pull up. Sometimes we can point you the right way on the phone.",
+    body: "We talk it through before we pull up. Sometimes we can point you the right way on the phone.",
   },
   {
     title: "We assess and quote",
-    body: "We come see it, forecast the job honestly, and give you one number. No moving targets, no mid-job changes.",
+    body: "We see it in person and give you one number. No moving targets.",
   },
   {
     title: "We do the work and close it out",
-    body: "Our in-house crew does the work, the inspection passes, and we follow up to make sure you are set.",
+    body: "Our crew does the work, the inspection passes, and we follow up.",
   },
 ];
 
@@ -59,7 +58,6 @@ export default function BookPage() {
       <JsonLd
         data={graph([
           electricianNode(business),
-          founderNode(business),
           breadcrumbListNode(trail, pageUrl),
         ])}
       />
@@ -71,7 +69,7 @@ export default function BookPage() {
           as="h1"
           eyebrow="Request service"
           title="Tell us what is going on"
-          description="Fill this out and our crew will follow up to talk it through. Nothing automated, no pressure. If it is urgent, do not wait on us. Call, day or night."
+          description="Fill this out and our crew will follow up. Nothing automated, no pressure. If it is urgent, call instead, day or night."
         />
 
         <div className="mt-12 grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
@@ -99,8 +97,8 @@ export default function BookPage() {
               How It Works
             </h2>
             <p className="mt-3 text-ink-muted">
-              Three steps, start to finish, with the same licensed team on the call
-              and at the inspection.
+              Three steps, with the same licensed team on the call and at
+              the inspection.
             </p>
             <ol className="mt-8 flex flex-col gap-6">
               {PLAN.map((step, index) => (

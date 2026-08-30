@@ -22,7 +22,6 @@ import { formatPostDate } from "@/lib/blog";
 import {
   electricianNode,
   faqPageNode,
-  founderNode,
   graph,
   type JsonLdNode,
 } from "@/lib/schema";
@@ -45,7 +44,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 
 const TITLE = "Electrician in Broward County, FL | Ghost Crown Electric";
 const DESCRIPTION =
-  "Licensed electrician serving Broward County and South Florida, day or night. One accountable team from the first call to the final inspection. Call for honest pricing.";
+  "Licensed electrician serving Broward and Palm Beach counties, day or night. Panels, service upgrades, meter banks, and emergency repairs. Call for one honest price.";
 
 // Real job photos from the field, shown in the interactive "Recent work"
 // gallery. Each card carries a short note on what the job was and its own icon.
@@ -54,7 +53,7 @@ const WORK_ITEMS: CardItem[] = [
     id: "service-rebuild",
     title: "Service Entrance Rebuild",
     description:
-      "A full exterior service entrance rebuilt with new conduit, weatherhead, and wiring, then permitted and inspected.",
+      "New conduit, weatherhead, and wiring. Permitted and inspected.",
     imgSrc: "/images/work-service-rebuild.jpg",
     alt: "An exterior electrical service entrance rebuilt with new conduit and wiring",
     icon: <Zap size={24} aria-hidden="true" />,
@@ -63,7 +62,7 @@ const WORK_ITEMS: CardItem[] = [
     id: "meter-bank",
     title: "Multi-Meter Service",
     description:
-      "A multi-tenant meter bank serviced on a building exterior, keeping a whole building's power safe and up to code.",
+      "A multi-tenant meter bank brought back up to code.",
     imgSrc: "/images/work-meter-bank.jpg",
     alt: "A multi-tenant electrical meter bank on a building exterior",
     icon: <Gauge size={24} aria-hidden="true" />,
@@ -72,7 +71,7 @@ const WORK_ITEMS: CardItem[] = [
     id: "service-upgrade",
     title: "Service Upgrade",
     description:
-      "Upgrading an exterior service to carry a modern home's load, from air conditioning to EV charging.",
+      "An exterior service upgraded to carry AC, pool, and EV charging.",
     imgSrc: "/images/work-service-upgrade.jpg",
     alt: "A Ghost Crown Electric electrician upgrading an exterior electrical service",
     icon: <PlugZap size={24} aria-hidden="true" />,
@@ -81,7 +80,7 @@ const WORK_ITEMS: CardItem[] = [
     id: "panel-rewire",
     title: "Panel Rewire",
     description:
-      "An electrical panel rewired with every circuit cleanly routed and clearly labeled.",
+      "Every circuit cleanly routed and clearly labeled.",
     imgSrc: "/images/work-panel-rewire.jpg",
     alt: "An electrical panel rewired with neatly routed circuits",
     icon: <Cable size={24} aria-hidden="true" />,
@@ -90,7 +89,7 @@ const WORK_ITEMS: CardItem[] = [
     id: "subpanels",
     title: "Meter, Service & Subpanels",
     description:
-      "A new meter, service disconnect, and subpanels set clean on a stucco wall.",
+      "New meter, disconnect, and subpanels, set clean and square.",
     imgSrc: "/images/work-service-subpanels.jpg",
     alt: "A new exterior meter, service disconnect, and subpanels on a stucco wall",
     icon: <SquareStack size={24} aria-hidden="true" />,
@@ -99,7 +98,7 @@ const WORK_ITEMS: CardItem[] = [
     id: "bucket-truck",
     title: "Our Bucket Truck On Site",
     description:
-      "Our own bucket truck on the job, so overhead service and sign work happens on our schedule, not a rental company's.",
+      "We own the truck, so overhead and sign work runs on our schedule.",
     imgSrc: "/images/work-bucket-truck.jpg",
     alt: "The Ghost Crown Electric bucket truck at a job site",
     icon: <Truck size={24} aria-hidden="true" />,
@@ -108,7 +107,7 @@ const WORK_ITEMS: CardItem[] = [
     id: "panel-replace",
     title: "Panel Replacement",
     description:
-      "A residential panel replaced with a modern, code-compliant one, often the fix an insurer wants to see.",
+      "A modern, code-compliant panel. Usually the fix an insurer wants.",
     imgSrc: "/images/work-panel-replace.jpg",
     alt: "A residential electrical panel being replaced",
     icon: <CircuitBoard size={24} aria-hidden="true" />,
@@ -117,7 +116,7 @@ const WORK_ITEMS: CardItem[] = [
     id: "residential-dusk",
     title: "Residential Service, Broward",
     description:
-      "A Broward County home at dusk after a completed service upgrade, back to full, reliable power.",
+      "A Broward home back to full power after a service upgrade.",
     imgSrc: "/images/work-residential-dusk.jpg",
     alt: "A South Florida home at dusk after an electrical service upgrade",
     icon: <House size={24} aria-hidden="true" />,
@@ -130,32 +129,32 @@ const HOME_FAQS: Faq[] = [
   {
     question: "What areas do you serve?",
     answer:
-      "We cover all of Broward and Palm Beach counties, and we reach as far south as North Miami Beach. Broward is home base, so that is where we are quickest, but we run north through Palm Beach every week. North Miami Beach is about as far into Miami-Dade as we go. If you sit right at the edge, call us anyway and we will be honest about it, quoting the trip by distance so there are no surprises.",
+      "All of Broward and Palm Beach counties, as far south as North Miami Beach. Broward is home base, so we are quickest there. Right at the edge? Call anyway and we will quote the trip honestly.",
   },
   {
     question: "Do you handle both commercial and residential work?",
     answer:
-      "Yes. We work in homes and in commercial and managed properties every week. Panels, meters, service rebuilds, pool electrical, and repairs are all in our lane. If it is electrical and it sits inside our service area, tell us what is going on and we will let you know plainly whether we are the right fit.",
+      "Yes. Homes, commercial buildings, and managed properties every week: panels, meters, service rebuilds, pool electrical, commercial lighting, and repairs.",
   },
   {
     question: "Can you help in an emergency?",
     answer:
-      "Yes. We answer the phone day or night. If your power is out, a panel feels warm, or something is not safe, call and we will talk it through right away. After-hours and emergency visits carry a premium, because you are paying for real availability, and we tell you that up front before we head your way.",
+      "Yes. We answer day or night. Power out, a warm panel, anything that does not feel safe, call and we will talk it through. After-hours visits carry a premium, and we tell you before we head out.",
   },
   {
     question: "How does the service call work?",
     answer:
-      "You reach a licensed electrician, not a call center. We start with an on-site visit to see the problem in person and diagnose it. If the job is bigger, you get one honest price before any further work begins, so you always know the number before we start.",
+      "You reach a licensed electrician, not a call center. We come out, diagnose it in person, and give you one price before any work begins.",
   },
   {
     question: "My insurance company flagged my panel. Can you help?",
     answer:
-      "Often, yes. Carriers frequently flag older panels like Zinsco and Federal Pacific. We come out, look at what you actually have, and tell you honestly whether it needs replacing and what that involves. Proper grounding and a sound panel protect your family, your home, and your investment as a whole. We document the work for your carrier.",
+      "Often, yes. Carriers flag older panels like Zinsco and Federal Pacific. We look at what you actually have, tell you honestly whether it needs replacing, and document the work for your carrier.",
   },
   {
     question: "Are you licensed?",
     answer:
-      "Yes. Ghost Crown Electric is a Florida Certified Electrical Contractor with statewide authority and holds a Broward County Master Electrician license. We pull the permits and meet the inspector on every job. With 286 permitted projects on public record, the work is documented and verifiable, not just a promise.",
+      "Yes. Florida Certified Electrical Contractor #EC13010704 and Broward County Master Electrician. We pull the permits and meet the inspector on every job, with 286 permitted projects on public record.",
   },
 ];
 
@@ -163,22 +162,22 @@ const HOME_FAQS: Faq[] = [
 const WHY_FEATURES: { title: string; body: string; icon: ReactNode }[] = [
   {
     title: "Licensed and certified",
-    body: "Florida Certified Electrical Contractor and Broward County Master Electrician, in a market full of unlicensed labor.",
+    body: "Florida Certified Electrical Contractor and Broward County Master Electrician.",
     icon: <BrandIcon name="licensed-shield" size={18} />,
   },
   {
     title: "One honest price",
-    body: "We forecast the job, quote it once, and never change the number mid job. No surprises when the work is done.",
+    body: "We quote it once and never change the number mid job.",
     icon: <BrandIcon name="one-honest-number" size={18} />,
   },
   {
     title: "Day or night",
-    body: "Power does not wait for business hours. We answer the phone and show up when we say we will.",
+    body: "Power does not wait for business hours. Neither do we.",
     icon: <BrandIcon name="call-day-or-night" size={18} />,
   },
   {
     title: "A documented record",
-    body: "286 permitted projects on public record, ranked in the top tier of Florida contractors by permit quality.",
+    body: "286 permitted projects on public record, top tier in Florida by permit quality.",
     icon: <BrandIcon name="five-star-work" size={18} />,
   },
 ];
@@ -226,7 +225,6 @@ export default function HomePage() {
 
   const nodes: JsonLdNode[] = [
     electricianNode(business),
-    founderNode(business),
     faqPageNode(HOME_FAQS, pageUrl),
   ];
 
@@ -238,7 +236,7 @@ export default function HomePage() {
       <section className="relative isolate overflow-hidden bg-surface-dark text-ink-on-dark">
         <div aria-hidden="true" className="absolute inset-0 -z-20">
           <Image
-            src="/images/hero-video-poster.jpg"
+            src="/images/work-residential-dusk.jpg"
             alt=""
             fill
             priority
@@ -252,7 +250,7 @@ export default function HomePage() {
             loop
             playsInline
             preload="auto"
-            poster="/images/hero-video-poster.jpg"
+            poster="/images/work-residential-dusk.jpg"
           >
             <source src="/videos/gce-ambient-web-v3.mp4" type="video/mp4" />
           </video>
@@ -276,9 +274,9 @@ export default function HomePage() {
               </h1>
 
               <p className="mt-5 max-w-2xl text-lg text-ink-muted-on-dark">
-                Licensed, local, and calm under pressure. We take your call, price
-                the job, and meet the inspector on site. From a panel that keeps
-                tripping to a house with no power, we show up when we say we will.
+                Licensed, local, and calm under pressure. We take the call,
+                price the job, and meet the inspector. A tripping panel or a
+                dark house, we show up when we say we will.
               </p>
 
               <CallToActions className="mt-8" />
@@ -340,7 +338,7 @@ export default function HomePage() {
               as="h2"
               eyebrow="What we do"
               title="The electrical work we are called for most"
-              description="From panels and service upgrades to pool electrical and everyday lighting and repairs, one licensed crew handles it from the first call to the final inspection."
+              description="Panels, service upgrades, commercial lighting, pool electrical, and everyday repairs. One licensed crew, first call to final inspection."
             />
             <Link
               href={routes.services}
@@ -369,9 +367,8 @@ export default function HomePage() {
                     Need Help Choosing a Service?
                   </h3>
                   <p className="mt-2 max-w-xl text-ink-muted-on-dark">
-                    Call and a licensed electrician will point you the right way,
-                    or send a request and we will get back to you. No obligation,
-                    day or night.
+                    Call and a licensed electrician will point you the right
+                    way. No obligation, day or night.
                   </p>
                   <CallToActions className="mt-6" />
                 </div>
@@ -385,8 +382,8 @@ export default function HomePage() {
       <section className="container-page py-16 sm:py-20">
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
           <Media
-            src="/images/damean-owner-truck.jpg"
-            alt="Damean Callum, owner of Ghost Crown Electric, in front of the company bucket truck"
+            src="/images/work-bucket-truck.jpg"
+            alt="A Ghost Crown Electric bucket truck and crew set up on a South Florida job site"
             sizes="(min-width: 1024px) 45vw, 100vw"
             className="aspect-[4/3] rounded-2xl border border-border shadow-[var(--shadow-card)]"
           />
@@ -395,7 +392,7 @@ export default function HomePage() {
               as="h2"
               eyebrow="Why Ghost Crown"
               title="The licensed hand you want in your panel"
-              description="You cannot see your electrical system, so you are trusting the person who works on it. Here is why property managers and homeowners keep calling us back."
+              description="You cannot see your electrical system, so you are trusting whoever works on it. Here is why property managers keep calling us back."
             />
             <ul className="mt-8 flex flex-col gap-5">
               {WHY_FEATURES.map((feature, index) => (
@@ -427,7 +424,7 @@ export default function HomePage() {
             as="h2"
             eyebrow="How we price"
             title="We price it once, and we price it right."
-            description="No games and no moving numbers. Here is how it works before you ever call."
+            description="No games and no moving numbers. Here is how it works."
           />
           <div className="relative isolate mt-10 overflow-hidden rounded-3xl bg-surface-dark px-5 py-8 sm:px-8 sm:py-10">
             <div
@@ -444,9 +441,9 @@ export default function HomePage() {
                     We start in person
                   </h3>
                   <p className="mt-2 text-ink-muted-on-dark">
-                    We come out and diagnose the problem in person, not with a
-                    guess over the phone. You meet a licensed electrician who
-                    tells you what is actually going on.
+                    We diagnose in person, not with a guess over the phone.
+                    You meet a licensed electrician who tells you what is
+                    going on.
                   </p>
                 </div>
               </li>
@@ -459,9 +456,8 @@ export default function HomePage() {
                     One honest price
                   </h3>
                   <p className="mt-2 text-ink-muted-on-dark">
-                    For any bigger job, you get a single price before the work
-                    begins, forecast from what we actually see, so you always
-                    know the number first.
+                    On any bigger job you get one price before work begins,
+                    forecast from what we actually see.
                   </p>
                 </div>
               </li>
@@ -474,19 +470,16 @@ export default function HomePage() {
                     No moving numbers
                   </h3>
                   <p className="mt-2 text-ink-muted-on-dark">
-                    The number we quote is the number you pay. We do not change
-                    it in the middle of the job. If something truly hidden turns
-                    up, you decide before we go on.
+                    The number we quote is the number you pay. If something
+                    truly hidden turns up, you decide before we go on.
                   </p>
                 </div>
               </li>
             </ul>
           </div>
           <p className="mt-8 max-w-2xl text-ink-muted">
-            The number we quote is the number you pay. We forecast the job
-            honestly, put one price on it, and we do not change it mid job. You
-            are paying for the experience, and for the peace of mind that comes
-            with it.
+            You are paying for the experience, and for the peace of mind
+            that comes with it.
           </p>
         </div>
       </section>
@@ -522,12 +515,10 @@ export default function HomePage() {
                     A nine-meter bank, back to life after a fire
                   </h3>
                   <p className="mt-3 text-ink-muted-on-dark">
-                    A fire took out a nine-meter meter bank and left the whole
-                    building dark. Tenants had been without power for a week. We
-                    got in, rebuilt the electrical, cleaned up and repaired the
-                    wall around it, and had the building back online within two
-                    weeks of the fire. That is the kind of situation you want
-                    handled by someone who has done it before.
+                    A fire took out a nine-meter bank and left a whole
+                    building dark, tenants without power for a week. We
+                    rebuilt the electrical, repaired the wall, and had every
+                    unit back online within two weeks.
                   </p>
                 </div>
               </li>
@@ -537,11 +528,10 @@ export default function HomePage() {
                     A 150-foot pool feeder, and a handshake from the inspector
                   </h3>
                   <p className="mt-3 text-ink-muted-on-dark">
-                    We ran a 150-foot pool feeder rewire and did it to the letter.
-                    When the inspector came out, he looked it over and shook our
-                    electrician's hand. Pool electrical is unforgiving work, and
-                    getting the grounding and bonding right is how you protect the
-                    water and everyone in it.
+                    A 150-foot pool feeder rewired to the letter. The
+                    inspector looked it over and shook our electrician's
+                    hand. Grounding and bonding is what protects the water
+                    and everyone in it.
                   </p>
                 </div>
               </li>
@@ -556,7 +546,7 @@ export default function HomePage() {
           as="h2"
           eyebrow="Recent work"
           title="Straight from our trucks"
-          description="Real panels, meter banks, and service upgrades our crew has handled across Broward County and South Florida. Hover or tap a photo to see the job."
+          description="Real panels, meter banks, and service upgrades from across Broward County. Tap a photo to see the job."
         />
         <ExpandingCards items={WORK_ITEMS} className="mt-10" />
       </section>
@@ -568,7 +558,7 @@ export default function HomePage() {
             as="h2"
             eyebrow="Commercial lighting"
             title="Your Sign Is Your Storefront After Dark"
-            description="Signs, parking lot pole lights, and building lighting for South Florida businesses. Our crew runs its own bucket truck, so high work happens on our schedule, not a rental company's."
+            description="Signs, parking lot pole lights, and building lighting. We run our own bucket truck, so high work happens on our schedule."
           />
           <Link
             href={routes.service("commercial-lighting")}
@@ -598,9 +588,8 @@ export default function HomePage() {
           ))}
         </ul>
         <p className="mt-6 max-w-2xl text-ink-muted">
-          A recent storefront sign relight by our crew: from damaged and dark to
-          every letter burning bright. If your sign or your lot has gone dark,
-          call and we will get eyes on it fast.
+          A recent storefront relight: dark and damaged to every letter
+          burning bright. If your sign or lot has gone dark, call us.
         </p>
       </section>
 
@@ -618,8 +607,8 @@ export default function HomePage() {
                 Power Out, or Something That Does Not Feel Safe?
               </h2>
               <p className="mt-1.5 font-medium text-accent-bright-ink/80">
-                Call day or night. We will talk it through right away and head
-                your way.
+                Call day or night. We will talk it through and head your
+                way.
               </p>
             </div>
           </div>
@@ -661,13 +650,12 @@ export default function HomePage() {
             as="h2"
             eyebrow="Where we work"
             title="Broward and Palm Beach, south to North Miami Beach"
-            description="We are based in North Lauderdale and run Broward County as our home turf, cover all of Palm Beach County to the north, and reach as far south as North Miami Beach. Pick a county to see the cities we serve."
+            description="Based in North Lauderdale. Broward is home turf, we cover all of Palm Beach County, and we reach as far south as North Miami Beach."
           />
           <CoverageMap groups={coverage} className="mt-10" />
           <p className="mt-6 text-ink-muted">
-            Do not see your city? Call us. If you are within range we will be
-            there, and if the drive is longer we will quote it honestly by
-            distance.
+            Do not see your city? Call us. If the drive is longer, we quote
+            it honestly by distance.
           </p>
         </div>
       </section>
@@ -678,7 +666,7 @@ export default function HomePage() {
           as="h2"
           eyebrow="On the record"
           title="A track record you can look up, not just take our word for."
-          description="Most of our work comes from referrals, but the proof is public. Here is what the record shows."
+          description="Most of our work comes from referrals. The proof is public."
         />
         <div className="relative isolate mt-10 overflow-hidden rounded-3xl bg-surface-dark px-5 py-8 sm:px-8 sm:py-10">
           <div

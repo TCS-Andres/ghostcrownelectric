@@ -15,14 +15,14 @@
 // than a generic pose. Pool and EV charging deliberately use equipment-only
 // frames rather than crew photography, so the card reads as the work itself.
 const SERVICE_IMAGE: Record<string, string> = {
-  "electrical-panel-upgrade": "damean-panel",
+  "electrical-panel-upgrade": "panel-upgrade",
   "electrical-service-rebuild": "work-service-rebuild",
   "emergency-electrician": "emergency-night",
   "commercial-lighting": "commercial-lighting-night",
   "pool-electrical": "pool-bonding",
   "ev-charger-installation": "ev-charger",
   "meter-bank-replacement": "work-meter-bank",
-  "lighting-fans-outlets": "damean-recessed",
+  "lighting-fans-outlets": "work-residential-dusk",
   "surge-protection": "surge-protection",
   "electrical-safety-check": "safety-check",
 };
@@ -77,19 +77,6 @@ const IMAGE_ALT: Record<string, string> = {
   "blog-panels-insurance": "A close inspection of an aged residential electrical panel",
   "blog-pool-grounding": "An underwater view of a pool light and a bonded metal handrail",
   "blog-service-rebuild": "A residential electrical service rebuild in progress",
-  "damean-panel": "A Ghost Crown Electric electrician testing a residential electrical panel",
-  "damean-meter": "A Ghost Crown Electric electrician inspecting a building's meter bank",
-  "damean-rooftop": "A Ghost Crown Electric electrician servicing a rooftop electrical disconnect",
-  "damean-pool": "A Ghost Crown Electric electrician correcting pool bonding and grounding",
-  "damean-ev": "A Ghost Crown Electric electrician installing a home EV charger",
-  "damean-consult": "A Ghost Crown Electric electrician meeting a homeowner at the door",
-  "damean-switchgear": "A Ghost Crown Electric electrician testing commercial switchgear",
-  "damean-cabletray": "A Ghost Crown Electric electrician running cable in a commercial ceiling",
-  "damean-recessed": "A Ghost Crown Electric electrician installing recessed lighting in a ceiling",
-  "damean-outlet": "A Ghost Crown Electric electrician wiring a new wall outlet",
-  "damean-conduit": "A Ghost Crown Electric electrician bending conduit on a job site",
-  "damean-kitchen": "A Ghost Crown Electric electrician hanging pendant lighting over a kitchen island",
-  "damean-warehouse": "A Ghost Crown Electric electrician replacing high bay lighting in a warehouse",
   // Real Ghost Crown job photography (client-supplied): a storefront sign
   // relight, before and after. Unlike the illustrative imagery above, these may
   // be described as actual Ghost Crown work.
@@ -150,11 +137,6 @@ const SERVICE_GALLERY: Record<
         "Corrosion, mixed breakers, and no room left to grow. This is the point where a repair stops being worth it.",
       real: true,
     },
-    {
-      name: "panel-upgrade",
-      caption:
-        "What it looks like when the work is done right: labeled, balanced, and room to add.",
-    },
   ],
   "electrical-service-rebuild": [
     {
@@ -162,11 +144,6 @@ const SERVICE_GALLERY: Record<
       caption:
         "Our crew rebuilding a residential service, meter can to main disconnect, with the power off and the permit pulled.",
       real: true,
-    },
-    {
-      name: "damean-conduit",
-      caption:
-        "Bending rigid conduit on site. A service rebuild is only as good as the pipe the conductors run in.",
     },
     {
       name: "work-service-subpanels",
@@ -198,18 +175,8 @@ const SERVICE_GALLERY: Record<
         "Our truck on site the next morning. We own the equipment, so nothing waits on a rental.",
       real: true,
     },
-    {
-      name: "damean-rooftop",
-      caption:
-        "Rooftop disconnect service. Outages do not keep business hours, and neither do we.",
-    },
   ],
   "commercial-lighting": [
-    {
-      name: "damean-warehouse",
-      caption:
-        "High bay retrofits: tired fixtures out, clean and even LED light in, without closing the floor.",
-    },
     {
       name: "commercial-lighting-before",
       caption:
@@ -292,25 +259,19 @@ const SERVICE_GALLERY: Record<
   ],
   "lighting-fans-outlets": [
     {
-      name: "damean-kitchen",
+      name: "hero-electrician",
       caption:
-        "Pendant lighting over a kitchen island. Wired properly, hung straight, and level with each other.",
+        "Switches, dimmers, and outlets are only as good as the connections behind the plate.",
     },
     {
-      name: "damean-outlet",
+      name: "pool-safety",
       caption:
-        "New outlets, switches, and GFCI protection where the original wiring never had it.",
+        "Outdoor and landscape lighting, wired on a timer and protected the way code requires.",
     },
     {
-      name: "work-residential-dusk",
+      name: "about-craft",
       caption:
-        "Landscape and palm uplighting on a Broward front yard, on a timer and on code.",
-      real: true,
-    },
-    {
-      name: "damean-cabletray",
-      caption:
-        "Running new circuits through a ceiling without taking the room apart to do it.",
+        "Every fixture and device gets tested before we call it done.",
     },
   ],
   "surge-protection": [

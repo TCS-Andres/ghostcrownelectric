@@ -18,8 +18,8 @@
     "Oriole Gardens",
     "Holiday Springs"
   ],
-  "housingNotes": "Margate incorporated in 1961 and built out through the 1960s and 1970s, leaving a mix of ranch homes, manufactured home communities, and retirement villages like Paradise Gardens, much of it wired to the codes of its decade. Original panels and breaker brands carriers no longer accept are common finds, especially in older sections. Margate sits inland, away from coastal salt air, but decades of Florida heat still wear on aging gear, and pools mean bonding deserves attention alongside the panel.",
-  "permitNote": "In Margate, service changes and pool electrical are permitted work through the city's building department under the Florida Building Code. Ghost Crown Electric pulls the permit in our own name, schedules the inspection, and meets the inspector in person, so the work is documented and signed off the way it should be.",
+  "housingNotes": "Margate incorporated in 1961 and built out through the 1960s and 1970s, leaving a mix of ranch homes, manufactured home communities, and retirement villages like Paradise Gardens, much of it wired to the codes of its decade.",
+  "permitNote": "In Margate, service changes and pool electrical are permitted work through the city's building department under the Florida Building Code.",
   "challenges": [
     {
       "heading": "A wide mix of housing from one growth era",
@@ -27,7 +27,7 @@
     },
     {
       "heading": "Retirement communities with original panels",
-      "body": "Neighborhoods like Paradise Gardens were built for easy living decades ago, and many homes run on original equipment. That gear has outlived its life, and some comes from brands insurers no longer accept. An assessment tells you where you stand before anything becomes an emergency."
+      "body": "Neighborhoods like Paradise Gardens were built for easy living decades ago, and many homes run on original equipment. An assessment tells you where you stand before anything becomes an emergency."
     },
     {
       "heading": "Insurance notices on aging Margate homes",
@@ -37,15 +37,15 @@
   "faqs": [
     {
       "question": "Do you work in Margate day or night?",
-      "answer": "Yes. Margate sits right next to our North Lauderdale home base, and we show up whenever you call, day or night. You always reach a licensed electrician who answers the phone, not a call center."
+      "answer": "Yes. You always reach a licensed electrician who answers the phone, not a call center."
     },
     {
       "question": "My insurance company flagged my panel. What should I do?",
-      "answer": "That is common in Margate's older housing stock. Send us the notice or the 4-point report and we will read it with you. Usually the fix is a modern, code-compliant panel that passes inspection, and we pull the permit and meet the inspector so the objection to your coverage is cleared."
+      "answer": "That is common in Margate's older housing stock. Usually the fix is a modern, code-compliant panel that passes inspection, and we pull the permit and meet the inspector so the objection to your coverage is cleared."
     },
     {
       "question": "I live in a manufactured or mobile home. Do you work on those?",
-      "answer": "Yes. Margate has a real base of manufactured and mobile home communities, and the service and panel on these homes need the same honest attention as any single-family house. We assess the setup in person and tell you plainly what condition it is in and what it needs."
+      "answer": "Yes. We assess the setup in person and tell you plainly what condition it is in and what it needs."
     }
   ]
 }

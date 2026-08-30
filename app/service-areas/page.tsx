@@ -6,7 +6,6 @@ import { coverageByCounty, coverageTotals } from "@/lib/coverage";
 import {
   breadcrumbListNode,
   electricianNode,
-  founderNode,
   graph,
 } from "@/lib/schema";
 import type { Crumb } from "@/components/layout/Breadcrumbs";
@@ -48,7 +47,6 @@ export default function ServiceAreasIndexPage() {
       <JsonLd
         data={graph([
           electricianNode(),
-          founderNode(),
           breadcrumbListNode(trail, pageUrl),
         ])}
       />
@@ -132,9 +130,8 @@ export default function ServiceAreasIndexPage() {
         </div>
 
         <p className="mt-12 max-w-3xl leading-relaxed text-ink-muted">
-          If your town is not listed, call anyway. If you are within range we
-          will be there, and if the drive is longer we will quote it honestly by
-          distance, so there are no surprises.
+          If your town is not listed, call anyway. If the drive is longer,
+          we quote it honestly by distance.
         </p>
       </div>
 

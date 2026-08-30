@@ -11,7 +11,6 @@ import {
   articleNode,
   breadcrumbListNode,
   electricianNode,
-  founderNode,
   graph,
 } from "@/lib/schema";
 import { renderMarkdown } from "@/lib/markdown";
@@ -76,7 +75,6 @@ export default async function BlogArticlePage({
       <JsonLd
         data={graph([
           electricianNode(),
-          founderNode(),
           articleNode(post, post.title, post.description, pageUrl),
           breadcrumbListNode(trail, pageUrl),
         ])}

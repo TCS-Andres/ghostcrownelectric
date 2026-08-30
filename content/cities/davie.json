@@ -7,7 +7,7 @@
   "metaTitle": "Electrician in Davie, FL | Ghost Crown Electric",
   "metaDescription": "Licensed electrician in Davie, FL. Panel upgrades, horse-property wiring, and emergency service across Broward, day or night. Call today.",
   "h1": "Electrician in Davie, FL",
-  "intro": "Davie built its reputation on horses, not high-rises. Zoning still allows horses on many streets, so a lot of homes sit on generous lots with detached structures, wells, and service panels never built for today's air conditioning, pools, and EV chargers. Whether it is a tired panel or a pool that needs its bonding checked, we come out, look in person, and give one honest price.",
+  "intro": "Davie built its reputation on horses, not high-rises. Zoning still allows them on many streets, so homes sit on generous lots with detached structures, wells, and panels never built for today's air conditioning, pools, and EV chargers.",
   "neighborhoods": [
     "Pine Island Ridge",
     "Forest Ridge",
@@ -18,8 +18,8 @@
     "Long Lake Ranches",
     "Ivanhoe"
   ],
-  "housingNotes": "Davie's housing reflects its horse-country roots. Older sections have large-lot properties, some with wells, septic, and original service that predates today's air conditioning and pools. Established communities like Pine Island Ridge date to the 1970s, so aging panels still turn up there, while Hawkes Bluff and other 2000s builds carry code-current equipment. Pools are common, and horse properties often add detached structures that need their own service and grounding.",
-  "permitNote": "In Davie, service changes and pool electrical work are permitted through the town's building department under the Florida Building Code and Broward County's requirements. Ghost Crown Electric pulls the permit in our own name, schedules the inspection, and we attend it in person, so the work on your property is documented and signed off correctly.",
+  "housingNotes": "Davie's housing reflects its horse-country roots. Established communities like Pine Island Ridge date to the 1970s, so aging panels still turn up there, while Hawkes Bluff and other 2000s builds carry code-current equipment.",
+  "permitNote": "In Davie, service changes and pool electrical work are permitted through the town's building department under the Florida Building Code and Broward County's requirements.",
   "challenges": [
     {
       "heading": "Horse properties with older service and outbuildings",
@@ -27,7 +27,7 @@
     },
     {
       "heading": "A town built in different eras, side by side",
-      "body": "Davie mixes horse-country estates, 1970s condo communities like Pine Island Ridge, and newer subdivisions within one town. Each era carries its own equipment, from original panels and brands the industry no longer favors to newer service that is generally sound. We usually know what to expect."
+      "body": "Davie mixes horse-country estates, 1970s condo communities like Pine Island Ridge, and newer subdivisions within one town. We usually know what to expect."
     },
     {
       "heading": "Pools and growing loads in newer western Davie",
@@ -37,15 +37,15 @@
   "faqs": [
     {
       "question": "Do you work on horse properties and larger lots in Davie?",
-      "answer": "Yes. Davie has more acreage and horse property than most of Broward, often with barns, wells, or guest structures that need their own electrical attention. We assess the whole property in person, not just the main panel, and give you one honest price."
+      "answer": "Yes. We assess the whole property in person, not just the main panel, and give you one honest price."
     },
     {
       "question": "My condo is in Pine Island Ridge and the panel is original. What should I expect?",
-      "answer": "That is common in Pine Island Ridge and Davie's other 1970s and 1980s communities. We assess the unit's service in person, explain what we find, and if a panel replacement is the right call we forecast one price before we start. We pull the permit and meet the inspector."
+      "answer": "That is common in Pine Island Ridge and Davie's other 1970s and 1980s communities. We pull the permit and meet the inspector."
     },
     {
       "question": "Do you serve Davie day or night?",
-      "answer": "Yes. Davie is well within our regular Broward service area, and we answer the phone whenever you call, day or night. You reach a licensed electrician directly, not a call center."
+      "answer": "Yes. You reach a licensed electrician directly, not a call center."
     }
   ]
 }

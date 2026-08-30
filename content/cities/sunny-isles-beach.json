@@ -18,8 +18,8 @@
     "the oceanfront boardwalk corridor",
     "the area near the Golden Beach town line"
   ],
-  "housingNotes": "Sunny Isles Beach housing is almost entirely vertical and coastal. Oceanfront towers from the 1960s and 1970s, like the older Winston Towers buildings, sit alongside luxury high-rises built since the 2000s on Collins Avenue, while Golden Isles on the bay side holds a pocket of older single-family and low-rise waterfront homes. Every building faces direct salt air off the Atlantic, which corrodes meter cans, panel enclosures, and rooftop and pool deck equipment fast. Older towers most often carry original wiring.",
-  "permitNote": "In Sunny Isles Beach, service changes and pool or rooftop work are permitted under the Florida Building Code's high velocity hurricane zone provisions and Miami-Dade's electrical requirements. Nearly every building is a condo or co-op, so board approval comes first. Ghost Crown Electric pulls the permit in our own name and meets the inspector in person.",
+  "housingNotes": "Sunny Isles Beach housing is almost entirely vertical and coastal. Every building faces direct salt air off the Atlantic, which corrodes meter cans, panel enclosures, and rooftop and pool deck equipment fast. Older towers most often carry original wiring.",
+  "permitNote": "In Sunny Isles Beach, service changes and pool or rooftop work are permitted under the Florida Building Code's high velocity hurricane zone provisions and Miami-Dade's electrical requirements.",
   "challenges": [
     {
       "heading": "Direct salt air on an oceanfront barrier island",
@@ -37,15 +37,15 @@
   "faqs": [
     {
       "question": "Do you come out to Sunny Isles Beach?",
-      "answer": "We do, and it sits at the very southern edge of our service area. We do not go farther south into Miami-Dade than this stretch of coast. Within that range you get the same licensed crew and honest pricing we bring to jobs near our North Lauderdale base."
+      "answer": "We do, and it sits at the very southern edge of our service area. Within that range you get the same licensed crew and honest pricing we bring to jobs near our North Lauderdale base."
     },
     {
       "question": "Is salt air really worse here than other coastal cities you serve?",
-      "answer": "It can be. Sunny Isles Beach sits directly on the open Atlantic with no barrier between the towers and the ocean, so salt air works on exposed equipment faster than in bay side or inland cities. Rooftop and pool deck electrical takes the worst of it."
+      "answer": "It can be. Rooftop and pool deck electrical takes the worst of it."
     },
     {
       "question": "My condo board wants a licensed electrician for a reserve study. Can you help?",
-      "answer": "Yes. We regularly work with boards and property managers on electrical assessments tied to reserve studies and recertification. We walk the building with you, document what we find honestly, and give the board a clear, prioritized picture."
+      "answer": "Yes. We walk the building with you, document what we find honestly, and give the board a clear, prioritized picture."
     }
   ]
 }

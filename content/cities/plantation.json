@@ -7,7 +7,7 @@
   "metaTitle": "Electrician in Plantation, FL | Ghost Crown Electric",
   "metaDescription": "Licensed electrician in Plantation, FL. Panel upgrades, pool electrical, and emergency work across Broward County, day or night. Book an on-site visit.",
   "h1": "Electrician in Plantation, FL",
-  "intro": "Plantation is one of Broward's older suburbs, incorporated in 1953, and it grew steadily into the 1970s. From the large lots of Plantation Acres to the planned neighborhoods around Jacaranda, many homes have stood for decades, often with pools and original panels. When a breaker keeps tripping or a 4-point inspection flags the electrical, we look in person, give you one honest price, and meet the inspector, day or night.",
+  "intro": "Plantation is one of Broward's older suburbs, incorporated in 1953, and it grew steadily into the 1970s. When a breaker keeps tripping or a 4-point inspection flags the electrical, we look in person, give you one honest price, and meet the inspector, day or night.",
   "neighborhoods": [
     "Jacaranda",
     "Jacaranda Lakes",
@@ -18,8 +18,8 @@
     "Plantation Isles",
     "Plantation Golf Estates"
   ],
-  "housingNotes": "Plantation was incorporated in 1953 and grew through the 1950s, 1960s, and 1970s, so much of its housing has stood for decades. Established sections like Plantation Acres feature large lots and older single-family homes, while the Jacaranda area brought planned neighborhoods with golf and pools in the 1970s. Many homes still run on original panels, some with breaker brands inspectors and carriers no longer accept, and many pools are decades old, so bonding and grounding deserve a periodic look.",
-  "permitNote": "In Plantation, service changes and pool electrical corrections require a permit and inspection through the city's building department, under the Florida Building Code and Broward County's requirements. Ghost Crown Electric pulls the permit in our own name and we meet the inspector on site, so the sign-off is clean and documented.",
+  "housingNotes": "Plantation was incorporated in 1953 and grew through the 1950s, 1960s, and 1970s, so much of its housing has stood for decades.",
+  "permitNote": "In Plantation, service changes and pool electrical corrections require a permit and inspection through the city's building department, under the Florida Building Code and Broward County's requirements.",
   "challenges": [
     {
       "heading": "Established homes with original panels",
@@ -27,7 +27,7 @@
     },
     {
       "heading": "1970s planned neighborhoods with aging pools",
-      "body": "The Jacaranda area brought golf-course living and backyard pools in the 1970s, and many are now decades old. The bonding and grounding that keep them safe can loosen or corrode over time. A yearly pool electrical inspection, ideally before heater season, catches issues early."
+      "body": "The Jacaranda area brought golf-course living and backyard pools in the 1970s, and many are now decades old. A yearly pool electrical inspection, ideally before heater season, catches issues early."
     },
     {
       "heading": "Insurance carriers scrutinizing older equipment",
@@ -41,11 +41,11 @@
     },
     {
       "question": "A 4-point inspection flagged my panel. What now?",
-      "answer": "That is common with Plantation's older homes. Send us the report or the carrier's notice and we will read it together. Usually the fix is a modern, code-compliant panel, and we pull the permit and meet the inspector so the objection between you and coverage is cleared."
+      "answer": "That is common with Plantation's older homes. Usually the fix is a modern, code-compliant panel, and we pull the permit and meet the inspector so the objection between you and coverage is cleared."
     },
     {
       "question": "How often should I have my pool's electrical checked?",
-      "answer": "About once a year, ideally before heater season. Many Plantation pools go back to the 1970s, and bonding and grounding can loosen or corrode over time. Book a pool electrical inspection and we will tell you honestly what we find."
+      "answer": "About once a year, ideally before heater season. Book a pool electrical inspection and we will tell you honestly what we find."
     }
   ]
 }

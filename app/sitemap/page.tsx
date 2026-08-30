@@ -6,7 +6,6 @@ import { buildMetadata, absoluteUrl } from "@/lib/seo";
 import {
   breadcrumbListNode,
   electricianNode,
-  founderNode,
   graph,
 } from "@/lib/schema";
 import type { Crumb } from "@/components/layout/Breadcrumbs";
@@ -104,7 +103,6 @@ export default function SiteMapPage() {
       <JsonLd
         data={graph([
           electricianNode(),
-          founderNode(),
           breadcrumbListNode(trail, pageUrl),
         ])}
       />

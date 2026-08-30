@@ -11,7 +11,6 @@ import {
   cityElectricianNode,
   cityServiceNode,
   faqPageNode,
-  founderNode,
   graph,
 } from "@/lib/schema";
 import type { Crumb } from "@/components/layout/Breadcrumbs";
@@ -81,7 +80,6 @@ export default async function CityPage({
       <JsonLd
         data={graph([
           cityElectricianNode(city, pageUrl),
-          founderNode(),
           cityServiceNode(city, pageUrl),
           faqPageNode(city.faqs, pageUrl),
           breadcrumbListNode(trail, pageUrl),
@@ -150,7 +148,7 @@ export default async function CityPage({
             as="h2"
             eyebrow="What we do here"
             title={`Electrical services in ${city.name}`}
-            description="Every job below is run by our licensed crew, from the first call to the final inspection. Panel and service work and pool electrical are what we are called for most."
+            description="Every job below is run by our licensed crew, first call to final inspection. Panel work, service upgrades, and pool electrical are what we are called for most."
           />
           <ul className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {orderedServices.map((service) => {

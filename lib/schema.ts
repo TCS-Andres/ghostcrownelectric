@@ -28,7 +28,6 @@ export type JsonLdNode = Record<string, unknown>;
 
 // Stable identifiers for the sitewide entities, referenced across pages.
 export const ELECTRICIAN_ID = `${SITE_URL}/#electrician`;
-export const FOUNDER_ID = `${SITE_URL}/#founder`;
 
 function geoCircle(lat: number, lng: number, radiusMeters: number): JsonLdNode {
   return {
@@ -108,7 +107,6 @@ export function electricianNode(business: Business = getBusiness()): JsonLdNode 
     areaServed: geoCircle(business.geo.lat, business.geo.lng, 40000),
     openingHoursSpecification: openingHours(),
     hasCredential: credentials(business),
-    founder: { "@id": FOUNDER_ID },
     knowsAbout: getServices().map((service) => service.name),
     image: absoluteUrl(OG_IMAGE_PATH),
   };
@@ -116,18 +114,6 @@ export function electricianNode(business: Business = getBusiness()): JsonLdNode 
     node.email = business.email;
   }
   return node;
-}
-
-// The owner, kept as a separate Person node so the license story stays attached
-// to a real name. The name is used exactly as it appears in business.json.
-export function founderNode(business: Business = getBusiness()): JsonLdNode {
-  return {
-    "@type": "Person",
-    "@id": FOUNDER_ID,
-    name: business.founder.name,
-    jobTitle: business.founder.title,
-    worksFor: { "@id": ELECTRICIAN_ID },
-  };
 }
 
 // A Service offered by the business. No offers node: the on-site visit is the
@@ -220,7 +206,6 @@ export function cityElectricianNode(city: City, pageUrl: string): JsonLdNode {
     areaServed: geoCircle(city.lat, city.lng, 25000),
     openingHoursSpecification: openingHours(),
     hasCredential: credentials(business),
-    founder: { "@id": FOUNDER_ID },
     parentOrganization: { "@id": ELECTRICIAN_ID },
     image: absoluteUrl(OG_IMAGE_PATH),
   };

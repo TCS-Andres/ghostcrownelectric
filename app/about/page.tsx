@@ -7,7 +7,6 @@ import { buildMetadata, absoluteUrl } from "@/lib/seo";
 import {
   breadcrumbListNode,
   electricianNode,
-  founderNode,
   graph,
 } from "@/lib/schema";
 import type { Crumb } from "@/components/layout/Breadcrumbs";
@@ -23,29 +22,29 @@ import { JsonLd } from "@/components/seo/JsonLd";
 
 const TITLE = "About Ghost Crown Electric | Broward Electrician";
 const DESCRIPTION =
-  "Meet Ghost Crown Electric, a licensed, local electrical service and repair company serving Broward County and South Florida. Ten years, 286 permitted jobs.";
+  "Ghost Crown Electric is a licensed electrical service and repair company serving Broward County and South Florida. Ten years, 286 permitted jobs on public record.";
 
 // Plain-language values, framed around the customer's peace of mind. The client
 // is the hero here; the company is the guide.
 const VALUES: { title: string; body: string; icon: ReactNode }[] = [
   {
     title: "Trust comes first",
-    body: "We lead with trust and licensing. If you cannot trust the person working in your panel, nothing else matters.",
+    body: "If you cannot trust the company working in your panel, nothing else matters.",
     icon: <BrandIcon name="licensed-shield" size={20} />,
   },
   {
     title: "We show up when we say we will",
-    body: "A time we give you is a promise. Day or night, when we say we are coming, we come.",
+    body: "A time we give you is a promise. Day or night, we come.",
     icon: <BrandIcon name="call-day-or-night" size={20} />,
   },
   {
     title: "Do it right so you can forget about it",
-    body: "We do the work right the first time, so you are not thinking about it after we leave. Peace of mind is the real deliverable.",
+    body: "Done right the first time, so you stop thinking about it after we leave.",
     icon: <BrandIcon name="five-star-work" size={20} />,
   },
   {
     title: "Price it once, price it right",
-    body: "We look at the whole situation, give you one honest number, and stand behind it. No surprises once work has started.",
+    body: "One honest number, and we stand behind it. No surprises once work has started.",
     icon: <BrandIcon name="one-honest-number" size={20} />,
   },
 ];
@@ -60,7 +59,6 @@ export function generateMetadata(): Metadata {
 
 export default function AboutPage() {
   const business = getBusiness();
-  const { name: ownerName, title: ownerTitle } = business.founder;
 
   const trail: Crumb[] = [
     { label: "Home", href: routes.home },
@@ -73,7 +71,6 @@ export default function AboutPage() {
       <JsonLd
         data={graph([
           electricianNode(),
-          founderNode(),
           breadcrumbListNode(trail, pageUrl),
         ])}
       />
@@ -100,12 +97,11 @@ export default function AboutPage() {
                   The Licensed Team Behind the Work
                 </h1>
                 <p className="mt-5 text-lg text-ink-muted-on-dark">
-                  Ghost Crown Electric is a licensed electrical service, repair, and
-                  restoration company based in North Lauderdale, serving Broward
-                  County and South Florida. We take your first call, price the job,
-                  and meet the inspector in person. We stay in our lane, we show up
-                  when we say we will, and we would rather do the work right once
-                  than come back twice.
+                  A licensed electrical service, repair, and restoration
+                  company based in North Lauderdale, serving Broward County
+                  and South Florida. We take the call, price the job, and
+                  meet the inspector in person. We would rather do the work
+                  right once than come back twice.
                 </p>
               </div>
               <HeroTrust className="mt-8" />
@@ -113,8 +109,8 @@ export default function AboutPage() {
             </div>
             <div className="hidden lg:block">
               <Media
-                src="/images/damean-blueprints.jpg"
-                alt="A Ghost Crown Electric electrician reviewing plans with the crew on a South Florida job site"
+                src="/images/work-bucket-truck.jpg"
+                alt="The Ghost Crown Electric bucket truck on a South Florida job site"
                 priority
                 sizes="(min-width: 1024px) 45vw, 0px"
                 className="aspect-[4/3] rounded-2xl border border-navy-600"
@@ -180,61 +176,56 @@ export default function AboutPage() {
             />
             <div className="mt-6 flex flex-col gap-4 text-lg leading-relaxed text-ink-muted">
               <p>
-                We started about ten years ago retrofitting South Florida
-                lighting to LED. Good work, until it commoditized and price
-                became the only thing that mattered. So we moved the business to
-                the work that still needs a licensed, experienced hand: service
-                rebuilds, panel and meter replacement, power restoration, and
-                emergency response. That is what we are known for now, and what
-                we are built to do well.
+                We started ten years ago retrofitting South Florida lighting
+                to LED. Good work, until price became the only thing that
+                mattered. So we moved to the work that still needs a
+                licensed hand: service rebuilds, panel and meter
+                replacement, power restoration, and emergency response.
               </p>
             </div>
           </div>
           <Media
-            src="/images/work-service-upgrade.jpg"
-            alt="A Ghost Crown Electric electrician upgrading an exterior electrical service"
+            src="/images/commercial-lighting-night.jpg"
+            alt="A commercial storefront sign fully lit at night after a Ghost Crown Electric relight"
             sizes="(min-width: 1024px) 45vw, 100vw"
             className="aspect-[4/3] rounded-2xl border border-border shadow-[var(--shadow-card)]"
           />
         </div>
       </section>
 
-      {/* Meet the owner: one contained section about Damean */}
+      {/* Licensed ownership: accountability framed around the company */}
       <section className="bg-surface-2">
         <div className="container-page py-14 sm:py-20">
           <div className="grid items-center gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-14">
             <Media
-              src="/images/damean-owner-truck.jpg"
-              alt={`${ownerName}, owner and ${ownerTitle} at Ghost Crown Electric, in front of the company bucket truck`}
+              src="/images/work-service-subpanels.jpg"
+              alt="A completed Ghost Crown Electric residential service: new meter can, main panel, disconnects, and battery backup"
               sizes="(min-width: 1024px) 38vw, 100vw"
               className="aspect-[4/3] rounded-2xl border border-border shadow-[var(--shadow-card)]"
             />
             <div>
               <SectionHeading
                 as="h2"
-                eyebrow="Meet the owner"
-                title="A Working Owner Who Takes It Personally"
+                eyebrow="How we are built"
+                title="Licensed Ownership on Every Job"
               />
               <div className="mt-6 flex flex-col gap-4 text-lg leading-relaxed text-ink-muted">
                 <p>
-                  {ownerName} is a working owner and {ownerTitle}. He is not
-                  behind a desk. He leads a licensed crew that takes the first
-                  call, walks the property, prices the job, does the work, pulls
-                  the permit, and meets the inspector. But ask him what the job is
-                  really about, and he does not start with panels. He starts with
-                  the people who live behind them.
+                  Ghost Crown Electric is owner-operated and licensed at the top:
+                  a Florida Certified Electrical Contractor and a Broward County
+                  Master Electrician. Nobody here is behind a desk. The same
+                  company that takes your call walks the property, prices the job,
+                  does the work, pulls the permit, and meets the inspector.
                 </p>
                 <p className="border-l-2 border-accent pl-5 font-heading text-xl font-semibold text-ink">
-                  &ldquo;I treat every home like it is my own family&rsquo;s. You
-                  are trusting me with where your family lives, and I do not rest
-                  until you can stop worrying about it.&rdquo;
+                  &ldquo;We treat every property like it is our own family&rsquo;s.
+                  You are trusting us with where people live, and that is not a job
+                  we hand off.&rdquo;
                 </p>
                 <p>
-                  That is why he answers the phone himself, tells you the truth
-                  even when it is not the easy sell, and treats a first-time
-                  customer the same as one he has looked after for years. When you
-                  hire Ghost Crown Electric, you are hiring someone who takes your
-                  home personally.
+                  That is why a real person answers, why you get the truth even
+                  when it is not the easy sell, and why a first-time customer gets
+                  the same crew as one we have looked after for years.
                 </p>
               </div>
             </div>
@@ -249,7 +240,7 @@ export default function AboutPage() {
             as="h2"
             eyebrow="How we work"
             title="What we stand on"
-            description="These are not slogans on a wall. They are the reasons people call us back and send us to their neighbors."
+            description="The reasons people call us back and send us to their neighbors."
           />
           <ul className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2">
             {VALUES.map((value, index) => (
@@ -276,8 +267,8 @@ export default function AboutPage() {
       <section className="container-page py-14 sm:py-20">
         <div className="grid items-center gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-14">
           <Media
-            src="/images/work-bucket-truck.jpg"
-            alt="The Ghost Crown Electric bucket truck at a South Florida job site"
+            src="/images/work-service-upgrade.jpg"
+            alt="The Ghost Crown Electric crew rebuilding a residential electrical service"
             sizes="(min-width: 1024px) 38vw, 100vw"
             className="order-last aspect-[4/3] rounded-2xl border border-border shadow-[var(--shadow-card)] lg:order-first"
           />
@@ -285,12 +276,11 @@ export default function AboutPage() {
             <SectionHeading as="h2" eyebrow="The crew" title="Small on purpose" />
             <div className="mt-6 flex flex-col gap-4 text-lg leading-relaxed text-ink-muted">
               <p>
-                Ghost Crown Electric runs three trucks and a three person
-                in-house crew, so we keep three jobs moving at once without
-                handing your work to a subcontractor we do not know. One member
-                of the crew has been with us more than eight years. The people
-                who show up are our people, trained the way we work, and we keep
-                the team small on purpose so the quality stays consistent.
+                Three trucks and a three person in-house crew, so three jobs
+                move at once without handing your work to a subcontractor we
+                do not know. One crew member has been with us more than
+                eight years. We keep the team small on purpose so the
+                quality stays consistent.
               </p>
             </div>
           </div>
@@ -300,7 +290,7 @@ export default function AboutPage() {
       {/* Closing CTA */}
       <CTABand
         headline="Work with the electrician who answers"
-        body="Tell us what is going on. We will tell you plainly what it takes, what it costs, and when we can be there. Day or night."
+        body="Tell us what is going on. We will tell you what it takes, what it costs, and when we can be there."
       />
     </>
   );

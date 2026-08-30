@@ -14,7 +14,7 @@ interface CTABandProps {
 // from business.json, never a hard-coded value.
 export function CTABand({
   headline = "Talk to the electrician who takes the call",
-  body = "We answer, price the job, and meet the inspector. Reach out and we will tell you plainly what it takes and what it costs.",
+  body = "We answer, price the job, and meet the inspector. Reach out and we will tell you what it takes.",
   className,
 }: CTABandProps) {
   const business = getBusiness();

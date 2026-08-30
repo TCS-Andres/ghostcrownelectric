@@ -6,7 +6,6 @@ import { buildMetadata, absoluteUrl } from "@/lib/seo";
 import {
   breadcrumbListNode,
   electricianNode,
-  founderNode,
   graph,
 } from "@/lib/schema";
 import type { Crumb } from "@/components/layout/Breadcrumbs";
@@ -62,7 +61,6 @@ export default function ServicesIndexPage() {
       <JsonLd
         data={graph([
           electricianNode(),
-          founderNode(),
           breadcrumbListNode(trail, pageUrl),
         ])}
       />
@@ -74,7 +72,7 @@ export default function ServicesIndexPage() {
           as="h1"
           eyebrow="What we do"
           title="Electrical services for Broward County and South Florida"
-          description="Our core services cover nearly everything we are called for, from panels and service upgrades to commercial lighting, pool electrical, and everyday repairs. Not sure which fits? Call and we will point you the right way."
+          description="Panels and service upgrades, commercial lighting, pool electrical, and everyday repairs. Not sure which fits? Call and we will point you the right way."
         />
 
         {services.length > 0 ? (
@@ -97,8 +95,8 @@ export default function ServicesIndexPage() {
 
         {services.length === 0 ? (
           <p className="mt-10 text-ink-muted">
-            Our service pages are being finalized. Call us and we will tell you
-            plainly whether we can help.
+            Our service pages are being finalized. Call and we will tell you
+            whether we can help.
           </p>
         ) : (
           <ul className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -120,9 +118,8 @@ export default function ServicesIndexPage() {
                     Not Sure Which Service You Need?
                   </h2>
                   <p className="mt-2 max-w-xl text-ink-muted-on-dark">
-                    Call and a licensed electrician will point you the right way,
-                    or send a request and we will get back to you. No obligation,
-                    day or night.
+                    Call and a licensed electrician will point you the right
+                    way. No obligation, day or night.
                   </p>
                   <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                     <Button

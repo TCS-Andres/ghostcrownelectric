@@ -8,7 +8,6 @@ import { cityLinks } from "@/lib/links";
 import {
   breadcrumbListNode,
   electricianNode,
-  founderNode,
   graph,
 } from "@/lib/schema";
 import type { Crumb } from "@/components/layout/Breadcrumbs";
@@ -90,7 +89,6 @@ export default function ContactPage() {
       <JsonLd
         data={graph([
           electricianNode(business),
-          founderNode(business),
           breadcrumbListNode(trail, pageUrl),
         ])}
       />
@@ -102,7 +100,7 @@ export default function ContactPage() {
           as="h1"
           eyebrow="Contact"
           title="Talk to the electrician who takes the call"
-          description="We answer, price the job, and meet the inspector. Call, send a note, or use the form and we will get right back to you."
+          description="We answer, price the job, and meet the inspector. Call or send a note and we will get right back to you."
         />
 
         <div className="mt-12 grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
@@ -176,8 +174,8 @@ export default function ContactPage() {
               Send Us the Details
             </h2>
             <p className="mt-3 text-ink-muted">
-              Tell us what is going on and how to reach you. If it is urgent,
-              call instead and we will pick up.
+              Tell us what is going on and how to reach you. If it is
+              urgent, call instead.
             </p>
             <LeadForm
               className="mt-6"

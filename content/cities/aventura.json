@@ -7,7 +7,7 @@
   "metaTitle": "Electrician in Aventura, FL | Ghost Crown Electric",
   "metaDescription": "Licensed electrician in Aventura, FL. High-rise condo electrical, salt-air corrosion repair, and HOA-coordinated work, day or night. Call today.",
   "h1": "Electrician in Aventura, FL",
-  "intro": "Aventura was master planned in the 1970s around the Turnberry Isle golf resort and grew into one of Miami-Dade's densest clusters of high-rise condo towers. Most work here is not a single-family panel, it is a building's electrical room, a unit subpanel, or rooftop equipment that answers to a board before a permit. With the Intracoastal along its edge, salt air wears on lugs and terminations.",
+  "intro": "Aventura was master planned in the 1970s around the Turnberry Isle golf resort and grew into one of Miami-Dade's densest clusters of high-rise condo towers. With the Intracoastal along its edge, salt air wears on lugs and terminations.",
   "neighborhoods": [
     "Turnberry Isle",
     "Williams Island",
@@ -18,8 +18,8 @@
     "the Aventura Mall district",
     "the Country Club Drive high-rise corridor"
   ],
-  "housingNotes": "Aventura's housing is almost entirely vertical, with high-rise towers built since the 1980s along the Intracoastal Waterway and Turnberry Isle golf course, plus gated mid-rise communities like Williams Island and The Waterways. Work here rarely means a single panel, but a unit subpanel, a building's electrical room, or rooftop equipment serving pumps, elevators, and common areas, all reviewed by a board first. Salt air off the waterway hits rooftop and pool deck equipment hardest, and older towers often carry original wiring.",
-  "permitNote": "In Aventura, service changes and pool or rooftop work are permitted through the city building department under the Florida Building Code and Miami-Dade's electrical requirements. Most buildings also require board approval first. Ghost Crown Electric pulls the permit in our own name, supplies the documentation your association needs, and meets the inspector in person.",
+  "housingNotes": "Aventura's housing is almost entirely vertical, with high-rise towers built since the 1980s along the Intracoastal Waterway and Turnberry Isle golf course, plus gated mid-rise communities like Williams Island and The Waterways.",
+  "permitNote": "In Aventura, service changes and pool or rooftop work are permitted through the city building department under the Florida Building Code and Miami-Dade's electrical requirements.",
   "challenges": [
     {
       "heading": "High-rise electrical rooms and board approval",
@@ -37,15 +37,15 @@
   "faqs": [
     {
       "question": "Do you work in Aventura, even though it's south of your home base?",
-      "answer": "We do. Aventura sits at the southern edge of our service area, about as far south into Miami-Dade as we go. Within that range you get the same licensed crew and honest pricing we bring to jobs near North Lauderdale."
+      "answer": "We do. Within that range you get the same licensed crew and honest pricing we bring to jobs near North Lauderdale."
     },
     {
       "question": "Can you work directly with my condo board or property manager?",
-      "answer": "Yes, and in Aventura it is usually necessary. We provide the certificates of insurance, licensing documentation, and scheduling most boards require, and coordinate directly with property management. We pull the city permit in our own name and meet the inspector in person."
+      "answer": "Yes, and in Aventura it is usually necessary. We pull the city permit in our own name and meet the inspector in person."
     },
     {
       "question": "Does salt air really matter for a high-rise unit that isn't on the roof?",
-      "answer": "It can. Salt air travels, and any equipment exposed to balconies, terraces, or the building's exterior faces the same corrosion rooftop equipment does. A unit's subpanel is usually indoors and better protected, but exterior outlets and anything near a balcony door are worth a look in an older tower."
+      "answer": "It can. A unit's subpanel is usually indoors and better protected, but exterior outlets and anything near a balcony door are worth a look in an older tower."
     }
   ]
 }

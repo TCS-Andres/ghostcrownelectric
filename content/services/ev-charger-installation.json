@@ -6,73 +6,73 @@
   "metaTitle": "EV Charger Installation in Broward County | Ghost Crown",
   "metaDescription": "EV charger installation in Broward County by a licensed crew. We confirm your service can carry a Level 2 charger, then install it right. Book a visit.",
   "h1": "EV Charger Installation in Broward County",
-  "intro": "A home EV charger is only as safe as the electrical service behind it. The question is not which charger you buy, but whether your panel and service can safely carry a Level 2 charger's heavy, steady load for hours. Our crew checks your service first, tells you plainly what it can handle, and if it needs an upgrade first, we say so once and leave the decision to you.",
+  "intro": "A home EV charger is only as safe as the electrical service behind it. The question is not which charger you buy, but whether your panel can carry a Level 2 load for hours. We check the service first and tell you plainly what it can handle.",
   "definition": {
     "heading": "What is EV charger installation",
-    "body": "EV charger installation adds a dedicated circuit and unit so an electric vehicle can charge safely at home. A Level 2 home charger runs on a 240 volt circuit and draws a large, steady current for hours. So the real work is not mounting the box; it is confirming the panel, wiring, and service can carry the load without heat or nuisance trips."
+    "body": "A dedicated 240 volt circuit and unit so an electric vehicle charges safely at home. The real work is not mounting the box, it is confirming the panel, wiring, and service can carry a heavy, steady load for hours without heat or nuisance trips."
   },
   "symptoms": [
     {
       "title": "A new EV and a slow trickle at the outlet",
-      "body": "You plugged the car into a regular wall outlet and it barely gained range overnight. A standard outlet was never meant for this; a dedicated charging circuit is what lets you leave each morning fully charged."
+      "body": "A standard outlet was never meant for this. A dedicated circuit is what lets you leave each morning fully charged."
     },
     {
       "title": "The breaker trips when the car is charging",
-      "body": "You start a charge and a breaker kicks off, or the area goes dark. That is the panel telling you the load is more than the circuit was built to carry, and it needs a proper look before it becomes a hazard."
+      "body": "The panel is telling you the load is more than the circuit was built to carry. It needs a look before it becomes a hazard."
     },
     {
       "title": "The panel is full, or the home predates electric cars",
-      "body": "Every slot in the panel is taken, or the service was sized decades ago for a home that never imagined an EV in the driveway. Either way, the capacity question is real and should be answered before you commit to a charger."
+      "body": "Every slot is taken, or the service was sized decades ago for a home that never imagined an EV. Answer the capacity question before you commit to a charger."
     },
     {
       "title": "A warm cord or a discolored outlet",
-      "body": "The charging cord feels hot to the touch, or the outlet has browned around the plug. That is heat where there should be none, and it is a fire risk, so stop using it and have the circuit assessed right away."
+      "body": "Heat where there should be none, and a fire risk. Stop using it and have the circuit assessed right away."
     }
   ],
   "process": [
     {
       "title": "The call and a few honest questions",
-      "body": "You call and tell us about the car, the charger, and the home, and that short conversation lets us plan the visit."
+      "body": "Tell us about the car, the charger, and the home, and we plan the visit around it."
     },
     {
       "title": "The site visit and load assessment",
-      "body": "We look at the panel, the incoming service, and the run, confirming the service can carry the charger safely, not just finding a spot on the wall."
+      "body": "We confirm the service can carry the charger safely, not just find a spot on the wall."
     },
     {
       "title": "One honest price, based on what it will take",
-      "body": "We forecast the job from what we saw and give you one price, and if the service needs an upgrade first, we tell you plainly and let you decide."
+      "body": "One price from what we actually saw. If the service needs an upgrade first, we say so."
     },
     {
       "title": "Our crew does the work, permit and inspection included",
-      "body": "Our in-house crew runs the circuit and mounts the unit, and where a permit is required we pull it in our own name and meet the inspector in person."
+      "body": "Our crew runs the circuit, mounts the unit, and pulls the permit where one is required."
     }
   ],
   "benefits": [
     {
       "title": "The load question answered first",
-      "body": "Before anything is mounted, you know for certain whether your service can carry the charger, with no guessing and no shortcuts."
+      "body": "Before anything is mounted, you know for certain whether your service can carry it."
     },
     {
       "title": "A safe circuit that will not overload",
-      "body": "The charger runs on its own dedicated circuit, sized for the steady draw, so it does not fight the rest of the house."
+      "body": "Its own circuit, sized for the steady draw, so it does not fight the rest of the house."
     },
     {
       "title": "One accountable company, first call to inspection",
-      "body": "The licensed crew that takes your call prices the job, does the work, and meets the inspector, so accountability never changes hands."
+      "body": "The crew that prices the job does the work and meets the inspector. Accountability never changes hands."
     },
     {
       "title": "Charge at home with peace of mind",
-      "body": "You wake up to a fully charged car and never think about the wiring behind it, which is the real product."
+      "body": "You wake up to a full charge and never think about the wiring behind it."
     }
   ],
   "localSections": [
     {
       "heading": "South Florida homes and the panels they were built with",
-      "body": "Much of Broward County's housing stock predates the EV, wired for the appliances of the 1960s, 70s, and 80s. Some of those panels are still sound; others are known problem brands. A charger asks the service to do something it was never planned for, so we check the panel and service before we talk about the charger at all."
+      "body": "Much of Broward's housing predates the EV, wired for the appliances of the 1960s, 70s, and 80s. Some of those panels are still sound, others are known problem brands. We check the service before we talk about the charger at all."
     },
     {
       "heading": "Heat, humidity, and salt air are part of the job",
-      "body": "Electrical work in South Florida lives with heat, humidity, and coastal salt air, all hard on connections over time. A charging circuit runs warm because it carries a heavy load for hours in an already warm, damp climate. So we account for it with proper conductors, solid terminations, and hardware rated for the location, whether a garage or an exterior run."
+      "body": "Heat, humidity, and coastal salt air are hard on connections, and a charging circuit runs warm because it carries a heavy load for hours. We account for it with proper conductors, solid terminations, and hardware rated for the location."
     }
   ],
   "guide": {
@@ -80,34 +80,34 @@
     "sections": [
       {
         "heading": "Start with the service, not the charger",
-        "body": "People buy the car first and worry about charging second, but the charger is the easy part; what decides whether it is safe is your electrical service. A Level 2 charger pulls a heavy, steady load for hours on top of the air conditioning, water heater, and range, so we assess it first. Sometimes the charger goes right in; sometimes the service needs work first, and we tell you once."
+        "body": "People buy the car first and worry about charging second. The charger is the easy part. A Level 2 unit pulls a heavy, steady load for hours on top of the air conditioning, water heater, and range, so the service is what decides whether it is safe. Sometimes it goes right in, sometimes the service needs work first."
       },
       {
         "heading": "Level 1 and Level 2, in plain language",
-        "body": "Level 1 is the cord that comes with most cars and plugs into a regular wall outlet; it works but adds only a few miles an hour. Level 2 runs on a 240 volt circuit and charges several times faster, usually filling the car overnight. That is what makes an electric car livable, but it needs a dedicated circuit and enough service capacity, which is why the assessment comes first."
+        "body": "Level 1 is the cord that comes with the car and plugs into a wall outlet. It works, but it adds only a few miles an hour. Level 2 runs on 240 volts and usually fills the car overnight, which is what makes an EV livable. It needs a dedicated circuit and enough service capacity."
       },
       {
         "heading": "What a proper install actually includes",
-        "body": "A proper install starts with a dedicated circuit and conductors sized for the steady load, not the smallest wire that passes, because undersized wire runs warm. The breaker is matched to the circuit, connections are solid since loose terminations cause most heat, and the run is protected for its location. A charger pulls hard for hours nightly for years, so the only install worth paying for is built to carry it safely."
+        "body": "A proper install starts with conductors sized for the steady load, not the smallest wire that passes. The breaker is matched to the circuit, connections are solid, and the run is protected for its location. A charger pulls hard for hours a night for years, so it has to be built to carry that."
       }
     ]
   },
   "faqs": [
     {
       "question": "Can any home get an EV charger?",
-      "answer": "Almost any home can, but not every home as it stands today. It depends on whether your electrical service can safely carry the charger's steady load, which is why we assess the panel and service first. Some homes are ready right away, and some need an upgrade before a charger goes in."
+      "answer": "Almost any home can, but not every home as it stands today. It depends on whether the service can carry the steady load. Some homes are ready right away, some need an upgrade first."
     },
     {
       "question": "How do I know if my panel can handle a charger?",
-      "answer": "You usually cannot know for certain from the outside. It depends on the panel's rating, how full it is, the size of the incoming service, and how much power the home already uses at once. We come out, assess all of it, and give you a clear answer rather than a hopeful guess."
+      "answer": "Not from the outside. It depends on the panel's rating, how full it is, the size of the incoming service, and how much the home already draws at once. We assess all of it and give you a clear answer."
     },
     {
       "question": "Do I need a permit for an EV charger?",
-      "answer": "In most cases, yes. Adding a dedicated 240 volt circuit is electrical work that Broward County building departments expect to see permitted and inspected. We pull the permit in our own name where it is required and meet the inspector in person, so you are not left chasing paperwork."
+      "answer": "In most cases, yes. Broward building departments expect a dedicated 240 volt circuit to be permitted and inspected. We pull it in our own name and meet the inspector, so you are not chasing paperwork."
     },
     {
       "question": "Do you install EV chargers for commercial properties?",
-      "answer": "Yes. We install chargers for both homes and commercial properties across Broward County. Commercial installs raise the same core question about whether the service can carry the added load, just at a larger scale, so we assess the service and give you one honest price the same way we do for a home."
+      "answer": "Yes, homes and commercial properties across Broward County. Commercial installs raise the same capacity question at a larger scale, and we answer it the same way."
     }
   ],
   "related": ["electrical-panel-upgrade", "electrical-service-rebuild", "surge-protection", "electrical-safety-check"],
@@ -122,6 +122,6 @@
   ],
   "cta": {
     "headline": "Ready to charge at home?",
-    "body": "Book a visit and we will start where it counts, confirming your service can carry the charger safely. One honest assessment, one honest price, and an install you never have to think about again."
+    "body": "We start where it counts, confirming your service can carry the charger safely. One honest price, and an install you never think about again."
   }
 }

@@ -7,7 +7,7 @@
   "metaTitle": "Electrician in Weston, FL | Ghost Crown Electric",
   "metaDescription": "Licensed electrician in Weston, FL. Panel checks, pool electrical, and EV charger circuits across Broward, day or night. Call today.",
   "h1": "Electrician in Weston, FL",
-  "intro": "Weston did not grow up slowly like most of Broward. Arvida built it out of drained Everglades land in the mid-1980s, and the city incorporated in 1996 as one of the county's most deliberately planned. Most homes are younger, with newer panels, but bigger houses, whole-home generators, pools, and EV chargers push real load. We assess in person, size the work correctly, and give one honest price.",
+  "intro": "Weston did not grow up slowly like most of Broward. Arvida built it out of drained Everglades land in the mid-1980s, so most homes are younger, but bigger houses, pools, generators, and EV chargers push real load. We assess in person and size the work correctly.",
   "neighborhoods": [
     "Bonaventure",
     "Windmill Ranch Estates",
@@ -18,8 +18,8 @@
     "Windmill Reserve",
     "Emerald Estates"
   ],
-  "housingNotes": "Weston is one of Broward's youngest cities, built out of former Everglades land starting in the mid-1980s and incorporated in 1996. Most homes, from Windmill Ranch Estates to Country Isles, were built under recent codes with service sized closer to modern standards. But these homes tend to be larger, and residents add pools, generators, and EV chargers at a high rate, pushing real load onto the service. Bonaventure is the exception, developed as a 1970s golf community with older equipment.",
-  "permitNote": "In Weston, service and pool electrical work are permitted through the city's building department under the Florida Building Code. New work, from an EV charger to an older Bonaventure panel change, still needs a permit and inspection. Ghost Crown Electric pulls the permit in our own name and attends the inspection in person.",
+  "housingNotes": "Weston is one of Broward's youngest cities, built out of former Everglades land starting in the mid-1980s and incorporated in 1996. Bonaventure is the exception, developed as a 1970s golf community with older equipment.",
+  "permitNote": "In Weston, service and pool electrical work are permitted through the city's building department under the Florida Building Code.",
   "challenges": [
     {
       "heading": "Bigger homes, bigger loads",
@@ -31,21 +31,21 @@
     },
     {
       "heading": "Pools everywhere, and the bonding that goes with them",
-      "body": "Nearly every Weston community, from Windmill Reserve to Savanna to Emerald Estates, was built around pools as a standard feature. That is a lot of bonding and grounding, most of it still original. A yearly check before heater season catches a loose bond early."
+      "body": "Nearly every Weston community, from Windmill Reserve to Savanna to Emerald Estates, was built around pools as a standard feature. A yearly check before heater season catches a loose bond early."
     }
   ],
   "faqs": [
     {
       "question": "Weston homes are newer. Do you still get called out much?",
-      "answer": "We do. Newer does not mean maintenance free. Weston homes carry heavier loads than most, with pools, generators, and EV chargers layered onto service sized years ago. We diagnose the actual cause and give you one honest price for the fix."
+      "answer": "We do. Newer does not mean maintenance free. We diagnose the actual cause and give you one honest price for the fix."
     },
     {
       "question": "Can you add a circuit for an EV charger?",
-      "answer": "Yes, and it is one of our most common Weston calls. We assess your existing panel and service size in person, tell you honestly whether it can handle the new load or needs an upgrade first, and forecast one price before we start. We pull the permit and meet the inspector."
+      "answer": "Yes, and it is one of our most common Weston calls. We pull the permit and meet the inspector."
     },
     {
       "question": "My home is in Bonaventure and the panel looks original. Is that a problem?",
-      "answer": "It can be. Bonaventure predates the rest of Weston, and some original panels there are from brands carriers no longer favor. Send us the age of the home or an insurance notice, and we will assess the service in person and tell you plainly whether a replacement is the right call."
+      "answer": "It can be. Send us the age of the home or an insurance notice, and we will assess the service in person and tell you plainly whether a replacement is the right call."
     }
   ]
 }

@@ -11,7 +11,6 @@ import {
   breadcrumbListNode,
   electricianNode,
   faqPageNode,
-  founderNode,
   graph,
   howToNode,
   serviceNode,
@@ -109,7 +108,6 @@ export default async function ServicePage({
       <JsonLd
         data={graph([
           electricianNode(),
-          founderNode(),
           serviceNode(service, pageUrl),
           howToNode(service, pageUrl),
           faqPageNode(service.faqs, pageUrl),
@@ -251,7 +249,7 @@ export default async function ServicePage({
               as="h2"
               eyebrow="Signs to watch for"
               title="Signs you need this"
-              description="If any of these sound familiar, it is worth a call. We will tell you plainly whether it is urgent or something to schedule."
+              description="If any of these sound familiar, it is worth a call. We will tell you whether it is urgent or something to schedule."
             />
             <ul className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
               {service.symptoms.map((symptom, index) => (
@@ -363,7 +361,7 @@ export default async function ServicePage({
         title={`${shortName}, up close`}
         description={
           bandPhotos.some((photo) => photo.real)
-            ? "Real conditions we run into and what the finished work looks like. Photos marked with the crown are Ghost Crown jobs."
+            ? "Real conditions we run into, and the finished work. Photos marked with the crown are our jobs."
             : "Real conditions we run into, and what the finished work looks like."
         }
         onDark
@@ -455,7 +453,7 @@ export default async function ServicePage({
           as="h2"
           eyebrow="Service area"
           title={`Where we provide ${shortName}`}
-          description="We cover all of Broward and Palm Beach counties, south to North Miami Beach. Pick your city or call and we will confirm we reach you."
+          description="All of Broward and Palm Beach counties, south to North Miami Beach. Pick your city, or call and we will confirm."
         />
         <ul className="mt-8 flex flex-wrap gap-2.5">
           {cities.map((city) => (
