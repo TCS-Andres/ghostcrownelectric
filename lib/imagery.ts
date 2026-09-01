@@ -15,13 +15,13 @@
 // than a generic pose. Pool and EV charging deliberately use equipment-only
 // frames rather than crew photography, so the card reads as the work itself.
 const SERVICE_IMAGE: Record<string, string> = {
-  "electrical-panel-upgrade": "panel-upgrade",
-  "electrical-service-rebuild": "work-service-rebuild",
+  "electrical-panel-upgrade": "panel-leviton-indoor",
+  "electrical-service-rebuild": "work-service-subpanels",
   "emergency-electrician": "emergency-night",
   "commercial-lighting": "commercial-lighting-night",
   "pool-electrical": "pool-bonding",
   "ev-charger-installation": "ev-charger",
-  "meter-bank-replacement": "work-meter-bank",
+  "meter-bank-replacement": "meter-upgrade-finished",
   "lighting-fans-outlets": "work-residential-dusk",
   "surge-protection": "surge-protection",
   "electrical-safety-check": "safety-check",
@@ -87,7 +87,7 @@ const IMAGE_ALT: Record<string, string> = {
   "work-meter-bank": "A multi-tenant electrical meter bank serviced by Ghost Crown Electric",
   "work-service-upgrade": "A Ghost Crown Electric electrician rebuilding a residential electrical service",
   "work-service-subpanels": "A completed residential electrical service with meter, main panel, disconnects, and battery backup",
-  "work-panel-replace": "A Federal Pacific Stab-Lok load center found behind a panel cover on a Broward County service call",
+  "work-panel-replace": "A Federal Pacific Stab-Lok load center found behind a panel cover on a South Florida service call",
   "work-panel-rewire": "An overcrowded residential panel interior with decades of added circuits",
   "work-panel-old": "An aged residential panel interior with corrosion and mixed breakers",
   "work-residential-dusk": "Landscape and palm uplighting on a South Florida home at dusk",
@@ -96,6 +96,12 @@ const IMAGE_ALT: Record<string, string> = {
   "meter-fire-after": "The same nine-meter bank rebuilt and the wall repaired after the fire",
   "meter-burnout-before": "Nine electrical meters melted and burned out of their sockets after a fire, with heavy soot on the wall behind them",
   "meter-burnout-after": "The same wall with a new nine-meter bank installed, every meter numbered and back in service",
+  "meter-fire-after-crop": "The rebuilt nine-meter bank on the repaired wall after the fire",
+  "meter-upgrade-finished": "A rebuilt multi-meter service with a new Eaton emergency disconnect, installed by Ghost Crown Electric",
+  "panel-leviton-indoor": "A new Leviton load center installed and labeled by Ghost Crown Electric, every breaker marked by room",
+  "panel-leviton-closed": "The finished Leviton panel closed and flush in the wall, with a clear window over the breakers",
+  "panel-leviton-outdoor": "A new outdoor Leviton 200 amp panel installed by Ghost Crown Electric on a stucco wall",
+  "panel-leviton-interior": "Inside a new Leviton panel: clean conductors, labeled breakers, and a full ground bar",
 };
 
 /*
@@ -120,21 +126,27 @@ const SERVICE_GALLERY: Record<
 > = {
   "electrical-panel-upgrade": [
     {
+      name: "panel-leviton-outdoor",
+      caption:
+        "A new outdoor 200 amp Leviton panel. Weather rated, labeled, permitted, and inspected.",
+      real: true,
+    },
+    {
       name: "work-panel-replace",
       caption:
-        "A Federal Pacific Stab-Lok load center found behind the cover on a Broward service call. Insurers flag these on sight.",
+        "What we usually find behind the old cover: a Federal Pacific Stab-Lok that insurers flag on sight.",
       real: true,
     },
     {
-      name: "work-panel-rewire",
+      name: "panel-leviton-interior",
       caption:
-        "Decades of added circuits crowded into a panel that was never sized to carry them.",
+        "Inside the new panel: clean conductors, every breaker labeled by room, and a full ground bar.",
       real: true,
     },
     {
-      name: "work-panel-old",
+      name: "panel-leviton-closed",
       caption:
-        "Corrosion, mixed breakers, and no room left to grow. This is the point where a repair stops being worth it.",
+        "Closed up and flush in the wall, with a window so you can check a breaker without opening it.",
       real: true,
     },
   ],
@@ -146,9 +158,9 @@ const SERVICE_GALLERY: Record<
       real: true,
     },
     {
-      name: "work-service-subpanels",
+      name: "work-service-rebuild",
       caption:
-        "The finished wall: new meter can, main panel, disconnects, and battery backup, all inspected.",
+        "Mid-rebuild. Every conductor labeled before anything gets landed.",
       real: true,
     },
     {
@@ -198,11 +210,6 @@ const SERVICE_GALLERY: Record<
   ],
   "pool-electrical": [
     {
-      name: "pool-gfci",
-      caption:
-        "The poolside sub-panel and GFCI breaker. Everything within reach of the water lands here first.",
-    },
-    {
       name: "pool-repair",
       caption:
         "Equipment pad service: pump, heater, and the panel that feeds them, brought back to code together.",
@@ -234,44 +241,23 @@ const SERVICE_GALLERY: Record<
   ],
   "meter-bank-replacement": [
     {
-      name: "meter-burnout-before",
+      name: "meter-fire-after-crop",
       caption:
-        "Before. Nine meters melted out of their sockets, and nine units in the dark for a week.",
+        "The finished wall after the fire. Permit closed, and every family back on their own power.",
       real: true,
     },
     {
-      name: "meter-burnout-after",
+      name: "work-meter-bank",
       caption:
-        "After. A new bank on the same wall, every position numbered and back in service.",
+        "The part of a multi-tenant building nobody notices until the day it fails.",
       real: true,
-    },
-    {
-      name: "meter-fire-after",
-      caption:
-        "The finished wall from the parking lot. Permit closed, and every family back on their own power.",
-      real: true,
-    },
-    {
-      name: "meter-socket",
-      caption:
-        "A single meter socket. The same job at house scale, and just as unforgiving.",
     },
   ],
   "lighting-fans-outlets": [
     {
-      name: "hero-electrician",
-      caption:
-        "Switches, dimmers, and outlets are only as good as the connections behind the plate.",
-    },
-    {
       name: "pool-safety",
       caption:
         "Outdoor and landscape lighting, wired on a timer and protected the way code requires.",
-    },
-    {
-      name: "about-craft",
-      caption:
-        "Every fixture and device gets tested before we call it done.",
     },
   ],
   "surge-protection": [
@@ -309,14 +295,9 @@ const SERVICE_GALLERY: Record<
         "Aged panels are the first thing we open, and the most common thing an insurer asks about.",
     },
     {
-      name: "zinsco-panel",
-      caption:
-        "Zinsco and Federal Pacific equipment gets its own line on the report, every time.",
-    },
-    {
       name: "work-panel-rewire",
       caption:
-        "Double taps, mixed breakers, and crowded gutters. All of it goes to you in writing.",
+        "Zinsco and Federal Pacific equipment gets its own line on the report, every time.",
       real: true,
     },
   ],

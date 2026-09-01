@@ -20,7 +20,7 @@ export function TopBar() {
             size={15}
             className="text-accent-bright"
           />
-          Licensed electricians serving Broward and Palm Beach Counties
+          Licensed electricians serving South Florida's Tri-County area
         </p>
         <div className="flex w-full items-center justify-between gap-3 sm:gap-5 lg:w-auto lg:justify-end">
           {licenseNumber ? (

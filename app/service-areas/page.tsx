@@ -18,7 +18,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 
 const TITLE = "Electrician Service Areas in South Florida | Ghost Crown";
 const DESCRIPTION =
-  "Licensed electrician serving all of Broward and Palm Beach counties, south to North Miami Beach. Find your city and reach out day or night.";
+  "Licensed electrician serving South Florida's Tri-County area, south to North Miami Beach. Find your city and reach out day or night.";
 
 export function generateMetadata(): Metadata {
   return buildMetadata({
@@ -31,7 +31,7 @@ export function generateMetadata(): Metadata {
 export default function ServiceAreasIndexPage() {
   const coverage = coverageByCounty();
   const totals = coverageTotals(coverage);
-  // Broward and Palm Beach are the promoted counties; Miami-Dade is the quiet
+  // South Florida's Tri-County area are the promoted counties; Miami-Dade is the quiet
   // southern edge (client direction 2026-08-12: do not market Miami-Dade).
   const promoted = coverage.filter((group) => group.id !== "miami-dade");
   const edge = coverage.find((group) => group.id === "miami-dade") ?? null;
@@ -58,7 +58,7 @@ export default function ServiceAreasIndexPage() {
           as="h1"
           eyebrow="Where we work"
           title="Serving all of South Florida"
-          description={`Our licensed crew covers all of Broward and Palm Beach counties, ${totals.cities} cities and counting, and reaches south to North Miami Beach. North Lauderdale is home base, so Broward is where we respond fastest, and we run north through Palm Beach every week. We take the call, price the job, and meet the inspector, wherever you are in the service area.`}
+          description={`Our licensed crew covers South Florida's Tri-County area, ${totals.cities} cities and counting, and reaches south to North Miami Beach. North Lauderdale is home base, so South Florida is where we respond fastest, and we run north through Palm Beach every week. We take the call, price the job, and meet the inspector, wherever you are in the service area.`}
         />
 
         {/* Coverage map */}

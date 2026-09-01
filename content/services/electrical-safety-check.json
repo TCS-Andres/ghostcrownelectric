@@ -3,9 +3,9 @@
   "name": "Electrical Safety Inspections",
   "shortName": "Safety Inspections",
   "tier": "safety",
-  "metaTitle": "Electrical Safety Inspections in Broward | Ghost Crown",
-  "metaDescription": "Electrical safety inspections in Broward County by a licensed crew. We inspect the panel, meter, and wiring and tell you what a carrier will flag. Book yours.",
-  "h1": "Electrical Safety Inspections in Broward County",
+  "metaTitle": "Electrical Safety Inspections in South Florida | Ghost Crown",
+  "metaDescription": "Electrical safety inspections in South Florida by a licensed crew. We inspect the panel, meter, and wiring and tell you what a carrier will flag. Book yours.",
+  "h1": "Electrical Safety Inspections in South Florida",
   "intro": "If your carrier wants a 4-point inspection, or something just feels off, an inspection is the honest answer. Our licensed crew walks your panel, meter socket, and wiring the way a Florida carrier does, then tells you what is sound and what is likely to get flagged.",
   "definition": {
     "heading": "What is an electrical safety inspection",
@@ -67,8 +67,8 @@
   ],
   "localSections": [
     {
-      "heading": "The many ages of South Florida housing",
-      "body": "Broward homes span many eras, each wired to the standards of its time. A 1960s house may still have its original panel and grounding, and the 80s and 90s brought their own problem brands. We read your system against its era."
+      "heading": "The transitions of South Florida housing",
+      "body": "Florida homes span many eras, each wired to the standards of its time. A 1960s house may still have its original panel and grounding, and the 80s and 90s brought their own problem brands. We read your system against its era."
     },
     {
       "heading": "What Florida insurance carriers are asking for",
@@ -116,7 +116,7 @@
     "notes": ""
   },
   "stats": [
-    {"value": "Master", "label": "Broward County Master Electrician"},
+    {"value": "Master", "label": "Tri-County Master Electrician"},
     {"value": "286", "label": "Permitted projects on public record"},
     {"value": "One company", "label": "First call to final inspection"}
   ],

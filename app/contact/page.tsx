@@ -17,9 +17,9 @@ import { GradientBadge, BADGE_TONES } from "@/components/ui/GradientBadge";
 import { LeadForm } from "@/components/forms/LeadForm";
 import { JsonLd } from "@/components/seo/JsonLd";
 
-const TITLE = "Contact Ghost Crown Electric | Broward County Electrician";
+const TITLE = "Contact Ghost Crown Electric | South Florida Electrician";
 const DESCRIPTION =
-  "Reach Ghost Crown Electric, a licensed Broward County electrician. Call day or night or send a note, and we will tell you plainly what it takes.";
+  "Reach Ghost Crown Electric, a licensed South Florida electrician. Call day or night or send a note, and we will tell you plainly what it takes.";
 
 export function generateMetadata(): Metadata {
   return buildMetadata({

@@ -97,7 +97,7 @@ export function electricianNode(business: Business = getBusiness()): JsonLdNode 
     telephone: business.phoneTel,
     slogan: business.tagline,
     description:
-      "Licensed electrical service, repair, and restoration for Broward County and South Florida, local and accountable from the first call to the final inspection.",
+      "Licensed electrical service, repair, and restoration for South Florida's Tri-County area, local and accountable from the first call to the final inspection.",
     address: postalAddress(business),
     geo: {
       "@type": "GeoCoordinates",

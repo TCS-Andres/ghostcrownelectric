@@ -3,9 +3,9 @@
   "name": "EV Charger Installation",
   "shortName": "EV Charger",
   "tier": "money",
-  "metaTitle": "EV Charger Installation in Broward County | Ghost Crown",
-  "metaDescription": "EV charger installation in Broward County by a licensed crew. We confirm your service can carry a Level 2 charger, then install it right. Book a visit.",
-  "h1": "EV Charger Installation in Broward County",
+  "metaTitle": "EV Charger Installation in South Florida | Ghost Crown",
+  "metaDescription": "EV charger installation in South Florida by a licensed crew. We confirm your service can carry a Level 2 charger, then install it right. Book a visit.",
+  "h1": "EV Charger Installation in South Florida",
   "intro": "A home EV charger is only as safe as the electrical service behind it. The question is not which charger you buy, but whether your panel can carry a Level 2 load for hours. We check the service first and tell you plainly what it can handle.",
   "definition": {
     "heading": "What is EV charger installation",
@@ -68,7 +68,7 @@
   "localSections": [
     {
       "heading": "South Florida homes and the panels they were built with",
-      "body": "Much of Broward's housing predates the EV, wired for the appliances of the 1960s, 70s, and 80s. Some of those panels are still sound, others are known problem brands. We check the service before we talk about the charger at all."
+      "body": "Much of South Florida's housing predates the EV, wired for the appliances of the 1960s, 70s, and 80s. Some of those panels are still sound, others are known problem brands. We check the service before we talk about the charger at all."
     },
     {
       "heading": "Heat, humidity, and salt air are part of the job",
@@ -103,11 +103,11 @@
     },
     {
       "question": "Do I need a permit for an EV charger?",
-      "answer": "In most cases, yes. Broward building departments expect a dedicated 240 volt circuit to be permitted and inspected. We pull it in our own name and meet the inspector, so you are not chasing paperwork."
+      "answer": "In most cases, yes. South Florida building departments expect a dedicated 240 volt circuit to be permitted and inspected. We pull it in our own name and meet the inspector, so you are not chasing paperwork."
     },
     {
       "question": "Do you install EV chargers for commercial properties?",
-      "answer": "Yes, homes and commercial properties across Broward County. Commercial installs raise the same capacity question at a larger scale, and we answer it the same way."
+      "answer": "Yes, homes and commercial properties across South Florida. Commercial installs raise the same capacity question at a larger scale, and we answer it the same way."
     }
   ],
   "related": ["electrical-panel-upgrade", "electrical-service-rebuild", "surge-protection", "electrical-safety-check"],

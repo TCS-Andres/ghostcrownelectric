@@ -60,7 +60,7 @@ export function CoverageMap({
   groups,
   eyebrow = "Coverage network",
   title = "Serving all of South Florida",
-  subtitle = "Licensed electricians across all of Broward and Palm Beach, day or night. Pick a county to see the cities we cover.",
+  subtitle = "Licensed electricians across South Florida's Tri-County area, day or night. Pick a county to see the cities we cover.",
   homeSlug = "north-lauderdale",
   className,
 }: CoverageMapProps) {
@@ -281,7 +281,7 @@ export function CoverageMap({
           viewBox={`0 0 ${W} ${H}`}
           className="h-full w-full"
           role="img"
-          aria-label={`Map of the ${totalCities} cities Ghost Crown Electric serves across Broward and Palm Beach counties, south to North Miami Beach`}
+          aria-label={`Map of the ${totalCities} cities Ghost Crown Electric serves across South Florida's counties, south to North Miami Beach`}
         >
           <defs>
             <linearGradient id="cov-sky" x1="0" y1="0" x2="1" y2="1">

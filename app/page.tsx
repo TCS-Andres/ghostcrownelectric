@@ -2,13 +2,12 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { getBusiness, getServices, getPosts } from "@/lib/content";
+import { getBusiness, getServices } from "@/lib/content";
 import { routes } from "@/lib/routes";
 import { buildMetadata, absoluteUrl } from "@/lib/seo";
 import { cityLinks } from "@/lib/links";
 import { coverageByCounty } from "@/lib/coverage";
-import { imageAlt, imagePath, postImage } from "@/lib/imagery";
-import { formatPostDate } from "@/lib/blog";
+import { imageAlt, imagePath } from "@/lib/imagery";
 import {
   electricianNode,
   faqPageNode,
@@ -31,9 +30,9 @@ import { PlanSection } from "@/components/sections/PlanSection";
 import { LeadForm } from "@/components/forms/LeadForm";
 import { JsonLd } from "@/components/seo/JsonLd";
 
-const TITLE = "Electrician in Broward County, FL | Ghost Crown Electric";
+const TITLE = "Electrician in South Florida | Ghost Crown Electric";
 const DESCRIPTION =
-  "Licensed electrician serving Broward and Palm Beach counties, day or night. Panels, service upgrades, meter banks, and emergency repairs. Call for one honest price.";
+  "Licensed electrician serving South Florida's Tri-County area, day or night. Panels, service upgrades, meter banks, and emergency repairs. Call for one honest price.";
 
 // The six FAQs previewed on the home page. Written once and used for both the
 // visible accordion and the FAQPage schema so the markup matches the page.
@@ -41,7 +40,7 @@ const HOME_FAQS: Faq[] = [
   {
     question: "What areas do you serve?",
     answer:
-      "All of Broward and Palm Beach counties, as far south as North Miami Beach. Broward is home base, so we are quickest there. Right at the edge? Call anyway and we will quote the trip honestly.",
+      "South Florida's Tri-County area, from Palm Beach County south to North Miami Beach. North Lauderdale is home base, so that is where we are quickest. Right at the edge? Call anyway and we will quote the trip honestly.",
   },
   {
     question: "Do you handle both commercial and residential work?",
@@ -66,7 +65,7 @@ const HOME_FAQS: Faq[] = [
   {
     question: "Are you licensed?",
     answer:
-      "Yes. Florida Certified Electrical Contractor #EC13010704 and Broward County Master Electrician. We pull the permits and meet the inspector on every job, with 286 permitted projects on public record.",
+      "Yes. Florida Certified Electrical Contractor #EC13010704 and Tri-County Master Electrician. We pull the permits and meet the inspector on every job, with 286 permitted projects on public record.",
   },
 ];
 
@@ -74,7 +73,7 @@ const HOME_FAQS: Faq[] = [
 const WHY_FEATURES: { title: string; body: string; icon: ReactNode }[] = [
   {
     title: "Licensed and certified",
-    body: "Florida Certified Electrical Contractor and Broward County Master Electrician.",
+    body: "Florida Certified Electrical Contractor and Tri-County Master Electrician.",
     icon: <BrandIcon name="licensed-shield" size={18} />,
   },
   {
@@ -110,7 +109,6 @@ export default function HomePage() {
   const featuredServices = services.slice(0, 7);
   const cities = cityLinks();
   const coverage = coverageByCounty();
-  const posts = getPosts().slice(0, 3);
   const pageUrl = absoluteUrl(routes.home);
 
   // The value stack under the hero: the two license credentials (with the state
@@ -181,9 +179,12 @@ export default function HomePage() {
               </p>
 
               <h1 className="mt-4 text-4xl text-ink-on-dark sm:text-5xl lg:text-6xl">
-                Electrician in Broward County,{" "}
+                Electrician in South Florida,{" "}
                 <span className="text-accent-bright">on Call Day or Night.</span>
               </h1>
+              <p className="mt-4 font-heading text-xl font-semibold text-accent-bright sm:text-2xl">
+                Your electrical issues are our responsibility.
+              </p>
 
               <p className="mt-5 max-w-2xl text-lg text-ink-muted-on-dark">
                 Licensed, local, and calm under pressure. We take the call,
@@ -550,8 +551,8 @@ export default function HomePage() {
           <SectionHeading
             as="h2"
             eyebrow="Where we work"
-            title="Broward and Palm Beach, south to North Miami Beach"
-            description="Based in North Lauderdale. Broward is home turf, we cover all of Palm Beach County, and we reach as far south as North Miami Beach."
+            title="South Florida, City by City"
+            description="Based in North Lauderdale. We cover the Tri-County area from Palm Beach County south to North Miami Beach."
           />
           <CoverageMap groups={coverage} className="mt-10" />
           <p className="mt-6 text-ink-muted">
@@ -606,78 +607,6 @@ export default function HomePage() {
           </dl>
         </div>
       </section>
-
-      {/* 11. Blog preview */}
-      {posts.length > 0 ? (
-        <section className="bg-surface-2">
-          <div className="container-page py-16 sm:py-20">
-            <div className="flex flex-wrap items-end justify-between gap-4">
-              <SectionHeading
-                as="h2"
-                eyebrow="Straight talk"
-                title="Reading worth your time"
-                description="Short, honest explainers on the questions we hear most."
-              />
-              <Link
-                href={routes.blog}
-                className="text-sm font-semibold text-accent hover:text-accent-hover"
-              >
-                Read the blog
-              </Link>
-            </div>
-            <ul className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-3">
-              {posts.map((post) => {
-                const image = postImage(post.slug);
-                return (
-                  <li key={post.slug}>
-                    <Link
-                      href={routes.post(post.slug)}
-                      className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-surface shadow-[var(--shadow-card)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[var(--shadow-lift)]"
-                    >
-                      {image ? (
-                        <Media
-                          src={image.src}
-                          alt={image.alt}
-                          className="aspect-[16/9]"
-                          sizes="(min-width: 768px) 33vw, 100vw"
-                          imageClassName="transition-transform duration-500 group-hover:scale-105"
-                        />
-                      ) : null}
-                      <div className="flex flex-1 flex-col p-6">
-                        <div className="flex items-center gap-2 text-xs text-ink-muted">
-                          <span className="font-semibold uppercase tracking-[0.1em] text-accent">
-                            {business.name}
-                          </span>
-                          {post.date ? (
-                            <>
-                              <span aria-hidden="true">/</span>
-                              <time dateTime={post.date}>
-                                {formatPostDate(post.date)}
-                              </time>
-                            </>
-                          ) : null}
-                        </div>
-                        <h3 className="mt-3 font-heading text-lg font-semibold text-ink group-hover:text-accent-hover">
-                          {post.title ?? post.slug}
-                        </h3>
-                        {typeof post.description === "string" &&
-                        post.description ? (
-                          <p className="mt-2 flex-1 text-sm text-ink-muted">
-                            {post.description}
-                          </p>
-                        ) : null}
-                        <span className="mt-4 text-sm font-semibold text-accent">
-                          Read article
-                        </span>
-                      </div>
-                    </Link>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-        </section>
-      ) : null}
 
       {/* 12. Final CTA */}
       <CTABand

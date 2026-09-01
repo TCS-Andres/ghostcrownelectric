@@ -21,7 +21,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 
 const TITLE = "Electrician FAQ | Ghost Crown Electric";
 const DESCRIPTION =
-  "Straight answers on our electrical work, pricing, service area, and licensing in Broward County and South Florida. Read the FAQ, then call when you are ready.";
+  "Straight answers on our electrical work, pricing, service area, and licensing in South Florida and South Florida. Read the FAQ, then call when you are ready.";
 
 // Grouped questions for the visible page. The same items, flattened, feed the
 // FAQPage JSON-LD so the markup and the page match exactly. This is the only
@@ -116,7 +116,7 @@ const GROUPS: { heading: string; icon: ReactNode; items: Faq[] }[] = [
       {
         question: "What areas do you serve?",
         answer:
-          "All of Broward and Palm Beach counties, as far south as North Miami Beach. North Lauderdale is home base, so Broward is quickest. If your town is not listed, call anyway and we will tell you honestly whether we reach you.",
+          "All of South Florida's Tri-County area, as far south as North Miami Beach. North Lauderdale is home base, so that is where we are quickest. If your town is not listed, call anyway and we will tell you honestly whether we reach you.",
       },
     ],
   },
@@ -127,7 +127,7 @@ const GROUPS: { heading: string; icon: ReactNode; items: Faq[] }[] = [
       {
         question: "Are you licensed?",
         answer:
-          "Yes. Florida Certified Electrical Contractor #EC13010704, with statewide authority, and a Broward County Master Electrician license.",
+          "Yes. Florida Certified Electrical Contractor #EC13010704, with statewide authority, and a Tri-County Master Electrician license.",
       },
       {
         question: "Who actually does the work?",

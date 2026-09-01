@@ -18,7 +18,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 
 const TITLE = "Electrical Advice for South Florida Homes | Ghost Crown Electric";
 const DESCRIPTION =
-  "Plain-spoken articles on panels, pool electrical, and service rebuilds from a licensed Broward County electrician. Practical guidance, no scare tactics.";
+  "Plain-spoken articles on panels, pool electrical, and service rebuilds from a licensed South Florida electrician. Practical guidance, no scare tactics.";
 
 export function generateMetadata(): Metadata {
   return buildMetadata({

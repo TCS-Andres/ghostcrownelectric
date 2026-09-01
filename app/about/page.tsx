@@ -20,9 +20,9 @@ import { HeroTrust } from "@/components/sections/HeroTrust";
 import { CallToActions } from "@/components/sections/CallToActions";
 import { JsonLd } from "@/components/seo/JsonLd";
 
-const TITLE = "About Ghost Crown Electric | Broward Electrician";
+const TITLE = "About Ghost Crown Electric | South Florida Electrician";
 const DESCRIPTION =
-  "Ghost Crown Electric is a licensed electrical service and repair company serving Broward County and South Florida. Ten years, 286 permitted jobs on public record.";
+  "Ghost Crown Electric is a licensed electrical service and repair company serving South Florida and South Florida. Ten years, 286 permitted jobs on public record.";
 
 // Plain-language values, framed around the customer's peace of mind. The client
 // is the hero here; the company is the guide.
@@ -98,7 +98,7 @@ export default function AboutPage() {
                 </h1>
                 <p className="mt-5 text-lg text-ink-muted-on-dark">
                   A licensed electrical service, repair, and restoration
-                  company based in North Lauderdale, serving Broward County
+                  company based in North Lauderdale, serving South Florida
                   and South Florida. We take the call, price the job, and
                   meet the inspector in person. We would rather do the work
                   right once than come back twice.
@@ -212,7 +212,7 @@ export default function AboutPage() {
               <div className="mt-6 flex flex-col gap-4 text-lg leading-relaxed text-ink-muted">
                 <p>
                   Ghost Crown Electric is owner-operated and licensed at the top:
-                  a Florida Certified Electrical Contractor and a Broward County
+                  a Florida Certified Electrical Contractor and a South Florida
                   Master Electrician. Nobody here is behind a desk. The same
                   company that takes your call walks the property, prices the job,
                   does the work, pulls the permit, and meets the inspector.
@@ -276,9 +276,9 @@ export default function AboutPage() {
             <SectionHeading as="h2" eyebrow="The crew" title="Small on purpose" />
             <div className="mt-6 flex flex-col gap-4 text-lg leading-relaxed text-ink-muted">
               <p>
-                Three trucks and a three person in-house crew, so three jobs
-                move at once without handing your work to a subcontractor we
-                do not know. One crew member has been with us more than
+                A three person in-house crew with bucket truck services
+                available, so jobs move without handing your work to a
+                subcontractor we do not know. One crew member has been with us more than
                 eight years. We keep the team small on purpose so the
                 quality stays consistent.
               </p>

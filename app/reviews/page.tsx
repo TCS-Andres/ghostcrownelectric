@@ -18,7 +18,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 
 const TITLE = "Reviews and Referrals | Ghost Crown Electric";
 const DESCRIPTION =
-  "Ten years of licensed electrical work in Broward County, built on referrals. The jobs that tell our story, and how to leave an honest review.";
+  "Ten years of licensed electrical work in South Florida, built on referrals. The jobs that tell our story, and how to leave an honest review.";
 
 // The recurring themes we hear in referrals, stated as themes, not as quotes we
 // put in anyone's mouth. No names, no star ratings, no invented testimonials.

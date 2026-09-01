@@ -1,7 +1,7 @@
 ---
 title: "Why Your Insurance Company Cares About Your Electrical Panel"
 description: "Florida insurers are dropping homes with Zinsco and Federal Pacific panels. A licensed Broward electrician explains the four-point rule and what to do next."
-date: "2026-07-21"
+date: "2026-08-06"
 tags: ["electrical panels", "insurance", "home safety", "property managers"]
 relatedServices: ["electrical-panel-upgrade", "electrical-safety-check", "electrical-service-rebuild"]
 ---

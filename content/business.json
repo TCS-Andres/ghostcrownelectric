@@ -1,7 +1,7 @@
 {
   "name": "Ghost Crown Electric",
   "legalName": "Ghost Crown Electric LLC",
-  "tagline": "Show Up. Do It Right. Sleep Easy.",
+  "tagline": "Your electrical issues are our responsibility.",
   "founder": {"name": "Damean Callum", "title": "Master Electrician", "note": "PLACEHOLDER: exact spelling pending license verification"},
   "phoneDisplay": "(754) 213-2747",
   "phoneTel": "+17542132747",
@@ -12,9 +12,9 @@
   "hours": "Monday to Friday, with emergency response day or night",
   "licenses": [
     {"label": "Florida Certified Electrical Contractor", "number": "EC13010704"},
-    {"label": "Broward County Master Electrician", "number": "PLACEHOLDER"}
+    {"label": "Tri-County Master Electrician", "number": "PLACEHOLDER"}
   ],
-  "serviceArea": "All of Broward and Palm Beach counties, south to North Miami Beach",
+  "serviceArea": "South Florida's Tri-County area, south to North Miami Beach",
   "geo": {"lat": 26.2174, "lng": -80.2256},
   "stats": {"permittedProjects": 286, "yearsActive": 10, "trucks": 3},
   "social": []

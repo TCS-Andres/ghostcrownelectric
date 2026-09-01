@@ -16,11 +16,11 @@ const business = getBusiness();
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${business.name} | Licensed Electrician in Broward County, FL`,
+    default: `${business.name} | Licensed Electrician in South Florida, FL`,
     template: `%s | ${business.name}`,
   },
   description:
-    "Licensed electrical service, repair, and restoration for Broward County and South Florida. Owner led from the first call to the final inspection.",
+    "Licensed electrical service, repair, and restoration for South Florida and South Florida. Owner led from the first call to the final inspection.",
   openGraph: {
     type: "website",
     siteName: business.name,

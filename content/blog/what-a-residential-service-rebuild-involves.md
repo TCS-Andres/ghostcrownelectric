@@ -1,7 +1,7 @@
 ---
 title: "What an Electrical Service Rebuild Actually Involves (and Costs)"
 description: "What a residential electrical service rebuild involves, from meter to panel, and how it is scoped and priced once, up front, by a licensed Broward pro."
-date: "2026-07-21"
+date: "2026-08-15"
 tags: ["service rebuild", "electrical panel", "cost guide", "homeowners"]
 relatedServices: ["electrical-service-rebuild", "electrical-panel-upgrade", "meter-bank-replacement"]
 ---

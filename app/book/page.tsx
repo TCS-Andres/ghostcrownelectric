@@ -17,7 +17,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 
 const TITLE = "Request Service | Ghost Crown Electric";
 const DESCRIPTION =
-  "Request licensed electrical service in Broward County. Tell us what is going on and get one honest price from an in-house crew.";
+  "Request licensed electrical service in South Florida. Tell us what is going on and get one honest price from an in-house crew.";
 
 const PLAN: { title: string; body: string }[] = [
   {

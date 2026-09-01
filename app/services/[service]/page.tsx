@@ -29,6 +29,7 @@ import { HeroTrust } from "@/components/sections/HeroTrust";
 import { CallToActions } from "@/components/sections/CallToActions";
 import { MidPageCTA } from "@/components/sections/MidPageCTA";
 import { WorkPhotos } from "@/components/sections/WorkPhotos";
+import { BeforeAfterSlider } from "@/components/ui/BeforeAfterSlider";
 import { JsonLd } from "@/components/seo/JsonLd";
 
 export const dynamicParams = false;
@@ -92,7 +93,11 @@ export default async function ServicePage({
   const gallery = serviceGallery(service.slug);
   // The first supporting photo sits beside the definition copy; the rest fill
   // the captioned band further down the page.
-  const [detailPhoto, ...bandPhotos] = gallery;
+  // Meter bank replacement carries the burned nine-meter bank as a before and
+  // after slider beside the definition, so its full gallery goes to the band.
+  const showSlider = service.slug === "meter-bank-replacement";
+  const detailPhoto = showSlider ? null : gallery[0];
+  const bandPhotos = showSlider ? gallery : gallery.slice(1);
   const cities = cityLinks();
   const shortName = service.shortName || service.name;
 
@@ -218,7 +223,22 @@ export default async function ServicePage({
             ) : null}
           </div>
 
-          {detailPhoto ? (
+          {showSlider ? (
+            <figure className="lg:justify-self-end">
+              <BeforeAfterSlider
+                beforeSrc="/images/meter-burnout-before.jpg"
+                afterSrc="/images/meter-burnout-after.jpg"
+                beforeAlt="Nine electrical meters melted and burned out of their sockets after a fire"
+                afterAlt="The same wall with a new nine-meter bank installed and back in service"
+                sizes="(min-width: 1024px) 45vw, 100vw"
+                className="aspect-[3/4] w-full rounded-2xl border border-border shadow-[var(--shadow-card)]"
+              />
+              <figcaption className="mt-3 text-sm leading-relaxed text-ink-muted">
+                Drag the slider. Nine meters melted out of their sockets, and the
+                same wall back in service. A Ghost Crown job.
+              </figcaption>
+            </figure>
+          ) : detailPhoto ? (
             <figure className="lg:justify-self-end">
               <Media
                 src={detailPhoto.src}
@@ -453,7 +473,7 @@ export default async function ServicePage({
           as="h2"
           eyebrow="Service area"
           title={`Where we provide ${shortName}`}
-          description="All of Broward and Palm Beach counties, south to North Miami Beach. Pick your city, or call and we will confirm."
+          description="All of South Florida's Tri-County area, south to North Miami Beach. Pick your city, or call and we will confirm."
         />
         <ul className="mt-8 flex flex-wrap gap-2.5">
           {cities.map((city) => (

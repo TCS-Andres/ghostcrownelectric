@@ -6,10 +6,14 @@ import { routes } from "@/lib/routes";
 import { Button } from "@/components/ui/Button";
 
 /*
-  Desktop exit-intent popup promoting the Electrical Safety Check as a defined
+  Desktop exit-intent prompt promoting the Electrical Safety Check as a defined
   scope walkthrough of the panel, meter socket, and overall system condition.
   No price is shown and there is no free-offer language: it is an invitation to
   book, in Ghost Crown's calm voice.
+
+  It is deliberately non-blocking. The client found the earlier modal, which
+  greyed out the whole site, read like spam. This version is a card in the
+  corner over a fully visible page: nothing to dismiss before using the site.
 
   Frequency cap: once a visitor closes it or follows the link, we do not show it
   again for 14 days (stored in localStorage). It also shows at most once per
@@ -66,33 +70,12 @@ export function ExitIntentPopup() {
     return () => document.removeEventListener("mouseout", onMouseOut);
   }, []);
 
-  // When open: focus the dialog, close on Escape, keep Tab focus inside.
+  // When open: close on Escape. The page stays fully usable behind it.
   useEffect(() => {
     if (!visible) return;
-    const node = dialogRef.current;
-    node?.focus();
-
     function onKeyDown(event: KeyboardEvent) {
-      if (event.key === "Escape") {
-        close();
-        return;
-      }
-      if (event.key !== "Tab" || !node) return;
-      const focusable = node.querySelectorAll<HTMLElement>(
-        'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])',
-      );
-      if (focusable.length === 0) return;
-      const first = focusable[0];
-      const last = focusable[focusable.length - 1];
-      if (event.shiftKey && document.activeElement === first) {
-        event.preventDefault();
-        last.focus();
-      } else if (!event.shiftKey && document.activeElement === last) {
-        event.preventDefault();
-        first.focus();
-      }
+      if (event.key === "Escape") close();
     }
-
     document.addEventListener("keydown", onKeyDown);
     return () => document.removeEventListener("keydown", onKeyDown);
   }, [visible, close]);
@@ -100,24 +83,18 @@ export function ExitIntentPopup() {
   if (!visible) return null;
 
   return (
-    <div
-      className="fixed inset-0 z-[60] flex items-center justify-center bg-navy/60 p-4 backdrop-blur-sm"
-      onClick={close}
-    >
+    <div className="pointer-events-none fixed inset-x-4 bottom-4 z-[60] flex justify-end sm:inset-x-auto sm:bottom-6 sm:right-6">
       <div
         ref={dialogRef}
-        role="dialog"
-        aria-modal="true"
+        role="complementary"
         aria-labelledby="exit-intent-title"
-        tabIndex={-1}
-        onClick={(event) => event.stopPropagation()}
-        className="relative w-full max-w-md rounded-2xl border border-white/50 bg-surface/85 p-8 shadow-[var(--shadow-lift)] backdrop-blur-2xl focus:outline-none"
+        className="pointer-events-auto relative w-full max-w-sm rounded-2xl border border-border bg-surface p-6 shadow-[var(--shadow-lift)]"
       >
         <button
           type="button"
           aria-label="Close"
           onClick={close}
-          className="absolute right-4 top-4 inline-flex h-9 w-9 items-center justify-center rounded-md text-ink-muted hover:bg-surface-2 hover:text-ink"
+          className="absolute right-3 top-3 inline-flex h-8 w-8 items-center justify-center rounded-md text-ink-muted hover:bg-surface-2 hover:text-ink"
         >
           <CloseIcon />
         </button>
@@ -127,27 +104,25 @@ export function ExitIntentPopup() {
         </p>
         <h2
           id="exit-intent-title"
-          className="mt-2 text-2xl text-ink"
+          className="mt-2 pr-8 text-xl text-ink"
         >
           Not sure what shape your electrical is in?
         </h2>
-        <p className="mt-3 text-ink-muted">
-          Book an Electrical Safety Check. We walk your panel, your meter
-          socket, and the overall condition of your system, then tell you
-          plainly what we find. No pressure, just a clear picture so you can
-          sleep easy.
+        <p className="mt-2 text-sm text-ink-muted">
+          Book an Electrical Safety Check. We walk your panel, meter socket, and
+          system, then tell you plainly what we find. No pressure.
         </p>
 
-        <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+        <div className="mt-4 flex flex-col gap-2 sm:flex-row">
           <Button
             href={routes.service("electrical-safety-check")}
             variant="primary"
-            size="md"
+            size="sm"
             onClick={close}
           >
             See the Safety Check
           </Button>
-          <Button variant="ghost" size="md" onClick={close}>
+          <Button variant="ghost" size="sm" onClick={close}>
             Maybe later
           </Button>
         </div>

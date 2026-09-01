@@ -1,7 +1,7 @@
 ---
 title: "Why Older Pools Shock Swimmers: Grounding and Bonding, Explained Plainly"
 description: "Older South Florida pools can tingle before they shock. A Broward electrician explains pool grounding and bonding plainly, and the yearly inspection to book."
-date: "2026-07-21"
+date: "2026-08-27"
 tags: ["pool safety", "grounding and bonding", "pool electrical", "homeowners"]
 relatedServices: ["pool-electrical", "electrical-safety-check", "electrical-panel-upgrade"]
 ---

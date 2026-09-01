@@ -21,7 +21,7 @@ const SITEMAP_PATH = "/sitemap";
 
 const TITLE = "Site Map | Ghost Crown Electric";
 const DESCRIPTION =
-  "Every page on the Ghost Crown Electric site in one place: services, service areas, articles, and company pages for Broward County and South Florida.";
+  "Every page on the Ghost Crown Electric site in one place: services, service areas, articles, and company pages for South Florida and South Florida.";
 
 interface LinkGroup {
   heading: string;

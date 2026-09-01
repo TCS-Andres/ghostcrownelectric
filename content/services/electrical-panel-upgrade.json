@@ -3,9 +3,9 @@
   "name": "Electrical Panel Upgrades & Replacement",
   "shortName": "Panel Upgrades",
   "tier": "money",
-  "metaTitle": "Electrical Panel Upgrades in Broward | Ghost Crown Electric",
-  "metaDescription": "Panel upgrade or replacement in Broward County by a licensed crew. Flagged by your insurer or a 4-point inspection? Book an honest on-site assessment today.",
-  "h1": "Electrical Panel Upgrades and Replacement in Broward County",
+  "metaTitle": "Electrical Panel Upgrades in South Florida | Ghost Crown Electric",
+  "metaDescription": "Panel upgrade or replacement in South Florida by a licensed crew. Flagged by your insurer or a 4-point inspection? Book an honest on-site assessment today.",
+  "h1": "Electrical Panel Upgrades and Replacement in South Florida",
   "intro": "A failing panel shows it: breakers that trip repeatedly, a burning smell, scorch marks, or lights that dim when the AC starts. Sometimes the first sign is a letter from your insurer. We replace it once and handle the permit and inspector.",
   "definition": {
     "heading": "What an electrical panel upgrade is",
@@ -68,7 +68,7 @@
   "localSections": [
     {
       "heading": "South Florida homes and the panels inside them",
-      "body": "Broward housing was built across many decades, and every era left its own electrical fingerprint. Heat, humidity, and salt air corrode the lugs and bus bars inside a panel, so equipment here ages faster than it would anywhere drier."
+      "body": "South Florida housing was built across many decades, and every era left its own electrical fingerprint. Heat, humidity, and salt air corrode the lugs and bus bars inside a panel, so equipment here ages faster than it would anywhere drier."
     },
     {
       "heading": "Why carriers are driving so many upgrades",
@@ -88,7 +88,7 @@
       },
       {
         "heading": "How to choose the right contractor",
-        "body": "Ghost Crown Electric is a Florida Certified Electrical Contractor and Broward County Master Electrician, with 286 permitted projects on public record. Our in-house crew handles the replacement in one visit, pulls the permit, and meets the inspector. If your panel is safe and current, we will say so and leave it alone."
+        "body": "Ghost Crown Electric is a Florida Certified Electrical Contractor and Tri-County Master Electrician, with 286 permitted projects on public record. Our in-house crew handles the replacement in one visit, pulls the permit, and meets the inspector. If your panel is safe and current, we will say so and leave it alone."
       }
     ]
   },
@@ -130,8 +130,8 @@
       "label": "Florida Certified Electrical Contractor"
     },
     {
-      "value": "Broward",
-      "label": "County Master Electrician"
+      "value": "Tri-County",
+      "label": "Master Electrician"
     }
   ],
   "cta": {
