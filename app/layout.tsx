@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     template: `%s | ${business.name}`,
   },
   description:
-    "Licensed electrical service, repair, and restoration for South Florida. Owner led from the first call to the final inspection.",
+    "Licensed electrical service, repair, and restoration for South Florida. One licensed team from the first call to the final inspection.",
   openGraph: {
     type: "website",
     siteName: business.name,
