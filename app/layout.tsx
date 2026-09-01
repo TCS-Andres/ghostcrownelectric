@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
-import { archivo, inter } from "@/lib/fonts";
+import { saira, barlow } from "@/lib/fonts";
 import { getBusiness, getServices, getCities, SITE_URL } from "@/lib/content";
 import { Header } from "@/components/layout/Header";
 import { TopBar } from "@/components/layout/TopBar";
@@ -47,7 +47,7 @@ export default function RootLayout({
   }));
 
   return (
-    <html lang="en" className={`${archivo.variable} ${inter.variable}`}>
+    <html lang="en" className={`${saira.variable} ${barlow.variable}`}>
       <body className="flex min-h-dvh flex-col bg-surface text-ink">
         <Preloader />
         <TopBar />

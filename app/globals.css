@@ -24,8 +24,8 @@
 
 @theme {
   /* Typography (font faces are loaded in app/layout.tsx via next/font) */
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-heading: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-barlow), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-saira), ui-sans-serif, system-ui, sans-serif;
 
   /* Brand palette */
   --color-navy: #08203a;
@@ -117,9 +117,14 @@ h4,
 h5,
 h6 {
   font-family: var(--font-heading);
-  line-height: 1.15;
-  letter-spacing: -0.01em;
-  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 0;
+  font-weight: 800;
+  font-stretch: 105%;
+}
+
+h1 {
+  font-stretch: 110%;
 }
 
 /* Respect users who ask for reduced motion */
