@@ -20,7 +20,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 
 const TITLE = "Electrical Services in South Florida | Ghost Crown Electric";
 const DESCRIPTION =
-  "Licensed electrical service, repair, and restoration across South Florida and South Florida. One accountable team from the first call to the final inspection.";
+  "Licensed electrical service, repair, and restoration across South Florida. One accountable team from the first call to the final inspection.";
 
 // Short assurances shown above the grid. Plain promises, no hype.
 const ASSURANCES: { text: string; icon: ReactNode }[] = [
@@ -71,7 +71,7 @@ export default function ServicesIndexPage() {
         <SectionHeading
           as="h1"
           eyebrow="What we do"
-          title="Electrical services for South Florida and South Florida"
+          title="Electrical services for South Florida"
           description="Panels and service upgrades, commercial lighting, pool electrical, and everyday repairs. Not sure which fits? Call and we will point you the right way."
         />
 

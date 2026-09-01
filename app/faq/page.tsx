@@ -21,7 +21,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 
 const TITLE = "Electrician FAQ | Ghost Crown Electric";
 const DESCRIPTION =
-  "Straight answers on our electrical work, pricing, service area, and licensing in South Florida and South Florida. Read the FAQ, then call when you are ready.";
+  "Straight answers on our electrical work, pricing, service area, and licensing in South Florida. Read the FAQ, then call when you are ready.";
 
 // Grouped questions for the visible page. The same items, flattened, feed the
 // FAQPage JSON-LD so the markup and the page match exactly. This is the only

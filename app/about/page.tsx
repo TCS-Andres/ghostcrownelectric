@@ -22,7 +22,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 
 const TITLE = "About Ghost Crown Electric | South Florida Electrician";
 const DESCRIPTION =
-  "Ghost Crown Electric is a licensed electrical service and repair company serving South Florida and South Florida. Ten years, 286 permitted jobs on public record.";
+  "Ghost Crown Electric is a licensed electrical service and repair company serving South Florida. Ten years, 286 permitted jobs on public record.";
 
 // Plain-language values, framed around the customer's peace of mind. The client
 // is the hero here; the company is the guide.
@@ -98,8 +98,7 @@ export default function AboutPage() {
                 </h1>
                 <p className="mt-5 text-lg text-ink-muted-on-dark">
                   A licensed electrical service, repair, and restoration
-                  company based in North Lauderdale, serving South Florida
-                  and South Florida. We take the call, price the job, and
+                  company based in North Lauderdale, serving South Florida. We take the call, price the job, and
                   meet the inspector in person. We would rather do the work
                   right once than come back twice.
                 </p>
