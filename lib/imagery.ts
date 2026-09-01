@@ -20,11 +20,11 @@ const SERVICE_IMAGE: Record<string, string> = {
   "emergency-electrician": "emergency-night",
   "commercial-lighting": "commercial-lighting-night",
   "pool-electrical": "pool-bonding",
-  "ev-charger-installation": "ev-charger",
+  "ev-charger-installation": "ev-charger-home",
   "meter-bank-replacement": "meter-upgrade-finished",
   "lighting-fans-outlets": "work-residential-dusk",
-  "surge-protection": "surge-protection",
-  "electrical-safety-check": "safety-check",
+  "surge-protection": "surge-device",
+  "electrical-safety-check": "safety-inspection",
 };
 
 // One golden-hour location image per city.
@@ -102,6 +102,13 @@ const IMAGE_ALT: Record<string, string> = {
   "panel-leviton-closed": "The finished Leviton panel closed and flush in the wall, with a clear window over the breakers",
   "panel-leviton-outdoor": "A new outdoor Leviton 200 amp panel installed by Ghost Crown Electric on a stucco wall",
   "panel-leviton-interior": "Inside a new Leviton panel: clean conductors, labeled breakers, and a full ground bar",
+  "ev-charger-home": "A Level 2 EV charger installed on the stucco wall of a South Florida home, cable plugged into a parked electric SUV",
+  "surge-device": "A whole home surge protective device mounted beside an open residential panel and wired to its own breaker",
+  "safety-inspection": "A gloved hand testing a breaker terminal with a digital multimeter inside an open residential panel",
+  "recessed-lighting": "New recessed LED lights glowing in a bright South Florida living room, a step ladder below",
+  "patio-fan": "A new outdoor ceiling fan on a covered patio beside a screened pool enclosure",
+  "gfci-outlet": "A newly installed white GFCI outlet in a kitchen subway tile backsplash",
+  "bucket-truck-lift": "The Ghost Crown Electric bucket truck with its boom fully extended at a South Florida commercial plaza",
 };
 
 /*
@@ -181,12 +188,6 @@ const SERVICE_GALLERY: Record<
         "A fire took out a nine-meter bank and left a whole building without power.",
       real: true,
     },
-    {
-      name: "work-bucket-truck",
-      caption:
-        "Our truck on site the next morning. We own the equipment, so nothing waits on a rental.",
-      real: true,
-    },
   ],
   "commercial-lighting": [
     {
@@ -202,10 +203,9 @@ const SERVICE_GALLERY: Record<
       real: true,
     },
     {
-      name: "work-bucket-truck",
+      name: "bucket-truck-lift",
       caption:
-        "Pole lights, high signs, and parking lot work. We bring our own bucket truck to all of it.",
-      real: true,
+        "Pole lights, high signs, and parking lot work. Our own bucket truck reaches all of it.",
     },
   ],
   "pool-electrical": [
@@ -255,6 +255,21 @@ const SERVICE_GALLERY: Record<
   ],
   "lighting-fans-outlets": [
     {
+      name: "recessed-lighting",
+      caption:
+        "Recessed LED lighting laid out to the room, wired, and patched in clean.",
+    },
+    {
+      name: "patio-fan",
+      caption:
+        "A patio fan on a fan-rated box and a wet-rated motor, built for the weather that reaches it.",
+    },
+    {
+      name: "gfci-outlet",
+      caption:
+        "GFCI protection wherever water lives: kitchens, baths, garages, and outdoors.",
+    },
+    {
       name: "pool-safety",
       caption:
         "Outdoor and landscape lighting, wired on a timer and protected the way code requires.",
@@ -262,9 +277,10 @@ const SERVICE_GALLERY: Record<
   ],
   "surge-protection": [
     {
-      name: "panel-upgrade",
+      name: "panel-leviton-interior",
       caption:
-        "A whole home device lives at the main panel. That is the first line of defense for everything behind it.",
+        "A whole home device lives here, at the main panel, on its own two pole breaker.",
+      real: true,
     },
     {
       name: "service-entrance",
@@ -272,27 +288,24 @@ const SERVICE_GALLERY: Record<
         "Most damaging surges arrive through the service entrance, so that is where we stop them.",
     },
     {
-      name: "work-panel-replace",
+      name: "panel-leviton-outdoor",
       caption:
-        "Older panels often have no surge protection at all, and nowhere to put it until the panel is replaced.",
+        "Outdoor panels take the hit first. The device mounts right beside them, protected from the weather.",
       real: true,
-    },
-    {
-      name: "hero-electrician",
-      caption:
-        "Installing one is about an hour at the panel, with the power off and the work done to code.",
     },
   ],
   "electrical-safety-check": [
     {
-      name: "about-craft",
-      caption:
-        "Testing circuits with a meter, because the problems that matter are the ones you cannot see.",
-    },
-    {
-      name: "old-panel",
+      name: "work-panel-old",
       caption:
         "Aged panels are the first thing we open, and the most common thing an insurer asks about.",
+      real: true,
+    },
+    {
+      name: "work-panel-replace",
+      caption:
+        "A Federal Pacific Stab-Lok behind the cover. Insurers flag these on sight.",
+      real: true,
     },
     {
       name: "work-panel-rewire",

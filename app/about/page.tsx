@@ -109,8 +109,8 @@ export default function AboutPage() {
             </div>
             <div className="hidden lg:block">
               <Media
-                src="/images/work-bucket-truck.jpg"
-                alt="The Ghost Crown Electric bucket truck on a South Florida job site"
+                src="/images/bucket-truck-lift.jpg"
+                alt="The Ghost Crown Electric bucket truck with its boom fully extended at a South Florida commercial plaza"
                 priority
                 sizes="(min-width: 1024px) 45vw, 0px"
                 className="aspect-[4/3] rounded-2xl border border-navy-600"
