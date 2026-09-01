@@ -17,14 +17,14 @@
 const SERVICE_IMAGE: Record<string, string> = {
   "electrical-panel-upgrade": "panel-leviton-indoor",
   "electrical-service-rebuild": "work-service-subpanels",
-  "emergency-electrician": "emergency-night",
+  "emergency-electrician": "emergency-night-call",
   "commercial-lighting": "commercial-lighting-night",
-  "pool-electrical": "pool-bonding",
+  "pool-electrical": "pool-equipment-pad",
   "ev-charger-installation": "ev-charger-home",
   "meter-bank-replacement": "meter-upgrade-finished",
   "lighting-fans-outlets": "work-residential-dusk",
   "surge-protection": "surge-device",
-  "electrical-safety-check": "safety-inspection",
+  "electrical-safety-check": "safety-inspection-v2",
 };
 
 // One golden-hour location image per city.
@@ -109,6 +109,12 @@ const IMAGE_ALT: Record<string, string> = {
   "patio-fan": "A new outdoor ceiling fan on a covered patio beside a screened pool enclosure",
   "gfci-outlet": "A newly installed white GFCI outlet in a kitchen subway tile backsplash",
   "bucket-truck-lift": "The Ghost Crown Electric bucket truck with its boom fully extended at a South Florida commercial plaza",
+  "truck-branded-front": "The Ghost Crown Electric bucket truck, decaled with the crown logo, company name, and phone number, parked at a commercial building",
+  "truck-branded-lift": "The Ghost Crown Electric bucket truck with its boom fully extended to a parking lot pole light at a South Florida plaza",
+  "pool-equipment-pad": "A South Florida pool equipment pad with pump, filter, and heater, fed from a weatherproof sub-panel and timer on the wall",
+  "pool-bonding-lug": "A bronze bonding lug clamped to a pool ladder rail with bare copper bonding wire across a travertine deck",
+  "emergency-night-call": "An exterior electrical panel open at night on a stucco wall, lit by a work light on the ground",
+  "safety-inspection-v2": "A digital multimeter clipped to an open residential panel with its leads on a breaker terminal, reading 120 volts",
 };
 
 /*
@@ -203,16 +209,16 @@ const SERVICE_GALLERY: Record<
       real: true,
     },
     {
-      name: "bucket-truck-lift",
+      name: "truck-branded-lift",
       caption:
         "Pole lights, high signs, and parking lot work. Our own bucket truck reaches all of it.",
     },
   ],
   "pool-electrical": [
     {
-      name: "pool-repair",
+      name: "pool-bonding-lug",
       caption:
-        "Equipment pad service: pump, heater, and the panel that feeds them, brought back to code together.",
+        "Equipotential bonding at the ladder rail. This copper is what keeps stray voltage out of the water.",
     },
     {
       name: "pool-safety",

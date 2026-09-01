@@ -295,8 +295,8 @@ export default function HomePage() {
       <section className="container-page py-16 sm:py-20">
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
           <Media
-            src="/images/bucket-truck-lift.jpg"
-            alt="The Ghost Crown Electric bucket truck with its boom fully extended at a South Florida commercial plaza"
+            src="/images/truck-branded-front.jpg"
+            alt="The Ghost Crown Electric bucket truck, decaled with the crown logo, company name, and phone number, parked at a commercial building"
             sizes="(min-width: 1024px) 45vw, 100vw"
             className="aspect-[4/3] rounded-2xl border border-border shadow-[var(--shadow-card)]"
           />
