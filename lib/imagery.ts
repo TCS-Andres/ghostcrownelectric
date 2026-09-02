@@ -142,6 +142,12 @@ const SERVICE_BEFORE_AFTER: Record<
   string,
   { before: string; after: string; caption: string }
 > = {
+  "electrical-service-rebuild": {
+    before: "meter-burnout-before",
+    after: "meter-bank-after-clean",
+    caption:
+      "Drag the slider: a nine-meter service melted out after a fire, and the same wall rebuilt, repainted, and back in service.",
+  },
   "meter-bank-replacement": {
     before: "meter-burnout-before",
     after: "meter-bank-after-clean",
@@ -220,15 +226,9 @@ const SERVICE_GALLERY: Record<
       real: true,
     },
     {
-      name: "panel-leviton-outdoor",
+      name: "work-meter-bank",
       caption:
-        "The finished outdoor side: a new 200 amp panel set clean on the wall, ready for inspection.",
-      real: true,
-    },
-    {
-      name: "meter-fire-after",
-      caption:
-        "A nine-meter service rebuilt on a repaired wall, every family back on their own power.",
+        "A multi-tenant meter bank brought back up to code. The part of a building nobody notices until it fails.",
       real: true,
     },
   ],

@@ -20,7 +20,6 @@ import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Card } from "@/components/ui/Card";
 import { Media } from "@/components/ui/Media";
-import { BeforeAfterSlider } from "@/components/ui/BeforeAfterSlider";
 import { CTABand } from "@/components/ui/CTABand";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { GradientBadge, BADGE_TONES } from "@/components/ui/GradientBadge";
@@ -92,11 +91,10 @@ export default async function ServicePage({
   const heroImage = serviceImage(service.slug);
   const gallery = serviceGallery(service.slug);
   const beforeAfter = serviceBeforeAfter(service.slug);
-  // Beside the definition copy: the before/after slider when the service has
-  // one, otherwise the first supporting photo. The rest fill the captioned
-  // band further down the page.
-  const detailPhoto = beforeAfter ? null : gallery[0];
-  const bandPhotos = beforeAfter ? gallery : gallery.slice(1);
+  // The first supporting photo sits beside the definition copy; the rest fill
+  // the "See the work" section, which leads with the before/after slider on
+  // the services that have one.
+  const [detailPhoto, ...bandPhotos] = gallery;
   const cities = cityLinks();
   const shortName = service.shortName || service.name;
 
@@ -222,21 +220,7 @@ export default async function ServicePage({
             ) : null}
           </div>
 
-          {beforeAfter ? (
-            <figure className="w-full lg:justify-self-end">
-              <BeforeAfterSlider
-                beforeSrc={beforeAfter.before.src}
-                afterSrc={beforeAfter.after.src}
-                beforeAlt={beforeAfter.before.alt}
-                afterAlt={beforeAfter.after.alt}
-                sizes="(min-width: 1024px) 45vw, 100vw"
-                className="aspect-[3/4] w-full rounded-2xl border border-border shadow-[var(--shadow-card)]"
-              />
-              <figcaption className="mt-3 text-sm leading-relaxed text-ink-muted">
-                {beforeAfter.caption}
-              </figcaption>
-            </figure>
-          ) : detailPhoto ? (
+          {detailPhoto ? (
             <figure className="lg:justify-self-end">
               <Media
                 src={detailPhoto.src}
@@ -336,6 +320,20 @@ export default async function ServicePage({
         </section>
       ) : null}
 
+      {/* The captioned photo band: what this work actually looks like */}
+      <WorkPhotos
+        photos={bandPhotos}
+        beforeAfter={beforeAfter}
+        eyebrow="See the work"
+        title={`${shortName}, up close`}
+        description={
+          bandPhotos.some((photo) => photo.real) || beforeAfter !== null
+            ? "Real conditions we run into, and the finished work. Photos marked with the crown are our jobs."
+            : "Real conditions we run into, and what the finished work looks like."
+        }
+        onDark
+      />
+
       {/* Benefits */}
       {service.benefits.length > 0 ? (
         <section className="bg-surface-2">
@@ -371,19 +369,6 @@ export default async function ServicePage({
           </div>
         </section>
       ) : null}
-
-      {/* The captioned photo band: what this work actually looks like */}
-      <WorkPhotos
-        photos={bandPhotos}
-        eyebrow="See the work"
-        title={`${shortName}, up close`}
-        description={
-          bandPhotos.some((photo) => photo.real)
-            ? "Real conditions we run into, and the finished work. Photos marked with the crown are our jobs."
-            : "Real conditions we run into, and what the finished work looks like."
-        }
-        onDark
-      />
 
       {/* Mid-page conversion strip */}
       <MidPageCTA />
