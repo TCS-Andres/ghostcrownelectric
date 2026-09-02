@@ -74,7 +74,7 @@ export function WorkPhotos({
           onDark={onDark}
         />
         {beforeAfter ? (
-          <div className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-[0.9fr_1.1fr]">
+          <div className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
             <figure className={cn(cardClass, "hover:translate-y-0")}>
               <BeforeAfterSlider
                 beforeSrc={beforeAfter.before.src}
@@ -87,7 +87,7 @@ export function WorkPhotos({
               <figcaption className={captionClass}>{beforeAfter.caption}</figcaption>
             </figure>
             {photos.length > 0 ? (
-              <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-1">
+              <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-1 lg:items-start">
                 {photos.map(card)}
               </ul>
             ) : null}
