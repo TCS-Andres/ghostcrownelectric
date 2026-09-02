@@ -184,8 +184,8 @@ export default function AboutPage() {
             </div>
           </div>
           <Media
-            src="/images/commercial-lighting-night.jpg"
-            alt="A commercial storefront sign fully lit at night after a Ghost Crown Electric relight"
+            src="/images/commercial-lighting-after.jpg"
+            alt="A repaired storefront sign at dusk with every letter back in place, a Ghost Crown Electric relight"
             sizes="(min-width: 1024px) 45vw, 100vw"
             className="aspect-[4/3] rounded-2xl border border-border shadow-[var(--shadow-card)]"
           />

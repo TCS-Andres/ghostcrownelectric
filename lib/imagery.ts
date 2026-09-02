@@ -18,7 +18,7 @@ const SERVICE_IMAGE: Record<string, string> = {
   "electrical-panel-upgrade": "panel-leviton-indoor",
   "electrical-service-rebuild": "work-service-subpanels",
   "emergency-electrician": "emergency-night-call",
-  "commercial-lighting": "commercial-lighting-night",
+  "commercial-lighting": "commercial-lighting-after",
   "pool-electrical": "pool-spa-dusk",
   "ev-charger-installation": "ev-charger-home",
   "meter-bank-replacement": "meter-upgrade-finished",
@@ -203,29 +203,31 @@ const SERVICE_GALLERY: Record<
   ],
   "electrical-service-rebuild": [
     {
-      name: "work-service-upgrade",
+      name: "meter-upgrade-finished",
       caption:
-        "Our crew rebuilding a residential service, meter can to main disconnect, with the power off and the permit pulled.",
+        "A completed service and meter upgrade: new meter bank, new emergency disconnect, inspected and back on.",
       real: true,
     },
     {
       name: "work-service-rebuild",
       caption:
-        "Mid-rebuild. Every conductor labeled before anything gets landed.",
+        "Mid-rebuild. Every conductor labeled before anything gets landed, because guessing is how people get hurt.",
       real: true,
     },
     {
-      name: "service-entrance",
+      name: "panel-leviton-outdoor",
       caption:
-        "The service entrance is where the utility hands power to your building. Everything downstream depends on it.",
+        "The finished outdoor side: a new 200 amp panel set clean on the wall, ready for inspection.",
+      real: true,
+    },
+    {
+      name: "meter-fire-after",
+      caption:
+        "A nine-meter service rebuilt on a repaired wall, every family back on their own power.",
+      real: true,
     },
   ],
   "emergency-electrician": [
-    {
-      name: "power-restoration",
-      caption:
-        "The moment the main goes back on. Most calls end right here, the same night.",
-    },
     {
       name: "meter-fire-before",
       caption:
@@ -241,9 +243,9 @@ const SERVICE_GALLERY: Record<
       real: true,
     },
     {
-      name: "commercial-lighting-after",
+      name: "commercial-lighting-night",
       caption:
-        "After. The same sign at dusk with every letter back in place.",
+        "After, at night. Every letter back on and burning bright.",
       real: true,
     },
     {
@@ -258,28 +260,18 @@ const SERVICE_GALLERY: Record<
       caption:
         "Equipotential bonding at the ladder rail. This copper is what keeps stray voltage out of the water.",
     },
-    {
-      name: "pool-safety",
-      caption:
-        "The end result. A pool you can light up at night and stop thinking about.",
-    },
   ],
   "ev-charger-installation": [
     {
-      name: "panel-upgrade",
+      name: "panel-leviton-indoor",
       caption:
         "Every EV install starts at the panel. The capacity has to be there before a charger goes on the wall.",
+      real: true,
     },
     {
       name: "work-service-subpanels",
       caption:
         "A residential service built to carry home charging and battery backup, permitted and inspected.",
-      real: true,
-    },
-    {
-      name: "work-panel-replace",
-      caption:
-        "An older panel like this one cannot carry a 48 amp charger. We tell you that before you spend the money.",
       real: true,
     },
   ],
@@ -313,22 +305,12 @@ const SERVICE_GALLERY: Record<
       caption:
         "GFCI protection wherever water lives: kitchens, baths, garages, and outdoors.",
     },
-    {
-      name: "pool-safety",
-      caption:
-        "Outdoor and landscape lighting, wired on a timer and protected the way code requires.",
-    },
   ],
   "surge-protection": [
     {
       name: "surge-exterior-main",
       caption:
         "Where we mount it: at the main disconnect below the meter, so every circuit in the house sits behind it.",
-    },
-    {
-      name: "service-entrance",
-      caption:
-        "Most damaging surges arrive through the service entrance, so that is where we stop them.",
     },
     {
       name: "panel-leviton-outdoor",
@@ -364,7 +346,7 @@ const SERVICE_GALLERY: Record<
   ],
 };
 
-const SERVICE_FALLBACK = "panel-upgrade";
+const SERVICE_FALLBACK = "panel-leviton-indoor";
 
 export function imagePath(name: string): string {
   return `/images/${name}.jpg`;

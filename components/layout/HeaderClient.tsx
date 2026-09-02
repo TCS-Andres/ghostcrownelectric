@@ -158,7 +158,7 @@ export function HeaderClient({
       {mobileOpen ? (
         <div
           id="mobile-menu"
-          className="border-t border-border bg-surface/95 backdrop-blur-xl lg:hidden"
+          className="border-t border-mist-300 bg-mist-200 lg:hidden"
         >
           <nav
             aria-label="Mobile"
@@ -225,14 +225,14 @@ function Dropdown({
         <Chevron open={isOpen} />
       </button>
       {isOpen ? (
-        <div className="absolute left-0 top-full z-50 mt-1 min-w-60 rounded-xl border border-border bg-surface/85 p-2 shadow-[var(--shadow-lift)] backdrop-blur-xl">
+        <div className="absolute left-0 top-full z-50 mt-1 min-w-60 rounded-xl border border-mist-300 bg-mist-200 p-2 shadow-[var(--shadow-lift)]">
           <ul className="flex flex-col">
             {items.map((item) => (
               <li key={item.href}>
                 <Link
                   href={item.href}
                   onClick={onNavigate}
-                  className="block rounded-md px-3 py-2 text-sm text-ink hover:bg-surface-2 hover:text-accent-hover"
+                  className="block rounded-md px-3 py-2 text-sm text-ink hover:bg-white hover:text-accent-hover"
                 >
                   {item.label}
                 </Link>
