@@ -17,7 +17,7 @@
 const SERVICE_IMAGE: Record<string, string> = {
   "electrical-panel-upgrade": "panel-leviton-indoor",
   "electrical-service-rebuild": "work-service-subpanels",
-  "emergency-electrician": "emergency-night-call",
+  "emergency-electrician": "emergency-burned-main",
   "commercial-lighting": "commercial-lighting-after",
   "pool-electrical": "pool-spa-dusk",
   "ev-charger-installation": "ev-charger-home",
@@ -119,6 +119,11 @@ const IMAGE_ALT: Record<string, string> = {
   "meter-bank-after-clean": "The rebuilt nine-meter bank on a freshly painted white wall, every position numbered and back in service",
   "pool-spa-dusk": "A South Florida pool and raised spa at blue hour, underwater lights, a lit waterfall feature, and landscape lighting inside a screened enclosure",
   "surge-exterior-main": "A whole home surge protective device mounted beside the main disconnect below the meter on a South Florida home",
+  "pool-spa-day": "A South Florida pool and raised spa in bright daylight, waterfall running, inside a screened enclosure",
+  "landscape-lighting-day": "A new brass path light and palm uplight fixture set in a mulch bed beside a South Florida home in daylight",
+  "emergency-burned-main": "An exterior main disconnect open in daylight, showing a scorched breaker and melted lug from an overheated connection",
+  "emergency-tripped-panel": "A residential panel with the door open and the main breaker in the tripped position, in daylight",
+  "surge-status-light": "Close up of a whole home surge protective device beside a residential panel, its green status light lit",
 };
 
 /*
@@ -229,6 +234,11 @@ const SERVICE_GALLERY: Record<
   ],
   "emergency-electrician": [
     {
+      name: "emergency-tripped-panel",
+      caption:
+        "A main that will not hold is telling you something. We find out what before we reset it.",
+    },
+    {
       name: "meter-fire-before",
       caption:
         "A fire took out a nine-meter bank and left a whole building without power.",
@@ -259,6 +269,11 @@ const SERVICE_GALLERY: Record<
       name: "pool-bonding-lug",
       caption:
         "Equipotential bonding at the ladder rail. This copper is what keeps stray voltage out of the water.",
+    },
+    {
+      name: "pool-spa-day",
+      caption:
+        "The end result. A pool, a spa, and a water feature you can run without thinking about what is behind them.",
     },
   ],
   "ev-charger-installation": [
@@ -305,6 +320,11 @@ const SERVICE_GALLERY: Record<
       caption:
         "GFCI protection wherever water lives: kitchens, baths, garages, and outdoors.",
     },
+    {
+      name: "landscape-lighting-day",
+      caption:
+        "Landscape and path lighting on a timer, with the low voltage runs buried and protected.",
+    },
   ],
   "surge-protection": [
     {
@@ -317,6 +337,11 @@ const SERVICE_GALLERY: Record<
       caption:
         "Outdoor panels take the hit first. The device mounts right beside them, protected from the weather.",
       real: true,
+    },
+    {
+      name: "surge-status-light",
+      caption:
+        "The green light means it is standing guard. When it goes dark, the device has taken a hit for you.",
     },
   ],
   "electrical-safety-check": [
