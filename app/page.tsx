@@ -410,15 +410,15 @@ export default function HomePage() {
             <div>
               <BeforeAfterSlider
                 beforeSrc="/images/meter-burnout-before.jpg"
-                afterSrc="/images/meter-burnout-after.jpg"
+                afterSrc="/images/meter-bank-after-clean.jpg"
                 beforeAlt="Nine electrical meters melted and burned out of their sockets after a fire, with heavy soot on the wall behind them"
-                afterAlt="The same wall with a new nine-meter bank installed, every meter numbered and back in service"
+                afterAlt="The same wall rebuilt and repainted white, with a new nine-meter bank installed, every meter numbered and back in service"
                 sizes="(min-width: 1024px) 35vw, 100vw"
                 className="aspect-[3/4] rounded-2xl border border-navy-600"
               />
               <p className="mt-3 text-sm text-ink-muted-on-dark">
                 Drag the slider: nine meters melted out of their sockets, and
-                the same wall back in service.
+                the same wall rebuilt, repainted, and back in service.
               </p>
             </div>
             <ul className="grid grid-cols-1 gap-6">
