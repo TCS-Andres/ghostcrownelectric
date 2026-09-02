@@ -19,12 +19,12 @@ const SERVICE_IMAGE: Record<string, string> = {
   "electrical-service-rebuild": "work-service-subpanels",
   "emergency-electrician": "emergency-night-call",
   "commercial-lighting": "commercial-lighting-night",
-  "pool-electrical": "pool-equipment-pad",
+  "pool-electrical": "pool-spa-dusk",
   "ev-charger-installation": "ev-charger-home",
   "meter-bank-replacement": "meter-upgrade-finished",
   "lighting-fans-outlets": "work-residential-dusk",
   "surge-protection": "surge-device",
-  "electrical-safety-check": "safety-inspection-v2",
+  "electrical-safety-check": "inspection-panel-check",
 };
 
 // One golden-hour location image per city.
@@ -115,7 +115,45 @@ const IMAGE_ALT: Record<string, string> = {
   "pool-bonding-lug": "A bronze bonding lug clamped to a pool ladder rail with bare copper bonding wire across a travertine deck",
   "emergency-night-call": "An exterior electrical panel open at night on a stucco wall, lit by a work light on the ground",
   "safety-inspection-v2": "A digital multimeter clipped to an open residential panel with its leads on a breaker terminal, reading 120 volts",
+  "inspection-panel-check": "A Ghost Crown Electric electrician crouched at an open residential panel, testing a breaker with a multimeter",
+  "meter-bank-after-clean": "The rebuilt nine-meter bank on a freshly painted white wall, every position numbered and back in service",
+  "pool-spa-dusk": "A South Florida pool and raised spa at blue hour, underwater lights, a lit waterfall feature, and landscape lighting inside a screened enclosure",
+  "surge-exterior-main": "A whole home surge protective device mounted beside the main disconnect below the meter on a South Florida home",
 };
+
+/*
+  Before and after pairs for service pages that have one. The template shows
+  these as a drag slider beside the definition copy, and the photo band then
+  carries the full gallery. Both frames must share the same crop so the wipe
+  reads as one wall.
+*/
+export interface BeforeAfterPair {
+  before: { src: string; alt: string };
+  after: { src: string; alt: string };
+  caption: string;
+}
+
+const SERVICE_BEFORE_AFTER: Record<
+  string,
+  { before: string; after: string; caption: string }
+> = {
+  "meter-bank-replacement": {
+    before: "meter-burnout-before",
+    after: "meter-bank-after-clean",
+    caption:
+      "Drag the slider: nine meters melted out of their sockets, and the same wall rebuilt, repainted, and back in service.",
+  },
+};
+
+export function serviceBeforeAfter(slug: string): BeforeAfterPair | null {
+  const pair = SERVICE_BEFORE_AFTER[slug];
+  if (!pair) return null;
+  return {
+    before: resolve(pair.before),
+    after: resolve(pair.after),
+    caption: pair.caption,
+  };
+}
 
 /*
   Supporting photography for each service page, so the templates read as trade
@@ -247,9 +285,9 @@ const SERVICE_GALLERY: Record<
   ],
   "meter-bank-replacement": [
     {
-      name: "meter-fire-after-crop",
+      name: "meter-fire-after",
       caption:
-        "The finished wall after the fire. Permit closed, and every family back on their own power.",
+        "The finished wall from the parking lot. Permit closed, and every family back on their own power.",
       real: true,
     },
     {
@@ -283,10 +321,9 @@ const SERVICE_GALLERY: Record<
   ],
   "surge-protection": [
     {
-      name: "panel-leviton-interior",
+      name: "surge-exterior-main",
       caption:
-        "A whole home device lives here, at the main panel, on its own two pole breaker.",
-      real: true,
+        "Where we mount it: at the main disconnect below the meter, so every circuit in the house sits behind it.",
     },
     {
       name: "service-entrance",
@@ -301,6 +338,11 @@ const SERVICE_GALLERY: Record<
     },
   ],
   "electrical-safety-check": [
+    {
+      name: "safety-inspection-v2",
+      caption:
+        "Every breaker gets tested under a meter, because the problems that matter are the ones you cannot see.",
+    },
     {
       name: "work-panel-old",
       caption:

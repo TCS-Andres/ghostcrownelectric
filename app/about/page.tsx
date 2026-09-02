@@ -275,11 +275,11 @@ export default function AboutPage() {
             <SectionHeading as="h2" eyebrow="The crew" title="Small on purpose" />
             <div className="mt-6 flex flex-col gap-4 text-lg leading-relaxed text-ink-muted">
               <p>
-                A three person in-house crew with bucket truck services
-                available, so jobs move without handing your work to a
-                subcontractor we do not know. One crew member has been with us more than
-                eight years. We keep the team small on purpose so the
-                quality stays consistent.
+                Our own in-house crew, with bucket truck services available,
+                so your work never gets handed to a subcontractor we do not
+                know. One crew member has been with us more than eight years.
+                We keep the team small on purpose so the quality stays
+                consistent.
               </p>
             </div>
           </div>

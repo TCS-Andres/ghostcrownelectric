@@ -65,7 +65,7 @@ const HOME_FAQS: Faq[] = [
   {
     question: "Are you licensed?",
     answer:
-      "Yes. Florida Certified Electrical Contractor #EC13010704 and Tri-County Master Electrician. We pull the permits and meet the inspector on every job, with 286 permitted projects on public record.",
+      "Yes. Florida Certified Electrical Contractor #EC13010704 and South Florida Master Electrician. We pull the permits and meet the inspector on every job, with 286 permitted projects on public record.",
   },
 ];
 
@@ -73,7 +73,7 @@ const HOME_FAQS: Faq[] = [
 const WHY_FEATURES: { title: string; body: string; icon: ReactNode }[] = [
   {
     title: "Licensed and certified",
-    body: "Florida Certified Electrical Contractor and Tri-County Master Electrician.",
+    body: "Florida Certified Electrical Contractor and South Florida Master Electrician.",
     icon: <BrandIcon name="licensed-shield" size={18} />,
   },
   {

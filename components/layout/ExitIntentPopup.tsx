@@ -1,33 +1,27 @@
 "use client";
 
-import Link from "next/link";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { routes } from "@/lib/routes";
 import { Button } from "@/components/ui/Button";
 
 /*
-  Desktop exit-intent prompt promoting the Electrical Safety Check as a defined
-  scope walkthrough of the panel, meter socket, and overall system condition.
-  No price is shown and there is no free-offer language: it is an invitation to
-  book, in Ghost Crown's calm voice.
+  A small timed prompt for the Electrical Safety Check. It appears five seconds
+  into a visit as a compact card in the corner, over a fully visible page: no
+  overlay, nothing to dismiss before using the site. The client's earlier
+  version greyed out the whole page and, on phones, covered it, so this one is
+  deliberately small, sits above the mobile request dock, and closes from a
+  large X or Escape.
 
-  It is deliberately non-blocking. The client found the earlier modal, which
-  greyed out the whole site, read like spam. This version is a card in the
-  corner over a fully visible page: nothing to dismiss before using the site.
-
-  Frequency cap: once a visitor closes it or follows the link, we do not show it
-  again for 14 days (stored in localStorage). It also shows at most once per
-  session and only on wide screens with a fine pointer, where exit intent via
-  the mouse leaving the top of the window is meaningful.
+  Frequency: once per session, and not again for 14 days after a close or a
+  click through (localStorage).
 */
 
 const STORAGE_KEY = "gce_safety_check_prompt_until";
 const SUPPRESS_DAYS = 14;
+const DELAY_MS = 5000;
 
 export function ExitIntentPopup() {
   const [visible, setVisible] = useState(false);
-  const dialogRef = useRef<HTMLDivElement>(null);
-  const shownThisSession = useRef(false);
 
   const suppress = useCallback(() => {
     try {
@@ -44,33 +38,16 @@ export function ExitIntentPopup() {
   }, [suppress]);
 
   useEffect(() => {
-    // Only desktop pointers, and only if not recently suppressed.
-    const canShow = window.matchMedia(
-      "(min-width: 1024px) and (pointer: fine)",
-    ).matches;
-    if (!canShow) return;
-
     try {
       const until = Number(window.localStorage.getItem(STORAGE_KEY) ?? "0");
       if (until && Date.now() < until) return;
     } catch {
       // Ignore storage errors and continue.
     }
-
-    function onMouseOut(event: MouseEvent) {
-      if (shownThisSession.current) return;
-      // Pointer left through the top edge of the viewport.
-      if (event.relatedTarget === null && event.clientY <= 0) {
-        shownThisSession.current = true;
-        setVisible(true);
-      }
-    }
-
-    document.addEventListener("mouseout", onMouseOut);
-    return () => document.removeEventListener("mouseout", onMouseOut);
+    const timer = window.setTimeout(() => setVisible(true), DELAY_MS);
+    return () => window.clearTimeout(timer);
   }, []);
 
-  // When open: close on Escape. The page stays fully usable behind it.
   useEffect(() => {
     if (!visible) return;
     function onKeyDown(event: KeyboardEvent) {
@@ -83,37 +60,32 @@ export function ExitIntentPopup() {
   if (!visible) return null;
 
   return (
-    <div className="pointer-events-none fixed inset-x-4 bottom-4 z-[60] flex justify-end sm:inset-x-auto sm:bottom-6 sm:right-6">
+    <div className="pointer-events-none fixed bottom-24 right-4 z-[60] sm:bottom-6 sm:right-6">
       <div
-        ref={dialogRef}
         role="complementary"
-        aria-labelledby="exit-intent-title"
-        className="pointer-events-auto relative w-full max-w-sm rounded-2xl border border-border bg-surface p-6 shadow-[var(--shadow-lift)]"
+        aria-labelledby="safety-prompt-title"
+        className="pointer-events-auto relative w-[min(19rem,calc(100vw-2rem))] rounded-xl border border-border bg-surface p-4 pr-11 shadow-[var(--shadow-lift)]"
       >
         <button
           type="button"
           aria-label="Close"
           onClick={close}
-          className="absolute right-3 top-3 inline-flex h-8 w-8 items-center justify-center rounded-md text-ink-muted hover:bg-surface-2 hover:text-ink"
+          className="absolute right-2 top-2 inline-flex h-9 w-9 items-center justify-center rounded-md text-ink-muted hover:bg-surface-2 hover:text-ink"
         >
           <CloseIcon />
         </button>
 
-        <p className="text-sm font-semibold uppercase tracking-[0.14em] text-accent">
-          Before you go
+        <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-accent">
+          Electrical Safety Check
         </p>
-        <h2
-          id="exit-intent-title"
-          className="mt-2 pr-8 text-xl text-ink"
-        >
+        <h2 id="safety-prompt-title" className="mt-1 text-base leading-snug text-ink">
           Not sure what shape your electrical is in?
         </h2>
-        <p className="mt-2 text-sm text-ink-muted">
-          Book an Electrical Safety Check. We walk your panel, meter socket, and
-          system, then tell you plainly what we find. No pressure.
+        <p className="mt-1.5 text-sm leading-snug text-ink-muted">
+          We walk your panel, meter, and wiring, then tell you plainly what we
+          find.
         </p>
-
-        <div className="mt-4 flex flex-col gap-2 sm:flex-row">
+        <div className="mt-3 flex items-center gap-3">
           <Button
             href={routes.service("electrical-safety-check")}
             variant="primary"
@@ -122,9 +94,13 @@ export function ExitIntentPopup() {
           >
             See the Safety Check
           </Button>
-          <Button variant="ghost" size="sm" onClick={close}>
-            Maybe later
-          </Button>
+          <button
+            type="button"
+            onClick={close}
+            className="text-sm font-medium text-ink-muted hover:text-ink"
+          >
+            Not now
+          </button>
         </div>
       </div>
     </div>

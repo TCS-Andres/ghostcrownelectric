@@ -127,12 +127,12 @@ const GROUPS: { heading: string; icon: ReactNode; items: Faq[] }[] = [
       {
         question: "Are you licensed?",
         answer:
-          "Yes. Florida Certified Electrical Contractor #EC13010704, with statewide authority, and a Tri-County Master Electrician license.",
+          "Yes. Florida Certified Electrical Contractor #EC13010704, with statewide authority, and a South Florida Master Electrician license.",
       },
       {
         question: "Who actually does the work?",
         answer:
-          "Our own three-person in-house crew. We do not hand your job to a subcontractor we do not know. The people at your property are our people.",
+          "Our own in-house crew, with bucket truck services available. We do not hand your job to a subcontractor we do not know. The people at your property are our people.",
       },
     ],
   },

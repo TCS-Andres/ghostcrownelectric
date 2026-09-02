@@ -6,7 +6,7 @@ import { getService, getServices, type Service } from "@/lib/content";
 import { routes } from "@/lib/routes";
 import { buildMetadata, absoluteUrl } from "@/lib/seo";
 import { cityLinks, firstSentence } from "@/lib/links";
-import { serviceImage, serviceGallery } from "@/lib/imagery";
+import { serviceImage, serviceGallery, serviceBeforeAfter } from "@/lib/imagery";
 import {
   breadcrumbListNode,
   electricianNode,
@@ -20,6 +20,7 @@ import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Card } from "@/components/ui/Card";
 import { Media } from "@/components/ui/Media";
+import { BeforeAfterSlider } from "@/components/ui/BeforeAfterSlider";
 import { CTABand } from "@/components/ui/CTABand";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { GradientBadge, BADGE_TONES } from "@/components/ui/GradientBadge";
@@ -29,7 +30,6 @@ import { HeroTrust } from "@/components/sections/HeroTrust";
 import { CallToActions } from "@/components/sections/CallToActions";
 import { MidPageCTA } from "@/components/sections/MidPageCTA";
 import { WorkPhotos } from "@/components/sections/WorkPhotos";
-import { BeforeAfterSlider } from "@/components/ui/BeforeAfterSlider";
 import { JsonLd } from "@/components/seo/JsonLd";
 
 export const dynamicParams = false;
@@ -91,13 +91,12 @@ export default async function ServicePage({
 
   const heroImage = serviceImage(service.slug);
   const gallery = serviceGallery(service.slug);
-  // The first supporting photo sits beside the definition copy; the rest fill
-  // the captioned band further down the page.
-  // Meter bank replacement carries the burned nine-meter bank as a before and
-  // after slider beside the definition, so its full gallery goes to the band.
-  const showSlider = service.slug === "meter-bank-replacement";
-  const detailPhoto = showSlider ? null : gallery[0];
-  const bandPhotos = showSlider ? gallery : gallery.slice(1);
+  const beforeAfter = serviceBeforeAfter(service.slug);
+  // Beside the definition copy: the before/after slider when the service has
+  // one, otherwise the first supporting photo. The rest fill the captioned
+  // band further down the page.
+  const detailPhoto = beforeAfter ? null : gallery[0];
+  const bandPhotos = beforeAfter ? gallery : gallery.slice(1);
   const cities = cityLinks();
   const shortName = service.shortName || service.name;
 
@@ -223,19 +222,18 @@ export default async function ServicePage({
             ) : null}
           </div>
 
-          {showSlider ? (
-            <figure className="lg:justify-self-end">
+          {beforeAfter ? (
+            <figure className="w-full lg:justify-self-end">
               <BeforeAfterSlider
-                beforeSrc="/images/meter-burnout-before.jpg"
-                afterSrc="/images/meter-burnout-after.jpg"
-                beforeAlt="Nine electrical meters melted and burned out of their sockets after a fire"
-                afterAlt="The same wall with a new nine-meter bank installed and back in service"
+                beforeSrc={beforeAfter.before.src}
+                afterSrc={beforeAfter.after.src}
+                beforeAlt={beforeAfter.before.alt}
+                afterAlt={beforeAfter.after.alt}
                 sizes="(min-width: 1024px) 45vw, 100vw"
                 className="aspect-[3/4] w-full rounded-2xl border border-border shadow-[var(--shadow-card)]"
               />
               <figcaption className="mt-3 text-sm leading-relaxed text-ink-muted">
-                Drag the slider. Nine meters melted out of their sockets, and the
-                same wall back in service. A Ghost Crown job.
+                {beforeAfter.caption}
               </figcaption>
             </figure>
           ) : detailPhoto ? (

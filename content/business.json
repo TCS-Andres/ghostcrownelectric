@@ -12,7 +12,7 @@
   "hours": "Monday to Friday, with emergency response day or night",
   "licenses": [
     {"label": "Florida Certified Electrical Contractor", "number": "EC13010704"},
-    {"label": "Tri-County Master Electrician", "number": "PLACEHOLDER"}
+    {"label": "South Florida Master Electrician", "number": "PLACEHOLDER"}
   ],
   "serviceArea": "South Florida's Tri-County area, south to North Miami Beach",
   "geo": {"lat": 26.2174, "lng": -80.2256},
